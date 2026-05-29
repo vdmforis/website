@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeroForm } from "@/components/HeroForm";
+import { BookCallButton } from "@/components/BookCallButton";
 import { whatsappLink } from "@/lib/contact";
 
 export default function Home() {
@@ -22,12 +23,9 @@ export default function Home() {
               privé als via onze B.V.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#contact"
-                className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
-              >
+              <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
                 Plan een gratis gesprek
-              </a>
+              </BookCallButton>
               <a
                 href={whatsappLink()}
                 target="_blank"
@@ -75,10 +73,7 @@ export default function Home() {
             kunnen vandaag nog.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <a
-              href="#contact"
-              className="group flex flex-col rounded-2xl border border-cream/15 bg-cream/5 p-6 transition-colors hover:border-terracotta hover:bg-cream/10"
-            >
+            <BookCallButton className="group flex flex-col rounded-2xl border border-cream/15 bg-cream/5 p-6 transition-colors hover:border-terracotta hover:bg-cream/10">
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
                 30 min · gratis
               </p>
@@ -88,9 +83,9 @@ export default function Home() {
                 vragen, en zeggen eerlijk of we de juiste club voor je zijn.
               </p>
               <span className="mt-4 text-sm text-terracotta">
-                Stuur een berichtje →
+                Boek een tijd →
               </span>
-            </a>
+            </BookCallButton>
             <a
               href={whatsappLink()}
               target="_blank"
@@ -190,9 +185,9 @@ export default function Home() {
             <span className="font-medium text-navy">Volledige aankoopbegeleiding</span>{" "}
             (van zoekprofiel tot sleutel) volgt deze zomer, zodra onze RAICV-vergunning
             binnen is. Vooraan staan?{" "}
-            <Link href="#contact" className="text-terracotta hover:underline">
+            <BookCallButton className="text-terracotta hover:underline">
               Plan vrijblijvend een gesprek
-            </Link>
+            </BookCallButton>
             {" "}— dan zetten we je op de lijst.
           </div>
         </div>

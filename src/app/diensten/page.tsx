@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookCallButton } from "@/components/BookCallButton";
 
 export const metadata: Metadata = {
   title: "Diensten",
@@ -315,12 +316,9 @@ export default function DienstenPage() {
             Begin met een vrijblijvend gesprek. Dat kost je niets en duurt 30 minuten.
             Daarna weten we allebei of we bij elkaar passen.
           </p>
-          <Link
-            href="/#contact"
-            className="mt-8 inline-block rounded-full bg-terracotta px-8 py-3 text-base font-medium text-cream transition-colors hover:bg-terracotta/90"
-          >
+          <BookCallButton className="mt-8 inline-block rounded-full bg-terracotta px-8 py-3 text-base font-medium text-cream transition-colors hover:bg-terracotta/90">
             Plan een kennismakingsgesprek
-          </Link>
+          </BookCallButton>
         </div>
       </section>
     </main>

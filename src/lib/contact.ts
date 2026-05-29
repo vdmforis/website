@@ -8,7 +8,7 @@ export const contact = {
   /**
    * Phone number in international format (no spaces, no plus).
    * Used for both tel: and WhatsApp wa.me links.
-   * TODO: Dennis — vervang door het echte WhatsApp-nummer voor zaken.
+   * TODO: Dennis — vervang door het echte WhatsApp Business-nummer zodra binnen.
    */
   whatsappNumber: "34600000000",
   /**
@@ -21,10 +21,13 @@ export const contact = {
   whatsappPrefill:
     "Hoi%20Dennis%2C%20ik%20heb%20een%20vraag%20over%20een%20huis%20kopen%20in%20Spanje.",
   /**
-   * Calendly / Cal.com link voor het direct boeken van een gesprek.
-   * TODO: Dennis — vervang door echte boekings-URL zodra Calendly opgezet is.
+   * Cal.com / Cal.eu embed configuration.
+   * The link is what comes after cal.eu/ in the booking URL.
    */
-  bookingUrl: "/#contact",
+  bookingNamespace: "intake",
+  bookingLink: "team/vdmforis/intake",
+  /** Public fallback URL (used when JS embed isn't an option). */
+  bookingUrl: "https://cal.eu/team/vdmforis/intake",
 };
 
 export function whatsappLink(): string {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BookCallButton } from "@/components/BookCallButton";
 
 const nav = [
   { href: "/diensten", label: "Diensten" },
@@ -27,12 +28,9 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/#contact"
-            className="hidden rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90 md:inline-block"
-          >
+          <BookCallButton className="hidden rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90 md:inline-block">
             Plan kennismaking
-          </Link>
+          </BookCallButton>
         </nav>
       </div>
     </header>

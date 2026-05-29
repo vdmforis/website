@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { contact, whatsappLink, mailLink } from "@/lib/contact";
 
 export function FloatingContact() {
@@ -55,8 +54,13 @@ export function FloatingContact() {
               </svg>
               {contact.email}
             </a>
-            <Link
+            <a
               href={contact.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cal-namespace={contact.bookingNamespace}
+              data-cal-link={contact.bookingLink}
+              data-cal-config='{"layout":"month_view"}'
               onClick={() => setOpen(false)}
               className="flex items-center gap-3 rounded-xl bg-terracotta px-4 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
             >
@@ -73,7 +77,7 @@ export function FloatingContact() {
                 <path d="M3 10h18M8 2v4M16 2v4" />
               </svg>
               Plan een gesprek <span className="ml-auto text-xs">gratis</span>
-            </Link>
+            </a>
           </div>
         </div>
       )}

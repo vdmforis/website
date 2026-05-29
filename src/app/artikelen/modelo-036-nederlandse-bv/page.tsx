@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookCallButton } from "@/components/BookCallButton";
 
 const publishDate = "2026-05-29";
 const updatedDate = "2026-05-29";
@@ -465,12 +466,9 @@ export default function Modelo036Article() {
             >
               Bekijk de papierwinkel-dienst
             </Link>
-            <Link
-              href="/#contact"
-              className="rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-navy transition-colors hover:border-terracotta"
-            >
+            <BookCallButton className="rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-navy transition-colors hover:border-terracotta">
               Of plan een gesprek
-            </Link>
+            </BookCallButton>
           </div>
         </div>
       </article>

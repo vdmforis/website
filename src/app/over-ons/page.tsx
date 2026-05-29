@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { whatsappLink } from "@/lib/contact";
+import { BookCallButton } from "@/components/BookCallButton";
 
 export const metadata: Metadata = {
   title: "Over ons",
@@ -189,12 +190,9 @@ export default function OverOnsPage() {
             en kan via videocall of WhatsApp — wat jou het beste uitkomt.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link
-              href="/#contact"
-              className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
-            >
+            <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
               Plan een gesprek <span className="ml-1 text-cream/80">· gratis</span>
-            </Link>
+            </BookCallButton>
             <a
               href={whatsappLink()}
               target="_blank"
