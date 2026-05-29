@@ -22,8 +22,8 @@ export default function OverOnsPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/85">
             Ik woon sinds juli 2023 in Grau de Castellón, samen met mijn vriendin en
-            onze zoon Levi (nu 11 maanden). We kwamen hier oorspronkelijk voor mijn
-            werk en zouden zien wat ervan kwam. Inmiddels is dit thuis.
+            ons jonge gezin. We kwamen hier oorspronkelijk voor mijn werk en zouden
+            zien wat ervan kwam. Inmiddels is dit thuis.
           </p>
         </div>
       </section>
