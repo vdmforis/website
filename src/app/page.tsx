@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeroForm } from "@/components/HeroForm";
+import { whatsappLink } from "@/lib/contact";
 
 export default function Home() {
   return (
@@ -20,6 +21,22 @@ export default function Home() {
               persoonlijk, en hebben het hele aankooptraject net zelf doorlopen — zowel
               privé als via onze B.V.
             </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#contact"
+                className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
+              >
+                Plan een gratis gesprek
+              </a>
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-navy transition-colors hover:border-terracotta"
+              >
+                Of stuur een WhatsApp
+              </a>
+            </div>
             <ul className="mt-8 space-y-3 text-foreground/85">
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
@@ -37,6 +54,77 @@ export default function Home() {
           </div>
           <div id="contact" className="flex flex-col justify-center scroll-mt-24">
             <HeroForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Begin gratis */}
+      <section className="border-t border-border bg-navy text-cream">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+          <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+            <h2 className="font-heading text-3xl md:text-4xl">
+              Begin gratis
+            </h2>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
+              Drie manieren, zonder verplichtingen
+            </p>
+          </div>
+          <p className="mt-4 max-w-2xl text-cream/85">
+            Voordat je een euro uitgeeft willen we eerst weten of we bij elkaar passen.
+            Kies de manier die jou het prettigst lijkt — alle drie zijn gratis en
+            kunnen vandaag nog.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <a
+              href="#contact"
+              className="group flex flex-col rounded-2xl border border-cream/15 bg-cream/5 p-6 transition-colors hover:border-terracotta hover:bg-cream/10"
+            >
+              <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
+                30 min · gratis
+              </p>
+              <h3 className="mt-3 font-heading text-xl">Plan een kennismaking</h3>
+              <p className="mt-2 flex-1 text-sm text-cream/80">
+                Videocall met Dennis. We luisteren naar je situatie, beantwoorden
+                vragen, en zeggen eerlijk of we de juiste club voor je zijn.
+              </p>
+              <span className="mt-4 text-sm text-terracotta">
+                Stuur een berichtje →
+              </span>
+            </a>
+            <a
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col rounded-2xl border border-cream/15 bg-cream/5 p-6 transition-colors hover:border-[#25D366] hover:bg-cream/10"
+            >
+              <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#5ee290]">
+                Direct · gratis
+              </p>
+              <h3 className="mt-3 font-heading text-xl">WhatsApp Dennis</h3>
+              <p className="mt-2 flex-1 text-sm text-cream/80">
+                Voor de korte vragen. Eerste reactie meestal binnen een paar uur, in
+                het Nederlands. Geen formulier, geen bot.
+              </p>
+              <span className="mt-4 text-sm text-[#5ee290]">
+                Open WhatsApp →
+              </span>
+            </a>
+            <Link
+              href="/artikelen/modelo-036-nederlandse-bv"
+              className="group flex flex-col rounded-2xl border border-cream/15 bg-cream/5 p-6 transition-colors hover:border-terracotta hover:bg-cream/10"
+            >
+              <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
+                8 min lezen · gratis
+              </p>
+              <h3 className="mt-3 font-heading text-xl">Lees onze gids</h3>
+              <p className="mt-2 flex-1 text-sm text-cream/80">
+                Modelo 036 voor Nederlandse B.V.&apos;s — eerstehandgids met
+                documentenlijst, kosten, doorlooptijd en de zes valkuilen.
+              </p>
+              <span className="mt-4 text-sm text-terracotta">
+                Lees het artikel →
+              </span>
+            </Link>
           </div>
         </div>
       </section>

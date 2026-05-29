@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { FloatingContact } from "@/components/FloatingContact";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -56,6 +57,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <FloatingContact />
       </body>
     </html>
   );

@@ -92,11 +92,11 @@ export function HeroForm() {
         disabled={isPending}
         className="w-full bg-terracotta text-cream hover:bg-terracotta/90 h-12 text-base"
       >
-        {isPending ? "Versturen…" : "Plan een vrijblijvend kennismakingsgesprek"}
+        {isPending ? "Versturen…" : "Plan een kennismakingsgesprek · gratis"}
       </Button>
 
       <p className="text-center text-xs text-muted-foreground">
-        We reageren binnen een werkdag. Het eerste gesprek is gratis.
+        We reageren binnen een werkdag. 30 minuten, geen verplichtingen.
       </p>
     </form>
   );
