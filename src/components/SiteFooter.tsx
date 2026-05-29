@@ -38,8 +38,8 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/onze-villa" className="hover:text-terracotta">
-                  Onze villa
+                <Link href="/onze-ervaring" className="hover:text-terracotta">
+                  Onze ervaring
                 </Link>
               </li>
               <li>
