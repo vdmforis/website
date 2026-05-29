@@ -34,7 +34,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col justify-center">
+          <div id="contact" className="flex flex-col justify-center scroll-mt-24">
             <HeroForm />
           </div>
         </div>
@@ -75,25 +75,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="mt-auto border-t border-border bg-navy text-cream">
-        <div className="mx-auto max-w-6xl px-6 py-10 text-sm">
-          <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-            <p>
-              <span className="font-heading text-base">Foris</span> —
-              Van der Meulen Foris B.V. · KvK 98214950 · Toldijk 27, 7901 TA Hoogeveen
-            </p>
-            <p className="text-cream/70">
-              <a href="mailto:info@vdmforis.com" className="hover:text-terracotta">
-                info@vdmforis.com
-              </a>
-            </p>
-          </div>
-          <p className="mt-4 text-cream/60 text-xs">
-            © {new Date().getFullYear()} Van der Meulen Foris B.V. Site in opbouw.
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }
