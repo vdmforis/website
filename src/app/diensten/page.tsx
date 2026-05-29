@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Diensten — drie pakketten",
+  title: "Diensten",
   description:
-    "Oriëntatie (€495, verrekend bij doorgang), volledige aankoopbegeleiding (€4.950 of 1,75%), en concierge na de koop (vanaf €45/mnd). Plus een speerpunt: off-plan nieuwbouw.",
+    "Vier diensten die we vandaag al leveren: oriëntatie & coaching, papierwinkel (NIE/CIF/bank), off-plan oversight en concierge. Volledige aankoopbegeleiding volgt zomer 2026 zodra onze RAICV-vergunning binnen is.",
 };
 
-const packages = [
+const availableNow = [
   {
     id: "orientatie",
-    badge: "Pakket 1 · Lage drempel",
-    title: "Oriëntatie",
-    price: "€ 495",
-    priceSub: "(volledig verrekend als je doorgaat met Volledige begeleiding)",
+    badge: "Coaching · Vanaf vandaag",
+    title: "Oriëntatie & strategie-coaching",
+    price: "€ 495 vast — of € 150 / uur",
+    priceSub: "(volledig verrekend als je later doorgaat met begeleiding)",
     intro:
-      "Voor iedereen die nog niet zeker weet of dit het moment is, of dit de juiste regio is, of wij de juiste club zijn. Geen verplichting verder.",
+      "Voor iedereen die nog niet zeker weet of dit het moment is, of dit de juiste regio is, of wij de juiste club zijn. Coaching en kennisoverdracht, geen makelaardij.",
     includes: [
       "Anderhalf uur intakegesprek (videocall of fysiek in Castellón)",
       "Persoonlijke regio-gids op maat (PDF) — wijken, prijsranges, infrastructuur, wat te vermijden",
@@ -26,31 +26,46 @@ const packages = [
       "Je oriënteert je nog. Je wil eerst de markt begrijpen voordat je iets vastlegt.",
   },
   {
-    id: "aankoopbegeleiding",
-    badge: "Pakket 2 · Kernproduct",
-    title: "Volledige aankoopbegeleiding",
-    price: "€ 4.950 vast of 1,75%",
-    priceSub: "(min € 4.500, max € 9.500 — je kiest bij aanvang)",
+    id: "papierwinkel",
+    badge: "Papierwinkel · Vanaf vandaag",
+    title: "NIE, CIF, bank, modelo 036",
+    price: "€ 350 – € 650 per traject",
+    priceSub: "(vaste prijs vooraf, afhankelijk van privé / B.V.)",
     intro:
-      "Het hele traject van zoekprofiel tot sleuteloverdracht. Wij doen het werk, jij neemt de beslissingen. Looptijd doorgaans 3–6 maanden.",
+      "Je hebt al gekocht, of bent vlak voor sluiting, en verzandt in de papierwinkel. Wij coördineren met onze gestor, vertalen, regelen afspraken en zorgen dat de juiste documenten op de juiste plek op het juiste moment liggen.",
     includes: [
-      "Zoekprofiel scherpstellen en actief op zoek (eigen netwerk + lokale Spaanse makelaars + nieuwbouwontwikkelaars)",
-      "Bezichtigingen — fysiek door ons, of videocall mét ons erbij",
-      "Bod- en onderhandelingsstrategie",
-      "Juridische check van het contract door een Spaanse advocaat (in onze prijs)",
-      "NIE en CIF (modelo 030 / 036) — geregeld, niet alleen toegelicht",
-      "Bankrekening openen en geld overmaken naar Spanje",
-      "Begeleiding op de dag van de notaris — Nederlandstalige uitleg op locatie",
-      "Sleuteloverdracht, registratie en finale checks",
+      "NIE-aanvraag voorbereiden en begeleiden (Spaanse consul of in Spanje)",
+      "Spaanse bankrekening openen — Nederlandstalige begeleiding bij compliance-vragen",
+      "Modelo 036 / 030 — voor zowel privépersonen als Nederlandse B.V.'s",
+      "Beëdigde vertalingen coördineren (notariële akte, KvK-uittreksel, UBO)",
+      "Apostille-traject begeleiden",
     ],
     forWhom:
-      "Je hebt besloten dat je gaat kopen en je wil dat het ordentelijk gaat — zonder zelf de hele papierwinkel uit te zoeken.",
+      "Je bent al begonnen aan een aankoop en wil de papierwinkel niet zelf uitzoeken — of je hebt net gekocht en wil zorgen dat je administratie kloppend is.",
+  },
+  {
+    id: "off-plan-oversight",
+    badge: "Toezicht · Vanaf vandaag",
+    title: "Off-plan oversight & oplevering",
+    price: "€ 350 per bezoek of € 950 pakket",
+    priceSub: "(pakket = drie bouwbezoeken + opleveringsinspectie)",
+    intro:
+      "Heb je al off-plan gekocht maar zit je in Nederland? Wij zijn jouw ogen op de bouwplaats. Geen verkoper-belang, geen bouwer-belang — gewoon eerlijke rapportage.",
+    includes: [
+      "Bouwbezoek met fotorapport en korte toelichting in het Nederlands",
+      "Aval bancair en deelbetalingen tegenhouden tegen contract",
+      "Opleveringsinspectie (snagging) met checklist van defecten",
+      "Coördinatie van herstel met de bouwer namens jou",
+      "Aanwezigheid bij de oplevering als je niet kunt",
+    ],
+    forWhom:
+      "Je hebt off-plan gekocht bij Metrovacesa, AEDAS, Avanza Urbana, ARQURA of een vergelijkbare ontwikkelaar en je wil onafhankelijk toezicht naast de verkoper.",
   },
   {
     id: "concierge",
-    badge: "Pakket 3 · Na de koop",
-    title: "Concierge",
-    price: "vanaf € 45 / maand",
+    badge: "Concierge · Vanaf vandaag",
+    title: "Concierge — sleutel- en huisbeheer",
+    price: "Vanaf € 45 / maand",
     priceSub: "(10% korting bij jaarlijkse vooruitbetaling)",
     intro:
       "Zorg dat je huis blijft draaien terwijl jij in Nederland zit. Drie niveaus, afhankelijk van hoe gemoedelijk je het wil.",
@@ -64,7 +79,33 @@ const packages = [
   },
 ];
 
+const fromQ3 = {
+  id: "aankoopbegeleiding",
+  badge: "Vanaf zomer 2026",
+  title: "Volledige aankoopbegeleiding",
+  price: "€ 4.950 vast of 1,75%",
+  priceSub: "(min € 4.500, max € 9.500 — je kiest bij aanvang)",
+  intro:
+    "Het hele traject van zoekprofiel tot sleuteloverdracht. Wij doen het werk, jij neemt de beslissingen. Looptijd doorgaans 3–6 maanden.",
+  includes: [
+    "Zoekprofiel scherpstellen en actief op zoek (eigen netwerk + lokale Spaanse makelaars + nieuwbouwontwikkelaars)",
+    "Bezichtigingen — fysiek door ons, of videocall mét ons erbij",
+    "Bod- en onderhandelingsstrategie",
+    "Juridische check van het contract door een Spaanse advocaat (in onze prijs)",
+    "NIE en CIF (modelo 030 / 036) — geregeld, niet alleen toegelicht",
+    "Bankrekening openen en geld overmaken naar Spanje",
+    "Begeleiding op de dag van de notaris — Nederlandstalige uitleg op locatie",
+    "Sleuteloverdracht, registratie en finale checks",
+  ],
+  forWhom:
+    "Je hebt besloten dat je gaat kopen en je wil dat het ordentelijk gaat — zonder zelf de hele papierwinkel uit te zoeken.",
+};
+
 const faqs = [
+  {
+    q: "Waarom is de volledige aankoopbegeleiding pas vanaf zomer 2026?",
+    a: "Wettelijk mogen we pas actief namens een koper zoeken en onderhandelen zodra we ingeschreven staan in het RAICV — het verplichte vastgoedregister van de Comunitat Valenciana sinds oktober 2022. Onze inschrijving (inclusief 200u-opleiding, verzekeringen en caución) loopt en wordt verwacht in Q3 2026. We willen dit liever goed doen dan snel.",
+  },
   {
     q: "Hoe lang duurt een aankoop van begin tot sleutel?",
     a: "Bij bestaande bouw: doorgaans 3 maanden. Bij nieuwbouw / off-plan: 9–18 maanden, afhankelijk van bouwfase. Het traject van NIE / CIF / bankrekening duurt zelf al snel 4–8 weken — dat starten we daarom als eerste, parallel met het zoeken.",
@@ -75,15 +116,11 @@ const faqs = [
   },
   {
     q: "Doen jullie ook fiscale en juridische begeleiding?",
-    a: "We zijn geen advocaten of belastingadviseurs — dat zou ook niet mogen. We werken structureel met een vaste Spaanse advocaat en een gestor; hun werk zit in de prijs van het Begeleidingspakket. Voor specifieke fiscale planning (modelo 720, vermogensbelasting, IRPF) verwijzen we door naar onze gestor.",
+    a: "We zijn geen advocaten of belastingadviseurs — dat zou ook niet mogen. We werken structureel met een vaste Spaanse advocaat en een gestor; hun werk zit in de prijs van de begeleiding. Voor specifieke fiscale planning (modelo 720, vermogensbelasting, IRPF) verwijzen we door naar onze gestor.",
   },
   {
     q: "Hoe weet ik dat jullie écht onafhankelijk zijn?",
-    a: "We krijgen geen commissie, kickback of cadeau van verkopers, ontwikkelaars, bouwers, banken of notarissen. Onze enige opdrachtgever — en geldstroom — ben jij. Dit staat in je opdrachtbevestiging en we tonen onze RAICV-vergunning en verzekeringen prominent op de site zodra deze binnen zijn (Q3 2026).",
-  },
-  {
-    q: "Wat als ik tóch besluit niet te kopen?",
-    a: "Eerlijk: we doen liever geen aankoop dan een verkeerde aankoop. Bij het Begeleidingspakket houden we periodiek 'go/no-go'-momenten. Als je halverwege besluit te stoppen, betaal je voor de tijd die we eraan besteed hebben — niet voor de fictieve aankoop.",
+    a: "We krijgen geen commissie, kickback of cadeau van verkopers, ontwikkelaars, bouwers, banken of notarissen. Onze enige opdrachtgever — en geldstroom — ben jij. Dit staat in je opdrachtbevestiging en we tonen onze RAICV-vergunning en verzekeringen prominent op de site zodra deze binnen zijn.",
   },
 ];
 
@@ -97,20 +134,29 @@ export default function DienstenPage() {
             Diensten
           </p>
           <h1 className="mt-4 font-heading text-4xl leading-[1.1] text-navy md:text-5xl">
-            Drie manieren om je aankoop in Spanje te regelen.
+            Wat we vandaag al voor je doen — en wat erbij komt deze zomer.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
-            Van een vrijblijvend gesprek tot het volledige traject van bezichtiging
-            tot sleuteloverdracht. Vaste prijzen, vooraf afgesproken. Bij elk pakket
-            werken wij voor jou — nooit voor de verkoper.
+            We werken aan onze RAICV-vergunning voor volledige aankoopbegeleiding, en dat
+            duurt nog tot deze zomer. Ondertussen zijn er vier diensten waarmee we al wel
+            kunnen helpen — coaching, papierwinkel, bouwtoezicht en concierge. Allemaal
+            vaste prijs, vooraf afgesproken, en wij werken voor jou.
           </p>
         </div>
       </section>
 
-      {/* Packages */}
+      {/* Available now */}
       <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-border pb-6">
+          <h2 className="font-heading text-2xl text-navy md:text-3xl">
+            Nu beschikbaar
+          </h2>
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
+            Vier diensten
+          </p>
+        </div>
         <div className="grid gap-10">
-          {packages.map((pkg) => (
+          {availableNow.map((pkg) => (
             <article
               key={pkg.id}
               id={pkg.id}
@@ -120,9 +166,7 @@ export default function DienstenPage() {
                 <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
                   {pkg.badge}
                 </p>
-                <h2 className="mt-3 font-heading text-3xl text-navy">
-                  {pkg.title}
-                </h2>
+                <h3 className="mt-3 font-heading text-3xl text-navy">{pkg.title}</h3>
                 <p className="mt-6 font-heading text-2xl text-terracotta">
                   {pkg.price}
                 </p>
@@ -151,8 +195,60 @@ export default function DienstenPage() {
         </div>
       </section>
 
+      {/* From Q3 2026 */}
+      <section className="border-y border-border bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-border pb-6">
+            <h2 className="font-heading text-2xl text-navy md:text-3xl">
+              In voorbereiding · vanaf zomer 2026
+            </h2>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
+              Na RAICV
+            </p>
+          </div>
+          <article
+            id={fromQ3.id}
+            className="grid scroll-mt-24 gap-6 rounded-3xl border border-border bg-card/80 p-8 shadow-sm md:grid-cols-[1fr_2fr] md:gap-12 md:p-12"
+          >
+            <div className="flex flex-col">
+              <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
+                {fromQ3.badge}
+              </p>
+              <h3 className="mt-3 font-heading text-3xl text-navy">{fromQ3.title}</h3>
+              <p className="mt-6 font-heading text-2xl text-terracotta">
+                {fromQ3.price}
+              </p>
+              <p className="text-sm text-muted-foreground">{fromQ3.priceSub}</p>
+              <p className="mt-6 text-sm text-foreground/75">
+                <span className="font-medium text-navy">Voor wie? </span>
+                {fromQ3.forWhom}
+              </p>
+              <p className="mt-6 rounded-xl border border-olive/40 bg-olive/10 p-4 text-sm text-foreground/80">
+                Wil je vooraan staan zodra dit pakket open gaat? Plan nu een
+                vrijblijvend gesprek — dan zetten we je op de lijst en houden we je op
+                de hoogte van onze RAICV-mijlpaal.
+              </p>
+            </div>
+            <div>
+              <p className="text-base text-foreground/85">{fromQ3.intro}</p>
+              <p className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-olive">
+                Wat komt erin
+              </p>
+              <ul className="mt-3 space-y-2">
+                {fromQ3.includes.map((item) => (
+                  <li key={item} className="flex gap-3 text-foreground/85">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
       {/* Off-plan specialism */}
-      <section className="border-y border-border bg-navy text-cream">
+      <section className="border-b border-border bg-navy text-cream">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
@@ -178,11 +274,14 @@ export default function DienstenPage() {
               de scherpe randjes zitten.
             </p>
             <p className="text-cream/70">
-              Off-plan begeleiding zit in het pakket{" "}
-              <Link href="#aankoopbegeleiding" className="underline hover:text-terracotta">
-                Volledige aankoopbegeleiding
+              Heb je al off-plan gekocht? Vraag onze{" "}
+              <Link
+                href="#off-plan-oversight"
+                className="underline hover:text-terracotta"
+              >
+                Off-plan oversight
               </Link>
-              {" "}— geen aparte meerprijs.
+              {" "}— dat kunnen we nu al doen.
             </p>
           </div>
         </div>
@@ -210,7 +309,7 @@ export default function DienstenPage() {
       <section className="border-t border-border bg-secondary/50">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center md:py-20">
           <h2 className="font-heading text-3xl text-navy md:text-4xl">
-            Niet zeker welk pakket past?
+            Niet zeker welke dienst past?
           </h2>
           <p className="mt-4 text-foreground/80">
             Begin met een vrijblijvend gesprek. Dat kost je niets en duurt 30 minuten.

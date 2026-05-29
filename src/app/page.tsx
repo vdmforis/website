@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HeroForm } from "@/components/HeroForm";
 
 export default function Home() {
@@ -40,7 +41,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Soon / proof strip */}
+      {/* Wat we vandaag al doen */}
+      <section className="border-t border-border bg-cream">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+          <div className="mb-10 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+            <h2 className="font-heading text-3xl text-navy md:text-4xl">
+              Wat we vandaag al voor je doen
+            </h2>
+            <Link
+              href="/diensten"
+              className="text-sm text-terracotta hover:underline"
+            >
+              Alle diensten en prijzen →
+            </Link>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Oriëntatie & coaching",
+                body: "Anderhalf uur intake, regiogids op maat, warme intro's naar onze gestor en bank.",
+                price: "€ 495",
+                href: "/diensten#orientatie",
+              },
+              {
+                title: "Papierwinkel",
+                body: "NIE, CIF, bankrekening, modelo 036, vertalingen en apostille — voor privé én B.V.",
+                price: "€ 350–650",
+                href: "/diensten#papierwinkel",
+              },
+              {
+                title: "Off-plan oversight",
+                body: "Bouwbezoeken, fotorapportage, aval-controle en opleveringsinspectie als jij in NL zit.",
+                price: "€ 350 per bezoek",
+                href: "/diensten#off-plan-oversight",
+              },
+              {
+                title: "Concierge",
+                body: "Sleutel, post, alarm, klusjescoördinatie — drie niveaus van licht tot villa-grade.",
+                price: "Vanaf € 45 / mnd",
+                href: "/diensten#concierge",
+              },
+            ].map((s) => (
+              <Link
+                key={s.title}
+                href={s.href}
+                className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-terracotta/60"
+              >
+                <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
+                  {s.price}
+                </p>
+                <h3 className="mt-3 font-heading text-xl text-navy">{s.title}</h3>
+                <p className="mt-2 flex-1 text-sm text-foreground/80">{s.body}</p>
+                <span className="mt-4 text-sm text-terracotta opacity-0 transition-opacity group-hover:opacity-100">
+                  Meer lezen →
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 rounded-2xl border border-olive/30 bg-olive/5 p-5 text-sm text-foreground/85">
+            <span className="font-medium text-navy">Volledige aankoopbegeleiding</span>{" "}
+            (van zoekprofiel tot sleutel) volgt deze zomer, zodra onze RAICV-vergunning
+            binnen is. Vooraan staan?{" "}
+            <Link href="#contact" className="text-terracotta hover:underline">
+              Plan vrijblijvend een gesprek
+            </Link>
+            {" "}— dan zetten we je op de lijst.
+          </div>
+        </div>
+      </section>
+
+      {/* Proof strip */}
       <section className="border-t border-border bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="grid gap-8 md:grid-cols-3">
@@ -55,11 +125,12 @@ export default function Home() {
             </div>
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-                In opbouw
+                Vergund &amp; verzekerd
               </p>
               <p className="mt-2 text-foreground/85">
-                Foris is in oprichting. RAICV-registratie (verplicht voor vastgoed&shy;bemiddeling
-                in de Comunitat Valenciana) loopt — verwachte goedkeuring Q3 2026.
+                RAICV-vergunning in aanvraag, beroepsaansprakelijkheids- en
+                cliëntgeldenverzekering geregeld via onze gestor in Castellón.
+                Transparantie staat hier zodra de papieren binnen zijn.
               </p>
             </div>
             <div>
