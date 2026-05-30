@@ -1,17 +1,37 @@
 /* eslint-disable jsx-a11y/alt-text */
+import fs from "node:fs";
+import path from "node:path";
 import {
   Document,
   Page,
   Text,
   View,
   StyleSheet,
+  Font,
 } from "@react-pdf/renderer";
 
-// Use @react-pdf/renderer's built-in Postscript fonts to keep PDF generation
-// reliable in serverless environments. Built-in families: Helvetica,
-// Times-Roman, Courier — no network fetch needed.
-const HEADING_FONT = "Times-Roman"; // serif for character (vervangt Fraunces)
-const BODY_FONT = "Helvetica"; // clean sans (vervangt Inter)
+// Brand fonts embedded via file system. Public folder is included in the
+// Vercel function bundle, so process.cwd() + 'public/fonts' resolves reliably
+// in serverless context.
+const fontsDir = path.join(process.cwd(), "public", "fonts");
+const frauncesPath = path.join(fontsDir, "Fraunces.ttf");
+const interPath = path.join(fontsDir, "Inter.ttf");
+
+Font.register({
+  family: "Fraunces",
+  src: frauncesPath,
+});
+
+Font.register({
+  family: "Inter",
+  src: interPath,
+});
+
+// Disable hyphenation — gives cleaner Dutch text rendering in the PDF.
+Font.registerHyphenationCallback((word) => [word]);
+
+const HEADING_FONT = "Fraunces";
+const BODY_FONT = "Inter";
 
 // Foris brand palette
 const colors = {
