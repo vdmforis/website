@@ -42,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${BASE}/artikelen/nieuwbouw-of-bestaande-bouw-spanje`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
       url: `${BASE}/gratis-gids`,
       lastModified: now,
       changeFrequency: "monthly",

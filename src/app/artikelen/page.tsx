@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "nieuwbouw-of-bestaande-bouw-spanje",
+    title: "Nieuwbouw of bestaande bouw in Spanje — welke past bij jou?",
+    excerpt:
+      "Eerlijke vergelijking: belastingen (IVA vs ITP), aankoopkosten, garanties, doorlooptijd en verborgen kosten. Plus een vijf-vragen-checklist om je beslissing te helpen.",
+    date: "30 mei 2026",
+    readingTime: "9 min",
+    tag: "Beslissingshulp",
+  },
+  {
     slug: "modelo-036-nederlandse-bv",
     title: "Modelo 036 voor Nederlandse B.V.'s — wat je moet weten in 2026",
     excerpt:
