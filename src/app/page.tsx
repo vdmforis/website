@@ -18,9 +18,9 @@ export default function Home() {
               Een huis kopen in Spanje zonder de typische valkuilen — van NIE tot notaris, in het Nederlands geregeld.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              We wonen in Grau de Castellón, kennen de notarissen, banken en bouwers
-              persoonlijk, en hebben het hele aankooptraject net zelf doorlopen — zowel
-              privé als via onze B.V.
+              We wonen sinds juli 2023 aan deze kust, kennen de notarissen, banken en
+              bouwers persoonlijk, en hebben het hele aankooptraject net zelf doorlopen
+              voor onze eigen off-plan villa.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
@@ -202,8 +202,9 @@ export default function Home() {
                 Eigen ervaring
               </p>
               <p className="mt-2 text-foreground/85">
-                3 jaar wonen in Grau de Castellón. Eigen huis gekocht in 2023, villa via
-                onze B.V. in 2026. We kennen de paperassen van binnenuit.
+                Sinds juli 2023 wonen we aan deze kust — eerst gehuurd in Benicàssim, nu
+                in juni 2026 verhuizen we naar ons eerste eigen huis, een off-plan villa
+                via onze B.V. We kennen de paperassen van binnenuit.
               </p>
             </div>
             <div>

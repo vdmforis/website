@@ -271,7 +271,7 @@ export default function DienstenPage() {
               Vier deelbetalingen, een bouwlicentie, een aval bancair, oplevering, snagging,
               registratie — allemaal kunnen ze fout gaan, en allemaal staan ze keurig in
               een Spaans contract dat je waarschijnlijk niet leest. Wij hebben dit traject
-              net zelf doorlopen met onze eigen villa in Benicàssim en weten precies waar
+              net zelf doorlopen met onze eigen villa in Grau de Castellón en weten precies waar
               de scherpe randjes zitten.
             </p>
             <p className="text-cream/70">

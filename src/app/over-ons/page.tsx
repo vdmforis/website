@@ -61,20 +61,21 @@ export default function OverOnsPage() {
             <p>
               In juli 2023 verhuisden we naar Spanje voor mijn werk. We huurden eerst —
               de bedoeling was om te kijken hoe het zou bevallen, niet meteen definitief.
-              Maar het beviel.
+              We begonnen in Benicàssim, en het beviel meteen.
             </p>
             <p>
-              Na een jaar of twee zetten we onze zinnen op het kopen van een eigen huis.
-              Dat werd een nieuwbouwvilla in Benicàssim. Niet om te verhuren, niet als
-              investering — gewoon: een eigen plek in een land dat thuis was geworden.
+              Na een paar jaar wonen besloten we het echt te maken. We zetten onze zinnen
+              op een eigen huis — niet om te verhuren, niet als investering, gewoon: een
+              eigen plek in een land dat thuis was geworden. Het werd een nieuwbouwvilla
+              in Grau de Castellón, off-plan gekocht via een nieuwe B.V. die we daarvoor
+              speciaal oprichtten: <span className="text-navy">Van der Meulen Foris B.V.</span>
             </p>
             <p>
-              We kochten via een nieuwe B.V. die we daarvoor speciaal oprichtten —{" "}
-              <span className="text-navy">Van der Meulen Foris B.V.</span> — en doorliepen
-              precies dat traject waar de meeste Nederlanders zo tegenop zien. Notariële
-              volmacht in Nederland, beëdigde vertaling, apostille, een Spaanse CIF
-              aanvragen via modelo 036, een aval bancair tracken volgens Ley 20/2015,
-              vier deelbetalingen verdeeld over twee landen.
+              We doorliepen precies dat traject waar de meeste Nederlanders zo tegenop
+              zien. Notariële volmacht in Nederland, beëdigde vertaling, apostille, een
+              Spaanse CIF aanvragen via modelo 036, een aval bancair tracken volgens Ley
+              20/2015, vier deelbetalingen verdeeld over twee landen. In juni 2026 trekken
+              we erin.
             </p>
             <p>
               Het lukte. Maar het was — eerlijk — complex. Zelfs voor iemand die met

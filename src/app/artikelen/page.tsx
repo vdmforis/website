@@ -41,8 +41,8 @@ export default function ArtikelenPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
             Geen marketingverhalen, geen oppervlakkige &quot;tips voor een huis in
-            Spanje&quot;. Echte eerstehandgidsen op basis van twee eigen aankopen aan
-            de Costa del Azahar.
+            Spanje&quot;. Echte eerstehandgidsen op basis van drie jaar wonen aan de
+            Costa del Azahar en onze eigen off-plan aankoop.
           </p>
         </div>
       </section>
