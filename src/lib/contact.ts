@@ -8,13 +8,15 @@ export const contact = {
   /**
    * Phone number in international format (no spaces, no plus).
    * Used for both tel: and WhatsApp wa.me links.
-   * TODO: Dennis — vervang door het echte WhatsApp Business-nummer zodra binnen.
+   * NB: Dennis is bezig met WhatsApp Business onboarding op dit nummer —
+   * wa.me/<nummer> blijft werken en routet automatisch naar het Business
+   * account zodra de overgang klaar is.
    */
-  whatsappNumber: "34600000000",
+  whatsappNumber: "31614967704",
   /**
    * Human-readable phone number for display.
    */
-  phoneDisplay: "+34 600 00 00 00",
+  phoneDisplay: "+31 6 14 96 77 04",
   /**
    * Prefilled WhatsApp message — already URL-encoded.
    */
