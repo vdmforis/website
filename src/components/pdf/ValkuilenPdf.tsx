@@ -5,41 +5,13 @@ import {
   Text,
   View,
   StyleSheet,
-  Font,
 } from "@react-pdf/renderer";
 
-// Register brand fonts from Google Fonts (downloaded once per cold start)
-Font.register({
-  family: "Fraunces",
-  fonts: [
-    {
-      src: "https://fonts.gstatic.com/s/fraunces/v37/6NUu8FuMKwSOwfeb0xY55Bxlx9MMyz8gqyOPlw-XbA.ttf",
-      fontWeight: 400,
-    },
-    {
-      src: "https://fonts.gstatic.com/s/fraunces/v37/6NUu8FuMKwSOwfeb0xY55Bxlx9MMyz8gqyOPlw-XbA.ttf",
-      fontWeight: 500,
-    },
-    {
-      src: "https://fonts.gstatic.com/s/fraunces/v37/6NUu8FuMKwSOwfeb0xY55Bxlx9MMyz8gqyOPlw-XbA.ttf",
-      fontWeight: 600,
-    },
-  ],
-});
-
-Font.register({
-  family: "Inter",
-  fonts: [
-    {
-      src: "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50ojvNvw.ttf",
-      fontWeight: 400,
-    },
-    {
-      src: "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50ojvNvw.ttf",
-      fontWeight: 500,
-    },
-  ],
-});
+// Use @react-pdf/renderer's built-in Postscript fonts to keep PDF generation
+// reliable in serverless environments. Built-in families: Helvetica,
+// Times-Roman, Courier — no network fetch needed.
+const HEADING_FONT = "Times-Roman"; // serif for character (vervangt Fraunces)
+const BODY_FONT = "Helvetica"; // clean sans (vervangt Inter)
 
 // Foris brand palette
 const colors = {
@@ -54,7 +26,7 @@ const colors = {
 
 const s = StyleSheet.create({
   page: {
-    fontFamily: "Inter",
+    fontFamily: BODY_FONT,
     fontSize: 11,
     lineHeight: 1.55,
     color: colors.text,
@@ -63,7 +35,7 @@ const s = StyleSheet.create({
   },
   // Cover page
   cover: {
-    fontFamily: "Inter",
+    fontFamily: BODY_FONT,
     backgroundColor: colors.cream,
     padding: 56,
     height: "100%",
@@ -88,19 +60,19 @@ const s = StyleSheet.create({
     backgroundColor: colors.terracotta,
     color: colors.cream,
     fontSize: 22,
-    fontFamily: "Fraunces",
+    fontFamily: HEADING_FONT,
     textAlign: "center",
     paddingTop: 4,
     borderRadius: 6,
   },
   brandName: {
-    fontFamily: "Fraunces",
+    fontFamily: HEADING_FONT,
     fontSize: 24,
     color: colors.navy,
     marginLeft: 12,
   },
   coverTitle: {
-    fontFamily: "Fraunces",
+    fontFamily: HEADING_FONT,
     fontSize: 40,
     color: colors.navy,
     lineHeight: 1.1,
@@ -117,7 +89,7 @@ const s = StyleSheet.create({
     justifyContent: "space-between",
     fontSize: 9,
     color: colors.olive,
-    fontFamily: "Inter",
+    fontFamily: BODY_FONT,
     textTransform: "uppercase",
     letterSpacing: 1.4,
   },
@@ -146,14 +118,14 @@ const s = StyleSheet.create({
     color: colors.textMuted,
   },
   h1: {
-    fontFamily: "Fraunces",
+    fontFamily: HEADING_FONT,
     fontSize: 28,
     color: colors.navy,
     marginBottom: 16,
     lineHeight: 1.15,
   },
   h2Label: {
-    fontFamily: "Inter",
+    fontFamily: BODY_FONT,
     fontSize: 10,
     color: colors.terracotta,
     textTransform: "uppercase",
@@ -161,14 +133,14 @@ const s = StyleSheet.create({
     marginBottom: 8,
   },
   h2: {
-    fontFamily: "Fraunces",
+    fontFamily: HEADING_FONT,
     fontSize: 22,
     color: colors.navy,
     marginBottom: 16,
     lineHeight: 1.2,
   },
   h3: {
-    fontFamily: "Fraunces",
+    fontFamily: HEADING_FONT,
     fontSize: 14,
     color: colors.navy,
     marginTop: 16,
@@ -211,7 +183,7 @@ const s = StyleSheet.create({
     borderRadius: 8,
   },
   ctaTitle: {
-    fontFamily: "Fraunces",
+    fontFamily: HEADING_FONT,
     fontSize: 18,
     color: colors.cream,
     marginBottom: 8,
@@ -471,7 +443,7 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
 
         <View style={s.highlight}>
           <Text style={s.p}>
-            <Text style={{ fontFamily: "Inter", fontWeight: 500 }}>Tip:</Text>{" "}
+            <Text style={{ fontFamily: BODY_FONT, fontWeight: 500 }}>Tip:</Text>{" "}
             print deze gids of bewaar 'm in je &quot;Spanje-koop&quot;-map. Tijdens
             het traject is het handig om hem af en toe terug te kunnen lezen.
           </Text>
