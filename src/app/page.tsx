@@ -106,19 +106,19 @@ export default function Home() {
               </span>
             </a>
             <Link
-              href="/artikelen/modelo-036-nederlandse-bv"
+              href="/gratis-gids"
               className="group flex flex-col rounded-2xl border border-cream/15 bg-cream/5 p-6 transition-colors hover:border-terracotta hover:bg-cream/10"
             >
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-                8 min lezen · gratis
+                PDF · 24 pagina&apos;s · gratis
               </p>
-              <h3 className="mt-3 font-heading text-xl">Lees onze gids</h3>
+              <h3 className="mt-3 font-heading text-xl">Download onze gids</h3>
               <p className="mt-2 flex-1 text-sm text-cream/80">
-                Modelo 036 voor Nederlandse B.V.&apos;s — eerstehandgids met
-                documentenlijst, kosten, doorlooptijd en de zes valkuilen.
+                De 9 valkuilen bij een huis kopen in Spanje als Nederlander —
+                eerstehandse ervaring, geen marketingverhaal.
               </p>
               <span className="mt-4 text-sm text-terracotta">
-                Lees het artikel →
+                Stuur me de gids →
               </span>
             </Link>
           </div>
@@ -173,7 +173,7 @@ export default function Home() {
               <Link
                 key={s.title}
                 href={s.href}
-                className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-terracotta/60"
+                className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-terracotta/60 hover:shadow-sm"
               >
                 <div className="flex items-center justify-between">
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-cream">
@@ -185,20 +185,13 @@ export default function Home() {
                 </div>
                 <h3 className="mt-4 font-heading text-xl text-navy">{s.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-foreground/80">{s.body}</p>
-                <span className="mt-4 text-sm text-terracotta opacity-0 transition-opacity group-hover:opacity-100">
-                  Meer lezen →
-                </span>
               </Link>
             ))}
           </div>
-          <div className="mt-10 rounded-2xl border border-olive/30 bg-olive/5 p-5 text-sm text-foreground/85">
+          <div className="mt-8 text-sm text-foreground/70">
             <span className="font-medium text-navy">Volledige aankoopbegeleiding</span>{" "}
-            (van zoekprofiel tot sleutel) volgt deze zomer, zodra onze RAICV-vergunning
-            binnen is. Vooraan staan?{" "}
-            <BookCallButton className="text-terracotta hover:underline">
-              Plan vrijblijvend een gesprek
-            </BookCallButton>
-            {" "}— dan zetten we je op de lijst.
+            (van zoekprofiel tot sleutel) volgt zomer 2026 — zodra onze RAICV-vergunning
+            binnen is.
           </div>
         </div>
       </section>

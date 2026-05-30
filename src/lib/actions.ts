@@ -52,8 +52,9 @@ export async function submitContact(
 
   try {
     const resend = new Resend(apiKey);
-    const subject = `Nieuwe aanvraag van ${parsed.data.name}`;
-    const lines = [
+
+    // 1) Notify owner of the new lead
+    const ownerLines = [
       `Naam: ${parsed.data.name}`,
       `E-mail: ${parsed.data.email}`,
       "",
@@ -65,8 +66,32 @@ export async function submitContact(
       from,
       to,
       replyTo: parsed.data.email,
-      subject,
-      text: lines.join("\n"),
+      subject: `Nieuwe aanvraag van ${parsed.data.name}`,
+      text: ownerLines.join("\n"),
+    });
+
+    // 2) Autoresponder to the requester — sets expectations + gives next steps
+    const autoLines = [
+      `Hoi ${parsed.data.name},`,
+      "",
+      "Bedankt voor je bericht. Het is bij ons binnengekomen en ik reageer normaal gesproken binnen één werkdag.",
+      "",
+      "Geen tijd om te wachten of een snelle vraag? Twee directe lijntjes:",
+      "",
+      "  • WhatsApp: +31 6 14 96 77 04",
+      "  • Plan een kennismaking (gratis, 30 min): https://cal.eu/team/vdmforis/intake",
+      "",
+      "Tot snel,",
+      "Dennis",
+      "",
+      "Van der Meulen Foris B.V. — vdmforis.com",
+    ];
+    await resend.emails.send({
+      from,
+      to: parsed.data.email,
+      replyTo: to,
+      subject: "We hebben je bericht ontvangen — Foris",
+      text: autoLines.join("\n"),
     });
   } catch (err) {
     console.error("[contact] Resend send failed", err);
