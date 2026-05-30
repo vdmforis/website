@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { whatsappLink } from "@/lib/contact";
 import { BookCallButton } from "@/components/BookCallButton";
@@ -13,7 +14,16 @@ export default function OverOnsPage() {
   return (
     <main className="flex-1">
       {/* Hero */}
-      <section className="border-b border-border bg-gradient-to-br from-cream via-cream to-secondary/60">
+      <section className="relative border-b border-border overflow-hidden">
+        <Image
+          src="/images/IMG_4402.jpg"
+          alt="Strand bij dageraad aan de Costa del Azahar — Grau de Castellón"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/40" />
         <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
             Over ons
@@ -54,6 +64,15 @@ export default function OverOnsPage() {
       {/* Hoe Spanje thuis werd */}
       <section className="border-y border-border bg-secondary/40">
         <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
+          <div className="relative mb-10 aspect-[3/2] overflow-hidden rounded-2xl">
+            <Image
+              src="/images/IMG_7278.jpg"
+              alt="Dennenbospad aan de Spaanse kust — Sierra de Irta-natuurgebied"
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+            />
+          </div>
           <h2 className="font-heading text-3xl text-navy md:text-4xl">
             Hoe Spanje thuis werd
           </h2>

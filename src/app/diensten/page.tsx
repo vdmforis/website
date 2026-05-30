@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BookCallButton } from "@/components/BookCallButton";
 
@@ -266,8 +267,16 @@ export default function DienstenPage() {
       </section>
 
       {/* Nieuwbouw specialism */}
-      <section className="border-b border-border bg-navy text-cream">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24">
+      <section className="relative border-b border-border overflow-hidden">
+        <Image
+          src="/images/IMG_9688.jpg"
+          alt="Mediterrane woonstraat met zee-uitzicht aan de Costa del Azahar"
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-navy/85" />
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24 text-cream">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
               Speerpunt

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -48,7 +49,16 @@ export default function ArtikelenPage() {
   return (
     <main className="flex-1">
       {/* Hero */}
-      <section className="border-b border-border bg-gradient-to-br from-cream via-cream to-secondary/60">
+      <section className="relative border-b border-border overflow-hidden">
+        <Image
+          src="/images/IMG_3633.jpg"
+          alt="Landschap aan de Costa del Azahar bij dageraad — bergen achter Castellón"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cream/95 via-cream/85 to-cream/40" />
         <div className="mx-auto max-w-4xl px-6 py-20 md:py-24">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
             Artikelen

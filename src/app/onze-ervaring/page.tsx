@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BookCallButton } from "@/components/BookCallButton";
 
@@ -68,7 +69,16 @@ export default function OnzeErvaringPage() {
   return (
     <main className="flex-1">
       {/* Hero */}
-      <section className="border-b border-border bg-gradient-to-br from-cream via-cream to-secondary/60">
+      <section className="relative border-b border-border overflow-hidden">
+        <Image
+          src="/images/IMG_2980.jpg"
+          alt="Zee-horizon met maan bij dageraad aan de Costa del Azahar"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cream/95 via-cream/85 to-cream/40" />
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
             Onze ervaring · Costa del Azahar
@@ -138,6 +148,15 @@ export default function OnzeErvaringPage() {
       {/* Villa specs */}
       <section className="border-y border-border bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-12">
+          <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-3xl md:aspect-[21/9]">
+            <Image
+              src="/images/IMG_3657.jpg"
+              alt="Nieuwbouw chalet adosado in Grau de Castellón — Metrovacesa Villas del Mar"
+              fill
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover"
+            />
+          </div>
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
             De villa in cijfers
           </p>

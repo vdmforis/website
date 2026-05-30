@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BookCallButton } from "@/components/BookCallButton";
 
@@ -57,7 +58,16 @@ export default function NieuwbouwBestaandeBouwArticle() {
       />
 
       {/* Article header */}
-      <header className="border-b border-border bg-gradient-to-br from-cream via-cream to-secondary/40">
+      <header className="relative border-b border-border overflow-hidden">
+        <Image
+          src="/images/IMG_5111.jpg"
+          alt="Uitzicht vanaf een Spaans terras op de palmenboulevard en de Middellandse Zee"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cream/95 via-cream/85 to-cream/40" />
         <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
           <Link
             href="/artikelen"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Compass, FileText, HardHat, KeyRound } from "lucide-react";
 import { HeroForm } from "@/components/HeroForm";
@@ -9,7 +10,15 @@ export default function Home() {
     <main className="flex-1">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-cream via-cream to-secondary" />
+        <Image
+          src="/images/IMG_5740.jpg"
+          alt="Zonsondergang op de boulevard aan de Costa del Azahar"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cream/95 via-cream/85 to-cream/40" />
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:py-32">
           <div className="flex flex-col justify-center">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
