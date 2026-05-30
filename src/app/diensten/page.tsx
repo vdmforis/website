@@ -5,7 +5,7 @@ import { BookCallButton } from "@/components/BookCallButton";
 export const metadata: Metadata = {
   title: "Diensten",
   description:
-    "Vier diensten die we vandaag al leveren: oriëntatie & coaching, papierwinkel (NIE/CIF/bank), off-plan oversight en concierge. Volledige aankoopbegeleiding volgt zomer 2026 zodra onze RAICV-vergunning binnen is.",
+    "Vier diensten die we vandaag al leveren: oriëntatie & coaching, papierwinkel (NIE/CIF/bank), nieuwbouwtoezicht en concierge. Volledige aankoopbegeleiding volgt zomer 2026 zodra onze RAICV-vergunning binnen is.",
 };
 
 const availableNow = [
@@ -45,13 +45,13 @@ const availableNow = [
       "Je bent al begonnen aan een aankoop en wil de papierwinkel niet zelf uitzoeken — of je hebt net gekocht en wil zorgen dat je administratie kloppend is.",
   },
   {
-    id: "off-plan-oversight",
+    id: "nieuwbouwtoezicht",
     badge: "Toezicht · Vanaf vandaag",
-    title: "Off-plan oversight & oplevering",
+    title: "Nieuwbouwtoezicht & oplevering",
     price: "€ 350 per bezoek of € 950 pakket",
     priceSub: "(pakket = drie bouwbezoeken + opleveringsinspectie)",
     intro:
-      "Heb je al off-plan gekocht maar zit je in Nederland? Wij zijn jouw ogen op de bouwplaats. Geen verkoper-belang, geen bouwer-belang — gewoon eerlijke rapportage.",
+      "Heb je nieuwbouw gekocht maar zit je in Nederland? Wij zijn jouw ogen op de bouwplaats. Geen verkoper-belang, geen bouwer-belang — gewoon eerlijke rapportage.",
     includes: [
       "Bouwbezoek met fotorapport en korte toelichting in het Nederlands",
       "Aval bancair en deelbetalingen tegenhouden tegen contract",
@@ -60,7 +60,7 @@ const availableNow = [
       "Aanwezigheid bij de oplevering als je niet kunt",
     ],
     forWhom:
-      "Je hebt off-plan gekocht bij Metrovacesa, AEDAS, Avanza Urbana, ARQURA of een vergelijkbare ontwikkelaar en je wil onafhankelijk toezicht naast de verkoper.",
+      "Je hebt nieuwbouw gekocht bij Metrovacesa, AEDAS, Avanza Urbana, ARQURA of een vergelijkbare ontwikkelaar en je wil onafhankelijk toezicht naast de verkoper.",
   },
   {
     id: "concierge",
@@ -109,7 +109,7 @@ const faqs = [
   },
   {
     q: "Hoe lang duurt een aankoop van begin tot sleutel?",
-    a: "Bij bestaande bouw: doorgaans 3 maanden. Bij nieuwbouw / off-plan: 9–18 maanden, afhankelijk van bouwfase. Het traject van NIE / CIF / bankrekening duurt zelf al snel 4–8 weken — dat starten we daarom als eerste, parallel met het zoeken.",
+    a: "Bij bestaande bouw: doorgaans 3 maanden. Bij nieuwbouw (off-plan): 9–18 maanden, afhankelijk van bouwfase. Het traject van NIE / CIF / bankrekening duurt zelf al snel 4–8 weken — dat starten we daarom als eerste, parallel met het zoeken.",
   },
   {
     q: "Werken jullie ook buiten de Costa del Azahar?",
@@ -265,7 +265,7 @@ export default function DienstenPage() {
         </div>
       </section>
 
-      {/* Off-plan specialism */}
+      {/* Nieuwbouw specialism */}
       <section className="border-b border-border bg-navy text-cream">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24">
           <div>
@@ -273,15 +273,18 @@ export default function DienstenPage() {
               Speerpunt
             </p>
             <h2 className="mt-4 font-heading text-3xl md:text-4xl">
-              Off-plan nieuwbouw aan de Costa del Azahar
+              Nieuwbouw aan de Costa del Azahar
             </h2>
+            <p className="mt-3 text-xs text-cream/60">
+              Internationaal vaak <em>off-plan</em> genoemd: kopen vóór oplevering.
+            </p>
           </div>
           <div className="space-y-4 text-cream/85">
             <p>
               Tussen Vinaròs en Burriana wordt op dit moment massief gebouwd. Metrovacesa,
               AEDAS, Avanza Urbana en ARQURA hebben in 2025 alleen al meer dan 1.250
               nieuwe woningen in de pijplijn gezet — een groei van bijna 26% in één jaar.
-              Mooi voor de keuze, maar off-plan kopen heeft eigen risico&apos;s die de meeste
+              Mooi voor de keuze, maar nieuwbouw kopen heeft eigen risico&apos;s die de meeste
               kopers onderschatten.
             </p>
             <p>
@@ -292,12 +295,12 @@ export default function DienstenPage() {
               de scherpe randjes zitten.
             </p>
             <p className="text-cream/70">
-              Heb je al off-plan gekocht? Vraag onze{" "}
+              Heb je al nieuwbouw gekocht? Vraag ons{" "}
               <Link
-                href="#off-plan-oversight"
+                href="#nieuwbouwtoezicht"
                 className="underline hover:text-terracotta"
               >
-                Off-plan oversight
+                Nieuwbouwtoezicht
               </Link>
               {" "}— dat kunnen we nu al doen.
             </p>

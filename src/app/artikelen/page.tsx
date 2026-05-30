@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Artikelen",
   description:
-    "Nederlandstalige eerstehandgidsen voor de Spaanse vastgoedwereld: NIE, modelo 036, off-plan kopen, plusvalía, vivienda turística — alles wat we onderweg leerden en waar we nog over schrijven.",
+    "Nederlandstalige eerstehandgidsen voor de Spaanse vastgoedwereld: NIE, modelo 036, nieuwbouw kopen, plusvalía, vivienda turística — alles wat we onderweg leerden en waar we nog over schrijven.",
 };
 
 const articles = [
@@ -21,7 +21,7 @@ const articles = [
 
 const upcoming = [
   "NIE aanvragen in Spanje — stappenplan 2026",
-  "Off-plan kopen in Spanje — zeven valkuilen die wij zelf tegenkwamen",
+  "Nieuwbouw kopen in Spanje (off-plan) — zeven valkuilen die wij zelf tegenkwamen",
   "Aval bancair bij nieuwbouw — Ley 20/2015 in mensentaal",
   "Costa del Azahar vs. Costa Blanca — welke past bij jou?",
   "Vivienda turística aanvragen in de Comunitat Valenciana",
@@ -42,7 +42,7 @@ export default function ArtikelenPage() {
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
             Geen marketingverhalen, geen oppervlakkige &quot;tips voor een huis in
             Spanje&quot;. Echte eerstehandgidsen op basis van drie jaar wonen aan de
-            Costa del Azahar en onze eigen off-plan aankoop.
+            Costa del Azahar en onze eigen nieuwbouwaankoop.
           </p>
         </div>
       </section>

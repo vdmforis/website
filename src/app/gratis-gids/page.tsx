@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const points = [
   "De juiste volgorde voor NIE, modelo 036 en bankrekening",
-  "Hoe je een aval bancair écht moet controleren bij off-plan",
+  "Hoe je een aval bancair écht moet controleren bij nieuwbouw",
   "Welke documenten beëdigd vertaald moeten worden (en welke niet)",
   "Wat je gestor en advocaat moeten doen — en wanneer",
   "Realistische lopende lasten: IBI, plusvalía, comunidad, modelo 720",

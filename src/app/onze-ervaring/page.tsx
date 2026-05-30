@@ -5,7 +5,7 @@ import { BookCallButton } from "@/components/BookCallButton";
 export const metadata: Metadata = {
   title: "Onze ervaring",
   description:
-    "Sinds juli 2023 wonen we aan de Costa del Azahar. Eerst gehuurd in Benicàssim, en in juni 2026 trekken we in ons eerste eigen huis — een off-plan nieuwbouwvilla in Grau de Castellón. Dit is hoe dat traject ging.",
+    "Sinds juli 2023 wonen we aan de Costa del Azahar. Eerst gehuurd in Benicàssim, en in juni 2026 trekken we in ons eerste eigen huis — een nieuwbouwvilla in Grau de Castellón, off-plan gekocht. Dit is hoe dat traject ging.",
 };
 
 const timeline = [
@@ -59,7 +59,7 @@ const lessons = [
     body: "Notariële volmacht in Nederland, beëdigde vertaling, apostille, modelo 036 met buitenlandse CIF — een stack die je gestor wél moet kennen. Niet elke gestor doet dit dagelijks.",
   },
   {
-    title: "Off-plan is geen impulsaankoop",
+    title: "Nieuwbouw kopen is geen impulsaankoop",
     body: "Tussen de eerste storting en de sleutel zitten in ons geval ruim een jaar. Reken op het meest pessimistische scenario voor je liquiditeit — niet op de planning van de bouwer.",
   },
 ];
@@ -74,12 +74,12 @@ export default function OnzeErvaringPage() {
             Onze ervaring · Costa del Azahar
           </p>
           <h1 className="mt-4 max-w-3xl font-heading text-4xl leading-[1.1] text-navy md:text-5xl">
-            Drie jaar Spanje, één off-plan aankoop — dit is wat we onderweg leerden.
+            Drie jaar Spanje, één nieuwbouwaankoop — dit is wat we onderweg leerden.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
             We verhuisden in juli 2023 naar Spanje en huurden de eerste tijd in
             Benicàssim. In juni 2026 trekken we in ons eerste eigen huis — een
-            off-plan nieuwbouwvilla in Grau de Castellón, gekocht via onze B.V. Vier
+            nieuwbouwvilla in Grau de Castellón, off-plan gekocht via onze B.V. Vier
             deelbetalingen, een aval bancair, een notariële volmacht in Nederland,
             modelo 036 — we doorliepen precies wat een Nederlander die hier wil kopen
             ook zal doorlopen.
@@ -120,7 +120,7 @@ export default function OnzeErvaringPage() {
             </h2>
             <p className="mt-4 text-foreground/85">
               Spanje was thuis geworden, dus we besloten te kopen. Het werd een chalet
-              adosado in de promotie Villas del Mar van Metrovacesa, off-plan, in Grau
+              adosado in de promotie Villas del Mar van Metrovacesa — nieuwbouw, in Grau
               de Castellón. We dachten met onze Nederlandse vastgoedachtergrond én drie
               jaar Spanje op zak: dit gaat soepel.
             </p>
@@ -167,7 +167,7 @@ export default function OnzeErvaringPage() {
       <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-4xl px-6 py-16 md:py-24">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-            Hoe een off-plan traject eruit ziet
+            Hoe een nieuwbouwtraject (off-plan) eruit ziet
           </p>
           <h2 className="mt-3 font-heading text-3xl text-navy md:text-4xl">
             Zes mijlpalen tussen "ja, ik wil" en de sleuteloverdracht

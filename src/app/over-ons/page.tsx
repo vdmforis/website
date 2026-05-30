@@ -67,7 +67,7 @@ export default function OverOnsPage() {
               Na een paar jaar wonen besloten we het echt te maken. We zetten onze zinnen
               op een eigen huis — niet om te verhuren, niet als investering, gewoon: een
               eigen plek in een land dat thuis was geworden. Het werd een nieuwbouwvilla
-              in Grau de Castellón, off-plan gekocht via een nieuwe B.V. die we daarvoor
+              in Grau de Castellón, off-plan (nog tijdens de bouw) gekocht via een nieuwe B.V. die we daarvoor
               speciaal oprichtten: <span className="text-navy">Van der Meulen Foris B.V.</span>
             </p>
             <p>

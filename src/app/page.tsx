@@ -21,7 +21,7 @@ export default function Home() {
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
               We wonen sinds juli 2023 aan deze kust, kennen de notarissen, banken en
               bouwers persoonlijk, en hebben het hele aankooptraject net zelf doorlopen
-              voor onze eigen off-plan villa.
+              voor onze eigen nieuwbouwvilla.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
@@ -156,10 +156,10 @@ export default function Home() {
                 Icon: FileText,
               },
               {
-                title: "Off-plan oversight",
+                title: "Nieuwbouwtoezicht",
                 body: "Bouwbezoeken, fotorapportage, aval-controle en opleveringsinspectie als jij in NL zit.",
                 price: "€ 350 per bezoek",
-                href: "/diensten#off-plan-oversight",
+                href: "/diensten#nieuwbouwtoezicht",
                 Icon: HardHat,
               },
               {
@@ -206,7 +206,7 @@ export default function Home() {
               </p>
               <p className="mt-2 text-foreground/85">
                 Sinds juli 2023 wonen we aan deze kust — eerst gehuurd in Benicàssim, nu
-                in juni 2026 verhuizen we naar ons eerste eigen huis, een off-plan villa
+                in juni 2026 verhuizen we naar ons eerste eigen huis, een nieuwbouwvilla
                 via onze B.V. We kennen de paperassen van binnenuit.
               </p>
             </div>
@@ -225,8 +225,9 @@ export default function Home() {
                 Specialisatie
               </p>
               <p className="mt-2 text-foreground/85">
-                Off-plan nieuwbouw aan de kuststrook tussen Vinaròs en Burriana — een
-                groeisegment waar nog weinig Nederlandse begeleiding voor beschikbaar is.
+                Nieuwbouw (ook wel off-plan genoemd) aan de kuststrook tussen Vinaròs en
+                Burriana — een groeisegment waar nog weinig Nederlandse begeleiding voor
+                beschikbaar is.
               </p>
             </div>
           </div>

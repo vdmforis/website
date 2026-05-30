@@ -264,9 +264,9 @@ const valkuilen: Omit<ValkuilSectionProps, "number">[] = [
       "Start het Modelo 036-traject minstens 8 weken voordat je een betaling vanuit je B.V. naar Spanje wil doen. Begin met de notariële volmacht in Nederland — die regelt zichzelf niet. Werk parallel: vertalingen en apostille terwijl je wacht op de notaris.",
   },
   {
-    title: "Het aval bancair niet controleren bij off-plan",
+    title: "Het aval bancair niet controleren bij nieuwbouw",
     problem:
-      "Bij off-plan kopen betaal je in tranches — vaak 20% verspreid over de bouwperiode, met de slot van 80% bij oplevering. Als de ontwikkelaar in die periode failliet gaat, raak je je geld kwijt, tenzij je betalingen zijn gedekt door een aval bancair.",
+      "Bij nieuwbouw (off-plan) kopen betaal je in tranches — vaak 20% verspreid over de bouwperiode, met de slot van 80% bij oplevering. Als de ontwikkelaar in die periode failliet gaat, raak je je geld kwijt, tenzij je betalingen zijn gedekt door een aval bancair.",
     origin:
       "Een aval bancair is een bankgarantie die bouwers verplicht moeten regelen onder Ley 20/2015. Klinkt waterdicht — maar niet elke aval dekt automatisch alle deelbetalingen plus IVA plus wettelijke rente. Sommige dekken alleen de hoofdsom. Sommige worden pas afgegeven ná de eerste storting.",
     action: "AVAL_CHECKLIST",
