@@ -44,6 +44,74 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "RealEstateAgent", "ProfessionalService"],
+  name: "Van der Meulen Foris B.V.",
+  alternateName: "Foris",
+  url: "https://vdmforis.com",
+  logo: "https://vdmforis.com/icon",
+  image: "https://vdmforis.com/opengraph-image",
+  description:
+    "Nederlandstalige aankoopbegeleiding aan de Costa del Azahar. Onafhankelijk, vaste prijs, ter plaatse — voor Nederlanders die een huis kopen in Castellón en omgeving.",
+  foundingDate: "2025-09-04",
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Van der Meulen Beheer B.V.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Toldijk 27",
+      postalCode: "7901 TA",
+      addressLocality: "Hoogeveen",
+      addressCountry: "NL",
+    },
+  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      addressLocality: "Grau de Castellón",
+      addressRegion: "Comunitat Valenciana",
+      addressCountry: "ES",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Toldijk 27",
+      postalCode: "7901 TA",
+      addressLocality: "Hoogeveen",
+      addressCountry: "NL",
+    },
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: "info@vdmforis.com",
+      telephone: "+31-6-14967704",
+      availableLanguage: ["nl", "es", "en"],
+      areaServed: "ES",
+    },
+  ],
+  areaServed: [
+    {
+      "@type": "AdministrativeArea",
+      name: "Castellón",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Comunitat Valenciana",
+    },
+  ],
+  identifier: [
+    {
+      "@type": "PropertyValue",
+      propertyID: "KvK",
+      value: "98214950",
+    },
+  ],
+  knowsLanguage: ["nl", "es", "en"],
+  sameAs: [],
+} as const;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,6 +123,10 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <CalInit />
         <SiteHeader />
         {children}

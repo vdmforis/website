@@ -55,12 +55,20 @@ export function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 flex flex-col gap-2 border-t border-cream/15 pt-6 text-xs text-cream/60 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-cream/15 pt-6 text-xs text-cream/60 md:flex-row md:items-center md:justify-between">
           <p>
             Van der Meulen Foris B.V. · KvK 98214950 · Toldijk 27, 7901 TA
             Hoogeveen
           </p>
-          <p>© {new Date().getFullYear()} Foris. Site in opbouw.</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link href="/privacy" className="hover:text-terracotta">
+              Privacy
+            </Link>
+            <Link href="/cookies" className="hover:text-terracotta">
+              Cookies
+            </Link>
+            <span>© {new Date().getFullYear()} Foris</span>
+          </div>
         </div>
       </div>
     </footer>

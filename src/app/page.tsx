@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Compass, FileText, HardHat, KeyRound } from "lucide-react";
 import { HeroForm } from "@/components/HeroForm";
 import { BookCallButton } from "@/components/BookCallButton";
 import { whatsappLink } from "@/lib/contact";
@@ -145,35 +146,44 @@ export default function Home() {
                 body: "Anderhalf uur intake, regiogids op maat, warme intro's naar onze gestor en bank.",
                 price: "€ 495",
                 href: "/diensten#orientatie",
+                Icon: Compass,
               },
               {
                 title: "Papierwinkel",
                 body: "NIE, CIF, bankrekening, modelo 036, vertalingen en apostille — voor privé én B.V.",
                 price: "€ 350–650",
                 href: "/diensten#papierwinkel",
+                Icon: FileText,
               },
               {
                 title: "Off-plan oversight",
                 body: "Bouwbezoeken, fotorapportage, aval-controle en opleveringsinspectie als jij in NL zit.",
                 price: "€ 350 per bezoek",
                 href: "/diensten#off-plan-oversight",
+                Icon: HardHat,
               },
               {
                 title: "Concierge",
                 body: "Sleutel, post, alarm, klusjescoördinatie — drie niveaus van licht tot villa-grade.",
                 price: "Vanaf € 45 / mnd",
                 href: "/diensten#concierge",
+                Icon: KeyRound,
               },
-            ].map((s) => (
+            ].map(({ Icon, ...s }) => (
               <Link
                 key={s.title}
                 href={s.href}
                 className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-terracotta/60"
               >
-                <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-                  {s.price}
-                </p>
-                <h3 className="mt-3 font-heading text-xl text-navy">{s.title}</h3>
+                <div className="flex items-center justify-between">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-cream">
+                    <Icon size={20} strokeWidth={1.75} aria-hidden />
+                  </span>
+                  <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
+                    {s.price}
+                  </p>
+                </div>
+                <h3 className="mt-4 font-heading text-xl text-navy">{s.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-foreground/80">{s.body}</p>
                 <span className="mt-4 text-sm text-terracotta opacity-0 transition-opacity group-hover:opacity-100">
                   Meer lezen →

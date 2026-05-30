@@ -126,8 +126,25 @@ const faqs = [
 ];
 
 export default function DienstenPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <main className="flex-1">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero */}
       <section className="border-b border-border bg-gradient-to-br from-cream via-cream to-secondary/60">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
