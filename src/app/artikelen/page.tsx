@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "nie-aanvragen-spanje-stappenplan",
+    title: "NIE aanvragen in Spanje — stappenplan 2026",
+    excerpt:
+      "Complete eerstehandsgids: via de Spaanse consul in Den Haag of ter plaatse in Spanje. Documenten, kosten, doorlooptijd, EX-15-formulier, Modelo 790 codigo 012, en de zeven valkuilen.",
+    date: "30 mei 2026",
+    readingTime: "11 min",
+    tag: "Papierwinkel",
+  },
+  {
     slug: "nieuwbouw-of-bestaande-bouw-spanje",
     title: "Nieuwbouw of bestaande bouw in Spanje — welke past bij jou?",
     excerpt:
@@ -29,7 +38,6 @@ const articles = [
 ] as const;
 
 const upcoming = [
-  "NIE aanvragen in Spanje — stappenplan 2026",
   "Nieuwbouw kopen in Spanje (off-plan) — zeven valkuilen die wij zelf tegenkwamen",
   "Aval bancair bij nieuwbouw — Ley 20/2015 in mensentaal",
   "Costa del Azahar vs. Costa Blanca — welke past bij jou?",
