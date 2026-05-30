@@ -7,7 +7,7 @@ const updatedDate = "2026-05-30";
 const readingTime = "11 min";
 const title = "NIE aanvragen in Spanje — stappenplan 2026";
 const description =
-  "Complete eerstehandsgids voor het aanvragen van een NIE als Nederlander: via de Spaanse consul in Den Haag of ter plaatse in Spanje. Documenten, kosten, doorlooptijd, het EX-15-formulier, Modelo 790 codigo 012, en de zeven valkuilen die mensen vaak maken.";
+  "Complete eerstehandsgids voor het aanvragen van een NIE als Nederlander: via het Consulaat-Generaal in Amsterdam of ter plaatse in Spanje. Documenten, kosten (€9,84), doorlooptijd, het EX-15-formulier, Modelo 790 codigo 012, en de zeven valkuilen die mensen vaak maken.";
 
 export const metadata: Metadata = {
   title,
@@ -179,22 +179,25 @@ export default function NieAanvragenArticle() {
             of een tweede huis willen kopen.
           </P>
 
-          <Step number={1} title="Afspraak maken bij het consulaat">
+          <Step number={1} title="Afspraak maken bij het Consulaat-Generaal in Amsterdam">
             <P>
-              Ga naar de website van het{" "}
+              <strong>Belangrijk om te weten</strong>: in Den Haag zit alleen de{" "}
+              <em>Embajada de España</em> (Ambassade), zonder consulaire sectie.
+              Alle consulaire zaken voor heel Nederland — inclusief NIE — lopen via
+              het{" "}
               <a
-                href="https://www.exteriores.gob.es/Consulados/lahaya/nl/Paginas/index.aspx"
+                href="https://www.exteriores.gob.es/Consulados/amsterdam/es/Paginas/index.aspx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-terracotta hover:underline"
               >
-                Spaanse Consulaat in Den Haag
-              </a>{" "}
-              of het Consulaat-Generaal in Amsterdam. Maak online een afspraak
-              voor de aanvraag van een NIE — kies de optie &quot;NIE para
-              extranjeros&quot; of vergelijkbaar.
+                Consulado General de España in Amsterdam
+              </a>
+              .
             </P>
             <P>
+              Maak via hun website online een afspraak voor de aanvraag van een NIE
+              — kies de optie &quot;NIE para no residentes&quot; of vergelijkbaar.
               Reken op een wachttijd van <strong>2–8 weken</strong> tot de
               eerstvolgende beschikbare afspraak, afhankelijk van het seizoen. In
               de zomermaanden is de drukte hoger.
@@ -203,16 +206,17 @@ export default function NieAanvragenArticle() {
 
           <Step number={2} title="EX-15 formulier invullen">
             <P>
-              Download het{" "}
+              Het officiële EX-15-formulier wordt beheerd door de Spaanse{" "}
+              <em>Policía Nacional</em>. Vind het via de{" "}
               <a
-                href="https://www.exteriores.gob.es/Embajadas/lahaya/Documents/EX-15.pdf"
+                href="https://sede.policia.gob.es/portalCiudadano/_es/tramites_extranjeria_tramite_asignacion_nie.php"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-terracotta hover:underline"
               >
-                officiële EX-15-formulier
-              </a>
-              {" "}van het Spaanse Ministerie van Binnenlandse Zaken. Het formulier
+                Sede Electrónica van de Policía Nacional
+              </a>{" "}
+              (procedure: <em>Asignación de NIE</em>). Het formulier
               is in het Spaans, maar grotendeels in te vullen met basisgegevens.
               Belangrijke velden:
             </P>
@@ -263,28 +267,30 @@ export default function NieAanvragenArticle() {
 
           <Step number={4} title="Modelo 790 codigo 012 betalen">
             <P>
-              De kosten voor de NIE-aanvraag bedragen circa{" "}
-              <strong>€10–€12</strong>, te betalen via het Modelo 790-formulier
-              (codigo 012). Je kunt dit formulier downloaden via de{" "}
+              De officiële tasa voor NIE-toekenning bedraagt <strong>€9,84</strong>{" "}
+              (Modelo 790, codigo 012). Je kunt het formulier digitaal aanmaken via
+              de{" "}
               <a
                 href="https://sede.policia.gob.es/Tasa790_012/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-terracotta hover:underline"
               >
-                Spaanse Policía Nacional sede
+                Sede van de Policía Nacional
               </a>
               .
             </P>
             <P>
               Vul het formulier digitaal in, print het, en betaal de tasa bij een
-              Spaanse bank (BBVA, La Caixa, Sabadell). Je krijgt een gestempeld
+              Spaanse <em>entidad colaboradora</em> (CaixaBank, BBVA, Santander,
+              Sabadell, Ibercaja, Bankinter of Unicaja). Je krijgt een gestempeld
               afschrift terug — dat moet je meenemen naar je afspraak.
             </P>
             <P>
-              Voor Nederlandse aanvragers: ga je via het consulaat, dan betaal je
-              de leges meestal bij het consulaat zelf (~€10), in plaats van via
-              Modelo 790.
+              Voor Nederlandse aanvragers: ga je via het Consulaat-Generaal in
+              Amsterdam, dan betaal je de leges meestal bij het consulaat zelf, in
+              plaats van via Modelo 790. Vraag bij de afspraakbevestiging om welke
+              bedragen het exact gaat — die wisselen periodiek.
             </P>
           </Step>
 
@@ -292,19 +298,33 @@ export default function NieAanvragenArticle() {
             <P>Wat je meeneemt naar het consulaat:</P>
             <UL>
               <li>Geldig paspoort (origineel + kopie van de info-pagina)</li>
-              <li>Twee pasfoto&apos;s (3,5 × 4,5 cm, witte achtergrond)</li>
+              <li>
+                Twee pasfoto&apos;s in <strong>Spaans formaat 32 × 26 mm</strong>{" "}
+                (níet het Nederlandse 35 × 45 mm), witte achtergrond, recent
+              </li>
               <li>Ingevulde EX-15 (2 exemplaren)</li>
               <li>Ondertekende motivatiebrief in het Spaans</li>
               <li>Betaalbewijs leges</li>
             </UL>
+            <Callout>
+              <p>
+                <strong>Pasfoto-valkuil:</strong> de Spaanse standaard 32 × 26 mm
+                wijkt af van het Nederlandse internationale formaat (35 × 45 mm).
+                Een Nederlandse fotograaf weet dit vaak niet. Vraag expliciet om{" "}
+                <em>&quot;foto carnet español DNI&quot;</em> of laat ze in Spanje
+                maken bij een fotomaton.
+              </p>
+            </Callout>
           </Step>
 
           <Step number={6} title="Wachten op uitslag">
             <P>
-              Na je afspraak duurt het meestal <strong>2–6 weken</strong> tot je
-              NIE wordt afgegeven. Het consulaat belt je of stuurt een e-mail
-              zodra het document klaar is. Je ontvangt een{" "}
-              <em>Resguardo de NIE</em> — een papieren attest met je nummer
+              De wettelijke termijn is <strong>5 werkdagen</strong> na registratie
+              door de bevoegde instantie. In de praktijk via een consulaat in
+              Nederland reken op <strong>2–6 weken</strong> tot je NIE wordt
+              afgegeven — afhankelijk van seizoen en drukte. Het consulaat belt
+              je of stuurt een e-mail zodra het document klaar is. Je ontvangt
+              een <em>Resguardo de NIE</em> — een papieren attest met je nummer
               erop. Bewaar het goed.
             </P>
           </Step>
@@ -374,10 +394,11 @@ export default function NieAanvragenArticle() {
 
           <Step number={4} title="NIE-pasje ontvangen">
             <P>
-              Anders dan via Nederland krijg je je NIE in Spanje meestal binnen{" "}
-              <strong>1–3 weken</strong>. Soms zelfs ter plekke — afhankelijk van
-              de drukte. Je krijgt het op een papieren <em>Resguardo</em> met je
-              nummer; geen plastic kaart.
+              De wettelijke termijn is <strong>5 werkdagen</strong> vanaf
+              registratie. In drukke kuststreken (Costa Blanca, Mallorca) reken op{" "}
+              <strong>1–3 weken</strong>. Soms krijg je het ter plekke — afhankelijk
+              van de afhandelingssnelheid van de comisaría. Je krijgt het op een
+              papieren <em>Resguardo</em> met je nummer; geen plastic kaart.
             </P>
           </Step>
         </Section>
@@ -421,15 +442,17 @@ export default function NieAanvragenArticle() {
         <Section>
           <H2>Hoeveel kost het echt?</H2>
           <P>
-            De officiële leges zijn <strong>€10–€12</strong> (Modelo 790 codigo
-            012). Daarbovenop alleen jouw eigen reis- en tijdskosten:
+            De officiële tasa is <strong>€9,84</strong> (Modelo 790 codigo 012,
+            specifiek voor NIE-toekenning). Daarbovenop alleen jouw eigen reis-
+            en tijdskosten:
           </P>
           <UL>
             <li>
-              Reis naar Den Haag of Amsterdam (~€10–€30 OV vanuit Nederland)
+              Reis naar Amsterdam (Consulaat-Generaal — ~€10–€30 OV vanuit Nederland)
             </li>
             <li>
-              Pasfoto&apos;s (€7–€10 bij een fotograaf)
+              Pasfoto&apos;s in Spaans formaat (€7–€10 bij een fotograaf — vraag om
+              DNI-formaat 32 × 26 mm)
             </li>
             <li>
               Bankkosten internationaal indien je in Spanje moet betalen (€5–€20)
@@ -450,9 +473,11 @@ export default function NieAanvragenArticle() {
           <H2>Zeven valkuilen om te vermijden</H2>
           <OL>
             <li>
-              <strong>EX-15 inruilen voor EX-18.</strong> EX-18 is voor
-              residentie-aanvraag, EX-15 voor NIE als niet-resident. Voor de
-              meeste tweede-huis-kopers: altijd EX-15.
+              <strong>EX-15 verwarren met EX-18.</strong> EX-18 is het{" "}
+              <em>Certificado de Registro de Ciudadano de la Unión</em> — voor
+              EU-burgers die zich vestigen als resident. EX-15 is voor de
+              NIE-toekenning als niet-resident. Voor de meeste tweede-huis-kopers:
+              altijd EX-15.
             </li>
             <li>
               <strong>Motivatie te kort houden.</strong> &quot;Voor een huis

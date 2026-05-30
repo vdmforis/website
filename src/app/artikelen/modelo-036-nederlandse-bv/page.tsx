@@ -285,11 +285,14 @@ export default function Modelo036Article() {
             </Step>
             <Step number={4} title="Wachten op de definitieve NIF">
               <P>
-                De AEAT bevestigt eerst de ontvangst (binnen 24 uur). Daarna
-                duurt de toekenning van een <strong>provisionele CIF</strong>{" "}
-                doorgaans 2–4 weken. De definitieve CIF volgt na controle, soms
-                2–3 maanden later. In ons koopcontract stond al een
-                provisionele CIF — dat is hoe gebruikelijk dit is.
+                De AEAT bevestigt eerst de ontvangst (binnen 24 uur). De
+                wettelijke termijn voor de toekenning van een{" "}
+                <strong>provisionele NIF</strong> is 10 werkdagen — in de praktijk
+                via de consulaire route is dit doorgaans 2–4 weken. Voor de{" "}
+                <strong>definitieve NIF</strong> heeft de entiteit vervolgens 6
+                maanden om alle documentatie aan te leveren; afhandeling duurt in
+                de praktijk 2–3 maanden vanaf indiening. In ons koopcontract
+                stond al een provisionele NIF — dat is hoe gebruikelijk dit is.
               </P>
             </Step>
           </div>

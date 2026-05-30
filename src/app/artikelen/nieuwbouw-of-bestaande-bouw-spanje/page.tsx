@@ -112,7 +112,7 @@ export default function NieuwbouwBestaandeBouwArticle() {
                 <tr>
                   <td className="px-4 py-3 font-medium text-navy">Belasting bij koop</td>
                   <td className="px-4 py-3">IVA 10%</td>
-                  <td className="px-4 py-3">ITP 6–11% (CCAA-afhankelijk)</td>
+                  <td className="px-4 py-3">ITP 6–13% (CCAA-afhankelijk)</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 font-medium text-navy">AJD (Valencia)</td>
@@ -176,11 +176,32 @@ export default function NieuwbouwBestaandeBouwArticle() {
           </P>
           <Callout>
             <p>
-              <strong>ITP varieert per regio.</strong> In de Comunidad Valenciana is
-              het algemene tarief 10% (verlaagd naar 8% voor jongeren onder 35 of
-              woningen onder €180.000). Madrid hanteert 6%, Andalucía 7%, Catalunya
-              10–11%. Vraag je gestor altijd het actuele percentage in jouw regio
-              op — beleid kan jaarlijks wijzigen.
+              <strong>ITP varieert per regio en wijzigt regelmatig.</strong> Per
+              juni 2026:
+            </p>
+            <ul className="mt-3 ml-5 list-disc space-y-1">
+              <li>
+                <strong>Comunidad Valenciana</strong>: 10% algemeen{" "}
+                <em>tot 1 juni 2026</em>, daarna verlaagd naar <strong>9%</strong>.
+                Boven €1 miljoen blijft 11%. Verlaagd tarief <strong>6%</strong>{" "}
+                voor eerste eigen woning &lt; €180.000 voor jongeren &lt; 35 jaar.
+              </li>
+              <li>
+                <strong>Madrid</strong>: 6% algemeen
+              </li>
+              <li>
+                <strong>Andalucía</strong>: 7% vlak tarief; verlaagd 3,5–6% voor
+                specifieke gevallen (jongeren, lage prijs, grote gezinnen)
+              </li>
+              <li>
+                <strong>Catalunya</strong>: progressief sinds juni 2025 — 10% tot
+                €600k / 11% tot €900k / 12% tot €1,5 mln / 13% boven €1,5 mln.
+                Plus 20% opslag voor <em>grandes tenedores</em>
+              </li>
+            </ul>
+            <p className="mt-3">
+              Vraag je gestor altijd het actuele percentage in jouw regio — beleid
+              kan elk fiscaal jaar wijzigen.
             </p>
           </Callout>
         </Section>
@@ -204,9 +225,11 @@ export default function NieuwbouwBestaandeBouwArticle() {
             </li>
             <li>
               <strong>Je hecht waarde aan 10-jaars constructiegarantie.</strong>{" "}
-              Onder Ley 38/1999 zijn bouwers tien jaar verplicht garantie te bieden
-              op structurele defecten. Drie jaar op afwerkings-elementen, één jaar
-              op kosmetische.
+              Onder Ley 38/1999 zijn bouwers verplicht garantie te bieden:{" "}
+              <strong>10 jaar</strong> op structurele defecten (estructurales),{" "}
+              <strong>3 jaar</strong> op gebreken die de bewoonbaarheid raken
+              (habitabilidad), en <strong>1 jaar</strong> op afwerkingselementen
+              (terminación o acabado).
             </li>
             <li>
               <strong>Je hebt tijd.</strong> Off-plan kopen betekent 9–18 maanden
@@ -289,9 +312,12 @@ export default function NieuwbouwBestaandeBouwArticle() {
             </li>
             <li>
               <strong>Energierenovatie.</strong> Van een F- of G-label naar A/B
-              kost meestal €10–€30k (isolatie, ramen, warmtepomp). Zonder die
-              investering: hoge energierekeningen, en mogelijk in de toekomst
-              verkoopbeperkingen onder Europese regelgeving.
+              kost meestal €10–€30k (isolatie, ramen, warmtepomp). Onder de
+              EU-EPBD-richtlijn moet Spanje nationale renovatieplannen opstellen
+              die naar verwachting label E vanaf 2030 en label D vanaf 2033 als
+              minimum voor verkoop/verhuur zullen vragen. Geen direct EU-verbod,
+              wel beleidsrichting waar je rekening mee wil houden bij oudere
+              woningen.
             </li>
             <li>
               <strong>Verborgen gebreken.</strong> Vocht, lekkages, asbest in oude
