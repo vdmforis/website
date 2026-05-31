@@ -55,11 +55,17 @@ export function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 flex flex-col gap-4 border-t border-cream/15 pt-6 text-xs text-cream/60 md:flex-row md:items-center md:justify-between">
-          <p>
-            Van der Meulen Foris B.V. · KvK 98214950 · Toldijk 27, 7901 TA
-            Hoogeveen
-          </p>
+        <div className="mt-10 flex flex-col gap-4 border-t border-cream/15 pt-6 text-xs text-cream/60 md:flex-row md:items-start md:justify-between">
+          <div className="space-y-1">
+            <p>
+              Van der Meulen Foris B.V. · KvK 98214950 · NIF (ES) N0868403052 ·
+              Toldijk 27, 7901 TA Hoogeveen
+            </p>
+            <p className="text-cream/50">
+              Fiscaal domicilie in Spanje: Grau de Castellón · Comunitat
+              Valenciana, España
+            </p>
+          </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link href="/privacy" className="hover:text-terracotta">
               Privacy

@@ -106,6 +106,11 @@ const organizationJsonLd = {
       propertyID: "KvK",
       value: "98214950",
     },
+    {
+      "@type": "PropertyValue",
+      propertyID: "NIF",
+      value: "N0868403052",
+    },
   ],
   knowsLanguage: ["nl", "es", "en"],
   sameAs: [],
