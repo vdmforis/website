@@ -79,7 +79,7 @@ export default function OnzeErvaringPage() {
           className="-z-10 object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cream/95 via-cream/85 to-cream/40" />
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
             Onze ervaring · Costa del Azahar
           </p>
@@ -145,18 +145,20 @@ export default function OnzeErvaringPage() {
         </div>
       </section>
 
+      {/* Full-bleed villa photo */}
+      <section className="relative aspect-[16/9] w-full overflow-hidden md:aspect-[21/9]">
+        <Image
+          src="/images/IMG_3657.jpg"
+          alt="Nieuwbouw chalet adosado in Grau de Castellón — Metrovacesa Villas del Mar"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </section>
+
       {/* Villa specs */}
-      <section className="border-y border-border bg-cream">
-        <div className="mx-auto max-w-6xl px-6 py-12">
-          <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-3xl md:aspect-[21/9]">
-            <Image
-              src="/images/IMG_3657.jpg"
-              alt="Nieuwbouw chalet adosado in Grau de Castellón — Metrovacesa Villas del Mar"
-              fill
-              sizes="(max-width: 1280px) 100vw, 1280px"
-              className="object-cover"
-            />
-          </div>
+      <section className="border-b border-border bg-cream">
+        <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
             De villa in cijfers
           </p>

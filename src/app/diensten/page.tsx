@@ -148,7 +148,7 @@ export default function DienstenPage() {
       />
       {/* Hero */}
       <section className="border-b border-border bg-gradient-to-br from-cream via-cream to-secondary/60">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
             Diensten
           </p>
@@ -165,7 +165,7 @@ export default function DienstenPage() {
       </section>
 
       {/* Available now */}
-      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-border pb-6">
           <h2 className="font-heading text-2xl text-navy md:text-3xl">
             Nu beschikbaar
@@ -216,7 +216,7 @@ export default function DienstenPage() {
 
       {/* From Q3 2026 */}
       <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
           <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-border pb-6">
             <h2 className="font-heading text-2xl text-navy md:text-3xl">
               In voorbereiding · vanaf zomer 2026
@@ -276,7 +276,7 @@ export default function DienstenPage() {
           className="-z-10 object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 bg-navy/85" />
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24 text-cream">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24 text-cream">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
               Speerpunt

@@ -20,7 +20,7 @@ export default function GratisGidsPage() {
   return (
     <main className="flex-1">
       <section className="border-b border-border bg-gradient-to-br from-cream via-cream to-secondary/40">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.1fr_1fr] md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.1fr_1fr] md:py-24">
           <div className="flex flex-col justify-center">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
               Gratis gids · 24 pagina&apos;s

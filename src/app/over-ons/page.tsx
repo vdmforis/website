@@ -61,18 +61,20 @@ export default function OverOnsPage() {
         </div>
       </section>
 
+      {/* Full-bleed pine path photo */}
+      <section className="relative aspect-[21/9] w-full overflow-hidden md:aspect-[3/1]">
+        <Image
+          src="/images/IMG_7278.jpg"
+          alt="Dennenbospad aan de Spaanse kust — Sierra de Irta-natuurgebied"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </section>
+
       {/* Hoe Spanje thuis werd */}
-      <section className="border-y border-border bg-secondary/40">
+      <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
-          <div className="relative mb-10 aspect-[3/2] overflow-hidden rounded-2xl">
-            <Image
-              src="/images/IMG_7278.jpg"
-              alt="Dennenbospad aan de Spaanse kust — Sierra de Irta-natuurgebied"
-              fill
-              sizes="(max-width: 768px) 100vw, 768px"
-              className="object-cover"
-            />
-          </div>
           <h2 className="font-heading text-3xl text-navy md:text-4xl">
             Hoe Spanje thuis werd
           </h2>

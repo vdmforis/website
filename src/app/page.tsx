@@ -19,7 +19,7 @@ export default function Home() {
           className="-z-10 object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cream/95 via-cream/85 to-cream/40" />
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:py-32">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:py-32">
           <div className="flex flex-col justify-center">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
               Costa del Azahar · Castellón
@@ -68,7 +68,7 @@ export default function Home() {
 
       {/* Begin gratis */}
       <section className="border-t border-border bg-navy text-cream">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
             <h2 className="font-heading text-3xl md:text-4xl">
               Begin gratis
@@ -136,7 +136,7 @@ export default function Home() {
 
       {/* Wat we vandaag al doen */}
       <section className="border-t border-border bg-cream">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <div className="mb-10 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
             <h2 className="font-heading text-3xl text-navy md:text-4xl">
               Wat we vandaag al voor je doen
@@ -207,7 +207,7 @@ export default function Home() {
 
       {/* Proof strip */}
       <section className="border-t border-border bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-12">
+        <div className="mx-auto max-w-7xl px-6 py-12">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">

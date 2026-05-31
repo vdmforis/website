@@ -17,7 +17,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/60 bg-cream/85 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link
           href="/"
           onClick={() => setOpen(false)}
@@ -62,7 +62,7 @@ export function SiteHeader() {
       {/* Mobile menu panel */}
       {open && (
         <nav className="border-t border-border/60 bg-cream md:hidden">
-          <ul className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
+          <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-4">
             {nav.map((item) => (
               <li key={item.href}>
                 <Link
