@@ -18,7 +18,12 @@ export function CalInit() {
   useEffect(() => {
     (async () => {
       try {
-        const cal = await getCalApi({ namespace: contact.bookingNamespace });
+        // Use Cal.eu's embed bundle so the modal hits the right instance
+        // (default getCalApi targets app.cal.com which 404s for cal.eu teams).
+        const cal = await getCalApi({
+          namespace: contact.bookingNamespace,
+          embedJsUrl: "https://app.cal.eu/embed/embed.js",
+        });
         cal("ui", {
           hideEventTypeDetails: false,
           layout: "month_view",

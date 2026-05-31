@@ -13,16 +13,19 @@ type Props = {
  * but the Cal embed (initialised by <CalInit />) hijacks the click and
  * opens an in-page modal when JS is available.
  *
+ * NB: we don't set target="_blank" because that would prevent Cal's JS
+ * from intercepting the click. If JS fails, the link navigates in the
+ * same tab to cal.eu — acceptable fallback.
+ *
  * Use anywhere we want a "Plan een gesprek" CTA. Style via className.
  */
 export function BookCallButton({ children, className, href }: Props) {
   return (
     <Link
       href={href ?? contact.bookingUrl}
-      target="_blank"
-      rel="noopener noreferrer"
       data-cal-namespace={contact.bookingNamespace}
       data-cal-link={contact.bookingLink}
+      data-cal-origin="https://cal.eu"
       data-cal-config='{"layout":"month_view"}'
       className={className}
     >
