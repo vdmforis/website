@@ -3,7 +3,6 @@ import { Fraunces, Inter, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingContact } from "@/components/FloatingContact";
-import { CalInit } from "@/components/CalInit";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -127,7 +126,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <CalInit />
         <SiteHeader />
         {children}
         <SiteFooter />

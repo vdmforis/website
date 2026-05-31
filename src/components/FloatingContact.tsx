@@ -56,10 +56,8 @@ export function FloatingContact() {
             </a>
             <a
               href={contact.bookingUrl}
-              data-cal-namespace={contact.bookingNamespace}
-              data-cal-link={contact.bookingLink}
-              data-cal-origin="https://cal.eu"
-              data-cal-config='{"layout":"month_view"}'
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="flex items-center gap-3 rounded-xl bg-terracotta px-4 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
             >
