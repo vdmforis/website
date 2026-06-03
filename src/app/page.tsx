@@ -45,6 +45,15 @@ export default function Home() {
                 Of stuur een WhatsApp
               </a>
             </div>
+            <p className="mt-4 text-sm text-foreground/70">
+              Liever eerst lezen?{" "}
+              <Link
+                href="/gratis-gids"
+                className="font-medium text-terracotta underline-offset-4 hover:underline"
+              >
+                Download onze 24-pagina gids — gratis →
+              </Link>
+            </p>
             <ul className="mt-8 space-y-3 text-foreground/85">
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />

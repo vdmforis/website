@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookCallButton } from "@/components/BookCallButton";
+import { GidsCallout } from "@/components/GidsCallout";
 
 const publishDate = "2026-05-29";
 const updatedDate = "2026-05-29";
@@ -91,6 +92,7 @@ export default function Modelo036Article() {
             traject in mei 2026 zelf doorlopen voor onze eigen B.V. — hier zit
             alles wat we onderweg leerden.
           </Lead>
+          <GidsCallout variant="inline" />
         </Section>
 
         <Section>
@@ -452,6 +454,8 @@ export default function Modelo036Article() {
             je er doorheen — vaste prijs, vooraf afgesproken, geen verrassingen.
           </P>
         </Section>
+
+        <GidsCallout variant="card" />
 
         <div className="mt-16 rounded-3xl border border-olive/40 bg-olive/5 p-8 text-center">
           <h3 className="font-heading text-2xl text-navy">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BookCallButton } from "@/components/BookCallButton";
+import { GidsCallout } from "@/components/GidsCallout";
 
 const publishDate = "2026-05-30";
 const updatedDate = "2026-05-30";
@@ -101,6 +102,7 @@ export default function NieuwbouwBestaandeBouwArticle() {
             geduld die je moet meebrengen. Hieronder een eerlijke vergelijking
             zonder voorkeur vooraf.
           </Lead>
+          <GidsCallout variant="inline" />
         </Section>
 
         <Section>
@@ -436,6 +438,8 @@ export default function NieuwbouwBestaandeBouwArticle() {
             of een aankoopbegeleider die het hele traject volgt.
           </P>
         </Section>
+
+        <GidsCallout variant="card" />
 
         <div className="mt-16 rounded-3xl border border-olive/40 bg-olive/5 p-8 text-center">
           <h3 className="font-heading text-2xl text-navy">

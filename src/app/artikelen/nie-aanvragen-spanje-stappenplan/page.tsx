@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookCallButton } from "@/components/BookCallButton";
+import { GidsCallout } from "@/components/GidsCallout";
 
 const publishDate = "2026-05-30";
 const updatedDate = "2026-05-30";
@@ -89,6 +90,7 @@ export default function NieAanvragenArticle() {
             een huis op het oog hebt, dan zit je weken vast omdat alles erna —
             bankrekening, contract, modelo 036 — eerst je NIE nodig heeft.
           </Lead>
+          <GidsCallout variant="inline" />
         </Section>
 
         <Section>
@@ -558,6 +560,8 @@ export default function NieAanvragenArticle() {
             risico, alleen voorsprong.
           </P>
         </Section>
+
+        <GidsCallout variant="card" />
 
         <div className="mt-16 rounded-3xl border border-olive/40 bg-olive/5 p-8 text-center">
           <h3 className="font-heading text-2xl text-navy">

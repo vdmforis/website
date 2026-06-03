@@ -37,6 +37,12 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href="/gratis-gids"
+            className="rounded-full border border-terracotta/40 px-3 py-1.5 text-terracotta transition-colors hover:bg-terracotta/10"
+          >
+            Gratis gids
+          </Link>
           <BookCallButton className="rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90">
             Plan kennismaking
           </BookCallButton>
@@ -74,6 +80,15 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/gratis-gids"
+                onClick={() => setOpen(false)}
+                className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
+              >
+                Gratis gids — De 9 valkuilen
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
