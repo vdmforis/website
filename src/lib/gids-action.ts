@@ -103,7 +103,16 @@ export async function requestGids(
     });
 
     if (pdfSend.error) {
-      console.error("[gids] Resend rejected PDF mail", pdfSend.error);
+      // Log the full error object as JSON so it survives Vercel log truncation.
+      console.error(
+        "[gids] Resend rejected PDF mail:",
+        JSON.stringify(pdfSend.error),
+      );
+      console.error("[gids] Resend send config:", JSON.stringify({
+        from,
+        to: parsed.data.email,
+        attachmentSize: pdfBuffer.length,
+      }));
       throw new Error(
         `Resend error: ${pdfSend.error.name} — ${pdfSend.error.message}`,
       );
@@ -129,11 +138,13 @@ export async function requestGids(
       // Don't throw — PDF mail to user already succeeded, owner notification is secondary
     }
   } catch (err) {
-    console.error("[gids] Resend send failed", err);
+    const detail = err instanceof Error ? err.message : String(err);
+    console.error("[gids] Resend send failed:", detail);
     return {
       status: "error",
       message:
-        "Er ging iets mis bij het versturen. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com.",
+        "Er ging iets mis bij het versturen. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com." +
+        ` (Debug: ${detail})`,
     };
   }
 
