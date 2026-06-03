@@ -110,10 +110,10 @@ export default function OnzeErvaringPage() {
             <p className="mt-4 text-foreground/85">
               Foris is voortgekomen uit Van der Meulen Vastgoed B.V. — een Drents
               familiebedrijf met meer dan tien jaar staat van dienst in koop,
-              ontwikkeling en verhuur van Nederlands vastgoed. Honderden traject&shy;jes
-              gevolgd, contracten beoordeeld, onderhandelingen gevoerd en bouwers
-              gemanaged. Die discipline en kennis brengen we direct mee in elke
-              Spaanse aankoop.
+              ontwikkeling en verhuur van Nederlands vastgoed. Ruime ervaring met
+              trajecten van A tot Z: contracten beoordelen, onderhandelen, bouwers
+              managen en projecten opleveren. Die discipline en kennis brengen we
+              direct mee in elke Spaanse aankoop.
             </p>
             <p className="mt-3 text-foreground/85">
               Het is geen toeval dat een vastgoedfamilie als basis dient: het verschil
