@@ -159,32 +159,9 @@ export default function OnzeErvaringPage() {
         />
       </section>
 
-      {/* Villa specs */}
+      {/* Spacer / divider */}
       <section className="border-b border-border bg-cream">
-        <div className="mx-auto max-w-7xl px-6 py-12">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-            De villa in cijfers
-          </p>
-          <div className="mt-6 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-            {[
-              ["Type", "Chalet adosado / pareado"],
-              ["Bouwfase", "Casco klaar, afbouw"],
-              ["Perceeloppervlak", "± 252 m²"],
-              ["Bewoonbaar", "± 127 m²"],
-              ["Terrassen", "± 146 m²"],
-              ["Tuin", "± 74 m²"],
-              ["Ontwikkelaar", "Metrovacesa"],
-              ["IVA op nieuwbouw", "10 %"],
-            ].map(([label, value]) => (
-              <div key={label}>
-                <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-                  {label}
-                </p>
-                <p className="mt-1 text-lg text-navy">{value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="mx-auto max-w-7xl px-6 py-4" />
       </section>
 
       {/* Timeline */}
