@@ -6,7 +6,7 @@ import { BookCallButton } from "@/components/BookCallButton";
 export const metadata: Metadata = {
   title: "Onze ervaring",
   description:
-    "Sinds juli 2023 wonen we aan de Costa del Azahar. Eerst gehuurd in Benicàssim, en in juni 2026 trekken we in ons eerste eigen huis — een nieuwbouwvilla in Grau de Castellón, off-plan gekocht. Dit is hoe dat traject ging.",
+    "Tien jaar Nederlandse vastgoedervaring uit familiebedrijf, drie jaar dagelijks werken aan de Costa del Azahar, plus eigen aankoop bij Metrovacesa als praktijkbewijs. Dit is wat de combinatie oplevert voor onze klanten.",
 };
 
 const timeline = [
@@ -84,15 +84,15 @@ export default function OnzeErvaringPage() {
             Onze ervaring · Costa del Azahar
           </p>
           <h1 className="mt-4 max-w-3xl font-heading text-4xl leading-[1.1] text-navy md:text-5xl">
-            Drie jaar Spanje, één nieuwbouwaankoop — dit is wat we onderweg leerden.
+            Drie jaar Spanje, tien jaar vastgoed uit Nederland — dit traject kennen we van twee kanten.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
-            We verhuisden in juli 2023 naar Spanje en huurden de eerste tijd in
-            Benicàssim. In juni 2026 trekken we in ons eerste eigen huis — een
-            nieuwbouwvilla in Grau de Castellón, off-plan gekocht via onze B.V. Vier
-            deelbetalingen, een aval bancair, een notariële volmacht in Nederland,
-            modelo 036 — we doorliepen precies wat een Nederlander die hier wil kopen
-            ook zal doorlopen.
+            Foris combineert de Nederlandse vastgoedervaring van een familiebedrijf
+            met tien jaar staat van dienst en drie jaar dagelijks werken aan de Costa
+            del Azahar. We kennen de Spaanse aankoopprocedure, het lokale netwerk van
+            notarissen en gestores, en de juridische valkuilen waar de meeste
+            buitenlandse kopers in trappen. Niet uit een handboek — uit eigen
+            praktijk.
           </p>
         </div>
       </section>
@@ -102,44 +102,47 @@ export default function OnzeErvaringPage() {
         <div className="grid gap-12 md:grid-cols-2">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-              Juli 2023 → vandaag
+              De basis · Nederland
             </p>
             <h2 className="mt-3 font-heading text-2xl text-navy md:text-3xl">
-              Drie jaar leven aan de Costa del Azahar
+              Tien jaar vastgoed uit familiebedrijf
             </h2>
             <p className="mt-4 text-foreground/85">
-              We zijn in 2023 naar Spanje verhuisd — eerst gehuurd, eerst in Benicàssim,
-              met de bedoeling om te kijken hoe het zou bevallen. Het beviel. We
-              leerden hoe het land werkt: welke gestor je belt voor wát, hoe de
-              Spaanse bureaucratie ritmisch maar bureaucratisch is, hoe een NIE écht in
-              elkaar steekt, en waarom Castellón rustiger en authentieker aanvoelt dan
-              de meeste Nederlanders denken.
+              Foris is voortgekomen uit Van der Meulen Vastgoed B.V. — een Drents
+              familiebedrijf met meer dan tien jaar staat van dienst in koop,
+              ontwikkeling en verhuur van Nederlands vastgoed. Honderden traject&shy;jes
+              gevolgd, contracten beoordeeld, onderhandelingen gevoerd en bouwers
+              gemanaged. Die discipline en kennis brengen we direct mee in elke
+              Spaanse aankoop.
             </p>
             <p className="mt-3 text-foreground/85">
-              In die jaren bouwden we een lokaal netwerk op van gestores, notarissen
-              en bouwers die we vertrouwen — mensen waar we ons eigen geld aan
-              durven toevertrouwen.
+              Het is geen toeval dat een vastgoedfamilie als basis dient: het verschil
+              tussen een goede en een slechte aankoop zit in de details die alleen
+              ervaren ogen zien — clausules die onbillijk uitpakken, prijzen die niet
+              kloppen met de markt, opleveringen die structureel uitlopen.
             </p>
           </div>
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-              2025 → juni 2026
+              De uitvoering · Costa del Azahar
             </p>
             <h2 className="mt-3 font-heading text-2xl text-navy md:text-3xl">
-              Onze eerste eigen aankoop
+              Drie jaar ter plaatse, netwerk dat staat
             </h2>
             <p className="mt-4 text-foreground/85">
-              Spanje was thuis geworden, dus we besloten te kopen. Het werd een chalet
-              adosado in de promotie Villas del Mar van Metrovacesa — nieuwbouw, in Grau
-              de Castellón. We dachten met onze Nederlandse vastgoedachtergrond én drie
-              jaar Spanje op zak: dit gaat soepel.
+              Sinds 2023 wonen we in Grau de Castellón. In die drie jaar hebben we
+              een lokaal netwerk opgebouwd dat we dagelijks gebruiken: vaste gestores
+              die buitenlandse B.V.&apos;s aankunnen, notarissen in Castellón en Valencia
+              die meedenken (niet alleen voorlezen), advocaten gespecialiseerd in
+              vastgoedtransacties, en bouwers waar we ons eigen geld aan toe&shy;vertrouwen.
             </p>
             <p className="mt-3 text-foreground/85">
-              Hilarisch fout, natuurlijk. Kopen via een Nederlandse B.V. brengt een
-              hele nieuwe stapel complicaties mee — notariële volmacht in Nederland,
-              beëdigde vertaling, apostille, een Spaanse CIF aanvragen via modelo 036,
-              en een aval bancair tracken volgens Ley 20/2015. Vier deelbetalingen over
-              twee landen. In juni 2026 krijgen we de sleutel.
+              Daar bovenop: ons eigen aankooptraject in 2025-2026 voor een chalet
+              adosado bij Metrovacesa in Grau de Castellón — off-plan, via onze B.V.,
+              compleet met notariële volmacht, beëdigde vertalingen, modelo 036,
+              aval bancair en vier deelbetalingen tussen NL en ES. Niet omdat we
+              het moesten leren, maar omdat het de logische uitwerking was van wat
+              we onze klanten adviseren.
             </p>
           </div>
         </div>
@@ -188,16 +191,17 @@ export default function OnzeErvaringPage() {
       <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-4xl px-6 py-16 md:py-24">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-            Hoe een nieuwbouwtraject (off-plan) eruit ziet
+            Nieuwbouwtraject (off-plan) · ons standaard speelveld
           </p>
           <h2 className="mt-3 font-heading text-3xl text-navy md:text-4xl">
-            Zes mijlpalen tussen "ja, ik wil" en de sleuteloverdracht
+            Zes mijlpalen — het traject dat we standaard met klanten doorlopen
           </h2>
           <p className="mt-4 max-w-2xl text-foreground/80">
-            Geen specifieke bedragen of namen — dit is het patroon dat bij vrijwel elke
-            grote Spaanse nieuwbouwontwikkelaar terugkomt. Op iedere stap kan iets
-            misgaan, en op iedere stap zit een controle die je kunt doen vóór je
-            betaalt.
+            Het patroon dat bij vrijwel elke grote Spaanse nieuwbouwontwikkelaar terugkomt.
+            Op iedere stap kan iets misgaan, en op iedere stap zit een controle die je
+            moet doen vóór je betaalt. We weten welke clausules onbillijk zijn, welke
+            documenten je advocaat moet checken, en wanneer je de bank moet aanspreken
+            om een aval serieus genomen te krijgen.
           </p>
           <ol className="mt-10 space-y-8">
             {timeline.map((item, idx) => (
@@ -223,10 +227,10 @@ export default function OnzeErvaringPage() {
       {/* Lessons */}
       <section className="mx-auto max-w-4xl px-6 py-16 md:py-24">
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-          Wat we leerden
+          Onze methode · vaste controles
         </p>
         <h2 className="mt-3 font-heading text-3xl text-navy md:text-4xl">
-          Vijf dingen waar we volgende keer eerder mee zouden zijn
+          Vijf inzichten die we standaard meenemen bij elke klantbegeleiding
         </h2>
         <div className="mt-10 grid gap-6">
           {lessons.map((lesson, idx) => (
@@ -248,11 +252,12 @@ export default function OnzeErvaringPage() {
       <section className="border-t border-border bg-navy text-cream">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center md:py-20">
           <h2 className="font-heading text-3xl md:text-4xl">
-            Wil je hetzelfde traject lopen, met minder zoekwerk?
+            Klaar om dit traject met ervaren mensen te lopen?
           </h2>
           <p className="mt-4 text-cream/85">
-            Wij hebben dit net gedaan. We weten wie er meedenkt, wie er voorleest, en
-            wie je dit jaar wel of niet moet bellen.
+            Nederlandse vastgoedkennis uit familietraditie, lokaal netwerk in
+            Castellón, en eigen praktijkbewijs. Geen leertraject — een vaste
+            methode.
           </p>
           <BookCallButton className="mt-8 inline-block rounded-full bg-terracotta px-8 py-3 text-base font-medium text-cream transition-colors hover:bg-terracotta/90">
             Plan een vrijblijvend gesprek
