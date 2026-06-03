@@ -145,7 +145,8 @@ export async function requestGids(
     return {
       status: "error",
       message:
-        "Er ging iets mis bij het versturen. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com.",
+        "Er ging iets mis bij het versturen. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com." +
+        ` (Debug: ${detail} | from=${JSON.stringify(from)} | to=${JSON.stringify(ownerTo)})`,
     };
   }
 
