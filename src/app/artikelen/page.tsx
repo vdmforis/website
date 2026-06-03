@@ -10,6 +10,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "costa-azahar-vs-costa-blanca",
+    title: "Costa del Azahar vs Costa Blanca — welke past bij jou?",
+    excerpt:
+      "Eerlijke vergelijking van beide kuststroken: prijzen per m², drukte, vliegverbindingen, klimaat, regelgeving en voor wie welke costa logischer is — geschreven vanuit drie jaar wonen aan de Azahar.",
+    date: "3 juni 2026",
+    readingTime: "12 min",
+    tag: "Regiokeuze",
+  },
+  {
     slug: "nie-aanvragen-spanje-stappenplan",
     title: "NIE aanvragen in Spanje — stappenplan 2026",
     excerpt:
@@ -41,7 +50,7 @@ const articles = [
 const upcoming = [
   "Nieuwbouw kopen in Spanje (off-plan) — zeven valkuilen die wij zelf tegenkwamen",
   "Aval bancair bij nieuwbouw — Ley 20/2015 in mensentaal",
-  "Costa del Azahar vs. Costa Blanca — welke past bij jou?",
+  "Spaanse bankrekening voor Nederlandse B.V. — welke banken, welke documenten, hoe lang",
   "Vivienda turística aanvragen in de Comunitat Valenciana",
 ] as const;
 

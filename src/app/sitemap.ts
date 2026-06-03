@@ -54,6 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE}/artikelen/costa-azahar-vs-costa-blanca`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE}/gratis-gids`,
       lastModified: now,
       changeFrequency: "monthly",
