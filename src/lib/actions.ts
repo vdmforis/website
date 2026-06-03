@@ -38,8 +38,10 @@ export async function submitContact(
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL ?? "info@vdmforis.com";
-  const from = process.env.CONTACT_FROM_EMAIL ?? "Foris <noreply@vdmforis.com>";
+  // Use || (not ??) so an empty-string env var also falls back to the default.
+  const to = process.env.CONTACT_TO_EMAIL || "info@vdmforis.com";
+  const from =
+    process.env.CONTACT_FROM_EMAIL || "Foris <noreply@vdmforis.com>";
 
   if (!apiKey) {
     // In development / preview without secrets: log and pretend success so the form is testable.

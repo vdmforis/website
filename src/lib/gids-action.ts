@@ -40,8 +40,10 @@ export async function requestGids(
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const ownerTo = process.env.CONTACT_TO_EMAIL ?? "info@vdmforis.com";
-  const from = process.env.CONTACT_FROM_EMAIL ?? "Foris <noreply@vdmforis.com>";
+  // Use || (not ??) so an empty-string env var also falls back to the default.
+  const ownerTo = process.env.CONTACT_TO_EMAIL || "info@vdmforis.com";
+  const from =
+    process.env.CONTACT_FROM_EMAIL || "Foris <noreply@vdmforis.com>";
 
   // Generate the PDF (in-memory buffer)
   let pdfBuffer: Buffer;
@@ -143,8 +145,7 @@ export async function requestGids(
     return {
       status: "error",
       message:
-        "Er ging iets mis bij het versturen. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com." +
-        ` (Debug: ${detail})`,
+        "Er ging iets mis bij het versturen. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com.",
     };
   }
 
