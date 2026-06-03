@@ -74,10 +74,9 @@ export async function requestGids(
 
   try {
     const resend = new Resend(apiKey);
-    const pdfBase64 = pdfBuffer.toString("base64");
 
     // 1) Send the PDF to the requester with a friendly body
-    await resend.emails.send({
+    const pdfSend = await resend.emails.send({
       from,
       to: parsed.data.email,
       replyTo: ownerTo,
@@ -98,13 +97,21 @@ export async function requestGids(
       attachments: [
         {
           filename: "foris-9-valkuilen.pdf",
-          content: pdfBase64,
+          content: pdfBuffer,
         },
       ],
     });
 
+    if (pdfSend.error) {
+      console.error("[gids] Resend rejected PDF mail", pdfSend.error);
+      throw new Error(
+        `Resend error: ${pdfSend.error.name} — ${pdfSend.error.message}`,
+      );
+    }
+    console.log("[gids] PDF sent, Resend id:", pdfSend.data?.id);
+
     // 2) Notify owner of the new lead
-    await resend.emails.send({
+    const ownerSend = await resend.emails.send({
       from,
       to: ownerTo,
       replyTo: parsed.data.email,
@@ -116,6 +123,11 @@ export async function requestGids(
         `Fase: ${parsed.data.process ?? "(niet opgegeven)"}\n\n` +
         `De gids is naar ze toegestuurd.`,
     });
+
+    if (ownerSend.error) {
+      console.error("[gids] Resend rejected owner mail", ownerSend.error);
+      // Don't throw — PDF mail to user already succeeded, owner notification is secondary
+    }
   } catch (err) {
     console.error("[gids] Resend send failed", err);
     return {

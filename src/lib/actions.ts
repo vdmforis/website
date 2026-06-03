@@ -62,13 +62,19 @@ export async function submitContact(
         ? `Bericht:\n${parsed.data.message}`
         : "(geen bericht meegestuurd)",
     ];
-    await resend.emails.send({
+    const ownerSend = await resend.emails.send({
       from,
       to,
       replyTo: parsed.data.email,
       subject: `Nieuwe aanvraag van ${parsed.data.name}`,
       text: ownerLines.join("\n"),
     });
+    if (ownerSend.error) {
+      console.error("[contact] Resend rejected owner mail", ownerSend.error);
+      throw new Error(
+        `Resend error (owner): ${ownerSend.error.name} — ${ownerSend.error.message}`,
+      );
+    }
 
     // 2) Autoresponder to the requester — sets expectations + gives next steps
     const autoLines = [
@@ -86,13 +92,17 @@ export async function submitContact(
       "",
       "Van der Meulen Foris B.V. — vdmforis.com",
     ];
-    await resend.emails.send({
+    const autoSend = await resend.emails.send({
       from,
       to: parsed.data.email,
       replyTo: to,
       subject: "We hebben je bericht ontvangen — Foris",
       text: autoLines.join("\n"),
     });
+    if (autoSend.error) {
+      console.error("[contact] Resend rejected autoresponder", autoSend.error);
+      // Don't throw — owner notification already succeeded
+    }
   } catch (err) {
     console.error("[contact] Resend send failed", err);
     return {
