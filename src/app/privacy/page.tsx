@@ -34,7 +34,7 @@ export default function PrivacyPage() {
             Van der Meulen Foris B.V., gevestigd te Toldijk 27, 7901 TA Hoogeveen,
             ingeschreven bij de Nederlandse Kamer van Koophandel onder nummer
             98214950 en bij de Spaanse Agencia Tributaria onder NIF
-            N0868403052. Fiscaal domicilie in Spanje te Grau de Castellón,
+            N0406296D. Fiscaal domicilie in Spanje te Grau de Castellón,
             Comunitat Valenciana. Voor vragen over deze verklaring kun je ons
             mailen op{" "}
             <a

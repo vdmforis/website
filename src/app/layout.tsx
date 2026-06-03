@@ -109,7 +109,7 @@ const organizationJsonLd = {
     {
       "@type": "PropertyValue",
       propertyID: "NIF",
-      value: "N0868403052",
+      value: "N0406296D",
     },
   ],
   knowsLanguage: ["nl", "es", "en"],

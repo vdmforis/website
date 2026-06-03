@@ -58,7 +58,7 @@ export function SiteFooter() {
         <div className="mt-10 flex flex-col gap-4 border-t border-cream/15 pt-6 text-xs text-cream/60 md:flex-row md:items-start md:justify-between">
           <div className="space-y-1">
             <p>
-              Van der Meulen Foris B.V. · KvK 98214950 · NIF (ES) N0868403052 ·
+              Van der Meulen Foris B.V. · KvK 98214950 · NIF (ES) N0406296D ·
               Toldijk 27, 7901 TA Hoogeveen
             </p>
             <p className="text-cream/50">
