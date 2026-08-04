@@ -393,10 +393,10 @@ function ValkuilSection({ number, title, problem, origin, action }: ValkuilSecti
 export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
   return (
     <Document
-      title="De 9 valkuilen bij een huis kopen in Spanje als Nederlander"
+      title="De 9 valkuilen bij nieuwbouw kopen in Spanje als Nederlander"
       author="Van der Meulen Foris B.V."
-      subject="Praktische gids voor Nederlandse kopers van Spaans vastgoed"
-      keywords="Spanje, vastgoed, NIE, Modelo 036, aval bancair, Costa del Azahar"
+      subject="Praktische gids voor Nederlandse kopers van Spaanse nieuwbouw"
+      keywords="Spanje, nieuwbouw, off-plan, NIE, Modelo 036, aval bancair, Costa del Azahar"
     >
       {/* Cover page */}
       <Page size="A4" style={s.cover}>
@@ -410,11 +410,11 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
 
         <View>
           <Text style={s.coverTitle}>
-            De 9 valkuilen bij een huis kopen in Spanje als Nederlander.
+            De 9 valkuilen bij nieuwbouw kopen in Spanje als Nederlander.
           </Text>
           <Text style={s.coverSub}>
-            Eerstehandsgids op basis van onze eigen aankoop en drie jaar wonen aan
-            de Costa del Azahar.
+            Praktische gids uit onze eigen vastgoedpraktijk in Nederland en
+            Spanje — met name de Costa del Azahar.
             {recipientName ? `\n\nGeschreven voor ${recipientName}.` : ""}
           </Text>
         </View>
@@ -435,30 +435,28 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
         <Text style={s.h1}>Voordat je begint</Text>
 
         <Text style={s.lead}>
-          Een huis kopen in Spanje is voor de meeste Nederlanders een eenmalige
+          Nieuwbouw kopen in Spanje is voor de meeste Nederlanders een eenmalige
           ervaring. En dat is precies het probleem — eenmalig betekent: zonder
           ervaring, zonder de juiste contacten, en zonder begrip van waar de
           Spaanse bureaucratie afwijkt van wat je in Nederland gewend bent.
         </Text>
 
         <Text style={s.p}>
-          Wij doorliepen dat traject zelf — eerst als bewoners die in juli 2023
-          naar Spanje verhuisden en huurden, daarna als kopers van onze eerste
-          eigen woning aan de Costa del Azahar. Onze achtergrond zit in het
-          Nederlandse familiebedrijf Van der Meulen Vastgoed B.V. — meer dan tien
-          jaar koop, ontwikkeling en verhuur. Toch struikelden we onderweg over
-          dingen die we als ervaren vastgoedmensen niet hadden zien aankomen.
+          Foris komt voort uit een familiebedrijf met ruime vastgoedervaring in
+          Nederland en Spanje — koop, ontwikkeling en verhuur, met name aan de
+          Costa del Azahar. Nieuwbouwtrajecten doorlopen we ook zelf, van
+          reservering en aval bancair tot oplevering. De valkuilen in deze gids
+          komen rechtstreeks uit die praktijk.
         </Text>
 
         <Text style={s.p}>
-          In deze gids vind je de negen valkuilen die wij zelf of in onze omgeving
-          zijn tegengekomen. Per valkuil leggen we uit wat het probleem is, waarom
-          het ontstaat, en wat je concreet kunt doen om het te voorkomen.
+          Per valkuil leggen we uit wat het probleem is, waarom het ontstaat, en
+          wat je concreet kunt doen om het te voorkomen.
         </Text>
 
         <Text style={s.p}>
-          Dit is geen verkooppraatje. Het is een eerlijke lijst van wat wij vooraf
-          graag hadden geweten.
+          Dit is geen verkooppraatje. Het is de lijst die we zelf hadden willen
+          hebben bij een eerste Spaanse aankoop.
         </Text>
 
         <View style={s.highlight}>
@@ -504,17 +502,17 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
         <Text style={s.h1}>Tot slot</Text>
 
         <Text style={s.p}>
-          Een huis kopen in Spanje is geen ramp — miljoenen mensen doen het
-          succesvol, jaarlijks. Maar het is wel een traject waar onwetendheid duur
+          Nieuwbouw kopen in Spanje is geen ramp — duizenden mensen doen het
+          jaarlijks succesvol. Maar het is wel een traject waar onwetendheid duur
           kan worden, en waar de juiste volgorde en de juiste mensen een enorm
           verschil maken.
         </Text>
 
         <Text style={s.p}>
-          Wij hebben dit traject zelf doorlopen, met Nederlandse vastgoedervaring
-          én drie jaar wonen in Spanje achter de hand, en we hebben alle
-          bovenstaande valkuilen óf zelf gemaakt óf in onze omgeving gezien.
-          Daarom doen we wat we doen.
+          Alle bovenstaande valkuilen komen rechtstreeks uit onze eigen
+          vastgoedpraktijk in Nederland en Spanje. Daarom doen we wat we doen:
+          Nederlandstalige begeleiding bij nieuwbouw, uitsluitend aan de kant van
+          de koper.
         </Text>
 
         <View style={s.ctaBox}>
@@ -527,7 +525,7 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
             we de juiste club voor je zijn.
           </Text>
           <Text style={s.ctaLink}>
-            Plan een gesprek: cal.eu/team/vdmforis/intake
+            Plan een gesprek: vdmforis.com/kennismaking
           </Text>
           <Text style={s.ctaLink}>WhatsApp: +31 6 14 96 77 04</Text>
           <Text style={s.ctaLink}>E-mail: info@vdmforis.com</Text>

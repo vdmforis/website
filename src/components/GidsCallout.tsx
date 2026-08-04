@@ -19,7 +19,7 @@ export function GidsCallout({ variant = "card" }: { variant?: Variant }) {
             Gratis PDF · 24 pagina&apos;s
           </p>
           <p className="mt-1 font-heading text-lg text-navy">
-            De 9 valkuilen bij een huis kopen in Spanje
+            De 9 valkuilen bij nieuwbouw kopen in Spanje
           </p>
           <p className="mt-1 text-sm text-foreground/75">
             Dit artikel pakt één onderdeel uit — de volledige lijst plus checklists per fase staat in de gids.
@@ -44,7 +44,7 @@ export function GidsCallout({ variant = "card" }: { variant?: Variant }) {
         Gratis PDF · 24 pagina&apos;s
       </p>
       <h3 className="mt-3 font-heading text-2xl text-navy">
-        De 9 valkuilen bij een huis kopen in Spanje als Nederlander
+        De 9 valkuilen bij nieuwbouw kopen in Spanje als Nederlander
       </h3>
       <p className="mx-auto mt-3 max-w-xl text-foreground/80">
         Eerstehandse ervaring uit ons eigen aankooptraject — geen marketingverhaal,

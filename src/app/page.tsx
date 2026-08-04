@@ -136,8 +136,8 @@ export default function Home() {
               </p>
               <h3 className="mt-3 font-heading text-xl">Download onze gids</h3>
               <p className="mt-2 flex-1 text-sm text-cream/80">
-                De 9 valkuilen bij een huis kopen in Spanje als Nederlander —
-                eerstehandse ervaring, geen marketingverhaal.
+                De 9 valkuilen bij nieuwbouw kopen in Spanje als Nederlander —
+                rechtstreeks uit onze eigen vastgoedpraktijk, geen marketingverhaal.
               </p>
               <span className="mt-4 text-sm text-terracotta">
                 Stuur me de gids →

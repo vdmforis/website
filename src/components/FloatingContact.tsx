@@ -55,9 +55,7 @@ export function FloatingContact() {
               {contact.email}
             </a>
             <a
-              href={contact.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={contact.bookingPath}
               onClick={() => setOpen(false)}
               className="flex items-center gap-3 rounded-xl bg-terracotta px-4 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
             >

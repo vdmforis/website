@@ -22,14 +22,8 @@ export const contact = {
    */
   whatsappPrefill:
     "Hoi%20Dennis%2C%20ik%20heb%20een%20vraag%20over%20een%20huis%20kopen%20in%20Spanje.",
-  /**
-   * Cal.com / Cal.eu embed configuration.
-   * The link is what comes after cal.eu/ in the booking URL.
-   */
-  bookingNamespace: "intake",
-  bookingLink: "team/vdmforis/intake",
-  /** Public fallback URL (used when JS embed isn't an option). */
-  bookingUrl: "https://cal.eu/team/vdmforis/intake",
+  /** On-site booking page — replaces the old cal.eu integration. */
+  bookingPath: "/kennismaking",
 };
 
 export function whatsappLink(): string {

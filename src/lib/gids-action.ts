@@ -82,16 +82,16 @@ export async function requestGids(
       from,
       to: parsed.data.email,
       replyTo: ownerTo,
-      subject: "Je Foris-gids: de 9 valkuilen bij een huis kopen in Spanje",
+      subject: "Je Foris-gids: de 9 valkuilen bij nieuwbouw kopen in Spanje",
       text:
         `Hoi ${parsed.data.name},\n\n` +
         "Bedankt voor je aanvraag. Hierbij de gids — bewaar 'm in je 'Spanje-koop'-map, " +
         "dan kun je er onderweg terug naar grijpen.\n\n" +
-        "De gids is opgesteld op basis van ons eigen aankooptraject en drie jaar wonen aan " +
-        "de Costa del Azahar. Geen verkooppraatje, gewoon de eerlijke lijst van wat we vooraf " +
-        "graag hadden geweten.\n\n" +
+        "De gids komt voort uit onze eigen vastgoedpraktijk in Nederland en Spanje. " +
+        "Geen verkooppraatje — gewoon de negen punten waar het bij nieuwbouwtrajecten " +
+        "in de praktijk misgaat.\n\n" +
         "Heb je vragen over je specifieke situatie? Een kennismakingsgesprek van 30 minuten is " +
-        "gratis: https://cal.eu/team/vdmforis/intake\n\n" +
+        "gratis: https://vdmforis.com/kennismaking\n\n" +
         "Of stuur me een WhatsApp: +31 6 14 96 77 04\n\n" +
         "Veel succes met je traject,\n" +
         "Dennis\n\n" +
