@@ -10,7 +10,7 @@ const readingTime = "12 min";
 const title =
   "Costa del Azahar vs Costa Blanca — welke past bij jou?";
 const description =
-  "Eerlijke vergelijking tussen de Costa del Azahar (Castellón) en de Costa Blanca (Alicante) voor Nederlandse huizenkopers. Prijzen per m², drukte, vliegverbindingen, klimaat, regelgeving en voor wie welke kuststrook past — geschreven vanuit drie jaar wonen aan de Azahar.";
+  "Eerlijke vergelijking tussen de Costa del Azahar (Castellón) en de Costa Blanca (Alicante) voor Nederlandse huizenkopers. Prijzen per m², drukte, vliegverbindingen, klimaat, regelgeving en voor wie welke kuststrook past — geschreven vanuit jarenlang wonen aan de Azahar.";
 
 export const metadata: Metadata = {
   title,

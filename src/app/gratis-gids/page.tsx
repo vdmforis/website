@@ -29,7 +29,7 @@ export default function GratisGidsPage() {
               De 9 valkuilen bij nieuwbouw kopen in Spanje als Nederlander.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              Op basis van onze eigen aankoop en drie jaar wonen aan de Costa del
+              Rechtstreeks uit onze eigen vastgoedpraktijk in Nederland en aan de Costa del
               Azahar. Geen marketingverhaal — een eerlijke lijst van wat wij vooraf
               graag hadden geweten.
             </p>

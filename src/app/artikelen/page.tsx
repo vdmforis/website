@@ -13,7 +13,7 @@ const articles = [
     slug: "costa-azahar-vs-costa-blanca",
     title: "Costa del Azahar vs Costa Blanca — welke past bij jou?",
     excerpt:
-      "Eerlijke vergelijking van beide kuststroken: prijzen per m², drukte, vliegverbindingen, klimaat, regelgeving en voor wie welke costa logischer is — geschreven vanuit drie jaar wonen aan de Azahar.",
+      "Eerlijke vergelijking van beide kuststroken: prijzen per m², drukte, vliegverbindingen, klimaat, regelgeving en voor wie welke costa logischer is — geschreven vanuit jarenlang wonen aan de Azahar.",
     date: "3 juni 2026",
     readingTime: "12 min",
     tag: "Regiokeuze",
@@ -77,7 +77,7 @@ export default function ArtikelenPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
             Geen marketingverhalen, geen oppervlakkige &quot;tips voor een huis in
-            Spanje&quot;. Echte eerstehandgidsen op basis van drie jaar wonen aan de
+            Spanje&quot;. Echte eerstehandgidsen op basis van jarenlang wonen aan de
             Costa del Azahar en onze eigen nieuwbouwaankoop.
           </p>
         </div>
