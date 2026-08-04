@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Compass, FileText, HardHat, KeyRound } from "lucide-react";
 import { HeroForm } from "@/components/HeroForm";
 import { BookCallButton } from "@/components/BookCallButton";
+import { Werkwijze3D } from "@/components/Werkwijze3D";
 import { whatsappLink } from "@/lib/contact";
 
 export default function Home() {
@@ -22,15 +23,15 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:py-32">
           <div className="flex flex-col justify-center">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-              Costa del Azahar · Castellón
+              Nieuwbouw · Costa del Azahar · Castellón
             </p>
             <h1 className="mt-4 font-heading text-4xl leading-[1.1] text-navy md:text-5xl lg:text-6xl">
-              Een huis kopen in Spanje zonder de typische valkuilen — van NIE tot notaris, in het Nederlands geregeld.
+              Nieuwbouw kopen in Spanje, zonder de typische valkuilen.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              We wonen sinds juli 2023 aan deze kust, kennen de notarissen, banken en
-              bouwers persoonlijk, en hebben het hele aankooptraject net zelf doorlopen
-              voor onze eigen nieuwbouwvilla.
+              Nederlandstalige aankoopbegeleiding bij nieuwbouw aan de Costa del
+              Azahar — van reservering tot sleuteloverdracht, met vaste advocaten,
+              notarissen en banken in het netwerk.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
@@ -61,11 +62,11 @@ export default function Home() {
               </li>
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Vaste prijs, vooraf afgesproken — geen verrassingen achteraf</span>
+                <span>Puur nieuwbouw — dat is alles wat we doen</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Ter plaatse in Castellón, Nederlandstalig contact</span>
+                <span>Vaste prijs, vooraf afgesproken — geen verrassingen achteraf</span>
               </li>
             </ul>
           </div>
@@ -74,6 +75,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Werkwijze — 3D scroll */}
+      <Werkwijze3D />
 
       {/* Begin gratis */}
       <section className="border-t border-border bg-navy text-cream">
@@ -208,8 +212,8 @@ export default function Home() {
           </div>
           <div className="mt-8 text-sm text-foreground/70">
             <span className="font-medium text-navy">Volledige aankoopbegeleiding</span>{" "}
-            (van zoekprofiel tot sleutel) volgt zomer 2026 — zodra onze RAICV-vergunning
-            binnen is.
+            (van reservering tot sleutel) volgt zodra onze RAICV-vergunning binnen is —
+            de aanvraag loopt.
           </div>
         </div>
       </section>
@@ -223,9 +227,9 @@ export default function Home() {
                 Eigen ervaring
               </p>
               <p className="mt-2 text-foreground/85">
-                Sinds juli 2023 wonen we aan deze kust — eerst gehuurd in Benicàssim, nu
-                in juni 2026 verhuizen we naar ons eerste eigen huis, een nieuwbouwvilla
-                via onze B.V. We kennen de paperassen van binnenuit.
+                Het volledige nieuwbouwtraject — reservering, aval-controle,
+                bouwtoezicht, oplevering — hebben we zelf doorlopen voor een eigen
+                villa in Castellón. We adviseren alleen wat we zelf hebben gedaan.
               </p>
             </div>
             <div>
