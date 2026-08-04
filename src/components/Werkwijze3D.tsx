@@ -6,36 +6,31 @@ const STEPS = [
   {
     num: "Stap 01 · Fundament kiezen",
     title: "Oriëntatie & projectkeuze",
-    body: "Budget, regio en welk nieuwbouwproject bij je past: in anderhalf uur staat je plan op papier. Je krijgt een regiogids op maat, een vergelijking van lopende projecten en warme introducties naar gestor, bank en advocaat. Het bedrag wordt volledig verrekend als je doorgaat met begeleiding.",
-    price: "€ 495 · vast",
+    body: "In anderhalf uur staat je plan op papier: budget, regio en welk nieuwbouwproject bij je past — met een regiogids op maat en warme introducties naar gestor, bank en advocaat.",
     label: "Stap 01 · Oriëntatie",
   },
   {
     num: "Stap 02 · Papieren als fundering",
     title: "De papierwinkel",
-    body: "NIE, CIF, Spaanse bankrekening, modelo 036, beëdigde vertalingen en apostilles — geregeld voor privé én B.V., zonder dat je ervoor naar Spanje hoeft. Alles in het Nederlands uitgelegd, één aanspreekpunt.",
-    price: "€ 350 – 650",
+    body: "NIE, CIF, Spaanse bankrekening, modelo 036, vertalingen en apostilles — geregeld voor privé én B.V., zonder dat je ervoor naar Spanje hoeft.",
     label: "Stap 02 · Papierwinkel",
   },
   {
     num: "Stap 03 · Toezicht op de bouw",
     title: "Nieuwbouwtoezicht",
-    body: "Bij nieuwbouw op tekening zijn wij je ogen op de bouwplaats: bouwbezoeken met fotorapportage, controle van de bankgarantie (aval, Ley 20/2015) en een opleveringsinspectie — terwijl jij gewoon in Nederland zit.",
-    price: "€ 350 per bezoek",
+    body: "Wij zijn je ogen op de bouwplaats: bouwbezoeken met fotorapportage, controle van de bankgarantie en een opleveringsinspectie — terwijl jij gewoon in Nederland zit.",
     label: "Stap 03 · Nieuwbouwtoezicht",
   },
   {
     num: "Stap 04 · Reservering tot sleutel",
     title: "Volledige aankoopbegeleiding",
-    body: "Projectselectie, reserveringscontract en aanbetalingsschema juridisch gecheckt door een Spaanse advocaat, bankgarantie geverifieerd, en het volledige notaristraject tot en met de sleuteloverdracht. Beschikbaar zodra onze RAICV-vergunning binnen is.",
-    price: "€ 4.950 · of 1,75% van de aankoopprijs",
+    body: "Reserveringscontract juridisch gecheckt door een Spaanse advocaat, bankgarantie geverifieerd, en het hele notaristraject tot en met de sleuteloverdracht. Beschikbaar zodra onze RAICV-vergunning binnen is.",
     label: "Stap 04 · Reservering tot sleutel",
   },
   {
     num: "Stap 05 · Zorgeloos bezit",
     title: "Concierge na de koop",
-    body: "Sleutelbeheer, periodieke checks, post, alarmopvolging en klusjescoördinatie — in drie niveaus, van licht tot villa-grade. Jaarlijks vooruitbetalen scheelt 10%.",
-    price: "Vanaf € 45 / maand",
+    body: "Sleutelbeheer, periodieke checks, post en klusjescoördinatie — in drie niveaus, van licht tot villa-grade.",
     label: "Stap 05 · Concierge",
   },
 ];
@@ -358,9 +353,12 @@ export function Werkwijze3D() {
               <h3 className="mt-2 font-heading text-2xl text-navy">{s.title}</h3>
               <p className="mt-3 max-w-lg text-foreground/80">{s.body}</p>
               <p className="mt-4">
-                <span className="inline-block rounded-full border border-border bg-card px-4 py-1.5 text-sm tabular-nums text-navy">
-                  {s.price}
-                </span>
+                <a
+                  href="#contact"
+                  className="text-sm font-medium text-terracotta underline-offset-4 hover:underline"
+                >
+                  Vraag een offerte aan →
+                </a>
               </p>
             </div>
           ))}

@@ -129,19 +129,18 @@ export default function OnzeErvaringPage() {
               Drie jaar ter plaatse, netwerk dat staat
             </h2>
             <p className="mt-4 text-foreground/85">
-              Sinds 2023 wonen we in Grau de Castellón. In die drie jaar hebben we
-              een lokaal netwerk opgebouwd dat we dagelijks gebruiken: vaste gestores
+              Sinds 2023 zijn we actief aan de Costa del Azahar en hebben we een
+              lokaal netwerk opgebouwd dat we dagelijks gebruiken: vaste gestores
               die buitenlandse B.V.&apos;s aankunnen, notarissen in Castellón en Valencia
               die meedenken (niet alleen voorlezen), advocaten gespecialiseerd in
               vastgoedtransacties, en bouwers waar we ons eigen geld aan toe&shy;vertrouwen.
             </p>
             <p className="mt-3 text-foreground/85">
-              Daar bovenop: ons eigen aankooptraject in 2025-2026 voor een chalet
-              adosado bij Metrovacesa in Grau de Castellón — off-plan, via onze B.V.,
-              compleet met notariële volmacht, beëdigde vertalingen, modelo 036,
-              aval bancair en vier deelbetalingen tussen NL en ES. Niet omdat we
-              het moesten leren, maar omdat het de logische uitwerking was van wat
-              we onze klanten adviseren.
+              Daar bovenop doorlopen we deze nieuwbouwtrajecten ook zelf, via eigen
+              vennootschappen — off-plan, compleet met notariële volmachten, beëdigde
+              vertalingen, modelo 036, aval bancair en deelbetalingen tussen NL en
+              ES. We adviseren geen stap die we niet zelf in de praktijk hebben
+              uitgevoerd.
             </p>
           </div>
         </div>

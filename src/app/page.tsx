@@ -66,7 +66,7 @@ export default function Home() {
               </li>
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Vaste prijs, vooraf afgesproken — geen verrassingen achteraf</span>
+                <span>Altijd een offerte vooraf — geen verrassingen achteraf</span>
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ export default function Home() {
             </p>
           </div>
           <p className="mt-4 max-w-2xl text-cream/85">
-            Voordat je een euro uitgeeft willen we eerst weten of we bij elkaar passen.
+            Voordat je iets vastlegt willen we eerst weten of we bij elkaar passen.
             Kies de manier die jou het prettigst lijkt — alle drie zijn gratis en
             kunnen vandaag nog.
           </p>
@@ -158,7 +158,7 @@ export default function Home() {
               href="/diensten"
               className="text-sm text-terracotta hover:underline"
             >
-              Alle diensten en prijzen →
+              Alle diensten →
             </Link>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -166,28 +166,24 @@ export default function Home() {
               {
                 title: "Oriëntatie & coaching",
                 body: "Anderhalf uur intake, regiogids op maat, warme intro's naar onze gestor en bank.",
-                price: "€ 495",
                 href: "/diensten#orientatie",
                 Icon: Compass,
               },
               {
                 title: "Papierwinkel",
                 body: "NIE, CIF, bankrekening, modelo 036, vertalingen en apostille — voor privé én B.V.",
-                price: "€ 350–650",
                 href: "/diensten#papierwinkel",
                 Icon: FileText,
               },
               {
                 title: "Nieuwbouwtoezicht",
                 body: "Bouwbezoeken, fotorapportage, aval-controle en opleveringsinspectie als jij in NL zit.",
-                price: "€ 350 per bezoek",
                 href: "/diensten#nieuwbouwtoezicht",
                 Icon: HardHat,
               },
               {
                 title: "Concierge",
                 body: "Sleutel, post, alarm, klusjescoördinatie — drie niveaus van licht tot villa-grade.",
-                price: "Vanaf € 45 / mnd",
                 href: "/diensten#concierge",
                 Icon: KeyRound,
               },
@@ -197,16 +193,14 @@ export default function Home() {
                 href={s.href}
                 className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-terracotta/60 hover:shadow-sm"
               >
-                <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-cream">
-                    <Icon size={20} strokeWidth={1.75} aria-hidden />
-                  </span>
-                  <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-                    {s.price}
-                  </p>
-                </div>
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-cream">
+                  <Icon size={20} strokeWidth={1.75} aria-hidden />
+                </span>
                 <h3 className="mt-4 font-heading text-xl text-navy">{s.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-foreground/80">{s.body}</p>
+                <span className="mt-4 text-sm text-terracotta">
+                  Vraag een offerte aan →
+                </span>
               </Link>
             ))}
           </div>
@@ -227,9 +221,9 @@ export default function Home() {
                 Eigen ervaring
               </p>
               <p className="mt-2 text-foreground/85">
-                Het volledige nieuwbouwtraject — reservering, aval-controle,
-                bouwtoezicht, oplevering — hebben we zelf doorlopen voor een eigen
-                villa in Castellón. We adviseren alleen wat we zelf hebben gedaan.
+                Foris komt voort uit een familiebedrijf met ruime vastgoedervaring
+                in Nederland en Spanje — met name aan de Costa del Azahar. Nieuwbouw
+                kennen we van binnenuit: van reservering en aval tot oplevering.
               </p>
             </div>
             <div>

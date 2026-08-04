@@ -7,7 +7,7 @@ import { BookCallButton } from "@/components/BookCallButton";
 export const metadata: Metadata = {
   title: "Over ons",
   description:
-    "Foris is opgericht door Dennis van der Meulen — sinds juli 2023 in Grau de Castellón en zoon van Diederik van der Meulen, oprichter van het Nederlandse Van der Meulen Vastgoed B.V. Tien jaar Nederlandse vastgoedervaring plus drie jaar wonen, kopen en leven in Spanje.",
+    "Foris is opgericht door Dennis van der Meulen — sinds 2023 aan de Costa del Azahar en zoon van Diederik van der Meulen, oprichter van het Nederlandse Van der Meulen Vastgoed B.V. Tien jaar Nederlandse vastgoedervaring plus drie jaar wonen, kopen en leven in Spanje.",
 };
 
 export default function OverOnsPage() {
@@ -32,7 +32,7 @@ export default function OverOnsPage() {
             Hoi, ik ben Dennis.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/85">
-            Ik woon sinds juli 2023 in Grau de Castellón, samen met mijn vriendin en
+            Ik woon sinds 2023 aan de Costa del Azahar, samen met mijn vriendin en
             ons jonge gezin. We kwamen hier oorspronkelijk voor mijn werk en zouden
             zien wat ervan kwam. Inmiddels is dit thuis.
           </p>

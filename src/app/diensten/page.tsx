@@ -6,7 +6,7 @@ import { BookCallButton } from "@/components/BookCallButton";
 export const metadata: Metadata = {
   title: "Diensten",
   description:
-    "Vier diensten die we vandaag al leveren: oriëntatie & coaching, papierwinkel (NIE/CIF/bank), nieuwbouwtoezicht en concierge. Volledige aankoopbegeleiding volgt zomer 2026 zodra onze RAICV-vergunning binnen is.",
+    "Vier diensten die we vandaag al leveren: oriëntatie & coaching, papierwinkel (NIE/CIF/bank), nieuwbouwtoezicht en concierge. Volledige aankoopbegeleiding volgt zodra onze RAICV-vergunning binnen is.",
 };
 
 const availableNow = [
@@ -14,8 +14,6 @@ const availableNow = [
     id: "orientatie",
     badge: "Coaching · Vanaf vandaag",
     title: "Oriëntatie & strategie-coaching",
-    price: "€ 495 vast — of € 150 / uur",
-    priceSub: "(volledig verrekend als je later doorgaat met begeleiding)",
     intro:
       "Voor iedereen die nog niet zeker weet of dit het moment is, of dit de juiste regio is, of wij de juiste club zijn. Coaching en kennisoverdracht, geen makelaardij.",
     includes: [
@@ -31,8 +29,6 @@ const availableNow = [
     id: "papierwinkel",
     badge: "Papierwinkel · Vanaf vandaag",
     title: "NIE, CIF, bank, modelo 036",
-    price: "€ 350 – € 650 per traject",
-    priceSub: "(vaste prijs vooraf, afhankelijk van privé / B.V.)",
     intro:
       "Je hebt al gekocht, of bent vlak voor sluiting, en verzandt in de papierwinkel. Wij coördineren met onze gestor, vertalen, regelen afspraken en zorgen dat de juiste documenten op de juiste plek op het juiste moment liggen.",
     includes: [
@@ -49,8 +45,6 @@ const availableNow = [
     id: "nieuwbouwtoezicht",
     badge: "Toezicht · Vanaf vandaag",
     title: "Nieuwbouwtoezicht & oplevering",
-    price: "€ 350 per bezoek of € 950 pakket",
-    priceSub: "(pakket = drie bouwbezoeken + opleveringsinspectie)",
     intro:
       "Heb je nieuwbouw gekocht maar zit je in Nederland? Wij zijn jouw ogen op de bouwplaats. Geen verkoper-belang, geen bouwer-belang — gewoon eerlijke rapportage.",
     includes: [
@@ -67,14 +61,12 @@ const availableNow = [
     id: "concierge",
     badge: "Concierge · Vanaf vandaag",
     title: "Concierge — sleutel- en huisbeheer",
-    price: "Vanaf € 45 / maand",
-    priceSub: "(10% korting bij jaarlijkse vooruitbetaling)",
     intro:
       "Zorg dat je huis blijft draaien terwijl jij in Nederland zit. Drie niveaus, afhankelijk van hoe gemoedelijk je het wil.",
     includes: [
-      "Light · € 45/mnd — sleutelbeheer, maandelijkse visuele check, jaarafrekening nutsvoorzieningen",
-      "Standard · € 89/mnd — bovenstaande + tweewekelijkse check, post afhandelen, alarmrespons",
-      "Villa · € 159/mnd — bovenstaande + wekelijkse check, 2u/mnd klusbudget, 24u-inzet bij calamiteit",
+      "Light — sleutelbeheer, maandelijkse visuele check, jaarafrekening nutsvoorzieningen",
+      "Standard — bovenstaande + tweewekelijkse check, post afhandelen, alarmrespons",
+      "Villa — bovenstaande + wekelijkse check, klusjescoördinatie, 24u-inzet bij calamiteit",
     ],
     forWhom:
       "Je woont niet permanent in Spanje en je wil niet aan de andere kant van Europa hoeven uitzoeken wie er nu weer iets met de boiler moet doen.",
@@ -83,17 +75,15 @@ const availableNow = [
 
 const fromQ3 = {
   id: "aankoopbegeleiding",
-  badge: "Vanaf zomer 2026",
+  badge: "Volledig traject",
   title: "Volledige aankoopbegeleiding",
-  price: "€ 4.950 vast of 1,75%",
-  priceSub: "(min € 4.500, max € 9.500 — je kiest bij aanvang)",
   intro:
     "Het hele traject van zoekprofiel tot sleuteloverdracht. Wij doen het werk, jij neemt de beslissingen. Looptijd doorgaans 3–6 maanden.",
   includes: [
     "Zoekprofiel scherpstellen en actief op zoek (eigen netwerk + lokale Spaanse makelaars + nieuwbouwontwikkelaars)",
     "Bezichtigingen — fysiek door ons, of videocall mét ons erbij",
     "Bod- en onderhandelingsstrategie",
-    "Juridische check van het contract door een Spaanse advocaat (in onze prijs)",
+    "Juridische check van het contract door een Spaanse advocaat (inbegrepen)",
     "NIE en CIF (modelo 030 / 036) — geregeld, niet alleen toegelicht",
     "Bankrekening openen en geld overmaken naar Spanje",
     "Begeleiding op de dag van de notaris — Nederlandstalige uitleg op locatie",
@@ -105,8 +95,8 @@ const fromQ3 = {
 
 const faqs = [
   {
-    q: "Waarom is de volledige aankoopbegeleiding pas vanaf zomer 2026?",
-    a: "Wettelijk mogen we pas actief namens een koper zoeken en onderhandelen zodra we ingeschreven staan in het RAICV — het verplichte vastgoedregister van de Comunitat Valenciana sinds oktober 2022. Onze inschrijving (inclusief 200u-opleiding, verzekeringen en caución) loopt en wordt verwacht in Q3 2026. We willen dit liever goed doen dan snel.",
+    q: "Waarom is de volledige aankoopbegeleiding er nog niet?",
+    a: "Wettelijk mogen we pas actief namens een koper zoeken en onderhandelen zodra we ingeschreven staan in het RAICV — het verplichte vastgoedregister van de Comunitat Valenciana sinds oktober 2022. Onze inschrijving (inclusief 200-uursopleiding, verzekeringen en caución) is in voorbereiding; de aanvraag dienen we eind 2026 in. We willen dit liever goed doen dan snel.",
   },
   {
     q: "Hoe lang duurt een aankoop van begin tot sleutel?",
@@ -118,7 +108,7 @@ const faqs = [
   },
   {
     q: "Doen jullie ook fiscale en juridische begeleiding?",
-    a: "We zijn geen advocaten of belastingadviseurs — dat zou ook niet mogen. We werken structureel met een vaste Spaanse advocaat en een gestor; hun werk zit in de prijs van de begeleiding. Voor specifieke fiscale planning (modelo 720, vermogensbelasting, IRPF) verwijzen we door naar onze gestor.",
+    a: "We zijn geen advocaten of belastingadviseurs — dat zou ook niet mogen. We werken structureel met een vaste Spaanse advocaat en een gestor; hun werk is inbegrepen in de begeleiding. Voor specifieke fiscale planning (modelo 720, vermogensbelasting, IRPF) verwijzen we door naar onze gestor.",
   },
   {
     q: "Hoe weet ik dat jullie écht onafhankelijk zijn?",
@@ -153,13 +143,13 @@ export default function DienstenPage() {
             Diensten
           </p>
           <h1 className="mt-4 font-heading text-4xl leading-[1.1] text-navy md:text-5xl">
-            Wat we vandaag al voor je doen — en wat erbij komt deze zomer.
+            Wat we vandaag al voor je doen — en wat eraan komt.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
-            We werken aan onze RAICV-vergunning voor volledige aankoopbegeleiding, en dat
-            duurt nog tot deze zomer. Ondertussen zijn er vier diensten waarmee we al wel
-            kunnen helpen — coaching, papierwinkel, bouwtoezicht en concierge. Allemaal
-            vaste prijs, vooraf afgesproken, en wij werken voor jou.
+            We werken aan onze RAICV-vergunning voor volledige aankoopbegeleiding.
+            Ondertussen zijn er vier diensten waarmee we al wel kunnen helpen —
+            coaching, papierwinkel, bouwtoezicht en concierge. Altijd een offerte
+            vooraf, en wij werken uitsluitend voor jou.
           </p>
         </div>
       </section>
@@ -186,10 +176,12 @@ export default function DienstenPage() {
                   {pkg.badge}
                 </p>
                 <h3 className="mt-3 font-heading text-3xl text-navy">{pkg.title}</h3>
-                <p className="mt-6 font-heading text-2xl text-terracotta">
-                  {pkg.price}
-                </p>
-                <p className="text-sm text-muted-foreground">{pkg.priceSub}</p>
+                <a
+                  href="/#contact"
+                  className="mt-6 inline-block text-sm font-medium text-terracotta underline-offset-4 hover:underline"
+                >
+                  Vraag een offerte aan →
+                </a>
                 <p className="mt-6 text-sm text-foreground/75">
                   <span className="font-medium text-navy">Voor wie? </span>
                   {pkg.forWhom}
@@ -219,7 +211,7 @@ export default function DienstenPage() {
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
           <div className="mb-10 flex items-baseline justify-between gap-4 border-b border-border pb-6">
             <h2 className="font-heading text-2xl text-navy md:text-3xl">
-              In voorbereiding · vanaf zomer 2026
+              In voorbereiding · na RAICV-registratie
             </h2>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
               Na RAICV
@@ -234,10 +226,12 @@ export default function DienstenPage() {
                 {fromQ3.badge}
               </p>
               <h3 className="mt-3 font-heading text-3xl text-navy">{fromQ3.title}</h3>
-              <p className="mt-6 font-heading text-2xl text-terracotta">
-                {fromQ3.price}
-              </p>
-              <p className="text-sm text-muted-foreground">{fromQ3.priceSub}</p>
+              <a
+                href="/#contact"
+                className="mt-6 inline-block text-sm font-medium text-terracotta underline-offset-4 hover:underline"
+              >
+                Vraag een offerte aan →
+              </a>
               <p className="mt-6 text-sm text-foreground/75">
                 <span className="font-medium text-navy">Voor wie? </span>
                 {fromQ3.forWhom}
@@ -299,8 +293,9 @@ export default function DienstenPage() {
             <p>
               Vier deelbetalingen, een bouwlicentie, een aval bancair, oplevering, snagging,
               registratie — allemaal kunnen ze fout gaan, en allemaal staan ze keurig in
-              een Spaans contract dat je waarschijnlijk niet leest. Wij hebben dit traject
-              net zelf doorlopen met onze eigen villa in Grau de Castellón en weten precies waar
+              een Spaans contract dat je waarschijnlijk niet leest. Als familiebedrijf met ruime
+              vastgoedervaring in Nederland en Spanje — met name aan de Costa del
+              Azahar — kennen we deze trajecten van binnenuit en weten we precies waar
               de scherpe randjes zitten.
             </p>
             <p className="text-cream/70">
