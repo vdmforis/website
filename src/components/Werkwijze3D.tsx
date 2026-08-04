@@ -8,30 +8,35 @@ const STEPS = [
     title: "Oriëntatie & projectkeuze",
     body: "In anderhalf uur staat je plan op papier: budget, regio en welk nieuwbouwproject bij je past — met een regiogids op maat en warme introducties naar gestor, bank en advocaat.",
     label: "Stap 01 · Oriëntatie",
+    dienst: "orientatie",
   },
   {
     num: "Stap 02 · Papieren als fundering",
     title: "De papierwinkel",
     body: "NIE, CIF, Spaanse bankrekening, modelo 036, vertalingen en apostilles — geregeld voor privé én B.V., zonder dat je ervoor naar Spanje hoeft.",
     label: "Stap 02 · Papierwinkel",
+    dienst: "papierwinkel",
   },
   {
     num: "Stap 03 · Toezicht op de bouw",
     title: "Nieuwbouwtoezicht",
     body: "Wij zijn je ogen op de bouwplaats: bouwbezoeken met fotorapportage, controle van de bankgarantie en een opleveringsinspectie — terwijl jij gewoon in Nederland zit.",
     label: "Stap 03 · Nieuwbouwtoezicht",
+    dienst: "nieuwbouwtoezicht",
   },
   {
     num: "Stap 04 · Reservering tot sleutel",
     title: "Volledige aankoopbegeleiding",
     body: "Reserveringscontract juridisch gecheckt door een Spaanse advocaat, bankgarantie geverifieerd, en het hele notaristraject tot en met de sleuteloverdracht. Beschikbaar zodra onze RAICV-vergunning binnen is.",
     label: "Stap 04 · Reservering tot sleutel",
+    dienst: "aankoopbegeleiding",
   },
   {
     num: "Stap 05 · Zorgeloos bezit",
     title: "Concierge na de koop",
     body: "Sleutelbeheer, periodieke checks, post en klusjescoördinatie — in drie niveaus, van licht tot villa-grade.",
     label: "Stap 05 · Concierge",
+    dienst: "concierge",
   },
 ];
 
@@ -354,7 +359,7 @@ export function Werkwijze3D() {
               <p className="mt-3 max-w-lg text-foreground/80">{s.body}</p>
               <p className="mt-4">
                 <a
-                  href="#contact"
+                  href={`/offerte?dienst=${s.dienst}`}
                   className="text-sm font-medium text-terracotta underline-offset-4 hover:underline"
                 >
                   Vraag een offerte aan →

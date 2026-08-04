@@ -167,41 +167,51 @@ export default function Home() {
                 title: "Oriëntatie & coaching",
                 body: "Anderhalf uur intake, regiogids op maat, warme intro's naar onze gestor en bank.",
                 href: "/diensten#orientatie",
+                dienst: "orientatie",
                 Icon: Compass,
               },
               {
                 title: "Papierwinkel",
                 body: "NIE, CIF, bankrekening, modelo 036, vertalingen en apostille — voor privé én B.V.",
                 href: "/diensten#papierwinkel",
+                dienst: "papierwinkel",
                 Icon: FileText,
               },
               {
                 title: "Nieuwbouwtoezicht",
                 body: "Bouwbezoeken, fotorapportage, aval-controle en opleveringsinspectie als jij in NL zit.",
                 href: "/diensten#nieuwbouwtoezicht",
+                dienst: "nieuwbouwtoezicht",
                 Icon: HardHat,
               },
               {
                 title: "Concierge",
                 body: "Sleutel, post, alarm, klusjescoördinatie — drie niveaus van licht tot villa-grade.",
                 href: "/diensten#concierge",
+                dienst: "concierge",
                 Icon: KeyRound,
               },
             ].map(({ Icon, ...s }) => (
-              <Link
+              <div
                 key={s.title}
-                href={s.href}
-                className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-terracotta/60 hover:shadow-sm"
+                className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-terracotta/60 hover:shadow-sm"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-cream">
                   <Icon size={20} strokeWidth={1.75} aria-hidden />
                 </span>
-                <h3 className="mt-4 font-heading text-xl text-navy">{s.title}</h3>
+                <h3 className="mt-4 font-heading text-xl text-navy">
+                  <Link href={s.href} className="after:absolute after:inset-0">
+                    {s.title}
+                  </Link>
+                </h3>
                 <p className="mt-2 flex-1 text-sm text-foreground/80">{s.body}</p>
-                <span className="mt-4 text-sm text-terracotta">
+                <Link
+                  href={`/offerte?dienst=${s.dienst}`}
+                  className="relative z-10 mt-4 text-sm text-terracotta underline-offset-4 hover:underline"
+                >
                   Vraag een offerte aan →
-                </span>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
           <div className="mt-8 text-sm text-foreground/70">

@@ -177,7 +177,7 @@ export default function DienstenPage() {
                 </p>
                 <h3 className="mt-3 font-heading text-3xl text-navy">{pkg.title}</h3>
                 <a
-                  href="/#contact"
+                  href={`/offerte?dienst=${pkg.id}`}
                   className="mt-6 inline-block text-sm font-medium text-terracotta underline-offset-4 hover:underline"
                 >
                   Vraag een offerte aan →
@@ -227,7 +227,7 @@ export default function DienstenPage() {
               </p>
               <h3 className="mt-3 font-heading text-3xl text-navy">{fromQ3.title}</h3>
               <a
-                href="/#contact"
+                href="/offerte?dienst=aankoopbegeleiding"
                 className="mt-6 inline-block text-sm font-medium text-terracotta underline-offset-4 hover:underline"
               >
                 Vraag een offerte aan →
