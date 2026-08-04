@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GidsForm } from "@/components/GidsForm";
 
 export const metadata: Metadata = {
-  title: "Gratis gids — de 9 valkuilen bij een huis kopen in Spanje",
+  title: "Gratis gids — de 9 valkuilen bij nieuwbouw kopen in Spanje",
   description:
     "Download onze gids van 24 pagina's: de negen valkuilen die wij zelf zijn tegengekomen tijdens onze aankoop. Eerlijke, eerstehandse informatie — gratis tegen je e-mailadres.",
 };
@@ -26,7 +26,7 @@ export default function GratisGidsPage() {
               Gratis gids · 24 pagina&apos;s
             </p>
             <h1 className="mt-4 font-heading text-4xl leading-[1.1] text-navy md:text-5xl">
-              De 9 valkuilen bij een huis kopen in Spanje als Nederlander.
+              De 9 valkuilen bij nieuwbouw kopen in Spanje als Nederlander.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
               Op basis van onze eigen aankoop en drie jaar wonen aan de Costa del

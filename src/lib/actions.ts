@@ -87,7 +87,7 @@ export async function submitContact(
       "Geen tijd om te wachten of een snelle vraag? Twee directe lijntjes:",
       "",
       "  • WhatsApp: +31 6 14 96 77 04",
-      "  • Plan een kennismaking (gratis, 30 min): https://cal.eu/team/vdmforis/intake",
+      "  • Plan een kennismaking (gratis, 30 min): https://vdmforis.com/kennismaking",
       "",
       "Tot snel,",
       "Dennis",
@@ -118,4 +118,234 @@ export async function submitContact(
     status: "success",
     message: "Bedankt! We nemen binnen een werkdag contact met je op.",
   };
+}
+
+const offerteSchema = z.object({
+  dienst: z.string().min(1, "Kies een dienst").max(80),
+  name: z.string().min(2, "Vul je naam in").max(120),
+  email: z.string().email("Geen geldig e-mailadres"),
+  phone: z.string().max(40).optional(),
+  message: z.string().max(2000).optional(),
+});
+
+export async function submitOfferte(
+  _prev: ContactState,
+  formData: FormData,
+): Promise<ContactState> {
+  const parsed = offerteSchema.safeParse({
+    dienst: formData.get("dienst"),
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone") || undefined,
+    message: formData.get("message") || undefined,
+  });
+
+  if (!parsed.success) {
+    const fieldErrors: Record<string, string> = {};
+    for (const issue of parsed.error.issues) {
+      const key = issue.path[0]?.toString();
+      if (key && !fieldErrors[key]) fieldErrors[key] = issue.message;
+    }
+    return {
+      status: "error",
+      message: "Controleer je gegevens en probeer opnieuw.",
+      fieldErrors,
+    };
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  const to = process.env.CONTACT_TO_EMAIL || "info@vdmforis.com";
+  const from =
+    process.env.CONTACT_FROM_EMAIL || "Foris <noreply@vdmforis.com>";
+
+  const successMessage =
+    "Aanvraag ontvangen! Je hoort binnen één werkdag van ons — met een offerte op maat of eerst een paar korte vragen.";
+
+  if (!apiKey) {
+    console.warn("[offerte] RESEND_API_KEY not set — skipping send", parsed.data);
+    return { status: "success", message: successMessage };
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+
+    const ownerLines = [
+      `Dienst: ${parsed.data.dienst}`,
+      `Naam: ${parsed.data.name}`,
+      `E-mail: ${parsed.data.email}`,
+      `Telefoon: ${parsed.data.phone ?? "(niet opgegeven)"}`,
+      "",
+      parsed.data.message
+        ? `Context:\n${parsed.data.message}`
+        : "(geen context meegestuurd)",
+    ];
+    const ownerSend = await resend.emails.send({
+      from,
+      to,
+      replyTo: parsed.data.email,
+      subject: `Offerte-aanvraag: ${parsed.data.dienst} — ${parsed.data.name}`,
+      text: ownerLines.join("\n"),
+    });
+    if (ownerSend.error) {
+      console.error("[offerte] Resend rejected owner mail", ownerSend.error);
+      throw new Error(
+        `Resend error (owner): ${ownerSend.error.name} — ${ownerSend.error.message}`,
+      );
+    }
+
+    const autoLines = [
+      `Hoi ${parsed.data.name},`,
+      "",
+      `Bedankt voor je offerte-aanvraag voor "${parsed.data.dienst}".`,
+      "",
+      "Je hoort binnen één werkdag van ons — met een offerte op maat, of eerst een paar korte vragen als we iets moeten verduidelijken.",
+      "",
+      "Sneller schakelen? WhatsApp: +31 6 14 96 77 04",
+      "",
+      "Tot snel,",
+      "Dennis",
+      "",
+      "Van der Meulen Foris B.V. — vdmforis.com",
+    ];
+    const autoSend = await resend.emails.send({
+      from,
+      to: parsed.data.email,
+      replyTo: to,
+      subject: "Offerte-aanvraag ontvangen — Foris",
+      text: autoLines.join("\n"),
+    });
+    if (autoSend.error) {
+      console.error("[offerte] Resend rejected autoresponder", autoSend.error);
+    }
+  } catch (err) {
+    console.error("[offerte] Resend send failed", err);
+    return {
+      status: "error",
+      message:
+        "Er ging iets mis bij het versturen. Mail ons gerust direct op info@vdmforis.com.",
+    };
+  }
+
+  return { status: "success", message: successMessage };
+}
+
+const kennismakingSchema = z.object({
+  name: z.string().min(2, "Vul je naam in").max(120),
+  email: z.string().email("Geen geldig e-mailadres"),
+  phone: z.string().max(40).optional(),
+  preference: z.string().max(60).optional(),
+  message: z.string().max(2000).optional(),
+});
+
+export async function submitKennismaking(
+  _prev: ContactState,
+  formData: FormData,
+): Promise<ContactState> {
+  const parsed = kennismakingSchema.safeParse({
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone") || undefined,
+    preference: formData.get("preference") || undefined,
+    message: formData.get("message") || undefined,
+  });
+
+  if (!parsed.success) {
+    const fieldErrors: Record<string, string> = {};
+    for (const issue of parsed.error.issues) {
+      const key = issue.path[0]?.toString();
+      if (key && !fieldErrors[key]) fieldErrors[key] = issue.message;
+    }
+    return {
+      status: "error",
+      message: "Controleer je gegevens en probeer opnieuw.",
+      fieldErrors,
+    };
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  const to = process.env.CONTACT_TO_EMAIL || "info@vdmforis.com";
+  const from =
+    process.env.CONTACT_FROM_EMAIL || "Foris <noreply@vdmforis.com>";
+
+  const successMessage =
+    "Aanvraag ontvangen! We stellen binnen één werkdag per e-mail een concreet tijdstip voor.";
+
+  if (!apiKey) {
+    console.warn(
+      "[kennismaking] RESEND_API_KEY not set — skipping send",
+      parsed.data,
+    );
+    return { status: "success", message: successMessage };
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+
+    const ownerLines = [
+      `Naam: ${parsed.data.name}`,
+      `E-mail: ${parsed.data.email}`,
+      `Telefoon: ${parsed.data.phone ?? "(niet opgegeven)"}`,
+      `Voorkeursmoment: ${parsed.data.preference ?? "(geen voorkeur)"}`,
+      "",
+      parsed.data.message
+        ? `Context:\n${parsed.data.message}`
+        : "(geen context meegestuurd)",
+    ];
+    const ownerSend = await resend.emails.send({
+      from,
+      to,
+      replyTo: parsed.data.email,
+      subject: `Kennismaking-aanvraag van ${parsed.data.name}`,
+      text: ownerLines.join("\n"),
+    });
+    if (ownerSend.error) {
+      console.error(
+        "[kennismaking] Resend rejected owner mail",
+        ownerSend.error,
+      );
+      throw new Error(
+        `Resend error (owner): ${ownerSend.error.name} — ${ownerSend.error.message}`,
+      );
+    }
+
+    const autoLines = [
+      `Hoi ${parsed.data.name},`,
+      "",
+      "Bedankt voor je aanvraag voor een kennismakingsgesprek. Binnen één werkdag stellen we je per e-mail een concreet tijdstip voor" +
+        (parsed.data.preference
+          ? ` — we houden rekening met je voorkeur (${parsed.data.preference.toLowerCase()}).`
+          : "."),
+      "",
+      "Het gesprek duurt 30 minuten, is gratis en verplicht je tot niets.",
+      "",
+      "Sneller schakelen? WhatsApp: +31 6 14 96 77 04",
+      "",
+      "Tot snel,",
+      "Dennis",
+      "",
+      "Van der Meulen Foris B.V. — vdmforis.com",
+    ];
+    const autoSend = await resend.emails.send({
+      from,
+      to: parsed.data.email,
+      replyTo: to,
+      subject: "Kennismaking aangevraagd — we stellen snel een tijd voor",
+      text: autoLines.join("\n"),
+    });
+    if (autoSend.error) {
+      console.error(
+        "[kennismaking] Resend rejected autoresponder",
+        autoSend.error,
+      );
+    }
+  } catch (err) {
+    console.error("[kennismaking] Resend send failed", err);
+    return {
+      status: "error",
+      message:
+        "Er ging iets mis bij het versturen. Mail ons gerust direct op info@vdmforis.com.",
+    };
+  }
+
+  return { status: "success", message: successMessage };
 }

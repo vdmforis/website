@@ -27,7 +27,7 @@ export function SiteHeader() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 text-sm md:flex">
+        <nav className="hidden items-center gap-5 text-sm md:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -39,11 +39,17 @@ export function SiteHeader() {
           ))}
           <Link
             href="/gratis-gids"
-            className="rounded-full border border-terracotta/40 px-3 py-1.5 text-terracotta transition-colors hover:bg-terracotta/10"
+            className="hidden text-foreground/75 transition-colors hover:text-terracotta lg:inline"
           >
             Gratis gids
           </Link>
-          <BookCallButton className="rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90">
+          <Link
+            href="/offerte"
+            className="whitespace-nowrap rounded-full border border-terracotta/40 px-3 py-1.5 text-terracotta transition-colors hover:bg-terracotta/10"
+          >
+            Vraag offerte
+          </Link>
+          <BookCallButton className="whitespace-nowrap rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90">
             Plan kennismaking
           </BookCallButton>
         </nav>
@@ -87,6 +93,15 @@ export function SiteHeader() {
                 className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
               >
                 Gratis gids — De 9 valkuilen
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/offerte"
+                onClick={() => setOpen(false)}
+                className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
+              >
+                Vraag een offerte aan
               </Link>
             </li>
           </ul>

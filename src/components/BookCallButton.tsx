@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { contact } from "@/lib/contact";
 
 type Props = {
   children: React.ReactNode;
@@ -8,18 +7,12 @@ type Props = {
 };
 
 /**
- * A booking trigger. Opens cal.eu in a new tab — Cal's embed-modal is
- * unreliable with the .eu instance, so a clean new-tab navigation is the
- * pragmatic choice. User books, closes tab, returns to the site.
+ * A booking trigger. Links to the on-site kennismaking page — the visitor
+ * requests a slot via our own form and we confirm a time by e-mail.
  */
 export function BookCallButton({ children, className, href }: Props) {
   return (
-    <Link
-      href={href ?? contact.bookingUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={className}
-    >
+    <Link href={href ?? "/kennismaking"} className={className}>
       {children}
     </Link>
   );

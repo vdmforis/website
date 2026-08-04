@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Compass, FileText, HardHat, KeyRound } from "lucide-react";
 import { HeroForm } from "@/components/HeroForm";
 import { BookCallButton } from "@/components/BookCallButton";
+import { Werkwijze3D } from "@/components/Werkwijze3D";
 import { whatsappLink } from "@/lib/contact";
 
 export default function Home() {
@@ -22,15 +23,15 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:py-32">
           <div className="flex flex-col justify-center">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-              Costa del Azahar · Castellón
+              Nieuwbouw · Costa del Azahar · Castellón
             </p>
             <h1 className="mt-4 font-heading text-4xl leading-[1.1] text-navy md:text-5xl lg:text-6xl">
-              Een huis kopen in Spanje zonder de typische valkuilen — van NIE tot notaris, in het Nederlands geregeld.
+              Nieuwbouw kopen in Spanje, zonder de typische valkuilen.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              We wonen sinds juli 2023 aan deze kust, kennen de notarissen, banken en
-              bouwers persoonlijk, en hebben het hele aankooptraject net zelf doorlopen
-              voor onze eigen nieuwbouwvilla.
+              Nederlandstalige aankoopbegeleiding bij nieuwbouw aan de Costa del
+              Azahar — van reservering tot sleuteloverdracht, met vaste advocaten,
+              notarissen en banken in het netwerk.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
@@ -61,11 +62,11 @@ export default function Home() {
               </li>
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Vaste prijs, vooraf afgesproken — geen verrassingen achteraf</span>
+                <span>Puur nieuwbouw — dat is alles wat we doen</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Ter plaatse in Castellón, Nederlandstalig contact</span>
+                <span>Altijd een offerte vooraf — geen verrassingen achteraf</span>
               </li>
             </ul>
           </div>
@@ -74,6 +75,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Werkwijze — 3D scroll */}
+      <Werkwijze3D />
 
       {/* Begin gratis */}
       <section className="border-t border-border bg-navy text-cream">
@@ -87,7 +91,7 @@ export default function Home() {
             </p>
           </div>
           <p className="mt-4 max-w-2xl text-cream/85">
-            Voordat je een euro uitgeeft willen we eerst weten of we bij elkaar passen.
+            Voordat je iets vastlegt willen we eerst weten of we bij elkaar passen.
             Kies de manier die jou het prettigst lijkt — alle drie zijn gratis en
             kunnen vandaag nog.
           </p>
@@ -132,8 +136,8 @@ export default function Home() {
               </p>
               <h3 className="mt-3 font-heading text-xl">Download onze gids</h3>
               <p className="mt-2 flex-1 text-sm text-cream/80">
-                De 9 valkuilen bij een huis kopen in Spanje als Nederlander —
-                eerstehandse ervaring, geen marketingverhaal.
+                De 9 valkuilen bij nieuwbouw kopen in Spanje als Nederlander —
+                rechtstreeks uit onze eigen vastgoedpraktijk, geen marketingverhaal.
               </p>
               <span className="mt-4 text-sm text-terracotta">
                 Stuur me de gids →
@@ -154,7 +158,7 @@ export default function Home() {
               href="/diensten"
               className="text-sm text-terracotta hover:underline"
             >
-              Alle diensten en prijzen →
+              Alle diensten →
             </Link>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -162,54 +166,58 @@ export default function Home() {
               {
                 title: "Oriëntatie & coaching",
                 body: "Anderhalf uur intake, regiogids op maat, warme intro's naar onze gestor en bank.",
-                price: "€ 495",
                 href: "/diensten#orientatie",
+                dienst: "orientatie",
                 Icon: Compass,
               },
               {
                 title: "Papierwinkel",
                 body: "NIE, CIF, bankrekening, modelo 036, vertalingen en apostille — voor privé én B.V.",
-                price: "€ 350–650",
                 href: "/diensten#papierwinkel",
+                dienst: "papierwinkel",
                 Icon: FileText,
               },
               {
                 title: "Nieuwbouwtoezicht",
                 body: "Bouwbezoeken, fotorapportage, aval-controle en opleveringsinspectie als jij in NL zit.",
-                price: "€ 350 per bezoek",
                 href: "/diensten#nieuwbouwtoezicht",
+                dienst: "nieuwbouwtoezicht",
                 Icon: HardHat,
               },
               {
                 title: "Concierge",
                 body: "Sleutel, post, alarm, klusjescoördinatie — drie niveaus van licht tot villa-grade.",
-                price: "Vanaf € 45 / mnd",
                 href: "/diensten#concierge",
+                dienst: "concierge",
                 Icon: KeyRound,
               },
             ].map(({ Icon, ...s }) => (
-              <Link
+              <div
                 key={s.title}
-                href={s.href}
-                className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-terracotta/60 hover:shadow-sm"
+                className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-terracotta/60 hover:shadow-sm"
               >
-                <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-cream">
-                    <Icon size={20} strokeWidth={1.75} aria-hidden />
-                  </span>
-                  <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-                    {s.price}
-                  </p>
-                </div>
-                <h3 className="mt-4 font-heading text-xl text-navy">{s.title}</h3>
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-cream">
+                  <Icon size={20} strokeWidth={1.75} aria-hidden />
+                </span>
+                <h3 className="mt-4 font-heading text-xl text-navy">
+                  <Link href={s.href} className="after:absolute after:inset-0">
+                    {s.title}
+                  </Link>
+                </h3>
                 <p className="mt-2 flex-1 text-sm text-foreground/80">{s.body}</p>
-              </Link>
+                <Link
+                  href={`/offerte?dienst=${s.dienst}`}
+                  className="relative z-10 mt-4 text-sm text-terracotta underline-offset-4 hover:underline"
+                >
+                  Vraag een offerte aan →
+                </Link>
+              </div>
             ))}
           </div>
           <div className="mt-8 text-sm text-foreground/70">
             <span className="font-medium text-navy">Volledige aankoopbegeleiding</span>{" "}
-            (van zoekprofiel tot sleutel) volgt zomer 2026 — zodra onze RAICV-vergunning
-            binnen is.
+            (van reservering tot sleutel) volgt zodra onze RAICV-vergunning binnen is —
+            de aanvraag loopt.
           </div>
         </div>
       </section>
@@ -223,9 +231,9 @@ export default function Home() {
                 Eigen ervaring
               </p>
               <p className="mt-2 text-foreground/85">
-                Sinds juli 2023 wonen we aan deze kust — eerst gehuurd in Benicàssim, nu
-                in juni 2026 verhuizen we naar ons eerste eigen huis, een nieuwbouwvilla
-                via onze B.V. We kennen de paperassen van binnenuit.
+                Foris komt voort uit een familiebedrijf met ruime vastgoedervaring
+                in Nederland en Spanje — met name aan de Costa del Azahar. Nieuwbouw
+                kennen we van binnenuit: van reservering en aval tot oplevering.
               </p>
             </div>
             <div>
