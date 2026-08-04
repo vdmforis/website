@@ -358,7 +358,7 @@ export default function NieuwbouwBestaandeBouwArticle() {
               hoge energierekeningen op een woning die we 30 jaar willen gebruiken
             </li>
             <li>
-              We wilden geen renovatieproject erbij — we wonen al sinds 2023 in
+              We wilden geen renovatieproject erbij — we wonen al jaren in
               Spanje en hebben de mentale ruimte niet voor verbouwingsstress
             </li>
             <li>
