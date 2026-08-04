@@ -7,7 +7,7 @@ import { BookCallButton } from "@/components/BookCallButton";
 export const metadata: Metadata = {
   title: "Over ons",
   description:
-    "Foris is opgericht door Dennis van der Meulen — jarenlang wonend in Spanje en zoon van Diederik van der Meulen, oprichter van het Nederlandse Van der Meulen Vastgoed B.V. Tien jaar Nederlandse vastgoedervaring plus jarenlang wonen, kopen en leven in Spanje.",
+    "Foris is de Spaanse tak van een Nederlands vastgoedfamiliebedrijf: tien jaar ervaring in koop, ontwikkeling en verhuur, gecombineerd met een vast netwerk en eigen nieuwbouwpraktijk aan de Costa del Azahar.",
 };
 
 export default function OverOnsPage() {
@@ -29,34 +29,36 @@ export default function OverOnsPage() {
             Over ons
           </p>
           <h1 className="mt-4 font-heading text-4xl leading-[1.1] text-navy md:text-5xl">
-            Hoi, ik ben Dennis.
+            Een vastgoedfamiliebedrijf, met een Spaanse tak aan de Costa del
+            Azahar.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/85">
-            Ik woon al jaren aan de Costa del Azahar, samen met mijn vriendin en
-            ons jonge gezin. We kwamen hier oorspronkelijk voor mijn werk en zouden
-            zien wat ervan kwam. Inmiddels is dit thuis.
+            Nederlandse vastgoedkennis, een vast lokaal netwerk en eigen
+            nieuwbouwpraktijk — gebundeld in één aanspreekpunt voor buitenlandse
+            kopers.
           </p>
         </div>
       </section>
 
-      {/* Het familiebedrijf */}
+      {/* Het bedrijf */}
       <section className="mx-auto max-w-3xl px-6 py-16 md:py-20">
         <h2 className="font-heading text-3xl text-navy md:text-4xl">
-          Het familiebedrijf
+          Twee takken, één discipline
         </h2>
         <div className="mt-6 space-y-4 text-foreground/85">
           <p>
-            Ik ben de zoon van <span className="text-navy">Diederik van der Meulen</span>.
-            Mijn vader runt al meer dan tien jaar{" "}
-            <span className="text-navy">Van der Meulen Vastgoed B.V.</span> in Nederland —
-            een familiebedrijf in koop, ontwikkeling en verhuur van vastgoed. Vastgoed is
-            bij ons letterlijk thuis aan de keukentafel besproken.
+            In Nederland opereert{" "}
+            <span className="text-navy">Van der Meulen Vastgoed B.V.</span> — al
+            meer dan tien jaar actief in koop, ontwikkeling en verhuur van
+            vastgoed. Contracten beoordelen, onderhandelen, bouwers aansturen en
+            projecten opleveren: dat is het dagelijkse werk.
           </p>
           <p>
-            Dat is de basis waar Foris uit voortkomt. We hebben de Nederlandse
-            vastgoedkennis, de lange-termijn-denkwijze en de financiële stabiliteit van
-            een gevestigd familiebedrijf — en daarbovenop nu een Spaanse tak die ter
-            plaatse zit.
+            <span className="text-navy">Van der Meulen Foris B.V.</span> is de
+            Spaanse tak van dat familiebedrijf, geleid door{" "}
+            <span className="text-navy">Dennis van der Meulen</span> — jarenlang
+            wonend en werkend aan de Costa del Azahar. Dezelfde discipline en
+            lange-termijn-denkwijze, toegepast op de Spaanse nieuwbouwmarkt.
           </p>
         </div>
       </section>
@@ -72,38 +74,31 @@ export default function OverOnsPage() {
         />
       </section>
 
-      {/* Hoe Spanje thuis werd */}
+      {/* Waarom Foris */}
       <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
           <h2 className="font-heading text-3xl text-navy md:text-4xl">
-            Hoe Spanje thuis werd
+            Waarom Foris bestaat
           </h2>
           <div className="mt-6 space-y-4 text-foreground/85">
             <p>
-              In juli 2023 verhuisden we naar Spanje voor mijn werk. We huurden eerst —
-              de bedoeling was om te kijken hoe het zou bevallen, niet meteen definitief.
-              We begonnen in Benicàssim, en het beviel meteen.
+              Het Spaanse nieuwbouwtraject — notariële volmachten, beëdigde
+              vertalingen, modelo 036, aval bancair, deelbetalingen over twee
+              landen — hebben we zelf doorlopen, via eigen vennootschappen. Onze
+              conclusie:{" "}
+              <em className="text-navy">
+                dit zou voor geen enkele koper zo moeilijk hoeven zijn.
+              </em>
             </p>
             <p>
-              Na een paar jaar wonen besloten we het echt te maken. We zetten onze zinnen
-              op een eigen huis — niet om te verhuren, niet als investering, gewoon: een
-              eigen plek in een land dat thuis was geworden. Het werd een nieuwbouwvilla
-              in Grau de Castellón, off-plan (nog tijdens de bouw) gekocht via een nieuwe B.V. die we daarvoor
-              speciaal oprichtten: <span className="text-navy">Van der Meulen Foris B.V.</span>
-            </p>
-            <p>
-              We doorliepen precies dat traject waar de meeste Nederlanders zo tegenop
-              zien. Notariële volmacht in Nederland, beëdigde vertaling, apostille, een
-              Spaanse CIF aanvragen via modelo 036, een aval bancair tracken volgens Ley
-              20/2015, vier deelbetalingen verdeeld over twee landen. In juni 2026 trekken
-              we erin.
-            </p>
-            <p>
-              Het lukte. Maar het was — eerlijk — complex. Zelfs voor iemand die met
-              vastgoed is opgegroeid.
+              Die drie ingrediënten — Nederlandse vastgoedkennis, een vast
+              netwerk van gestores, notarissen en advocaten, en eigen
+              praktijkervaring met Spaanse nieuwbouw — maken we met Foris
+              beschikbaar voor buitenlandse kopers. Geen makelaarsketen, geen
+              call center, geen commissie-jacht.
             </p>
             <p className="text-sm text-muted-foreground">
-              Het hele verhaal van die aankoop staat op{" "}
+              Hoe zo&apos;n traject eruitziet, stap voor stap:{" "}
               <Link href="/onze-ervaring" className="text-terracotta hover:underline">
                 Onze ervaring
               </Link>
@@ -113,35 +108,8 @@ export default function OverOnsPage() {
         </div>
       </section>
 
-      {/* Waarom Foris */}
-      <section className="mx-auto max-w-3xl px-6 py-16 md:py-20">
-        <h2 className="font-heading text-3xl text-navy md:text-4xl">
-          Hoe Foris ontstond
-        </h2>
-        <div className="mt-6 space-y-4 text-foreground/85">
-          <p>
-            Tijdens dat traject keken we elkaar op een gegeven moment aan en zeiden:{" "}
-            <em className="text-navy">
-              dit zou voor geen enkele Nederlander zo moeilijk moeten hoeven zijn.
-            </em>
-          </p>
-          <p>
-            We hadden de Nederlandse vastgoedkennis van Van der Meulen Vastgoed B.V., we
-            hadden net het volledige Spaanse aankooptraject zelf doorlopen, en we hadden
-            door jarenlang wonen aan de Costa del Azahar een netwerk opgebouwd van
-            gestores, notarissen, advocaten en bouwers die we vertrouwen. Die combinatie
-            wilden we beschikbaar maken voor andere Nederlanders.
-          </p>
-          <p>
-            Dat is Van der Meulen Foris B.V. Geen makelaarsketen, geen call center, geen
-            commissie-jacht. Een familiebedrijf met een Spaanse tak, dat één ding goed
-            wil doen: Nederlanders begeleiden bij het kopen van een huis aan deze kust.
-          </p>
-        </div>
-      </section>
-
       {/* Wat dat in de praktijk betekent */}
-      <section className="border-y border-border bg-navy text-cream">
+      <section className="border-b border-border bg-navy text-cream">
         <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
           <h2 className="font-heading text-3xl md:text-4xl">
             Wat dat in de praktijk betekent
@@ -153,20 +121,20 @@ export default function OverOnsPage() {
                 body: "Elk Spaans document leggen we uit in helder Nederlands. Geen Google-vertaling, geen onduidelijkheid bij de notaris.",
               },
               {
-                title: "Ter plaatse — letterlijk op vijf minuten van het strand",
-                body: "We wonen in Grau de Castellón. Een afspraak in Benicàssim is een fietstochtje. Geen tweedaagse vlucht en hotel voor de notaris.",
+                title: "Ter plaatse in Castellón",
+                body: "Een bezichtiging, bouwbezoek of notarisafspraak is lokaal geregeld — jij hoeft er niet voor te vliegen.",
               },
               {
                 title: "Familiebedrijf-mentaliteit",
-                body: "Korte lijntjes. Dezelfde mensen die je leert kennen bij het kennismakingsgesprek zijn de mensen die met je naar de notaris gaan.",
+                body: "Korte lijntjes. Dezelfde mensen die je spreekt bij de kennismaking gaan met je mee naar de notaris.",
               },
               {
                 title: "Onafhankelijk",
                 body: "We krijgen geen commissie van verkopers, ontwikkelaars, bouwers of banken. Onze enige opdrachtgever ben jij.",
               },
               {
-                title: "Vaste prijs",
-                body: "Vooraf afgesproken, schriftelijk. Geen succes-fees, geen verborgen marges, geen verrassingen achteraf.",
+                title: "Duidelijke afspraken",
+                body: "Offerte vooraf, schriftelijk. Geen succes-fees, geen verborgen marges, geen verrassingen achteraf.",
               },
             ].map((item, idx) => (
               <li key={item.title} className="flex gap-4">
@@ -189,7 +157,7 @@ export default function OverOnsPage() {
         <ul className="mt-8 space-y-5">
           {[
             "We zeggen het eerlijk — ook als dat betekent dat je dit huis níet moet kopen.",
-            "We zijn duidelijk over geld — vooraf, schriftelijk, niets achteraf.",
+            "We zijn duidelijk over afspraken — vooraf, schriftelijk, niets achteraf.",
             "We doen alleen werk dat we zelf zouden willen krijgen.",
             "Wat we niet kunnen, doen we niet. We sturen je dan door naar iemand die het wel kan.",
           ].map((promise, idx) => (
@@ -205,11 +173,11 @@ export default function OverOnsPage() {
       <section className="border-t border-border bg-cream">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center md:py-20">
           <h2 className="font-heading text-3xl text-navy md:text-4xl">
-            Klinkt dit als de juiste club voor jouw aankoop?
+            Kennismaken?
           </h2>
           <p className="mt-4 text-foreground/80">
-            Stuur me een berichtje. Een eerste kennismaking is gratis, duurt 30 minuten
-            en kan via videocall of WhatsApp — wat jou het beste uitkomt.
+            Een eerste gesprek is gratis, duurt 30 minuten en kan via videocall
+            of telefonisch — wat jou het beste uitkomt.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
