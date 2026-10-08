@@ -44,7 +44,7 @@ export const home: Record<Locale, HomeCopy> = {
     },
     hero: {
       eyebrow: "Woningbeheer · Onderhoud · Verhuur · Castellón",
-      title: "Je huis in Spanje, in goede handen.",
+      title: "Je huis rond Castellón, in goede handen.",
       intro:
         "Onderhoud, reparaties en woningbeheer in Grau de Castellón, Castellón en Benicàssim, in het Nederlands geregeld. Wij zijn er als jij er niet bent, met foto's en updates via WhatsApp.",
       quote: "Vraag een offerte aan",
@@ -70,7 +70,7 @@ export const home: Record<Locale, HomeCopy> = {
         bullets: [
           "Klussen, reparaties en onderhoud",
           "Sleutelbeheer, post en periodieke checks (Light · Standard · Villa)",
-          "Speciaal voor eigenaren die niet altijd in Spanje zijn",
+          "Speciaal voor eigenaren die er niet altijd zelf zijn",
         ],
         quote: "Vraag een offerte aan →",
         quoteHref: "/offerte?dienst=anders",
@@ -108,7 +108,7 @@ export const home: Record<Locale, HomeCopy> = {
     },
     hero: {
       eyebrow: "Property care · Maintenance · Rentals · Castellón",
-      title: "Your home in Spain, in good hands.",
+      title: "Your home around Castellón, in good hands.",
       intro:
         "Maintenance, repairs and property care in Grau de Castellón, Castellón and Benicàssim. We're there when you're not, with photos and updates on WhatsApp.",
       quote: "Request a quote",
@@ -134,7 +134,7 @@ export const home: Record<Locale, HomeCopy> = {
         bullets: [
           "Odd jobs, repairs and maintenance",
           "Key holding, post and regular checks (Light · Standard · Villa)",
-          "Made for owners who aren't always in Spain",
+          "Made for owners who aren't always here",
         ],
         quote: "Request a quote →",
         quoteHref: "#contact",
@@ -176,7 +176,7 @@ export const home: Record<Locale, HomeCopy> = {
     },
     hero: {
       eyebrow: "Gestión de viviendas · Mantenimiento · Alquiler · Castellón",
-      title: "Tu casa en España, en buenas manos.",
+      title: "Tu casa en Castellón y alrededores, en buenas manos.",
       intro:
         "Mantenimiento, reparaciones y gestión de viviendas en el Grao de Castellón, Castellón y Benicàssim. Estamos ahí cuando tú no estás, con fotos y novedades por WhatsApp.",
       quote: "Pide presupuesto",
@@ -202,7 +202,7 @@ export const home: Record<Locale, HomeCopy> = {
         bullets: [
           "Pequeños trabajos, reparaciones y mantenimiento",
           "Custodia de llaves, correo y revisiones periódicas (Light · Standard · Villa)",
-          "Pensado para propietarios que no siempre están en España",
+          "Pensado para propietarios que no siempre están aquí",
         ],
         quote: "Pide presupuesto →",
         quoteHref: "#contact",
