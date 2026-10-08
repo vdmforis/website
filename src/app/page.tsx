@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Compass, FileText, HardHat, KeyRound } from "lucide-react";
+import { Compass, FileText, HardHat, House, Wrench } from "lucide-react";
 import { HeroForm } from "@/components/HeroForm";
 import { BookCallButton } from "@/components/BookCallButton";
 import { Werkwijze3D } from "@/components/Werkwijze3D";
@@ -23,20 +23,23 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:py-32">
           <div className="flex flex-col justify-center">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-              Nieuwbouw · Costa del Azahar · Castellón
+              Woningbeheer · Onderhoud · Verhuur · Castellón
             </p>
             <h1 className="mt-4 font-heading text-4xl leading-[1.1] text-navy md:text-5xl lg:text-6xl">
-              Nieuwbouw kopen in Spanje, zonder de typische valkuilen.
+              Je huis in Spanje, in goede handen.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-foreground/80">
-              Nederlandstalige aankoopbegeleiding bij nieuwbouw aan de Costa del
-              Azahar — van reservering tot sleuteloverdracht, met vaste advocaten,
-              notarissen en banken in het netwerk.
+              Onderhoud, reparaties en woningbeheer in Grau de Castellón, Castellón
+              en Benicàssim, in het Nederlands geregeld. Wij zijn er als jij er niet
+              bent, met foto&apos;s en updates via WhatsApp.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <BookCallButton className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90">
-                Plan een gratis gesprek
-              </BookCallButton>
+              <Link
+                href="/offerte"
+                className="rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
+              >
+                Vraag een offerte aan
+              </Link>
               <a
                 href={whatsappLink()}
                 target="_blank"
@@ -47,26 +50,33 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-4 text-sm text-foreground/70">
-              Liever eerst lezen?{" "}
-              <Link
-                href="/gratis-gids"
+              Ook:{" "}
+              <a
+                href="#verhuur"
                 className="font-medium text-terracotta underline-offset-4 hover:underline"
               >
-                Download onze 24-pagina gids — gratis →
-              </Link>
+                woonruimte te huur van Foris
+              </a>{" "}
+              · Een huis kopen?{" "}
+              <a
+                href="#kopers"
+                className="font-medium text-terracotta underline-offset-4 hover:underline"
+              >
+                Bekijk onze kopersbegeleiding →
+              </a>
             </p>
             <ul className="mt-8 space-y-3 text-foreground/85">
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Onafhankelijk — we krijgen geen commissie van verkopers</span>
+                <span>Eén Nederlandstalig aanspreekpunt, ook als je er zelf niet bent</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Puur nieuwbouw — dat is alles wat we doen</span>
+                <span>Geen Spaans netwerk nodig — wij kennen de weg in Castellón</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                <span>Altijd een offerte vooraf — geen verrassingen achteraf</span>
+                <span>Altijd vooraf een prijs of uurtarief — geen verrassingen achteraf</span>
               </li>
             </ul>
           </div>
@@ -76,8 +86,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Werkwijze — 3D scroll */}
-      <Werkwijze3D />
+      {/* Twee activiteiten */}
+      <section className="border-t border-border bg-cream">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
+            Wat Foris doet
+          </p>
+          <h2 className="mt-3 max-w-2xl font-heading text-3xl text-navy md:text-4xl">
+            Twee activiteiten, één aanspreekpunt.
+          </h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div
+              id="onderhoud"
+              className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-8"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta">
+                <Wrench size={20} strokeWidth={1.75} aria-hidden />
+              </span>
+              <h3 className="mt-4 font-heading text-2xl text-navy">
+                Woningbeheer &amp; onderhoud
+              </h3>
+              <p className="mt-3 text-foreground/80">
+                Van een lekkende kraan tot een vaste check van je woning terwijl je
+                weg bent. We werken in Grau de Castellón, Castellón centrum en
+                Benicàssim. Je krijgt vooraf een prijs of uurtarief en na afloop
+                foto&apos;s van het werk.
+              </p>
+              <ul className="mt-5 flex-1 space-y-2 text-sm text-foreground/85">
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
+                  <span>Klussen, reparaties en onderhoud</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
+                  <span>Sleutelbeheer, post en periodieke checks (Light · Standard · Villa)</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
+                  <span>Speciaal voor eigenaren die niet altijd in Spanje zijn</span>
+                </li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                <Link
+                  href="/offerte?dienst=anders"
+                  className="font-medium text-terracotta underline-offset-4 hover:underline"
+                >
+                  Vraag een offerte aan →
+                </Link>
+                <Link
+                  href="/diensten#concierge"
+                  className="text-terracotta underline-offset-4 hover:underline"
+                >
+                  Bekijk de woningbeheerpakketten →
+                </Link>
+              </div>
+            </div>
+            <div
+              id="verhuur"
+              className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-8"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-olive/10 text-olive">
+                <House size={20} strokeWidth={1.75} aria-hidden />
+              </span>
+              <h3 className="mt-4 font-heading text-2xl text-navy">
+                Verhuur: wonen in een Foris-woning
+              </h3>
+              <p className="mt-3 flex-1 text-foreground/80">
+                Foris verhuurt ook eigen woonruimte in Castellón, voor de lange
+                termijn. Het onderhoud regelen we zelf, dus als huurder heb je één
+                aanspreekpunt.
+              </p>
+              <p className="mt-5 text-sm italic text-foreground/70">
+                Op dit moment is al onze woonruimte verhuurd.
+              </p>
+              <div className="mt-6 text-sm">
+                <a
+                  href="#contact"
+                  className="font-medium text-terracotta underline-offset-4 hover:underline"
+                >
+                  Houd me op de hoogte →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Begin gratis */}
       <section className="border-t border-border bg-navy text-cream">
@@ -132,7 +225,7 @@ export default function Home() {
               className="group flex flex-col rounded-2xl border border-cream/15 bg-cream/5 p-6 transition-colors hover:border-terracotta hover:bg-cream/10"
             >
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-                PDF · 24 pagina&apos;s · gratis
+                Voor kopers · PDF · 24 pagina&apos;s · gratis
               </p>
               <h3 className="mt-3 font-heading text-xl">Download onze gids</h3>
               <p className="mt-2 flex-1 text-sm text-cream/80">
@@ -147,12 +240,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Wat we vandaag al doen */}
-      <section className="border-t border-border bg-cream">
+      {/* Voor kopers */}
+      <section id="kopers" className="scroll-mt-24 border-t border-border bg-cream">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-          <div className="mb-10 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
+            Voor kopers
+          </p>
+          <div className="mb-10 mt-3 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
             <h2 className="font-heading text-3xl text-navy md:text-4xl">
-              Wat we vandaag al voor je doen
+              Een huis kopen aan de Costa del Azahar?
             </h2>
             <Link
               href="/diensten"
@@ -161,7 +257,17 @@ export default function Home() {
               Alle diensten →
             </Link>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <p className="-mt-4 mb-10 max-w-2xl text-foreground/80">
+            We helpen met oriëntatie, de papierwinkel (NIE, CIF, bank) en toezicht
+            op je nieuwbouw. Na de sleuteloverdracht zorgen we ook voor je huis.{" "}
+            <Link
+              href="/gratis-gids"
+              className="font-medium text-terracotta underline-offset-4 hover:underline"
+            >
+              Download onze gratis gids →
+            </Link>
+          </p>
+          <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 title: "Oriëntatie & coaching",
@@ -183,13 +289,6 @@ export default function Home() {
                 href: "/diensten#nieuwbouwtoezicht",
                 dienst: "nieuwbouwtoezicht",
                 Icon: HardHat,
-              },
-              {
-                title: "Concierge",
-                body: "Sleutel, post, alarm, klusjescoördinatie — drie niveaus van licht tot villa-grade.",
-                href: "/diensten#concierge",
-                dienst: "concierge",
-                Icon: KeyRound,
               },
             ].map(({ Icon, ...s }) => (
               <div
@@ -216,11 +315,14 @@ export default function Home() {
           </div>
           <div className="mt-8 text-sm text-foreground/70">
             <span className="font-medium text-navy">Volledige aankoopbegeleiding</span>{" "}
-            (van reservering tot sleutel) volgt zodra onze RAICV-vergunning binnen is —
-            de aanvraag loopt.
+            (van reservering tot sleutel) volgt zodra we in het RAICV-register
+            zijn ingeschreven.
           </div>
         </div>
       </section>
+
+      {/* Kopers-traject — 3D scroll */}
+      <Werkwijze3D />
 
       {/* Proof strip */}
       <section className="border-t border-border bg-secondary/40">
@@ -232,28 +334,28 @@ export default function Home() {
               </p>
               <p className="mt-2 text-foreground/85">
                 Foris komt voort uit een familiebedrijf met ruime vastgoedervaring
-                in Nederland en Spanje — met name aan de Costa del Azahar. Nieuwbouw
-                kennen we van binnenuit: van reservering en aval tot oplevering.
+                in Nederland en Spanje — met name aan de Costa del Azahar. We
+                verhuren ook zelf woonruimte in Castellón.
               </p>
             </div>
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-                Vergund &amp; verzekerd
+                Hoe we werken
               </p>
               <p className="mt-2 text-foreground/85">
-                RAICV-vergunning in aanvraag, beroepsaansprakelijkheids- en
-                cliëntgeldenverzekering geregeld via onze gestor in Castellón.
-                Transparantie staat hier zodra de papieren binnen zijn.
+                Van der Meulen Foris B.V. is een Nederlands familiebedrijf met een
+                fiscaal domicilie in Grau de Castellón. Je krijgt vooraf een prijs of
+                uurtarief, en achteraf altijd een factuur.
               </p>
             </div>
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-                Specialisatie
+                Werkgebied
               </p>
               <p className="mt-2 text-foreground/85">
-                Nieuwbouw (ook wel off-plan genoemd) aan de kuststrook tussen Vinaròs en
-                Burriana — een groeisegment waar nog weinig Nederlandse begeleiding voor
-                beschikbaar is.
+                Onderhoud en woningbeheer in Grau de Castellón, Castellón centrum en
+                Benicàssim. Kopers begeleiden we langs de kust tussen Vinaròs en
+                Burriana.
               </p>
             </div>
           </div>

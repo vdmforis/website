@@ -21,7 +21,7 @@ export const contact = {
    * Prefilled WhatsApp message — already URL-encoded.
    */
   whatsappPrefill:
-    "Hoi%20Dennis%2C%20ik%20heb%20een%20vraag%20over%20een%20huis%20kopen%20in%20Spanje.",
+    "Hoi%20Dennis%2C%20ik%20heb%20een%20vraag%20over%20mijn%20woning%20in%20Spanje.",
   /** On-site booking page — replaces the old cal.eu integration. */
   bookingPath: "/kennismaking",
 };

@@ -14,16 +14,15 @@ export default function PrivacyPage() {
       <section className="border-b border-border bg-cream">
         <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-            Juridisch · in voorbereiding
+            Juridisch
           </p>
           <h1 className="mt-4 font-heading text-4xl text-navy md:text-5xl">
             Privacyverklaring
           </h1>
           <p className="mt-6 text-foreground/80">
-            Laatst bijgewerkt: mei 2026. Wij ronden onze definitieve juridische
-            documentatie af zodra onze RAICV-vergunning binnen is (zomer 2026). Tot
-            die tijd vind je hier een korte verklaring van hoe wij met jouw gegevens
-            omgaan op deze website.
+            Laatst bijgewerkt: oktober 2026. Hier lees je kort en zonder vakjargon
+            hoe wij omgaan met de gegevens van bezoekers van deze website en van
+            onze klanten.
           </p>
         </div>
       </section>
@@ -50,13 +49,17 @@ export default function PrivacyPage() {
         <Section title="Welke gegevens verzamelen wij">
           <ul className="ml-5 list-disc space-y-2">
             <li>
-              <strong>Contactformulier</strong>: naam, e-mailadres en de inhoud van
-              je bericht. Wij gebruiken dit alleen om jouw vraag te beantwoorden.
+              <strong>Formulieren</strong> (contact, offerte, kennismaking en
+              gratis gids): naam, e-mailadres, en — afhankelijk van het formulier —
+              je telefoonnummer, voorkeursmoment en de inhoud van je bericht. Wij
+              gebruiken dit alleen om jouw vraag of aanvraag te beantwoorden.
             </li>
             <li>
-              <strong>Booking-systeem (Cal.eu)</strong>: wanneer je een
-              kennismakingsgesprek inplant geef je je e-mailadres, naam en gekozen
-              tijd door. Cal.eu verwerkt deze gegevens namens ons.
+              <strong>Opdrachten voor onderhoud of woningbeheer</strong>: naam,
+              contactgegevens, het adres van de woning en — als dat bij de opdracht
+              hoort — foto&apos;s van het werk en afspraken over sleutels of
+              toegang. Wij gebruiken dit alleen om de opdracht uit te voeren en te
+              factureren.
             </li>
             <li>
               <strong>WhatsApp</strong>: als je ons via WhatsApp benadert, gelden
@@ -64,9 +67,8 @@ export default function PrivacyPage() {
               bericht alleen voor het beantwoorden te gebruiken.
             </li>
             <li>
-              <strong>Analytics</strong>: wij gebruiken cookieloze analyse via
-              Vercel Analytics. Er worden geen tracking-cookies geplaatst en geen
-              persoonlijk identificeerbare data verzonden.
+              <strong>Geen analytics of tracking</strong>: wij gebruiken op deze
+              website geen analysetools en plaatsen geen tracking-cookies.
             </li>
           </ul>
         </Section>
@@ -90,8 +92,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="ml-5 mt-3 list-disc space-y-2">
             <li>Resend (verzending van e-mail vanuit het contactformulier);</li>
-            <li>Cal.eu (afspraken inplannen);</li>
-            <li>Vercel (hosting van deze website, geen analytische cookies);</li>
+            <li>Vercel (hosting van deze website);</li>
             <li>
               Onze Spaanse en Nederlandse gestor/advocaat wanneer dat nodig is om
               een afgesproken dienst uit te voeren.
@@ -111,16 +112,16 @@ export default function PrivacyPage() {
               info@vdmforis.com
             </a>
             . Reageren wij niet binnen 30 dagen, dan kun je een klacht indienen bij
-            de Autoriteit Persoonsgegevens.
+            de Autoriteit Persoonsgegevens (Nederland) of de Agencia Española de
+            Protección de Datos (AEPD, Spanje).
           </p>
         </Section>
 
-        <Section title="Definitief versie">
+        <Section title="Wijzigingen">
           <p>
-            Onze definitieve privacyverklaring volgt zodra onze RAICV-vergunning
-            binnen is en de finale verwerkersovereenkomsten met onze leveranciers
-            zijn ondertekend. Heb je in de tussentijd vragen over je gegevens —
-            stuur ons gerust een bericht.
+            Wanneer onze dienstverlening of de tools die we gebruiken veranderen,
+            werken we deze verklaring bij. Heb je vragen over je gegevens — stuur
+            ons gerust een bericht.
           </p>
           <p className="mt-6">
             <Link href="/" className="text-terracotta hover:underline">

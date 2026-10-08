@@ -78,7 +78,7 @@ export function HeroForm() {
           id="message"
           name="message"
           rows={4}
-          placeholder="Bijvoorbeeld: budget, regio van interesse, of waar je staat in het proces."
+          placeholder="Bijvoorbeeld: een klus of reparatie, woningbeheer, of een vraag over huren of kopen."
           className="mt-1"
         />
       </div>

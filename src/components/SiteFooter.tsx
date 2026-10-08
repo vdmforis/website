@@ -8,7 +8,12 @@ export function SiteFooter() {
           <div>
             <p className="font-heading text-xl">Foris</p>
             <p className="mt-2 text-cream/75">
-              Nederlandstalige aankoopbegeleiding aan de Costa del Azahar.
+              Woningbeheer, onderhoud en verhuur in Grau de Castellón, Castellón
+              en Benicàssim.
+            </p>
+            <p className="mt-2 text-cream/60">
+              Ook Nederlandstalige begeleiding bij het kopen van een huis aan de
+              Costa del Azahar.
             </p>
           </div>
           <div>
@@ -33,6 +38,16 @@ export function SiteFooter() {
             </p>
             <ul className="mt-2 space-y-1">
               <li>
+                <Link href="/#onderhoud" className="hover:text-terracotta">
+                  Woningbeheer &amp; onderhoud
+                </Link>
+              </li>
+              <li>
+                <Link href="/#verhuur" className="hover:text-terracotta">
+                  Verhuur
+                </Link>
+              </li>
+              <li>
                 <Link href="/diensten" className="hover:text-terracotta">
                   Diensten
                 </Link>
@@ -50,6 +65,11 @@ export function SiteFooter() {
               <li>
                 <Link href="/over-ons" className="hover:text-terracotta">
                   Over ons
+                </Link>
+              </li>
+              <li>
+                <Link href="/offerte" className="hover:text-terracotta">
+                  Vraag een offerte aan
                 </Link>
               </li>
             </ul>

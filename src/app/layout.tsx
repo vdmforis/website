@@ -23,18 +23,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://www.vdmforis.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vdmforis.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Foris — Een huis kopen in Spanje zonder de typische valkuilen",
+    default: "Foris — Woningbeheer, onderhoud & verhuur in Castellón",
     template: "%s · Foris",
   },
   description:
-    "Nederlandstalige aankoopbegeleiding aan de Costa del Azahar. Onafhankelijk, vaste prijs, ter plaatse. Van NIE tot notaris, in het Nederlands geregeld.",
+    "Nederlandstalig onderhoud, reparaties en woningbeheer in Grau de Castellón, Castellón en Benicàssim. Ook verhuur van eigen woonruimte en begeleiding bij het kopen van een huis.",
   openGraph: {
     type: "website",
     locale: "nl_NL",
-    url: "https://vdmforis.com",
+    url: SITE_URL,
     siteName: "Foris",
   },
   robots: {
@@ -43,77 +45,131 @@ export const metadata: Metadata = {
   },
 };
 
+/*
+ * Sitewide structured data. Two activities:
+ *  1. woningbeheer & onderhoud (HomeAndConstructionBusiness)
+ *  2. verhuur van eigen woningen — geen eigen entiteit; pas een
+ *     RealEstateListing op een woningpagina zodra er iets beschikbaar is.
+ * Plus kopersbegeleiding (ProfessionalService).
+ * Bewust GEEN RealEstateAgent zolang de RAICV-inschrijving niet rond is.
+ */
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "RealEstateAgent", "ProfessionalService"],
-  name: "Van der Meulen Foris B.V.",
-  alternateName: "Foris",
-  url: "https://vdmforis.com",
-  logo: "https://vdmforis.com/icon",
-  image: "https://vdmforis.com/opengraph-image",
-  description:
-    "Nederlandstalige aankoopbegeleiding aan de Costa del Azahar. Onafhankelijk, vaste prijs, ter plaatse — voor Nederlanders die een huis kopen in Castellón en omgeving.",
-  foundingDate: "2025-09-04",
-  parentOrganization: {
-    "@type": "Organization",
-    name: "Van der Meulen Beheer B.V.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Toldijk 27",
-      postalCode: "7901 TA",
-      addressLocality: "Hoogeveen",
-      addressCountry: "NL",
-    },
-  },
-  address: [
+  "@graph": [
     {
-      "@type": "PostalAddress",
-      addressLocality: "Grau de Castellón",
-      addressRegion: "Comunitat Valenciana",
-      addressCountry: "ES",
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#org`,
+      name: "Van der Meulen Foris B.V.",
+      alternateName: "Foris",
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon`,
+      image: `${SITE_URL}/opengraph-image`,
+      description:
+        "Woningbeheer, onderhoud en reparaties in Grau de Castellón, Castellón en Benicàssim, en verhuur van eigen woonruimte in Castellón. Ook Nederlandstalige begeleiding bij het kopen van een huis aan de Costa del Azahar.",
+      foundingDate: "2025-09-04",
+      parentOrganization: {
+        "@type": "Organization",
+        name: "Van der Meulen Beheer B.V.",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Toldijk 27",
+          postalCode: "7901 TA",
+          addressLocality: "Hoogeveen",
+          addressCountry: "NL",
+        },
+      },
+      address: [
+        {
+          "@type": "PostalAddress",
+          addressLocality: "Grau de Castellón",
+          addressRegion: "Comunitat Valenciana",
+          addressCountry: "ES",
+        },
+        {
+          "@type": "PostalAddress",
+          streetAddress: "Toldijk 27",
+          postalCode: "7901 TA",
+          addressLocality: "Hoogeveen",
+          addressCountry: "NL",
+        },
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          email: "info@vdmforis.com",
+          telephone: "+31-6-14967704",
+          availableLanguage: ["nl", "es", "en"],
+          areaServed: "ES",
+        },
+      ],
+      identifier: [
+        {
+          "@type": "PropertyValue",
+          propertyID: "KvK",
+          value: "98214950",
+        },
+        {
+          "@type": "PropertyValue",
+          propertyID: "NIF",
+          value: "N0406296D",
+        },
+      ],
+      knowsLanguage: ["nl", "es", "en"],
+      sameAs: [],
     },
     {
-      "@type": "PostalAddress",
-      streetAddress: "Toldijk 27",
-      postalCode: "7901 TA",
-      addressLocality: "Hoogeveen",
-      addressCountry: "NL",
-    },
-  ],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      contactType: "customer service",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": `${SITE_URL}/#onderhoud`,
+      name: "Foris Woningbeheer & Onderhoud",
+      url: `${SITE_URL}/#onderhoud`,
+      image: `${SITE_URL}/opengraph-image`,
+      parentOrganization: { "@id": `${SITE_URL}/#org` },
+      description:
+        "Onderhoud, reparaties en woningbeheer voor eigenaren in Grau de Castellón, Castellón en Benicàssim — in het Nederlands geregeld.",
       email: "info@vdmforis.com",
       telephone: "+31-6-14967704",
-      availableLanguage: ["nl", "es", "en"],
-      areaServed: "ES",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Grau de Castellón",
+        addressRegion: "Comunitat Valenciana",
+        addressCountry: "ES",
+      },
+      areaServed: [
+        { "@type": "Place", name: "Grau de Castellón" },
+        { "@type": "City", name: "Castellón de la Plana" },
+        { "@type": "City", name: "Benicàssim" },
+      ],
+      knowsLanguage: ["nl", "es", "en"],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Woningbeheer & onderhoud",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Klussen, reparaties en onderhoud" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Woningbeheer: sleutelbeheer, post en periodieke checks",
+            },
+          },
+        ],
+      },
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${SITE_URL}/#kopers`,
+      name: "Foris Kopersbegeleiding",
+      url: `${SITE_URL}/diensten`,
+      parentOrganization: { "@id": `${SITE_URL}/#org` },
+      description:
+        "Nederlandstalige begeleiding bij het kopen van een huis aan de Costa del Azahar: oriëntatie, papierwinkel en nieuwbouwtoezicht.",
+      areaServed: { "@type": "AdministrativeArea", name: "Castellón" },
     },
   ],
-  areaServed: [
-    {
-      "@type": "AdministrativeArea",
-      name: "Castellón",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Comunitat Valenciana",
-    },
-  ],
-  identifier: [
-    {
-      "@type": "PropertyValue",
-      propertyID: "KvK",
-      value: "98214950",
-    },
-    {
-      "@type": "PropertyValue",
-      propertyID: "NIF",
-      value: "N0406296D",
-    },
-  ],
-  knowsLanguage: ["nl", "es", "en"],
-  sameAs: [],
 } as const;
 
 export default function RootLayout({
