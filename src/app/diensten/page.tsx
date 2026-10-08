@@ -226,12 +226,12 @@ export default function DienstenPage() {
                 {fromQ3.badge}
               </p>
               <h3 className="mt-3 font-heading text-3xl text-navy">{fromQ3.title}</h3>
-              <a
+              <Link
                 href="/offerte?dienst=aankoopbegeleiding"
                 className="mt-6 inline-block text-sm font-medium text-terracotta underline-offset-4 hover:underline"
               >
                 Vraag een offerte aan →
-              </a>
+              </Link>
               <p className="mt-6 text-sm text-foreground/75">
                 <span className="font-medium text-navy">Voor wie? </span>
                 {fromQ3.forWhom}

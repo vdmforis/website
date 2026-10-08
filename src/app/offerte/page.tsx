@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { OfferteForm } from "@/components/OfferteForm";
 import { whatsappLink, contact } from "@/lib/contact";
 
@@ -52,12 +53,12 @@ export default async function OffertePage({
               {contact.email}
             </a>{" "}
             of{" "}
-            <a
+            <Link
               href="/kennismaking"
               className="font-medium text-terracotta underline-offset-4 hover:underline"
             >
               plan een gratis kennismaking
-            </a>
+            </Link>
             .
           </p>
         </div>

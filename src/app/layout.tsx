@@ -3,6 +3,7 @@ import { Fraunces, Inter, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingContact } from "@/components/FloatingContact";
+import { HtmlLang } from "@/components/HtmlLang";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -28,7 +29,7 @@ const SITE_URL = "https://www.vdmforis.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Foris — Woningbeheer, onderhoud & verhuur in Castellón",
+    default: "Foris · Woningbeheer, onderhoud en verhuur in Castellón",
     template: "%s · Foris",
   },
   description:
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
 /*
  * Sitewide structured data. Two activities:
  *  1. woningbeheer & onderhoud (HomeAndConstructionBusiness)
- *  2. verhuur van eigen woningen — geen eigen entiteit; pas een
+ *  2. verhuur van eigen woningen: geen eigen entiteit; pas een
  *     RealEstateListing op een woningpagina zodra er iets beschikbaar is.
  * Plus kopersbegeleiding (ProfessionalService).
  * Bewust GEEN RealEstateAgent zolang de RAICV-inschrijving niet rond is.
@@ -126,7 +127,7 @@ const organizationJsonLd = {
       image: `${SITE_URL}/opengraph-image`,
       parentOrganization: { "@id": `${SITE_URL}/#org` },
       description:
-        "Onderhoud, reparaties en woningbeheer voor eigenaren in Grau de Castellón, Castellón en Benicàssim — in het Nederlands geregeld.",
+        "Onderhoud, reparaties en woningbeheer voor eigenaren in Grau de Castellón, Castellón en Benicàssim, in het Nederlands geregeld.",
       email: "info@vdmforis.com",
       telephone: "+31-6-14967704",
       address: {
@@ -178,8 +179,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="nl"
+    <HtmlLang
       className={`${fraunces.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
@@ -192,6 +192,6 @@ export default function RootLayout({
         <SiteFooter />
         <FloatingContact />
       </body>
-    </html>
+    </HtmlLang>
   );
 }

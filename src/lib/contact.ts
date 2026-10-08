@@ -1,3 +1,5 @@
+import type { Locale } from "@/lib/i18n";
+
 /**
  * Central source of truth for contact details used across the site.
  * Update the values here; every component picks them up automatically.
@@ -26,8 +28,19 @@ export const contact = {
   bookingPath: "/kennismaking",
 };
 
-export function whatsappLink(): string {
-  return `https://wa.me/${contact.whatsappNumber}?text=${contact.whatsappPrefill}`;
+/** Prefilled WhatsApp message per site language (plain text, encoded below). */
+const whatsappPrefillByLocale: Record<Locale, string> = {
+  nl: "Hoi Dennis, ik heb een vraag over mijn woning in Spanje.",
+  en: "Hi Dennis, I have a question about my home in Spain.",
+  es: "Hola Dennis, tengo una pregunta sobre mi vivienda en España.",
+};
+
+export function whatsappLink(locale: Locale = "nl"): string {
+  const text =
+    locale === "nl"
+      ? contact.whatsappPrefill
+      : encodeURIComponent(whatsappPrefillByLocale[locale]);
+  return `https://wa.me/${contact.whatsappNumber}?text=${text}`;
 }
 
 export function mailLink(): string {
