@@ -63,7 +63,7 @@ const organizationJsonLd = {
       name: "Van der Meulen Foris B.V.",
       alternateName: "Foris",
       url: SITE_URL,
-      logo: `${SITE_URL}/icon`,
+      logo: `${SITE_URL}/brand/vdm-foris-logo-navy-square.png`,
       image: `${SITE_URL}/opengraph-image`,
       description:
         "Woningbeheer, onderhoud en reparaties in Grau de Castellón, Castellón en Benicàssim, en verhuur van eigen woonruimte in Castellón. Ook Nederlandstalige begeleiding bij het kopen van een huis aan de Costa del Azahar.",

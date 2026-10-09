@@ -53,45 +53,70 @@
 }
 
 :root {
-  /* Foris brand colors */
-  --cream: oklch(0.957 0.018 80);
-  --navy: oklch(0.225 0.04 250);
-  --terracotta: oklch(0.585 0.145 38);
-  --olive: oklch(0.475 0.075 130);
+  /*
+   * VDM Foris brand (logo navy #072557, sampled from the approved logo).
+   * Token names are historical: "terracotta" is now the action colour
+   * (buttons, links, small accents) and equals the logo navy; "cream" is now
+   * the light background / text-on-navy colour; "olive" is a muted slate blue
+   * for secondary labels. Contrast (WCAG AA) checked:
+   * navy on white 14.9:1, slate on #F3F6FA 6.4:1, light accent on navy 9.1:1.
+   */
+  --navy: #072557;
+  --navy-hover: #1a3a70;
+  --cream: #ffffff;
+  --terracotta: #072557;
+  --olive: #3b5b86;
+  --accent-on-dark: #b7cbec;
 
   /* Semantic tokens mapped to brand */
   --background: var(--cream);
-  --foreground: oklch(0.18 0.02 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 250);
+  --foreground: #0b1a30;
+  --card: #ffffff;
+  --card-foreground: #0b1a30;
+  --popover: #ffffff;
+  --popover-foreground: #0b1a30;
   --primary: var(--navy);
-  --primary-foreground: var(--cream);
-  --secondary: oklch(0.92 0.015 80);
+  --primary-foreground: #ffffff;
+  --secondary: #f3f6fa;
   --secondary-foreground: var(--navy);
-  --muted: oklch(0.92 0.015 80);
-  --muted-foreground: oklch(0.45 0.02 250);
-  --accent: var(--terracotta);
-  --accent-foreground: var(--cream);
+  --muted: #f3f6fa;
+  --muted-foreground: #4a5a72;
+  --accent: var(--navy);
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.55 0.22 27);
-  --border: oklch(0.88 0.02 80);
-  --input: oklch(0.92 0.015 80);
-  --ring: var(--terracotta);
-  --chart-1: var(--terracotta);
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: var(--navy);
+  --chart-1: var(--navy);
   --chart-2: var(--olive);
-  --chart-3: var(--navy);
-  --chart-4: oklch(0.65 0.1 38);
-  --chart-5: oklch(0.4 0.04 250);
+  --chart-3: #1a3a70;
+  --chart-4: #7d97c2;
+  --chart-5: #b7cbec;
   --radius: 0.625rem;
-  --sidebar: var(--cream);
-  --sidebar-foreground: oklch(0.18 0.02 250);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0b1a30;
   --sidebar-primary: var(--navy);
-  --sidebar-primary-foreground: var(--cream);
-  --sidebar-accent: oklch(0.92 0.015 80);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f3f6fa;
   --sidebar-accent-foreground: var(--navy);
-  --sidebar-border: oklch(0.88 0.02 80);
-  --sidebar-ring: var(--terracotta);
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: var(--navy);
+}
+
+/*
+ * On navy sections the action colour would vanish, so swap it for the light
+ * accent there. Buttons that use the action colour as background become
+ * white with navy text.
+ */
+.bg-navy,
+.on-dark {
+  --terracotta: var(--accent-on-dark);
+  --olive: var(--accent-on-dark);
+}
+.bg-navy .bg-terracotta,
+.on-dark .bg-terracotta {
+  background-color: #ffffff;
+  color: var(--navy);
 }
 
 .dark {

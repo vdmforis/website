@@ -270,7 +270,7 @@ export default function DienstenPage() {
           className="-z-10 object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 bg-navy/85" />
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24 text-cream">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1fr_2fr] md:py-24 text-cream on-dark">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
               Speerpunt

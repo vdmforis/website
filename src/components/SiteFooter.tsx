@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { localeFromPathname, localizedPath } from "@/lib/i18n";
@@ -14,7 +15,13 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-12 text-sm">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <p className="font-heading text-xl">Foris</p>
+            <Image
+              src="/brand/vdm-foris-logo-white.png"
+              alt="VDM Foris"
+              width={496}
+              height={370}
+              className="h-14 w-auto"
+            />
             <p className="mt-2 text-cream/75">{t.tagline}</p>
             <p className="mt-2 text-cream/60">{t.sub}</p>
           </div>

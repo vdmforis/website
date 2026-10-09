@@ -296,7 +296,7 @@ export function Werkwijze3D() {
               className="relative aspect-square max-h-[46vh] w-full overflow-hidden rounded-3xl border border-border md:max-h-[80vh]"
               style={{
                 background:
-                  "radial-gradient(60% 35% at 70% 8%, #f3e3cf, transparent 70%), linear-gradient(180deg, #ead7bd, #f5efe6)",
+                  "radial-gradient(60% 35% at 70% 8%, #e6edf7, transparent 70%), linear-gradient(180deg, #dce5f1, #f5f7fb)",
               }}
             >
               <div

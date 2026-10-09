@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -19,9 +20,17 @@ export function SiteHeader() {
         <Link
           href={localizedPath(locale, "/")}
           onClick={() => setOpen(false)}
-          className="font-heading text-xl font-medium tracking-tight text-navy"
+          aria-label="VDM Foris, home"
+          className="flex items-center"
         >
-          Foris
+          <Image
+            src="/brand/vdm-foris-logo-navy.png"
+            alt="VDM Foris"
+            width={496}
+            height={370}
+            priority
+            className="h-11 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
