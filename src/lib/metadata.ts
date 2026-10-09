@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { languageAlternates, localizedPath, ogLocale, type Locale } from "@/lib/i18n";
 
+type ArticleInfo = {
+  publishedTime: string;
+  modifiedTime: string;
+  authors: string[];
+};
+
 /**
  * Metadata for a page that exists in NL/EN/ES: canonical, hreflang alternates
  * and Open Graph for the given locale. `title` is used as-is (absolute).
@@ -9,13 +15,21 @@ export function translatedPageMetadata(
   locale: Locale,
   path: string,
   { title, description }: { title: string; description: string },
+  article?: ArticleInfo,
 ): Metadata {
   return {
     title: { absolute: title },
     description,
     alternates: languageAlternates(locale, path),
     openGraph: {
-      type: "website",
+      ...(article
+        ? {
+            type: "article" as const,
+            publishedTime: article.publishedTime,
+            modifiedTime: article.modifiedTime,
+            authors: article.authors,
+          }
+        : { type: "website" as const }),
       siteName: "Foris",
       locale: ogLocale[locale],
       alternateLocale: (Object.keys(ogLocale) as Locale[])

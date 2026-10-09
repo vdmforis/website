@@ -1,7 +1,7 @@
 /**
- * Lean i18n helpers. Dutch is the default and lives at the root (/, /privacy,
- * /cookies). English and Spanish live under /en and /es. Only the pages listed
- * in `translatedPaths` have EN/ES versions; everything else is Dutch only.
+ * Lean i18n helpers. Dutch is the default and lives at the root URLs.
+ * English and Spanish live under /en and /es with the same slugs
+ * (/diensten -> /en/diensten). Every public page is listed in `translatedPaths`.
  *
  * Safe to import from client components, server components and proxy.ts.
  */
@@ -17,8 +17,32 @@ export const foreignLocales: readonly ForeignLocale[] = ["en", "es"];
 export const LOCALE_COOKIE = "NEXT_LOCALE";
 export const LOCALE_COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
-/** Dutch paths that also exist under /en and /es. */
-export const translatedPaths = ["/", "/privacy", "/cookies"] as const;
+/** Article slugs under /artikelen (same slug in every language). */
+export const articleSlugs = [
+  "costa-azahar-vs-costa-blanca",
+  "nie-aanvragen-spanje-stappenplan",
+  "nieuwbouw-of-bestaande-bouw-spanje",
+  "modelo-036-nederlandse-bv",
+] as const;
+export type ArticleSlug = (typeof articleSlugs)[number];
+
+/**
+ * Dutch paths that also exist under /en and /es.
+ * Keep in sync with the `matcher` in src/proxy.ts (that list must be literals).
+ */
+export const translatedPaths = [
+  "/",
+  "/diensten",
+  "/onze-ervaring",
+  "/over-ons",
+  "/artikelen",
+  ...articleSlugs.map((slug) => `/artikelen/${slug}` as const),
+  "/gratis-gids",
+  "/offerte",
+  "/kennismaking",
+  "/privacy",
+  "/cookies",
+] as const;
 
 export const ogLocale: Record<Locale, string> = {
   nl: "nl_NL",
@@ -52,14 +76,21 @@ export function stripLocale(pathname: string | null | undefined): string {
   return rest === "" ? "/" : rest;
 }
 
-/** Dutch path -> path for `locale`. ("/privacy", "en") -> "/en/privacy". */
+/**
+ * Dutch path -> path for `locale`.
+ * ("/privacy", "en") -> "/en/privacy", ("/", "es") -> "/es",
+ * ("/#contact", "en") -> "/en#contact", ("/offerte?dienst=x", "es") -> "/es/offerte?dienst=x".
+ */
 export function localizedPath(locale: Locale, path: string): string {
   if (locale === defaultLocale) return path;
-  return path === "/" ? `/${locale}` : `/${locale}${path}`;
+  if (path === "/") return `/${locale}`;
+  if (path.startsWith("/#") || path.startsWith("/?")) return `/${locale}${path.slice(1)}`;
+  return `/${locale}${path}`;
 }
 
 export function isTranslated(path: string): boolean {
-  return (translatedPaths as readonly string[]).includes(path);
+  const bare = path.split(/[?#]/)[0] || "/";
+  return (translatedPaths as readonly string[]).includes(bare);
 }
 
 /** Where the language switcher should send you from the current page. */

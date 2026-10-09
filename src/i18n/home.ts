@@ -112,7 +112,7 @@ export const home: Record<Locale, HomeCopy> = {
       intro:
         "Maintenance, repairs and property care in Grau de Castellón, Castellón and Benicàssim. We're there when you're not, with photos and updates on WhatsApp.",
       quote: "Request a quote",
-      quoteHref: "#contact",
+      quoteHref: "/en/offerte",
       whatsapp: "Or send a WhatsApp",
       alsoPrefix: "Also:",
       alsoRent: "rental homes from Foris",
@@ -137,8 +137,8 @@ export const home: Record<Locale, HomeCopy> = {
           "Made for owners who aren't always here",
         ],
         quote: "Request a quote →",
-        quoteHref: "#contact",
-        packages: "See the property care packages (in Dutch) →",
+        quoteHref: "/en/offerte?dienst=anders",
+        packages: "See the property care packages →",
       },
       rent: {
         title: "Rentals: live in a Foris home",
@@ -151,7 +151,7 @@ export const home: Record<Locale, HomeCopy> = {
       eyebrow: "For buyers",
       title: "Buying a home on the Costa del Azahar?",
       body: "We help with orientation, the paperwork (NIE, CIF, bank account) and keeping an eye on your new build. After the handover, we look after your home too.",
-      more: "More about buyer guidance (in Dutch) →",
+      more: "More about buyer guidance →",
     },
     proof: [
       {
@@ -180,7 +180,7 @@ export const home: Record<Locale, HomeCopy> = {
       intro:
         "Mantenimiento, reparaciones y gestión de viviendas en el Grao de Castellón, Castellón y Benicàssim. Estamos ahí cuando tú no estás, con fotos y novedades por WhatsApp.",
       quote: "Pide presupuesto",
-      quoteHref: "#contact",
+      quoteHref: "/es/offerte",
       whatsapp: "O escríbenos por WhatsApp",
       alsoPrefix: "También:",
       alsoRent: "viviendas de alquiler de Foris",
@@ -205,8 +205,8 @@ export const home: Record<Locale, HomeCopy> = {
           "Pensado para propietarios que no siempre están aquí",
         ],
         quote: "Pide presupuesto →",
-        quoteHref: "#contact",
-        packages: "Ver los paquetes de gestión (en neerlandés) →",
+        quoteHref: "/es/offerte?dienst=anders",
+        packages: "Ver los paquetes de gestión →",
       },
       rent: {
         title: "Alquiler: vivir en una vivienda de Foris",
@@ -219,7 +219,7 @@ export const home: Record<Locale, HomeCopy> = {
       eyebrow: "Para compradores",
       title: "¿Vas a comprar casa en la Costa del Azahar?",
       body: "Te ayudamos con la orientación, el papeleo (NIE, CIF, cuenta bancaria) y el seguimiento de tu obra nueva. Después de la entrega de llaves, también cuidamos de tu casa.",
-      more: "Más información para compradores (en neerlandés) →",
+      more: "Más información para compradores →",
     },
     proof: [
       {

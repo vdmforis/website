@@ -38,7 +38,7 @@ export function SiteHeader() {
           {t.nav.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localizedPath(locale, item.href)}
               className="text-foreground/75 transition-colors hover:text-terracotta"
             >
               {item.label}
@@ -46,26 +46,24 @@ export function SiteHeader() {
           ))}
           {t.guide && (
             <Link
-              href="/gratis-gids"
+              href={localizedPath(locale, "/gratis-gids")}
               className="hidden text-foreground/75 transition-colors hover:text-terracotta lg:inline"
             >
               {t.guide}
             </Link>
           )}
           <Link
-            href={t.quote.href}
+            href={localizedPath(locale, t.quote.href)}
             className="whitespace-nowrap rounded-full border border-terracotta/40 px-3 py-1.5 text-terracotta transition-colors hover:bg-terracotta/10"
           >
             {t.quote.label}
           </Link>
-          {locale === "nl" && (
-            <Link
-              href={t.book.href}
-              className="whitespace-nowrap rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90"
-            >
-              {t.book.label}
-            </Link>
-          )}
+          <Link
+            href={localizedPath(locale, t.book.href)}
+            className="whitespace-nowrap rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90"
+          >
+            {t.book.label}
+          </Link>
           <LanguageSwitcher />
         </nav>
 
@@ -73,7 +71,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher />
           <Link
-            href={t.book.href}
+            href={localizedPath(locale, t.book.href)}
             className="rounded-full bg-terracotta px-3 py-1.5 text-xs text-cream transition-colors hover:bg-terracotta/90"
           >
             {t.book.labelShort}
@@ -97,7 +95,7 @@ export function SiteHeader() {
             {t.nav.map((item) => (
               <li key={item.href}>
                 <Link
-                  href={item.href}
+                  href={localizedPath(locale, item.href)}
                   onClick={() => setOpen(false)}
                   className="block rounded-lg px-3 py-3 text-base text-foreground/85 transition-colors hover:bg-secondary/40 hover:text-terracotta"
                 >
@@ -108,7 +106,7 @@ export function SiteHeader() {
             {t.guideMobile && (
               <li>
                 <Link
-                  href="/gratis-gids"
+                  href={localizedPath(locale, "/gratis-gids")}
                   onClick={() => setOpen(false)}
                   className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
                 >
@@ -118,7 +116,7 @@ export function SiteHeader() {
             )}
             <li>
               <Link
-                href={t.quote.href}
+                href={localizedPath(locale, t.quote.href)}
                 onClick={() => setOpen(false)}
                 className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
               >

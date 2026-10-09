@@ -5,7 +5,7 @@ import { HeroForm } from "@/components/HeroForm";
 import { BookCallButton } from "@/components/BookCallButton";
 import { Werkwijze3D } from "@/components/Werkwijze3D";
 import { whatsappLink } from "@/lib/contact";
-import type { Locale } from "@/lib/i18n";
+import { localizedPath, type Locale } from "@/lib/i18n";
 import { home } from "@/i18n/home";
 
 function Bullet() {
@@ -122,8 +122,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                   {t.pillars.care.quote}
                 </Link>
                 <Link
-                  href="/diensten#concierge"
-                  hrefLang={locale === "nl" ? undefined : "nl"}
+                  href={localizedPath(locale, "/diensten#concierge")}
                   className="text-terracotta underline-offset-4 hover:underline"
                 >
                   {t.pillars.care.packages}
@@ -169,8 +168,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="mt-4 max-w-2xl text-foreground/80">{t.buyers.body}</p>
             <p className="mt-4">
               <Link
-                href="/diensten"
-                hrefLang="nl"
+                href={localizedPath(locale, "/diensten")}
                 className="text-sm font-medium text-terracotta underline-offset-4 hover:underline"
               >
                 {t.buyers.more}

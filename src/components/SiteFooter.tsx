@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { localeFromPathname, localizedPath } from "@/lib/i18n";
-import { dutchOnlyLinks, ui } from "@/i18n/ui";
+import { ui } from "@/i18n/ui";
 
 export function SiteFooter() {
   const locale = localeFromPathname(usePathname());
@@ -48,32 +48,15 @@ export function SiteFooter() {
             <ul className="mt-2 space-y-1">
               {t.links.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-terracotta">
+                  <Link
+                    href={localizedPath(locale, item.href)}
+                    className="hover:text-terracotta"
+                  >
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            {t.dutchOnlyHeading && (
-              <>
-                <p className="mt-4 font-mono text-xs uppercase tracking-[0.18em] text-cream/60">
-                  {t.dutchOnlyHeading}
-                </p>
-                <ul className="mt-2 space-y-1">
-                  {dutchOnlyLinks.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        hrefLang="nl"
-                        className="hover:text-terracotta"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
           </div>
         </div>
         <div className="mt-10 flex flex-col gap-4 border-t border-cream/15 pt-6 text-xs text-cream/60 md:flex-row md:items-start md:justify-between">

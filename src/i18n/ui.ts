@@ -1,6 +1,9 @@
 import type { Locale } from "@/lib/i18n";
 
-/** Short UI strings used by client components (header, footer, forms). */
+/**
+ * Short UI strings used by client components (header, footer, forms).
+ * Hrefs are Dutch paths; components localise them with `localizedPath`.
+ */
 export const ui = {
   nl: {
     switcherLabel: "Taal",
@@ -32,7 +35,6 @@ export const ui = {
         { href: "/over-ons", label: "Over ons" },
         { href: "/offerte", label: "Vraag een offerte aan" },
       ],
-      dutchOnlyHeading: null as string | null,
       taxAddress: "Fiscaal domicilie in Spanje: Grau de Castellón · Comunitat Valenciana, España",
       privacy: "Privacy",
       cookies: "Cookies",
@@ -67,14 +69,15 @@ export const ui = {
     switcherLabel: "Language",
     header: {
       nav: [
-        { href: "/en#onderhoud", label: "Maintenance" },
-        { href: "/en#verhuur", label: "Rentals" },
-        { href: "/en#kopers", label: "Buying a home" },
+        { href: "/diensten", label: "Services" },
+        { href: "/onze-ervaring", label: "Our experience" },
+        { href: "/artikelen", label: "Articles" },
+        { href: "/over-ons", label: "About us" },
       ],
-      guide: null as string | null,
-      guideMobile: null as string | null,
-      quote: { href: "/en#contact", label: "Request a quote", labelMobile: "Request a quote" },
-      book: { href: "/en#contact", label: "Contact us", labelShort: "Contact" },
+      guide: "Free guide",
+      guideMobile: "Free guide: the 9 pitfalls (in Dutch)",
+      quote: { href: "/offerte", label: "Get a quote", labelMobile: "Request a quote" },
+      book: { href: "/kennismaking", label: "Book a call", labelShort: "Book" },
       openMenu: "Open menu",
       closeMenu: "Close menu",
     },
@@ -84,11 +87,14 @@ export const ui = {
       contact: "Contact",
       pages: "Pages",
       links: [
-        { href: "/en#onderhoud", label: "Property care & maintenance" },
-        { href: "/en#verhuur", label: "Rentals" },
-        { href: "/en#contact", label: "Request a quote" },
+        { href: "/#onderhoud", label: "Property care & maintenance" },
+        { href: "/#verhuur", label: "Rentals" },
+        { href: "/diensten", label: "Services" },
+        { href: "/onze-ervaring", label: "Our experience" },
+        { href: "/artikelen", label: "Articles" },
+        { href: "/over-ons", label: "About us" },
+        { href: "/offerte", label: "Request a quote" },
       ],
-      dutchOnlyHeading: "In Dutch" as string | null,
       taxAddress: "Spanish tax address: Grau de Castellón · Comunitat Valenciana, Spain",
       privacy: "Privacy",
       cookies: "Cookies",
@@ -96,9 +102,9 @@ export const ui = {
     floating: {
       dialog: "Quick contact options",
       title: "Get in touch",
-      intro: "First reply within one working day.",
+      intro: "First reply within one working day. An introductory call is free.",
       whatsapp: "WhatsApp us",
-      book: null as string | null,
+      book: "Book a call" as string | null,
       free: "free",
       button: "Talk to us",
       open: "Open contact options",
@@ -115,7 +121,7 @@ export const ui = {
         "For example: a job or repair, property care, or a question about renting or buying.",
       submit: "Send us your question",
       sending: "Sending…",
-      note: "We reply within one working day.",
+      note: 'We reply within one working day. Prefer to book a time straight away? Click "Book a call" at the top right.',
       success: "Message received",
     },
   },
@@ -123,14 +129,15 @@ export const ui = {
     switcherLabel: "Idioma",
     header: {
       nav: [
-        { href: "/es#onderhoud", label: "Mantenimiento" },
-        { href: "/es#verhuur", label: "Alquiler" },
-        { href: "/es#kopers", label: "Comprar casa" },
+        { href: "/diensten", label: "Servicios" },
+        { href: "/onze-ervaring", label: "Experiencia" },
+        { href: "/artikelen", label: "Artículos" },
+        { href: "/over-ons", label: "Quiénes somos" },
       ],
-      guide: null as string | null,
-      guideMobile: null as string | null,
-      quote: { href: "/es#contact", label: "Pide presupuesto", labelMobile: "Pide presupuesto" },
-      book: { href: "/es#contact", label: "Contacto", labelShort: "Contacto" },
+      guide: "Guía gratis",
+      guideMobile: "Guía gratis: los 9 errores (en neerlandés)",
+      quote: { href: "/offerte", label: "Pide presupuesto", labelMobile: "Pide presupuesto" },
+      book: { href: "/kennismaking", label: "Reserva una llamada", labelShort: "Reservar" },
       openMenu: "Abrir menú",
       closeMenu: "Cerrar menú",
     },
@@ -141,11 +148,14 @@ export const ui = {
       contact: "Contacto",
       pages: "Páginas",
       links: [
-        { href: "/es#onderhoud", label: "Gestión y mantenimiento" },
-        { href: "/es#verhuur", label: "Alquiler" },
-        { href: "/es#contact", label: "Pide presupuesto" },
+        { href: "/#onderhoud", label: "Gestión y mantenimiento" },
+        { href: "/#verhuur", label: "Alquiler" },
+        { href: "/diensten", label: "Servicios" },
+        { href: "/onze-ervaring", label: "Experiencia" },
+        { href: "/artikelen", label: "Artículos" },
+        { href: "/over-ons", label: "Quiénes somos" },
+        { href: "/offerte", label: "Pide presupuesto" },
       ],
-      dutchOnlyHeading: "En neerlandés" as string | null,
       taxAddress: "Domicilio fiscal en España: Grau de Castellón · Comunitat Valenciana, España",
       privacy: "Privacidad",
       cookies: "Cookies",
@@ -153,9 +163,9 @@ export const ui = {
     floating: {
       dialog: "Opciones de contacto",
       title: "Contacto directo",
-      intro: "Primera respuesta en un día laborable.",
+      intro: "Primera respuesta en un día laborable. La primera llamada es gratis.",
       whatsapp: "Escríbenos por WhatsApp",
-      book: null as string | null,
+      book: "Reserva una llamada" as string | null,
       free: "gratis",
       button: "Habla con nosotros",
       open: "Abrir opciones de contacto",
@@ -172,16 +182,8 @@ export const ui = {
         "Por ejemplo: una reparación, la gestión de tu vivienda o una pregunta sobre alquilar o comprar.",
       submit: "Envíanos tu pregunta",
       sending: "Enviando…",
-      note: "Respondemos en un día laborable.",
+      note: 'Respondemos en un día laborable. ¿Prefieres reservar una hora directamente? Pulsa "Reserva una llamada" arriba a la derecha.',
       success: "Mensaje recibido",
     },
   },
 } satisfies Record<Locale, unknown>;
-
-/** Dutch-only pages, linked from the EN/ES footer under "In Dutch". */
-export const dutchOnlyLinks = [
-  { href: "/diensten", label: "Diensten" },
-  { href: "/onze-ervaring", label: "Onze ervaring" },
-  { href: "/artikelen", label: "Artikelen" },
-  { href: "/over-ons", label: "Over ons" },
-];

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { contact, whatsappLink, mailLink } from "@/lib/contact";
-import { localeFromPathname } from "@/lib/i18n";
+import { localeFromPathname, localizedPath } from "@/lib/i18n";
 import { ui } from "@/i18n/ui";
 
 export function FloatingContact() {
@@ -61,7 +61,7 @@ export function FloatingContact() {
             </a>
             {t.book && (
             <a
-              href={contact.bookingPath}
+              href={localizedPath(locale, contact.bookingPath)}
               onClick={() => setOpen(false)}
               className="flex items-center gap-3 rounded-xl bg-terracotta px-4 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
             >

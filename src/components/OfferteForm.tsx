@@ -6,31 +6,32 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitOfferte, type ContactState } from "@/lib/actions";
+import type { Locale } from "@/lib/i18n";
+import { dienstIds, dienstLabels, formUi } from "@/i18n/forms";
 
 const initialState: ContactState = { status: "idle" };
 
-export const DIENSTEN = [
-  { id: "orientatie", label: "Oriëntatie & projectkeuze" },
-  { id: "papierwinkel", label: "Papierwinkel — NIE, CIF, bank" },
-  { id: "nieuwbouwtoezicht", label: "Nieuwbouwtoezicht" },
-  { id: "aankoopbegeleiding", label: "Volledige aankoopbegeleiding" },
-  { id: "concierge", label: "Concierge" },
-  { id: "anders", label: "Weet ik nog niet / iets anders" },
-] as const;
-
-export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
+export function OfferteForm({
+  defaultDienst,
+  locale = "nl",
+}: {
+  defaultDienst?: string;
+  locale?: Locale;
+}) {
+  const t = formUi[locale];
+  const DIENSTEN = dienstIds.map((id) => ({ id, label: dienstLabels[locale][id] }));
   const [state, formAction, isPending] = useActionState(
     submitOfferte,
     initialState,
   );
-  const [dienst, setDienst] = useState(
+  const [dienst, setDienst] = useState<string>(
     DIENSTEN.some((d) => d.id === defaultDienst) ? defaultDienst! : "",
   );
 
   if (state.status === "success") {
     return (
       <div className="rounded-2xl border border-olive/30 bg-card p-8 text-center shadow-sm">
-        <p className="font-heading text-2xl text-navy">Aanvraag ontvangen</p>
+        <p className="font-heading text-2xl text-navy">{t.received}</p>
         <p className="mt-3 text-muted-foreground">{state.message}</p>
       </div>
     );
@@ -40,9 +41,10 @@ export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
 
   return (
     <form action={formAction} className="space-y-6" noValidate>
+      <input type="hidden" name="locale" value={locale} />
       <fieldset>
         <legend className="font-heading text-lg text-navy">
-          Waar wil je een offerte voor?
+          {t.offerte.legend}
         </legend>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {DIENSTEN.map((d) => (
@@ -57,7 +59,7 @@ export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
               <input
                 type="radio"
                 name="dienst"
-                value={d.label}
+                value={d.id}
                 checked={dienst === d.id}
                 onChange={() => setDienst(d.id)}
                 className="sr-only"
@@ -82,14 +84,14 @@ export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
       <div className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-sm">
         <div>
           <Label htmlFor="name" className="text-navy">
-            Je naam
+            {t.name}
           </Label>
           <Input
             id="name"
             name="name"
             required
             autoComplete="name"
-            placeholder="Voornaam en achternaam"
+            placeholder={t.namePlaceholder}
             className="mt-1"
             aria-invalid={Boolean(fieldErrors.name)}
           />
@@ -100,7 +102,7 @@ export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
 
         <div>
           <Label htmlFor="email" className="text-navy">
-            E-mailadres
+            {t.email}
           </Label>
           <Input
             id="email"
@@ -108,7 +110,7 @@ export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
             type="email"
             required
             autoComplete="email"
-            placeholder="jij@voorbeeld.nl"
+            placeholder={t.emailPlaceholder}
             className="mt-1"
             aria-invalid={Boolean(fieldErrors.email)}
           />
@@ -119,29 +121,29 @@ export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
 
         <div>
           <Label htmlFor="phone" className="text-navy">
-            Telefoonnummer{" "}
-            <span className="text-muted-foreground">(optioneel)</span>
+            {t.phone}{" "}
+            <span className="text-muted-foreground">{t.optional}</span>
           </Label>
           <Input
             id="phone"
             name="phone"
             type="tel"
             autoComplete="tel"
-            placeholder="+31 6 …"
+            placeholder={t.phonePlaceholder}
             className="mt-1"
           />
         </div>
 
         <div>
           <Label htmlFor="message" className="text-navy">
-            Korte toelichting{" "}
-            <span className="text-muted-foreground">(optioneel)</span>
+            {t.offerte.message}{" "}
+            <span className="text-muted-foreground">{t.optional}</span>
           </Label>
           <Textarea
             id="message"
             name="message"
             rows={3}
-            placeholder="Bijvoorbeeld: regio, nieuwbouwproject, of waar je staat in het proces."
+            placeholder={t.offerte.messagePlaceholder}
             className="mt-1"
           />
         </div>
@@ -155,12 +157,11 @@ export function OfferteForm({ defaultDienst }: { defaultDienst?: string }) {
           disabled={isPending}
           className="h-12 w-full bg-terracotta text-base text-cream hover:bg-terracotta/90"
         >
-          {isPending ? "Versturen…" : "Vraag offerte aan"}
+          {isPending ? t.sending : t.offerte.submit}
         </Button>
 
         <p className="text-center text-xs text-muted-foreground">
-          Binnen één werkdag een offerte op maat. Vrijblijvend — je zit nergens
-          aan vast.
+          {t.offerte.note}
         </p>
       </div>
     </form>

@@ -27,6 +27,7 @@ export function proxy(request: NextRequest) {
   if (locale === defaultLocale) return NextResponse.next();
 
   const url = request.nextUrl.clone();
+  // Keeps the query string (e.g. /offerte?dienst=papierwinkel).
   url.pathname = localizedPath(locale, request.nextUrl.pathname);
   const response = NextResponse.redirect(url, 307);
   response.headers.set("Cache-Control", "private, no-store");
@@ -36,5 +37,20 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   // Keep in sync with `translatedPaths` in src/lib/i18n.ts (must be literals).
-  matcher: ["/", "/privacy", "/cookies"],
+  matcher: [
+    "/",
+    "/diensten",
+    "/onze-ervaring",
+    "/over-ons",
+    "/artikelen",
+    "/artikelen/costa-azahar-vs-costa-blanca",
+    "/artikelen/nie-aanvragen-spanje-stappenplan",
+    "/artikelen/nieuwbouw-of-bestaande-bouw-spanje",
+    "/artikelen/modelo-036-nederlandse-bv",
+    "/gratis-gids",
+    "/offerte",
+    "/kennismaking",
+    "/privacy",
+    "/cookies",
+  ],
 };

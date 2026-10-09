@@ -5,10 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { requestGids, type GidsState } from "@/lib/gids-action";
+import { whatsappLink } from "@/lib/contact";
+import type { Locale } from "@/lib/i18n";
+import { formUi, processIds, processLabels } from "@/i18n/forms";
 
 const initialState: GidsState = { status: "idle" };
 
-export function GidsForm() {
+export function GidsForm({ locale = "nl" }: { locale?: Locale }) {
+  const t = formUi[locale];
   const [state, formAction, isPending] = useActionState(
     requestGids,
     initialState,
@@ -18,19 +22,19 @@ export function GidsForm() {
     return (
       <div className="rounded-2xl border border-olive/30 bg-card p-8 shadow-sm">
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
-          Onderweg
+          {t.gids.successEyebrow}
         </p>
-        <p className="mt-2 font-heading text-2xl text-navy">De gids is gestuurd</p>
+        <p className="mt-2 font-heading text-2xl text-navy">{t.gids.successTitle}</p>
         <p className="mt-3 text-foreground/80">{state.message}</p>
         <p className="mt-6 text-sm text-muted-foreground">
-          Tijdens het lezen vragen?{" "}
+          {t.gids.questions}{" "}
           <a
-            href="https://wa.me/34611365294"
+            href={whatsappLink(locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="text-terracotta hover:underline"
           >
-            Stuur ons direct een WhatsApp
+            {t.gids.whatsapp}
           </a>
           .
         </p>
@@ -47,16 +51,17 @@ export function GidsForm() {
       className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-sm md:p-8"
       noValidate
     >
+      <input type="hidden" name="locale" value={locale} />
       <div>
         <Label htmlFor="name" className="text-navy">
-          Je naam
+          {t.name}
         </Label>
         <Input
           id="name"
           name="name"
           required
           autoComplete="name"
-          placeholder="Voornaam en achternaam"
+          placeholder={t.namePlaceholder}
           className="mt-1"
           aria-invalid={Boolean(fieldErrors.name)}
         />
@@ -67,7 +72,7 @@ export function GidsForm() {
 
       <div>
         <Label htmlFor="email" className="text-navy">
-          E-mailadres
+          {t.email}
         </Label>
         <Input
           id="email"
@@ -75,7 +80,7 @@ export function GidsForm() {
           type="email"
           required
           autoComplete="email"
-          placeholder="jij@voorbeeld.nl"
+          placeholder={t.emailPlaceholder}
           className="mt-1"
           aria-invalid={Boolean(fieldErrors.email)}
         />
@@ -86,19 +91,20 @@ export function GidsForm() {
 
       <div>
         <Label htmlFor="process" className="text-navy">
-          Waar sta je in het proces?{" "}
-          <span className="text-muted-foreground">(optioneel)</span>
+          {t.gids.process}{" "}
+          <span className="text-muted-foreground">{t.optional}</span>
         </Label>
         <select
           id="process"
           name="process"
           className="mt-1 flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-colors outline-none focus:border-ring focus:ring-2 focus:ring-ring/30 md:text-sm"
         >
-          <option value="">— maak een keuze —</option>
-          <option value="orienterend">Aan het oriënteren</option>
-          <option value="zoekend">Actief op zoek</option>
-          <option value="op-het-oog">Heb een huis op het oog</option>
-          <option value="al-gekocht">Al gekocht, in het traject</option>
+          <option value="">{t.gids.choose}</option>
+          {processIds.map((id) => (
+            <option key={id} value={id}>
+              {processLabels[locale][id]}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -111,12 +117,11 @@ export function GidsForm() {
         disabled={isPending}
         className="w-full bg-terracotta text-cream hover:bg-terracotta/90 h-12 text-base"
       >
-        {isPending ? "Versturen…" : "Stuur me de gids · gratis"}
+        {isPending ? t.sending : t.gids.submit}
       </Button>
 
       <p className="text-center text-xs text-muted-foreground">
-        Je krijgt de PDF direct in je inbox. We sturen je hierna geen
-        ongevraagde nieuwsbrieven.
+        {t.gids.note}
       </p>
     </form>
   );
