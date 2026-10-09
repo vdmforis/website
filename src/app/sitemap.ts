@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://vdmforis.com";
+const BASE = "https://www.vdmforis.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -89,5 +89,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.2,
     },
+    // English and Spanish versions (see src/lib/i18n.ts translatedPaths)
+    ...(["en", "es"] as const).flatMap((lang) => [
+      {
+        url: `${BASE}/${lang}`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.9,
+      },
+      {
+        url: `${BASE}/${lang}/privacy`,
+        lastModified: now,
+        changeFrequency: "yearly" as const,
+        priority: 0.2,
+      },
+      {
+        url: `${BASE}/${lang}/cookies`,
+        lastModified: now,
+        changeFrequency: "yearly" as const,
+        priority: 0.2,
+      },
+    ]),
   ];
 }

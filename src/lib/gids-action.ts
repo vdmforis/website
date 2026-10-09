@@ -92,7 +92,7 @@ export async function requestGids(
         "in de praktijk misgaat.\n\n" +
         "Heb je vragen over je specifieke situatie? Een kennismakingsgesprek van 30 minuten is " +
         "gratis: https://vdmforis.com/kennismaking\n\n" +
-        "Of stuur me een WhatsApp: +31 6 14 96 77 04\n\n" +
+        "Of stuur me een WhatsApp: +34 611 365 294\n\n" +
         "Veel succes met je traject,\n" +
         "Dennis\n\n" +
         "Van der Meulen Foris B.V. — vdmforis.com",

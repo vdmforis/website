@@ -10,15 +10,13 @@ export const contact = {
   /**
    * Phone number in international format (no spaces, no plus).
    * Used for both tel: and WhatsApp wa.me links.
-   * NB: Dennis is bezig met WhatsApp Business onboarding op dit nummer —
-   * wa.me/<nummer> blijft werken en routet automatisch naar het Business
-   * account zodra de overgang klaar is.
+   * Spaans WhatsApp Business-nummer van VDM Foris.
    */
-  whatsappNumber: "31614967704",
+  whatsappNumber: "34611365294",
   /**
    * Human-readable phone number for display.
    */
-  phoneDisplay: "+31 6 14 96 77 04",
+  phoneDisplay: "+34 611 365 294",
   /**
    * Prefilled WhatsApp message — already URL-encoded.
    */

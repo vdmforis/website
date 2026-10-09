@@ -25,7 +25,7 @@ export function GidsForm() {
         <p className="mt-6 text-sm text-muted-foreground">
           Tijdens het lezen vragen?{" "}
           <a
-            href="https://wa.me/31614967704"
+            href="https://wa.me/34611365294"
             target="_blank"
             rel="noopener noreferrer"
             className="text-terracotta hover:underline"

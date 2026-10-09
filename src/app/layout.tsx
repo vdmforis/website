@@ -99,7 +99,7 @@ const organizationJsonLd = {
           "@type": "ContactPoint",
           contactType: "customer service",
           email: "info@vdmforis.com",
-          telephone: "+31-6-14967704",
+          telephone: "+34-611-365-294",
           availableLanguage: ["nl", "es", "en"],
           areaServed: "ES",
         },
@@ -129,7 +129,7 @@ const organizationJsonLd = {
       description:
         "Onderhoud, reparaties en woningbeheer voor eigenaren in Grau de Castellón, Castellón en Benicàssim, in het Nederlands geregeld.",
       email: "info@vdmforis.com",
-      telephone: "+31-6-14967704",
+      telephone: "+34-611-365-294",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Grau de Castellón",
