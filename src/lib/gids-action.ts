@@ -4,10 +4,11 @@ import { Resend } from "resend";
 import { renderToBuffer } from "@react-pdf/renderer";
 import { z } from "zod";
 import { ValkuilenPdf } from "@/components/pdf/ValkuilenPdf";
+import { actionTexts, formLocale, processLabels, type ProcessId } from "@/i18n/forms";
 
 const gidsSchema = z.object({
-  name: z.string().min(2, "Vul je naam in").max(120),
-  email: z.string().email("Geen geldig e-mailadres"),
+  name: z.string().min(2).max(120),
+  email: z.string().email(),
   process: z.string().optional(),
 });
 
@@ -20,6 +21,9 @@ export async function requestGids(
   _prev: GidsState,
   formData: FormData,
 ): Promise<GidsState> {
+  const locale = formLocale(formData.get("locale"));
+  const tx = actionTexts[locale];
+
   const parsed = gidsSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
@@ -30,11 +34,13 @@ export async function requestGids(
     const fieldErrors: Record<string, string> = {};
     for (const issue of parsed.error.issues) {
       const key = issue.path[0]?.toString();
-      if (key && !fieldErrors[key]) fieldErrors[key] = issue.message;
+      if (key && !fieldErrors[key]) {
+        fieldErrors[key] = key === "name" ? tx.name : key === "email" ? tx.email : tx.check;
+      }
     }
     return {
       status: "error",
-      message: "Controleer je gegevens en probeer opnieuw.",
+      message: tx.check,
       fieldErrors,
     };
   }
@@ -55,8 +61,7 @@ export async function requestGids(
     console.error("[gids] PDF render failed", err);
     return {
       status: "error",
-      message:
-        "Er ging iets mis bij het samenstellen van de gids. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com.",
+      message: tx.gidsPdfFailed,
     };
   }
 
@@ -69,8 +74,7 @@ export async function requestGids(
     });
     return {
       status: "success",
-      message:
-        "Bedankt! De gids is onderweg naar je inbox. (Dev mode: e-mail niet daadwerkelijk verzonden.)",
+      message: tx.gidsDev,
     };
   }
 
@@ -78,24 +82,13 @@ export async function requestGids(
     const resend = new Resend(apiKey);
 
     // 1) Send the PDF to the requester with a friendly body
+    const mail = gidsMail(locale, parsed.data.name);
     const pdfSend = await resend.emails.send({
       from,
       to: parsed.data.email,
       replyTo: ownerTo,
-      subject: "Je Foris-gids: de 9 valkuilen bij nieuwbouw kopen in Spanje",
-      text:
-        `Hoi ${parsed.data.name},\n\n` +
-        "Bedankt voor je aanvraag. Hierbij de gids — bewaar 'm in je 'Spanje-koop'-map, " +
-        "dan kun je er onderweg terug naar grijpen.\n\n" +
-        "De gids komt voort uit onze eigen vastgoedpraktijk in Nederland en Spanje. " +
-        "Geen verkooppraatje — gewoon de negen punten waar het bij nieuwbouwtrajecten " +
-        "in de praktijk misgaat.\n\n" +
-        "Heb je vragen over je specifieke situatie? Een kennismakingsgesprek van 30 minuten is " +
-        "gratis: https://vdmforis.com/kennismaking\n\n" +
-        "Of stuur me een WhatsApp: +31 6 14 96 77 04\n\n" +
-        "Veel succes met je traject,\n" +
-        "Dennis\n\n" +
-        "Van der Meulen Foris B.V. — vdmforis.com",
+      subject: mail.subject,
+      text: mail.text,
       attachments: [
         {
           filename: "foris-9-valkuilen.pdf",
@@ -126,13 +119,18 @@ export async function requestGids(
       from,
       to: ownerTo,
       replyTo: parsed.data.email,
-      subject: `Nieuwe gids-aanvraag: ${parsed.data.name}`,
+      subject: `${locale === "nl" ? "" : `[${locale.toUpperCase()}] `}Nieuwe gids-aanvraag: ${parsed.data.name}`,
       text:
         `Nieuwe download van de Foris-gids:\n\n` +
         `Naam: ${parsed.data.name}\n` +
         `E-mail: ${parsed.data.email}\n` +
-        `Fase: ${parsed.data.process ?? "(niet opgegeven)"}\n\n` +
-        `De gids is naar ze toegestuurd.`,
+        `Fase: ${
+          parsed.data.process
+            ? (processLabels.nl[parsed.data.process as ProcessId] ?? parsed.data.process)
+            : "(niet opgegeven)"
+        }\n` +
+        `Taal: ${locale.toUpperCase()}\n\n` +
+        `De gids (Nederlandstalig) is naar ze toegestuurd.`,
     });
 
     if (ownerSend.error) {
@@ -142,15 +140,62 @@ export async function requestGids(
   } catch (err) {
     const detail = err instanceof Error ? err.message : String(err);
     console.error("[gids] Resend send failed:", detail);
-    return {
-      status: "error",
-      message:
-        "Er ging iets mis bij het versturen. Probeer het zo nog eens, of mail ons direct op info@vdmforis.com.",
-    };
+    return { status: "error", message: tx.gidsFailed };
   }
 
+  return { status: "success", message: tx.gidsSuccess };
+}
+
+/** E-mail that carries the PDF. The guide itself is Dutch-only. */
+function gidsMail(locale: "nl" | "en" | "es", name: string) {
+  if (locale === "en") {
+    return {
+      subject: "Your Foris guide: the 9 pitfalls of buying a new build in Spain (in Dutch)",
+      text:
+        `Hi ${name},\n\n` +
+        "Thanks for your request. The guide is attached. Please note: the guide is written in Dutch; " +
+        "we don't have an English version at the moment.\n\n" +
+        "It comes from our own property practice in the Netherlands and Spain. " +
+        "No sales pitch, just the nine points where new-build purchases go wrong in practice.\n\n" +
+        "Questions about your own situation? A 30-minute introductory call is free: " +
+        "https://www.vdmforis.com/en/kennismaking\n\n" +
+        "Or send me a WhatsApp: +34 611 365 294\n\n" +
+        "Good luck with your purchase,\n" +
+        "Dennis\n\n" +
+        "Van der Meulen Foris B.V. · vdmforis.com",
+    };
+  }
+  if (locale === "es") {
+    return {
+      subject: "Tu guía de Foris: los 9 errores al comprar obra nueva en España (en neerlandés)",
+      text:
+        `Hola, ${name}:\n\n` +
+        "Gracias por tu solicitud. Te adjuntamos la guía. Ten en cuenta que está escrita en neerlandés; " +
+        "de momento no tenemos versión en español.\n\n" +
+        "Nace de nuestra propia práctica inmobiliaria en los Países Bajos y en España. " +
+        "Sin discurso comercial: solo los nueve puntos en los que las compras de obra nueva fallan en la práctica.\n\n" +
+        "¿Tienes preguntas sobre tu caso concreto? Una llamada de presentación de 30 minutos es gratis: " +
+        "https://www.vdmforis.com/es/kennismaking\n\n" +
+        "O escríbeme por WhatsApp: +34 611 365 294\n\n" +
+        "Mucha suerte con tu compra,\n" +
+        "Dennis\n\n" +
+        "Van der Meulen Foris B.V. · vdmforis.com",
+    };
+  }
   return {
-    status: "success",
-    message: "Bedankt! De gids is onderweg naar je inbox. Geen mail binnen 5 minuten? Check je spam.",
+    subject: "Je Foris-gids: de 9 valkuilen bij nieuwbouw kopen in Spanje",
+    text:
+      `Hoi ${name},\n\n` +
+      "Bedankt voor je aanvraag. Hierbij de gids. Bewaar 'm in je 'Spanje-koop'-map, " +
+      "dan kun je er onderweg terug naar grijpen.\n\n" +
+      "De gids komt voort uit onze eigen vastgoedpraktijk in Nederland en Spanje. " +
+      "Geen verkooppraatje, gewoon de negen punten waar het bij nieuwbouwtrajecten " +
+      "in de praktijk misgaat.\n\n" +
+      "Heb je vragen over je specifieke situatie? Een kennismakingsgesprek van 30 minuten is " +
+      "gratis: https://vdmforis.com/kennismaking\n\n" +
+      "Of stuur me een WhatsApp: +34 611 365 294\n\n" +
+      "Veel succes met je traject,\n" +
+      "Dennis\n\n" +
+      "Van der Meulen Foris B.V. · vdmforis.com",
   };
 }

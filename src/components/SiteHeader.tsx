@@ -1,68 +1,85 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { BookCallButton } from "@/components/BookCallButton";
-
-const nav = [
-  { href: "/diensten", label: "Diensten" },
-  { href: "/onze-ervaring", label: "Onze ervaring" },
-  { href: "/artikelen", label: "Artikelen" },
-  { href: "/over-ons", label: "Over ons" },
-];
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { localeFromPathname, localizedPath } from "@/lib/i18n";
+import { ui } from "@/i18n/ui";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const locale = localeFromPathname(usePathname());
+  const t = ui[locale].header;
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/60 bg-cream/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link
-          href="/"
+          href={localizedPath(locale, "/")}
           onClick={() => setOpen(false)}
-          className="font-heading text-xl font-medium tracking-tight text-navy"
+          aria-label="VDM Foris, home"
+          className="flex items-center"
         >
-          Foris
+          <Image
+            src="/brand/vdm-foris-logo-black.png"
+            alt="VDM Foris"
+            width={496}
+            height={370}
+            priority
+            className="h-11 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-5 text-sm md:flex">
-          {nav.map((item) => (
+          {t.nav.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localizedPath(locale, item.href)}
               className="text-foreground/75 transition-colors hover:text-terracotta"
             >
               {item.label}
             </Link>
           ))}
+          {t.guide && (
+            <Link
+              href={localizedPath(locale, "/gratis-gids")}
+              className="hidden text-foreground/75 transition-colors hover:text-terracotta lg:inline"
+            >
+              {t.guide}
+            </Link>
+          )}
           <Link
-            href="/gratis-gids"
-            className="hidden text-foreground/75 transition-colors hover:text-terracotta lg:inline"
-          >
-            Gratis gids
-          </Link>
-          <Link
-            href="/offerte"
+            href={localizedPath(locale, t.quote.href)}
             className="whitespace-nowrap rounded-full border border-terracotta/40 px-3 py-1.5 text-terracotta transition-colors hover:bg-terracotta/10"
           >
-            Vraag offerte
+            {t.quote.label}
           </Link>
-          <BookCallButton className="whitespace-nowrap rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90">
-            Plan kennismaking
-          </BookCallButton>
+          <Link
+            href={localizedPath(locale, t.book.href)}
+            className="whitespace-nowrap rounded-full bg-terracotta px-4 py-2 text-cream transition-colors hover:bg-terracotta/90"
+          >
+            {t.book.label}
+          </Link>
+          <LanguageSwitcher />
         </nav>
 
-        {/* Mobile: primary CTA + hamburger */}
+        {/* Mobile: language + primary CTA + hamburger */}
         <div className="flex items-center gap-2 md:hidden">
-          <BookCallButton className="rounded-full bg-terracotta px-3 py-1.5 text-xs text-cream transition-colors hover:bg-terracotta/90">
-            Plan
-          </BookCallButton>
+          <LanguageSwitcher />
+          <Link
+            href={localizedPath(locale, t.book.href)}
+            className="rounded-full bg-terracotta px-3 py-1.5 text-xs text-cream transition-colors hover:bg-terracotta/90"
+          >
+            {t.book.labelShort}
+          </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Sluit menu" : "Open menu"}
+            aria-label={open ? t.closeMenu : t.openMenu}
             aria-expanded={open}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-border/60 text-navy transition-colors hover:bg-secondary/40"
           >
@@ -75,10 +92,10 @@ export function SiteHeader() {
       {open && (
         <nav className="border-t border-border/60 bg-cream md:hidden">
           <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-4">
-            {nav.map((item) => (
+            {t.nav.map((item) => (
               <li key={item.href}>
                 <Link
-                  href={item.href}
+                  href={localizedPath(locale, item.href)}
                   onClick={() => setOpen(false)}
                   className="block rounded-lg px-3 py-3 text-base text-foreground/85 transition-colors hover:bg-secondary/40 hover:text-terracotta"
                 >
@@ -86,22 +103,24 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
+            {t.guideMobile && (
+              <li>
+                <Link
+                  href={localizedPath(locale, "/gratis-gids")}
+                  onClick={() => setOpen(false)}
+                  className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
+                >
+                  {t.guideMobile}
+                </Link>
+              </li>
+            )}
             <li>
               <Link
-                href="/gratis-gids"
+                href={localizedPath(locale, t.quote.href)}
                 onClick={() => setOpen(false)}
                 className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
               >
-                Gratis gids — De 9 valkuilen
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/offerte"
-                onClick={() => setOpen(false)}
-                className="mt-2 block rounded-lg border border-terracotta/40 px-3 py-3 text-base font-medium text-terracotta transition-colors hover:bg-terracotta/10"
-              >
-                Vraag een offerte aan
+                {t.quote.labelMobile}
               </Link>
             </li>
           </ul>

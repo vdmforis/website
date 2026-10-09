@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://vdmforis.com/sitemap.xml",
-    host: "https://vdmforis.com",
+    sitemap: "https://www.vdmforis.com/sitemap.xml",
+    host: "https://www.vdmforis.com",
   };
 }

@@ -527,7 +527,7 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
           <Text style={s.ctaLink}>
             Plan een gesprek: vdmforis.com/kennismaking
           </Text>
-          <Text style={s.ctaLink}>WhatsApp: +31 6 14 96 77 04</Text>
+          <Text style={s.ctaLink}>WhatsApp: +34 611 365 294</Text>
           <Text style={s.ctaLink}>E-mail: info@vdmforis.com</Text>
         </View>
 

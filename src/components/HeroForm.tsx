@@ -6,10 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContact, type ContactState } from "@/lib/actions";
+import type { Locale } from "@/lib/i18n";
+import { ui } from "@/i18n/ui";
 
 const initialState: ContactState = { status: "idle" };
 
-export function HeroForm() {
+export function HeroForm({ locale = "nl" }: { locale?: Locale }) {
+  const t = ui[locale].form;
   const [state, formAction, isPending] = useActionState(
     submitContact,
     initialState,
@@ -18,7 +21,7 @@ export function HeroForm() {
   if (state.status === "success") {
     return (
       <div className="rounded-2xl border border-olive/30 bg-card p-6 shadow-sm">
-        <p className="font-heading text-2xl text-navy">Bericht ontvangen</p>
+        <p className="font-heading text-2xl text-navy">{t.success}</p>
         <p className="mt-2 text-muted-foreground">{state.message}</p>
       </div>
     );
@@ -33,16 +36,17 @@ export function HeroForm() {
       className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-sm"
       noValidate
     >
+      <input type="hidden" name="locale" value={locale} />
       <div>
         <Label htmlFor="name" className="text-navy">
-          Je naam
+          {t.name}
         </Label>
         <Input
           id="name"
           name="name"
           required
           autoComplete="name"
-          placeholder="Voornaam en achternaam"
+          placeholder={t.namePlaceholder}
           className="mt-1"
           aria-invalid={Boolean(fieldErrors.name)}
         />
@@ -53,7 +57,7 @@ export function HeroForm() {
 
       <div>
         <Label htmlFor="email" className="text-navy">
-          E-mailadres
+          {t.email}
         </Label>
         <Input
           id="email"
@@ -61,7 +65,7 @@ export function HeroForm() {
           type="email"
           required
           autoComplete="email"
-          placeholder="jij@voorbeeld.nl"
+          placeholder={t.emailPlaceholder}
           className="mt-1"
           aria-invalid={Boolean(fieldErrors.email)}
         />
@@ -72,13 +76,13 @@ export function HeroForm() {
 
       <div>
         <Label htmlFor="message" className="text-navy">
-          Korte vraag of context <span className="text-muted-foreground">(optioneel)</span>
+          {t.message} <span className="text-muted-foreground">{t.optional}</span>
         </Label>
         <Textarea
           id="message"
           name="message"
           rows={4}
-          placeholder="Bijvoorbeeld: budget, regio van interesse, of waar je staat in het proces."
+          placeholder={t.messagePlaceholder}
           className="mt-1"
         />
       </div>
@@ -92,12 +96,11 @@ export function HeroForm() {
         disabled={isPending}
         className="w-full bg-terracotta text-cream hover:bg-terracotta/90 h-12 text-base"
       >
-        {isPending ? "Versturen…" : "Stuur ons je vraag"}
+        {isPending ? t.sending : t.submit}
       </Button>
 
       <p className="text-center text-xs text-muted-foreground">
-        We reageren binnen een werkdag. Liever direct een tijd boeken? Klik op
-        &quot;Plan kennismaking&quot; rechtsboven.
+        {t.note}
       </p>
     </form>
   );

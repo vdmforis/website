@@ -44,8 +44,8 @@ const SAND = "#dcc9a3";
 const CONCRETE = "#c9c2b2";
 const WALL = "#f7f1e4";
 const TERRA = "#c9603a";
-const NAVYC = "#16354d";
-const GLASS = "#8fb6c9";
+const NAVYC = "#111111";
+const GLASS = "#c8ccd0";
 const GREEN = "#5a6e3a";
 const TRUNK = "#8a6844";
 const POOL = "#4f93ad";
@@ -296,7 +296,7 @@ export function Werkwijze3D() {
               className="relative aspect-square max-h-[46vh] w-full overflow-hidden rounded-3xl border border-border md:max-h-[80vh]"
               style={{
                 background:
-                  "radial-gradient(60% 35% at 70% 8%, #f3e3cf, transparent 70%), linear-gradient(180deg, #ead7bd, #f5efe6)",
+                  "radial-gradient(60% 35% at 70% 8%, #ededed, transparent 70%), linear-gradient(180deg, #e5e5e5, #f7f7f7)",
               }}
             >
               <div
