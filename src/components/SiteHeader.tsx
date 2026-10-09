@@ -24,7 +24,7 @@ export function SiteHeader() {
           className="flex items-center"
         >
           <Image
-            src="/brand/vdm-foris-logo-navy.png"
+            src="/brand/vdm-foris-logo-black.png"
             alt="VDM Foris"
             width={496}
             height={370}

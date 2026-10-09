@@ -54,59 +54,60 @@
 
 :root {
   /*
-   * VDM Foris brand (logo navy #072557, sampled from the approved logo).
-   * Token names are historical: "terracotta" is now the action colour
-   * (buttons, links, small accents) and equals the logo navy; "cream" is now
-   * the light background / text-on-navy colour; "olive" is a muted slate blue
-   * for secondary labels. Contrast (WCAG AA) checked:
-   * navy on white 14.9:1, slate on #F3F6FA 6.4:1, light accent on navy 9.1:1.
+   * VDM Foris brand: black and white (logo ink #111111).
+   * Token names are historical: "navy" and "terracotta" are now the near-black
+   * primary/action colour (buttons, links, headings, small accents); "cream" is
+   * the white background / text-on-dark colour; "olive" is a mid grey for
+   * secondary labels. Contrast (WCAG AA) checked:
+   * #111111 on white 18.9:1, #595959 on white 7.0:1 and on #F5F5F5 6.4:1,
+   * #E5E5E5 on #111111 15.0:1.
    */
-  --navy: #072557;
-  --navy-hover: #1a3a70;
+  --navy: #111111;
+  --navy-hover: #333333;
   --cream: #ffffff;
-  --terracotta: #072557;
-  --olive: #3b5b86;
-  --accent-on-dark: #b7cbec;
+  --terracotta: #111111;
+  --olive: #595959;
+  --accent-on-dark: #e5e5e5;
 
   /* Semantic tokens mapped to brand */
   --background: var(--cream);
-  --foreground: #0b1a30;
+  --foreground: #111111;
   --card: #ffffff;
-  --card-foreground: #0b1a30;
+  --card-foreground: #111111;
   --popover: #ffffff;
-  --popover-foreground: #0b1a30;
+  --popover-foreground: #111111;
   --primary: var(--navy);
   --primary-foreground: #ffffff;
-  --secondary: #f3f6fa;
+  --secondary: #f5f5f5;
   --secondary-foreground: var(--navy);
-  --muted: #f3f6fa;
-  --muted-foreground: #4a5a72;
+  --muted: #f5f5f5;
+  --muted-foreground: #595959;
   --accent: var(--navy);
   --accent-foreground: #ffffff;
   --destructive: oklch(0.55 0.22 27);
-  --border: #e2e8f0;
-  --input: #e2e8f0;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
   --ring: var(--navy);
   --chart-1: var(--navy);
-  --chart-2: var(--olive);
-  --chart-3: #1a3a70;
-  --chart-4: #7d97c2;
-  --chart-5: #b7cbec;
+  --chart-2: #595959;
+  --chart-3: #333333;
+  --chart-4: #8c8c8c;
+  --chart-5: #d4d4d4;
   --radius: 0.625rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #0b1a30;
+  --sidebar-foreground: #111111;
   --sidebar-primary: var(--navy);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f3f6fa;
+  --sidebar-accent: #f5f5f5;
   --sidebar-accent-foreground: var(--navy);
-  --sidebar-border: #e2e8f0;
+  --sidebar-border: #e5e5e5;
   --sidebar-ring: var(--navy);
 }
 
 /*
- * On navy sections the action colour would vanish, so swap it for the light
- * accent there. Buttons that use the action colour as background become
- * white with navy text.
+ * On black sections the action colour would vanish, so swap it for light grey
+ * there. Buttons that use the action colour as background become white with
+ * black text.
  */
 .bg-navy,
 .on-dark {
@@ -120,29 +121,29 @@
 }
 
 .dark {
-  --background: oklch(0.18 0.03 250);
+  --background: oklch(0.18 0 0);
   --foreground: var(--cream);
-  --card: oklch(0.225 0.04 250);
+  --card: oklch(0.225 0 0);
   --card-foreground: var(--cream);
-  --popover: oklch(0.225 0.04 250);
+  --popover: oklch(0.225 0 0);
   --popover-foreground: var(--cream);
   --primary: var(--cream);
   --primary-foreground: var(--navy);
-  --secondary: oklch(0.27 0.04 250);
+  --secondary: oklch(0.27 0 0);
   --secondary-foreground: var(--cream);
-  --muted: oklch(0.27 0.04 250);
-  --muted-foreground: oklch(0.7 0.02 250);
+  --muted: oklch(0.27 0 0);
+  --muted-foreground: oklch(0.7 0 0);
   --accent: var(--terracotta);
   --accent-foreground: var(--cream);
   --destructive: oklch(0.7 0.19 22);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: var(--terracotta);
-  --sidebar: oklch(0.225 0.04 250);
+  --sidebar: oklch(0.225 0 0);
   --sidebar-foreground: var(--cream);
   --sidebar-primary: var(--terracotta);
   --sidebar-primary-foreground: var(--cream);
-  --sidebar-accent: oklch(0.27 0.04 250);
+  --sidebar-accent: oklch(0.27 0 0);
   --sidebar-accent-foreground: var(--cream);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: var(--terracotta);

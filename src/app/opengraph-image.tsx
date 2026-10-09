@@ -6,8 +6,8 @@ export const alt = "VDM Foris · Onderhoud en woningbeheer rond Castellón";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const NAVY = "#072557";
-const ACCENT_ON_DARK = "#b7cbec";
+const BLACK = "#111111";
+const LIGHT_GREY = "#e5e5e5";
 
 export default async function OpenGraphImage() {
   const logo = await readFile(
@@ -21,7 +21,7 @@ export default async function OpenGraphImage() {
         style={{
           width: "100%",
           height: "100%",
-          background: NAVY,
+          background: BLACK,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -53,7 +53,7 @@ export default async function OpenGraphImage() {
             right: 72,
             display: "flex",
             justifyContent: "space-between",
-            color: ACCENT_ON_DARK,
+            color: LIGHT_GREY,
             fontSize: 22,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
