@@ -2,6 +2,13 @@ import type { Locale } from "@/lib/i18n";
 
 type Card = { label: string; body: string };
 
+type ServiceCard = {
+  title: string;
+  body: string;
+  cta: string;
+  ctaHref: string;
+};
+
 export type HomeCopy = {
   meta: { title: string; description: string };
   hero: {
@@ -11,80 +18,60 @@ export type HomeCopy = {
     quote: string;
     quoteHref: string;
     whatsapp: string;
-    alsoPrefix: string;
-    alsoRent: string;
-    alsoBuyPrefix: string;
-    alsoBuy: string;
-    usps: string[];
     imageAlt: string;
   };
-  pillars: {
+  services: {
     eyebrow: string;
     title: string;
-    care: {
-      title: string;
-      body: string;
-      bullets: string[];
-      quote: string;
-      quoteHref: string;
-      packages: string;
-    };
-    rent: { title: string; body: string; status: string; notify: string };
+    onderhoud: ServiceCard;
+    verhuurbeheer: ServiceCard;
+    aankoopbegeleiding: ServiceCard;
   };
-  buyers: { eyebrow: string; title: string; body: string; more: string };
+  alsoRent: string;
   proof: [Card, Card, Card];
 };
 
 export const home: Record<Locale, HomeCopy> = {
   nl: {
     meta: {
-      title: "Foris · Woningbeheer, onderhoud en verhuur in Castellón",
+      title: "Foris · Woningbeheer, onderhoud en verhuurbeheer in Castellón",
       description:
-        "Nederlandstalig onderhoud, reparaties en woningbeheer in Grau de Castellón, Castellón en Benicàssim. Ook verhuur van eigen woonruimte en begeleiding bij het kopen van een huis.",
+        "Onderhoud en woningbeheer, verhuurbeheer voor particuliere verhuurders en aankoopbegeleiding in Castellón. In het Nederlands geregeld.",
     },
     hero: {
-      eyebrow: "Woningbeheer · Onderhoud · Verhuur · Castellón",
+      eyebrow: "Onderhoud · Verhuurbeheer · Aankoopbegeleiding",
       title: "Je huis rond Castellón, in goede handen.",
       intro:
-        "Onderhoud, reparaties en woningbeheer in Grau de Castellón, Castellón en Benicàssim, in het Nederlands geregeld. Wij zijn er als jij er niet bent, met foto's en updates via WhatsApp.",
+        "Drie diensten rond je woning in Grau de Castellón, Castellón en Benicàssim: onderhoud en woningbeheer, verhuurbeheer voor particuliere verhuurders en begeleiding bij het kopen van een huis. In het Nederlands geregeld.",
       quote: "Vraag een offerte aan",
       quoteHref: "/offerte",
       whatsapp: "Of stuur een WhatsApp",
-      alsoPrefix: "Ook:",
-      alsoRent: "woonruimte te huur van Foris",
-      alsoBuyPrefix: "Een huis kopen?",
-      alsoBuy: "Bekijk onze kopersbegeleiding →",
-      usps: [
-        "Eén Nederlandstalig aanspreekpunt, ook als je er zelf niet bent",
-        "Geen Spaans netwerk nodig: wij kennen de weg in Castellón",
-        "Altijd vooraf een prijs of uurtarief, geen verrassingen achteraf",
-      ],
       imageAlt: "Zonsondergang op de boulevard aan de Costa del Azahar",
     },
-    pillars: {
+    services: {
       eyebrow: "Wat Foris doet",
-      title: "Twee activiteiten, één aanspreekpunt.",
-      care: {
-        title: "Woningbeheer & onderhoud",
-        body: "Van een lekkende kraan tot een vaste check van je woning terwijl je weg bent. We werken in Grau de Castellón, Castellón centrum en Benicàssim. Je krijgt vooraf een prijs of uurtarief en na afloop foto's van het werk.",
-        bullets: [
-          "Klussen, reparaties en onderhoud",
-          "Sleutelbeheer, post en periodieke checks (Light · Standard · Villa)",
-          "Speciaal voor eigenaren die er niet altijd zelf zijn",
-        ],
-        quote: "Vraag een offerte aan →",
-        quoteHref: "/offerte?dienst=anders",
-        packages: "Bekijk de woningbeheerpakketten →",
+      title: "Drie diensten, één aanspreekpunt.",
+      onderhoud: {
+        title: "Onderhoud en woningbeheer",
+        body: "Kleine reparaties, periodieke controles en sleutelbeheer. Ook voor nieuwbouwwoningen: repasos coördineren en kleine gebreken na oplevering verhelpen. Speciaal voor eigenaren die er niet altijd zelf zijn.",
+        cta: "Meer over onderhoud",
+        ctaHref: "/onderhoud",
       },
-      rent: {
-        title: "Verhuur: wonen in een Foris-woning",
-        body: "Foris verhuurt ook eigen woonruimte in Castellón, voor de lange termijn. Het onderhoud regelen we zelf, dus als huurder heb je één aanspreekpunt.",
-        status: "Op dit moment is al onze woonruimte verhuurd.",
-        notify: "Houd me op de hoogte →",
+      verhuurbeheer: {
+        title: "Verhuurbeheer",
+        body: "Volledig verhuurbeheer voor particuliere verhuurders: van huurder zoeken en screenen tot huurincasso, contact en onderhoud. Wij zitten tussen jou en de huurder in en regelen alles.",
+        cta: "Meer over verhuurbeheer",
+        ctaHref: "/verhuurbeheer",
+      },
+      aankoopbegeleiding: {
+        title: "Aankoopbegeleiding",
+        body: "Begeleiding bij het kopen van een huis aan de Costa del Azahar. Van oriëntatie en papierwinkel tot nieuwbouwtoezicht en concierge. Voor kopers die het ordentelijk willen regelen.",
+        cta: "Meer voor kopers",
+        ctaHref: "/diensten",
       },
     },
-    // Dutch uses the full buyers section in HomePage; these are unused for nl.
-    buyers: { eyebrow: "", title: "", body: "", more: "" },
+    alsoRent:
+      "Foris verhuurt ook eigen woonruimte in Castellón voor de lange termijn. Op dit moment is alles verhuurd.",
     proof: [
       {
         label: "Eigen ervaring",
@@ -102,57 +89,44 @@ export const home: Record<Locale, HomeCopy> = {
   },
   en: {
     meta: {
-      title: "Foris · Property care, maintenance and rentals in Castellón",
+      title: "Foris · Property care, maintenance and rental management in Castellón",
       description:
-        "Maintenance, repairs and property care in Grau de Castellón, Castellón and Benicàssim, for owners who aren't always here. Foris also rents out its own housing.",
+        "Maintenance and property care, rental management for private landlords and buying guidance in Castellón. Arranged in English.",
     },
     hero: {
-      eyebrow: "Property care · Maintenance · Rentals · Castellón",
+      eyebrow: "Maintenance · Rental management · Buying guidance",
       title: "Your home around Castellón, in good hands.",
       intro:
-        "Maintenance, repairs and property care in Grau de Castellón, Castellón and Benicàssim. We're there when you're not, with photos and updates on WhatsApp.",
+        "Three services around your home in Grau de Castellón, Castellón and Benicàssim: maintenance and property care, rental management for private landlords and guidance when buying a home. Arranged in English.",
       quote: "Request a quote",
       quoteHref: "/en/offerte",
       whatsapp: "Or send a WhatsApp",
-      alsoPrefix: "Also:",
-      alsoRent: "rental homes from Foris",
-      alsoBuyPrefix: "Buying a home?",
-      alsoBuy: "See how we help buyers →",
-      usps: [
-        "One English-speaking point of contact, even when you're away",
-        "No local contacts needed: we know our way around Castellón",
-        "A price or hourly rate agreed upfront, no surprises afterwards",
-      ],
       imageAlt: "Sunset on the seafront promenade on the Costa del Azahar",
     },
-    pillars: {
+    services: {
       eyebrow: "What Foris does",
-      title: "Two activities, one point of contact.",
-      care: {
-        title: "Property care & maintenance",
-        body: "From a dripping tap to regular checks on your home while you're away. We work in Grau de Castellón, Castellón city centre and Benicàssim. You get a price or hourly rate upfront and photos of the work afterwards.",
-        bullets: [
-          "Odd jobs, repairs and maintenance",
-          "Key holding, post and regular checks (Light · Standard · Villa)",
-          "Made for owners who aren't always here",
-        ],
-        quote: "Request a quote →",
-        quoteHref: "/en/offerte?dienst=anders",
-        packages: "See the property care packages →",
+      title: "Three services, one point of contact.",
+      onderhoud: {
+        title: "Maintenance and property care",
+        body: "Small repairs, regular checks and key holding. Also for new-build homes: coordinate snagging and fix small defects after handover. Made for owners who are not always here.",
+        cta: "More about maintenance",
+        ctaHref: "/en/onderhoud",
       },
-      rent: {
-        title: "Rentals: live in a Foris home",
-        body: "Foris also rents out its own housing in Castellón, on long-term lets. We handle the maintenance ourselves, so as a tenant you have one point of contact.",
-        status: "All our housing is let at the moment.",
-        notify: "Keep me posted →",
+      verhuurbeheer: {
+        title: "Rental management",
+        body: "Full rental management for private landlords: from finding and screening a tenant to rent collection, contact and maintenance. We sit between you and the tenant and take care of everything.",
+        cta: "More about rental management",
+        ctaHref: "/en/verhuurbeheer",
+      },
+      aankoopbegeleiding: {
+        title: "Buying guidance",
+        body: "Guidance when buying a home on the Costa del Azahar. From orientation and paperwork to new-build supervision and concierge. For buyers who want to do it properly.",
+        cta: "More for buyers",
+        ctaHref: "/en/diensten",
       },
     },
-    buyers: {
-      eyebrow: "For buyers",
-      title: "Buying a home on the Costa del Azahar?",
-      body: "We help with orientation, the paperwork (NIE, CIF, bank account) and keeping an eye on your new build. After the handover, we look after your home too.",
-      more: "More about buyer guidance →",
-    },
+    alsoRent:
+      "Foris also rents out its own housing in Castellón on long-term lets. Everything is let at the moment.",
     proof: [
       {
         label: "Our background",
@@ -170,57 +144,44 @@ export const home: Record<Locale, HomeCopy> = {
   },
   es: {
     meta: {
-      title: "Foris · Mantenimiento, gestión y alquiler de viviendas en Castellón",
+      title: "Foris · Mantenimiento, gestión de alquileres y asesoramiento en Castellón",
       description:
-        "Mantenimiento, reparaciones y gestión de viviendas en el Grao de Castellón, Castellón y Benicàssim, para propietarios que no siempre están aquí. Foris también alquila vivienda propia.",
+        "Mantenimiento y gestión de viviendas, gestión de alquileres para propietarios particulares y asesoramiento de compra en Castellón. Gestionado en español.",
     },
     hero: {
-      eyebrow: "Gestión de viviendas · Mantenimiento · Alquiler · Castellón",
+      eyebrow: "Mantenimiento · Gestión de alquileres · Asesoramiento de compra",
       title: "Tu casa en Castellón y alrededores, en buenas manos.",
       intro:
-        "Mantenimiento, reparaciones y gestión de viviendas en el Grao de Castellón, Castellón y Benicàssim. Estamos ahí cuando tú no estás, con fotos y novedades por WhatsApp.",
+        "Tres servicios para tu vivienda en el Grao de Castellón, Castellón y Benicàssim: mantenimiento y gestión de viviendas, gestión de alquileres para propietarios particulares y asesoramiento en la compra de casa. Gestionado en español.",
       quote: "Pide presupuesto",
       quoteHref: "/es/offerte",
       whatsapp: "O escríbenos por WhatsApp",
-      alsoPrefix: "También:",
-      alsoRent: "viviendas de alquiler de Foris",
-      alsoBuyPrefix: "¿Vas a comprar casa?",
-      alsoBuy: "Mira cómo ayudamos a los compradores →",
-      usps: [
-        "Un solo interlocutor, también cuando no estás aquí",
-        "No necesitas contactos en la zona: conocemos bien Castellón",
-        "Siempre un precio o una tarifa por hora por adelantado, sin sorpresas",
-      ],
       imageAlt: "Puesta de sol en el paseo marítimo de la Costa del Azahar",
     },
-    pillars: {
+    services: {
       eyebrow: "Qué hace Foris",
-      title: "Dos actividades, un solo interlocutor.",
-      care: {
-        title: "Gestión y mantenimiento de viviendas",
-        body: "Desde un grifo que gotea hasta revisiones periódicas de tu casa mientras estás fuera. Trabajamos en el Grao de Castellón, el centro de Castellón y Benicàssim. Te damos un precio o una tarifa por hora por adelantado y, al terminar, fotos del trabajo.",
-        bullets: [
-          "Pequeños trabajos, reparaciones y mantenimiento",
-          "Custodia de llaves, correo y revisiones periódicas (Light · Standard · Villa)",
-          "Pensado para propietarios que no siempre están aquí",
-        ],
-        quote: "Pide presupuesto →",
-        quoteHref: "/es/offerte?dienst=anders",
-        packages: "Ver los paquetes de gestión →",
+      title: "Tres servicios, un solo interlocutor.",
+      onderhoud: {
+        title: "Mantenimiento y gestión de viviendas",
+        body: "Pequeñas reparaciones, revisiones periódicas y custodia de llaves. También para viviendas de obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega. Pensado para propietarios que no siempre están aquí.",
+        cta: "Más sobre mantenimiento",
+        ctaHref: "/es/onderhoud",
       },
-      rent: {
-        title: "Alquiler: vivir en una vivienda de Foris",
-        body: "Foris también alquila vivienda propia en Castellón, a largo plazo. El mantenimiento lo hacemos nosotros, así que como inquilino tienes un solo interlocutor.",
-        status: "Ahora mismo no tenemos ninguna vivienda disponible.",
-        notify: "Avísame cuando haya algo →",
+      verhuurbeheer: {
+        title: "Gestión de alquileres",
+        body: "Gestión completa de alquileres para propietarios particulares: desde buscar y seleccionar inquilino hasta el cobro del alquiler, contacto y mantenimiento. Nos situamos entre tú y el inquilino y nos encargamos de todo.",
+        cta: "Más sobre gestión de alquileres",
+        ctaHref: "/es/verhuurbeheer",
+      },
+      aankoopbegeleiding: {
+        title: "Asesoramiento de compra",
+        body: "Asesoramiento en la compra de casa en la Costa del Azahar. Desde orientación y papeleo hasta supervisión de obra nueva y conserjería. Para compradores que quieren hacerlo bien.",
+        cta: "Más para compradores",
+        ctaHref: "/es/diensten",
       },
     },
-    buyers: {
-      eyebrow: "Para compradores",
-      title: "¿Vas a comprar casa en la Costa del Azahar?",
-      body: "Te ayudamos con la orientación, el papeleo (NIE, CIF, cuenta bancaria) y el seguimiento de tu obra nueva. Después de la entrega de llaves, también cuidamos de tu casa.",
-      more: "Más información para compradores →",
-    },
+    alsoRent:
+      "Foris también alquila vivienda propia en Castellón a largo plazo. Ahora mismo no tenemos ninguna vivienda disponible.",
     proof: [
       {
         label: "Experiencia propia",

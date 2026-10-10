@@ -6,6 +6,8 @@
  * Safe to import from client components, server components and proxy.ts.
  */
 
+export { whatsappLink } from "@/lib/contact";
+
 export const locales = ["nl", "en", "es"] as const;
 export type Locale = (typeof locales)[number];
 export type ForeignLocale = Exclude<Locale, "nl">;
@@ -40,6 +42,12 @@ export const translatedPaths = [
   "/gratis-gids",
   "/offerte",
   "/kennismaking",
+  "/onderhoud",
+  "/onderhoud/grau-de-castellon",
+  "/onderhoud/castellon",
+  "/onderhoud/benicassim",
+  "/verhuurbeheer",
+  "/tarieven",
   "/privacy",
   "/cookies",
 ] as const;
