@@ -9,8 +9,9 @@ export const ui = {
     switcherLabel: "Taal",
     header: {
       nav: [
+        { href: "/onderhoud", label: "Onderhoud" },
+        { href: "/tarieven", label: "Tarieven" },
         { href: "/diensten", label: "Diensten" },
-        { href: "/onze-ervaring", label: "Onze ervaring" },
         { href: "/artikelen", label: "Artikelen" },
         { href: "/over-ons", label: "Over ons" },
       ],
@@ -27,7 +28,8 @@ export const ui = {
       contact: "Contact",
       pages: "Pagina's",
       links: [
-        { href: "/#onderhoud", label: "Woningbeheer & onderhoud" },
+        { href: "/onderhoud", label: "Onderhoud" },
+        { href: "/tarieven", label: "Tarieven" },
         { href: "/#verhuur", label: "Verhuur" },
         { href: "/diensten", label: "Diensten" },
         { href: "/onze-ervaring", label: "Onze ervaring" },
@@ -69,8 +71,9 @@ export const ui = {
     switcherLabel: "Language",
     header: {
       nav: [
+        { href: "/onderhoud", label: "Maintenance" },
+        { href: "/tarieven", label: "Prices" },
         { href: "/diensten", label: "Services" },
-        { href: "/onze-ervaring", label: "Our experience" },
         { href: "/artikelen", label: "Articles" },
         { href: "/over-ons", label: "About us" },
       ],
@@ -87,7 +90,8 @@ export const ui = {
       contact: "Contact",
       pages: "Pages",
       links: [
-        { href: "/#onderhoud", label: "Property care & maintenance" },
+        { href: "/onderhoud", label: "Maintenance" },
+        { href: "/tarieven", label: "Prices" },
         { href: "/#verhuur", label: "Rentals" },
         { href: "/diensten", label: "Services" },
         { href: "/onze-ervaring", label: "Our experience" },
@@ -129,8 +133,9 @@ export const ui = {
     switcherLabel: "Idioma",
     header: {
       nav: [
+        { href: "/onderhoud", label: "Mantenimiento" },
+        { href: "/tarieven", label: "Precios" },
         { href: "/diensten", label: "Servicios" },
-        { href: "/onze-ervaring", label: "Experiencia" },
         { href: "/artikelen", label: "Artículos" },
         { href: "/over-ons", label: "Quiénes somos" },
       ],
@@ -148,7 +153,8 @@ export const ui = {
       contact: "Contacto",
       pages: "Páginas",
       links: [
-        { href: "/#onderhoud", label: "Gestión y mantenimiento" },
+        { href: "/onderhoud", label: "Mantenimiento" },
+        { href: "/tarieven", label: "Precios" },
         { href: "/#verhuur", label: "Alquiler" },
         { href: "/diensten", label: "Servicios" },
         { href: "/onze-ervaring", label: "Experiencia" },
