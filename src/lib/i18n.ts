@@ -46,6 +46,7 @@ export const translatedPaths = [
   "/onderhoud/grau-de-castellon",
   "/onderhoud/castellon",
   "/onderhoud/benicassim",
+  "/verhuurbeheer",
   "/tarieven",
   "/privacy",
   "/cookies",

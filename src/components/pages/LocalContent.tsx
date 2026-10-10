@@ -58,6 +58,7 @@ export function LocalContent({ locale, area }: { locale: Locale; area: LocalArea
           <div>
             <h2 className="font-heading text-3xl text-navy md:text-4xl">{t.servicesTitle}</h2>
             <p className="mt-6 text-foreground/85">{t.servicesList}</p>
+            <p className="mt-4 text-sm text-foreground/60">{t.newBuildNote}</p>
             <Link
               href={lp("/tarieven")}
               className="mt-6 inline-block text-base font-medium text-terracotta underline-offset-4 hover:underline"

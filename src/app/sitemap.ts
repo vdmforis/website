@@ -10,6 +10,7 @@ const settings: Record<string, { freq: Freq; priority: number }> = {
   "/": { freq: "weekly", priority: 1.0 },
   "/diensten": { freq: "monthly", priority: 0.9 },
   "/onderhoud": { freq: "monthly", priority: 0.9 },
+  "/verhuurbeheer": { freq: "monthly", priority: 0.9 },
   "/tarieven": { freq: "monthly", priority: 0.9 },
   "/onze-ervaring": { freq: "monthly", priority: 0.8 },
   "/over-ons": { freq: "monthly", priority: 0.7 },

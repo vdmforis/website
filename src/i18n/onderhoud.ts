@@ -15,6 +15,9 @@ type OnderhoudText = {
   services: ServiceItem[];
   howItWorksTitle: string;
   howItWorksSteps: { step: string; desc: string }[];
+  newBuildTitle: string;
+  newBuildIntro: string;
+  newBuildItems: string[];
   packagesTitle: string;
   packagesIntro: string;
   light: { name: string; price: string; freq: string; for: string; includes: string[] };
@@ -81,6 +84,14 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
         step: "3. Wij regelen het",
         desc: "We plannen het werk in en houden je op de hoogte. Na afloop krijg je foto's via WhatsApp.",
       },
+    ],
+    newBuildTitle: "Ook voor nieuwbouwwoningen",
+    newBuildIntro:
+      "Heb je nieuwbouw gekocht? Wij helpen ook met kleine problemen na oplevering en repasos.",
+    newBuildItems: [
+      "Repasos coördineren met de bouwer",
+      "Kleine gebreken na oplevering verhelpen",
+      "Periodieke controles in de eerste maanden",
     ],
     packagesTitle: "Vaste pakketten voor woningbeheer",
     packagesIntro:
@@ -187,6 +198,14 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
         desc: "We schedule the work and keep you posted. Afterwards you get photos via WhatsApp.",
       },
     ],
+    newBuildTitle: "Also for new-build homes",
+    newBuildIntro:
+      "Bought a new build? We also help with small problems after handover and snagging.",
+    newBuildItems: [
+      "Coordinate snagging with the developer",
+      "Fix small defects after handover",
+      "Regular checks in the first few months",
+    ],
     packagesTitle: "Fixed packages for property care",
     packagesIntro:
       "For owners who do not live in Spain full-time. Price per month, including key holding and photo reports after every visit.",
@@ -291,6 +310,14 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
         step: "3. Nosotros nos encargamos",
         desc: "Planificamos el trabajo y te mantenemos informado. Al terminar, recibes fotos por WhatsApp.",
       },
+    ],
+    newBuildTitle: "También para viviendas de obra nueva",
+    newBuildIntro:
+      "¿Has comprado obra nueva? También ayudamos con pequeños problemas tras la entrega y los repasos.",
+    newBuildItems: [
+      "Coordinar repasos con la promotora",
+      "Solucionar pequeños defectos tras la entrega",
+      "Revisiones periódicas en los primeros meses",
     ],
     packagesTitle: "Paquetes fijos de gestión de viviendas",
     packagesIntro:

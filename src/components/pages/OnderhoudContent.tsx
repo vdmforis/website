@@ -71,10 +71,30 @@ export function OnderhoudContent({ locale }: { locale: Locale }) {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
-        <h2 className="font-heading text-3xl text-navy md:text-4xl">{t.packagesTitle}</h2>
-        <p className="mt-4 max-w-2xl text-foreground/80">{t.packagesIntro}</p>
+        <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
+          <div>
+            <h2 className="font-heading text-3xl text-navy md:text-4xl">{t.newBuildTitle}</h2>
+          </div>
+          <div>
+            <p className="text-foreground/80">{t.newBuildIntro}</p>
+            <ul className="mt-6 space-y-3">
+              {t.newBuildItems.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
+                  <span className="text-foreground/85">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <section className="border-t border-border bg-secondary/40">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+          <h2 className="font-heading text-3xl text-navy md:text-4xl">{t.packagesTitle}</h2>
+          <p className="mt-4 max-w-2xl text-foreground/80">{t.packagesIntro}</p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
           <article className="rounded-2xl border border-border bg-card p-8 shadow-sm">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
               {t.light.name}
@@ -127,13 +147,14 @@ export function OnderhoudContent({ locale }: { locale: Locale }) {
           </article>
         </div>
 
-        <p className="mt-6 text-sm text-foreground/60">{t.allInclude}</p>
-        <Link
-          href={lp("/tarieven")}
-          className="mt-6 inline-block text-base font-medium text-terracotta underline-offset-4 hover:underline"
-        >
-          {t.pricingCta} →
-        </Link>
+          <p className="mt-6 text-sm text-foreground/60">{t.allInclude}</p>
+          <Link
+            href={lp("/tarieven")}
+            className="mt-6 inline-block text-base font-medium text-terracotta underline-offset-4 hover:underline"
+          >
+            {t.pricingCta} →
+          </Link>
+        </div>
       </section>
 
       <section className="border-t border-border bg-secondary/50">

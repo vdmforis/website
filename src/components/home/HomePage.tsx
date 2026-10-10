@@ -54,30 +54,6 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {t.hero.whatsapp}
               </a>
             </div>
-            <p className="mt-4 text-sm text-foreground/70">
-              {t.hero.alsoPrefix}{" "}
-              <a
-                href="#verhuur"
-                className="font-medium text-terracotta underline-offset-4 hover:underline"
-              >
-                {t.hero.alsoRent}
-              </a>{" "}
-              · {t.hero.alsoBuyPrefix}{" "}
-              <a
-                href="#kopers"
-                className="font-medium text-terracotta underline-offset-4 hover:underline"
-              >
-                {t.hero.alsoBuy}
-              </a>
-            </p>
-            <ul className="mt-8 space-y-3 text-foreground/85">
-              {t.hero.usps.map((usp) => (
-                <li key={usp} className="flex gap-3">
-                  <Bullet />
-                  <span>{usp}</span>
-                </li>
-              ))}
-            </ul>
           </div>
           <div id="contact" className="flex flex-col justify-center scroll-mt-24">
             <HeroForm locale={locale} />
@@ -85,16 +61,16 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* Twee activiteiten */}
+      {/* Drie diensten */}
       <section className="border-t border-border bg-cream">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-            {t.pillars.eyebrow}
+            {t.services.eyebrow}
           </p>
           <h2 className="mt-3 max-w-2xl font-heading text-3xl text-navy md:text-4xl">
-            {t.pillars.title}
+            {t.services.title}
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div
               id="onderhoud"
               className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-8"
@@ -103,80 +79,55 @@ export function HomePage({ locale }: { locale: Locale }) {
                 <Wrench size={20} strokeWidth={1.75} aria-hidden />
               </span>
               <h3 className="mt-4 font-heading text-2xl text-navy">
-                {t.pillars.care.title}
+                {t.services.onderhoud.title}
               </h3>
-              <p className="mt-3 text-foreground/80">{t.pillars.care.body}</p>
-              <ul className="mt-5 flex-1 space-y-2 text-sm text-foreground/85">
-                {t.pillars.care.bullets.map((b) => (
-                  <li key={b} className="flex gap-3">
-                    <Bullet />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-                <Link
-                  href={t.pillars.care.quoteHref}
-                  className="font-medium text-terracotta underline-offset-4 hover:underline"
-                >
-                  {t.pillars.care.quote}
-                </Link>
-                <Link
-                  href={localizedPath(locale, "/diensten#concierge")}
-                  className="text-terracotta underline-offset-4 hover:underline"
-                >
-                  {t.pillars.care.packages}
-                </Link>
-              </div>
+              <p className="mt-3 flex-1 text-foreground/80">{t.services.onderhoud.body}</p>
+              <Link
+                href={localizedPath(locale, t.services.onderhoud.ctaHref)}
+                className="mt-6 text-sm font-medium text-terracotta underline-offset-4 hover:underline"
+              >
+                {t.services.onderhoud.cta} →
+              </Link>
             </div>
-            <div
-              id="verhuur"
-              className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-8"
-            >
+
+            <div className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-8">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-olive/10 text-olive">
                 <House size={20} strokeWidth={1.75} aria-hidden />
               </span>
               <h3 className="mt-4 font-heading text-2xl text-navy">
-                {t.pillars.rent.title}
+                {t.services.verhuurbeheer.title}
               </h3>
-              <p className="mt-3 flex-1 text-foreground/80">{t.pillars.rent.body}</p>
-              <p className="mt-5 text-sm italic text-foreground/70">
-                {t.pillars.rent.status}
-              </p>
-              <div className="mt-6 text-sm">
-                <a
-                  href="#contact"
-                  className="font-medium text-terracotta underline-offset-4 hover:underline"
-                >
-                  {t.pillars.rent.notify}
-                </a>
-              </div>
+              <p className="mt-3 flex-1 text-foreground/80">{t.services.verhuurbeheer.body}</p>
+              <Link
+                href={localizedPath(locale, t.services.verhuurbeheer.ctaHref)}
+                className="mt-6 text-sm font-medium text-terracotta underline-offset-4 hover:underline"
+              >
+                {t.services.verhuurbeheer.cta} →
+              </Link>
+            </div>
+
+            <div className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-8">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta">
+                <Compass size={20} strokeWidth={1.75} aria-hidden />
+              </span>
+              <h3 className="mt-4 font-heading text-2xl text-navy">
+                {t.services.aankoopbegeleiding.title}
+              </h3>
+              <p className="mt-3 flex-1 text-foreground/80">{t.services.aankoopbegeleiding.body}</p>
+              <Link
+                href={localizedPath(locale, t.services.aankoopbegeleiding.ctaHref)}
+                className="mt-6 text-sm font-medium text-terracotta underline-offset-4 hover:underline"
+              >
+                {t.services.aankoopbegeleiding.cta} →
+              </Link>
             </div>
           </div>
+
+          <p className="mt-8 text-center text-sm text-foreground/60">{t.alsoRent}</p>
         </div>
       </section>
 
-      {locale === "nl" ? <DutchBuyerSections /> : (
-        <section id="kopers" className="scroll-mt-24 border-t border-border bg-cream">
-          <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-terracotta">
-              {t.buyers.eyebrow}
-            </p>
-            <h2 className="mt-3 font-heading text-3xl text-navy md:text-4xl">
-              {t.buyers.title}
-            </h2>
-            <p className="mt-4 max-w-2xl text-foreground/80">{t.buyers.body}</p>
-            <p className="mt-4">
-              <Link
-                href={localizedPath(locale, "/diensten")}
-                className="text-sm font-medium text-terracotta underline-offset-4 hover:underline"
-              >
-                {t.buyers.more}
-              </Link>
-            </p>
-          </div>
-        </section>
-      )}
+      {locale === "nl" && <DutchBuyerSections />}
 
       {/* Proof strip */}
       <section className="border-t border-border bg-secondary/40">

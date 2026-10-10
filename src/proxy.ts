@@ -54,6 +54,7 @@ export const config = {
     "/onderhoud/grau-de-castellon",
     "/onderhoud/castellon",
     "/onderhoud/benicassim",
+    "/verhuurbeheer",
     "/tarieven",
     "/privacy",
     "/cookies",

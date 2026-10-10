@@ -11,6 +11,7 @@ type LocalText = {
   typicalItems: string[];
   servicesTitle: string;
   servicesList: string;
+  newBuildNote: string;
   pricingLink: string;
   ctaTitle: string;
   ctaBody: string;
@@ -41,6 +42,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "Wat we in Grau doen",
       servicesList:
         "Onderhoud en kleine reparaties, sleutelbeheer, periodieke woningcontroles, post ophalen en luchten, schilderwerk en afwerking. Voor eigenaren die er niet altijd zelf zijn.",
+      newBuildNote:
+        "Ook nieuwbouw: repasos coördineren en kleine gebreken na oplevering verhelpen.",
       pricingLink: "Bekijk alle prijzen en tarieven",
       ctaTitle: "Laten we kennismaken.",
       ctaBody:
@@ -67,6 +70,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "Wat we in Castellón doen",
       servicesList:
         "Onderhoud en kleine reparaties, sleutelbeheer, periodieke woningcontroles, post ophalen en luchten, schilderwerk en afwerking. Voor eigenaren die er niet altijd zelf zijn.",
+      newBuildNote:
+        "Ook nieuwbouw: repasos coördineren en kleine gebreken na oplevering verhelpen.",
       pricingLink: "Bekijk alle prijzen en tarieven",
       ctaTitle: "Laten we kennismaken.",
       ctaBody:
@@ -94,6 +99,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "Wat we in Benicàssim doen",
       servicesList:
         "Onderhoud en kleine reparaties, sleutelbeheer, periodieke woningcontroles, post ophalen en luchten, schilderwerk en afwerking, visuele controle van tuin en zwembad. Voor eigenaren die er niet altijd zelf zijn.",
+      newBuildNote:
+        "Ook nieuwbouw: repasos coördineren en kleine gebreken na oplevering verhelpen.",
       pricingLink: "Bekijk alle prijzen en tarieven",
       ctaTitle: "Laten we kennismaken.",
       ctaBody:
@@ -122,6 +129,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "What we do in Grau",
       servicesList:
         "Maintenance and small repairs, key holding, regular house checks, collecting post and airing out, painting and finishing. For owners who are not always here.",
+      newBuildNote:
+        "Also new builds: coordinate snagging and fix small defects after handover.",
       pricingLink: "See all prices and rates",
       ctaTitle: "Let's talk.",
       ctaBody:
@@ -148,6 +157,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "What we do in Castellón",
       servicesList:
         "Maintenance and small repairs, key holding, regular house checks, collecting post and airing out, painting and finishing. For owners who are not always here.",
+      newBuildNote:
+        "Also new builds: coordinate snagging and fix small defects after handover.",
       pricingLink: "See all prices and rates",
       ctaTitle: "Let's talk.",
       ctaBody:
@@ -175,6 +186,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "What we do in Benicàssim",
       servicesList:
         "Maintenance and small repairs, key holding, regular house checks, collecting post and airing out, painting and finishing, visual checks of garden and pool. For owners who are not always here.",
+      newBuildNote:
+        "Also new builds: coordinate snagging and fix small defects after handover.",
       pricingLink: "See all prices and rates",
       ctaTitle: "Let's talk.",
       ctaBody:
@@ -203,6 +216,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "Qué hacemos en el Grao",
       servicesList:
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados. Para propietarios que no siempre están aquí.",
+      newBuildNote:
+        "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
       pricingLink: "Ver todos los precios y tarifas",
       ctaTitle: "Hablemos.",
       ctaBody:
@@ -229,6 +244,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "Qué hacemos en Castellón",
       servicesList:
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados. Para propietarios que no siempre están aquí.",
+      newBuildNote:
+        "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
       pricingLink: "Ver todos los precios y tarifas",
       ctaTitle: "Hablemos.",
       ctaBody:
@@ -256,6 +273,8 @@ export const localContent: Record<Locale, LocalContent> = {
       servicesTitle: "Qué hacemos en Benicàssim",
       servicesList:
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados, revisión visual del jardín y la piscina. Para propietarios que no siempre están aquí.",
+      newBuildNote:
+        "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
       pricingLink: "Ver todos los precios y tarifas",
       ctaTitle: "Hablemos.",
       ctaBody:
