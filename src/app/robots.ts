@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/team"],
       },
     ],
     sitemap: "https://www.vdmforis.com/sitemap.xml",
