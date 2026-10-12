@@ -56,6 +56,7 @@ export const config = {
     "/onderhoud/benicassim",
     "/verhuurbeheer",
     "/tarieven",
+    "/partners",
     "/privacy",
     "/cookies",
   ],

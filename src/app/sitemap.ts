@@ -17,6 +17,7 @@ const settings: Record<string, { freq: Freq; priority: number }> = {
   "/onderhoud/grau-de-castellon": { freq: "monthly", priority: 0.8 },
   "/onderhoud/castellon": { freq: "monthly", priority: 0.8 },
   "/onderhoud/benicassim": { freq: "monthly", priority: 0.8 },
+  "/partners": { freq: "monthly", priority: 0.8 },
   "/artikelen": { freq: "weekly", priority: 0.7 },
   "/artikelen/modelo-036-nederlandse-bv": { freq: "yearly", priority: 0.6 },
   "/artikelen/nieuwbouw-of-bestaande-bouw-spanje": { freq: "yearly", priority: 0.7 },

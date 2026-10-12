@@ -28,6 +28,12 @@ export type HomeCopy = {
     aankoopbegeleiding: ServiceCard;
   };
   alsoRent: string;
+  partnerTeaser: {
+    title: string;
+    body: string;
+    cta: string;
+    ctaHref: string;
+  };
   proof: [Card, Card, Card];
 };
 
@@ -72,6 +78,12 @@ export const home: Record<Locale, HomeCopy> = {
     },
     alsoRent:
       "Foris verhuurt ook eigen woonruimte in Castellón voor de lange termijn. Op dit moment is alles verhuurd.",
+    partnerTeaser: {
+      title: "Voor partners",
+      body: "Ben je een schoonmaakbedrijf, vakantieverhuur beheerder, makelaar of administrador? Wij werken graag samen voor onderhoud en kleine reparaties. Eerste opdracht zonder uitrukkosten.",
+      cta: "Meer over samenwerking",
+      ctaHref: "/partners",
+    },
     proof: [
       {
         label: "Eigen ervaring",
@@ -127,6 +139,12 @@ export const home: Record<Locale, HomeCopy> = {
     },
     alsoRent:
       "Foris also rents out its own housing in Castellón on long-term lets. Everything is let at the moment.",
+    partnerTeaser: {
+      title: "For partners",
+      body: "Are you a cleaning company, holiday rental manager, estate agent or administrador? We are happy to work with you on maintenance and small repairs. First job with no call-out charge.",
+      cta: "More about partnership",
+      ctaHref: "/en/partners",
+    },
     proof: [
       {
         label: "Our background",
@@ -182,6 +200,12 @@ export const home: Record<Locale, HomeCopy> = {
     },
     alsoRent:
       "Foris también alquila vivienda propia en Castellón a largo plazo. Ahora mismo no tenemos ninguna vivienda disponible.",
+    partnerTeaser: {
+      title: "Para empresas colaboradoras",
+      body: "¿Eres una empresa de limpieza, gestor de alquiler vacacional, agencia inmobiliaria o administrador de fincas? Nos encanta colaborar en mantenimiento y pequeñas reparaciones. Primer encargo sin coste de desplazamiento.",
+      cta: "Más sobre colaboración",
+      ctaHref: "/es/partners",
+    },
     proof: [
       {
         label: "Experiencia propia",

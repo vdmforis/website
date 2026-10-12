@@ -27,6 +27,7 @@ export function OfferteForm({
   const [dienst, setDienst] = useState<string>(
     DIENSTEN.some((d) => d.id === defaultDienst) ? defaultDienst! : "",
   );
+  const [startTime] = useState(() => Date.now());
 
   if (state.status === "success") {
     return (
@@ -42,6 +43,15 @@ export function OfferteForm({
   return (
     <form action={formAction} className="space-y-6" noValidate>
       <input type="hidden" name="locale" value={locale} />
+      <input type="hidden" name="startTime" value={startTime} />
+      <input
+        type="text"
+        name="website"
+        autoComplete="off"
+        tabIndex={-1}
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px" }}
+        aria-hidden="true"
+      />
       <fieldset>
         <legend className="font-heading text-lg text-navy">
           {t.offerte.legend}

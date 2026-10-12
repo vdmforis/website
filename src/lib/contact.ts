@@ -33,11 +33,23 @@ const whatsappPrefillByLocale: Record<Locale, string> = {
   es: "Hola Dennis, tengo una pregunta sobre mi vivienda en la zona de Castellón.",
 };
 
+/** Prefilled WhatsApp message for partner enquiries (plain text, encoded below). */
+const whatsappPartnerPrefillByLocale: Record<Locale, string> = {
+  nl: "Hoi Dennis, ik ben geïnteresseerd in samenwerking voor onderhoud en kleine reparaties.",
+  en: "Hi Dennis, I am interested in partnering for maintenance and small repairs.",
+  es: "Hola Dennis, estoy interesado en colaborar para mantenimiento y pequeñas reparaciones.",
+};
+
 export function whatsappLink(locale: Locale = "nl"): string {
   const text =
     locale === "nl"
       ? contact.whatsappPrefill
       : encodeURIComponent(whatsappPrefillByLocale[locale]);
+  return `https://wa.me/${contact.whatsappNumber}?text=${text}`;
+}
+
+export function whatsappPartnerLink(locale: Locale = "nl"): string {
+  const text = encodeURIComponent(whatsappPartnerPrefillByLocale[locale]);
   return `https://wa.me/${contact.whatsappNumber}?text=${text}`;
 }
 

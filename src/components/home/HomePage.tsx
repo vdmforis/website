@@ -127,6 +127,22 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      {/* Partner teaser */}
+      <section className="border-t border-border bg-card">
+        <div className="mx-auto max-w-3xl px-6 py-12 text-center">
+          <h2 className="font-heading text-2xl text-navy md:text-3xl">
+            {t.partnerTeaser.title}
+          </h2>
+          <p className="mt-4 text-foreground/80">{t.partnerTeaser.body}</p>
+          <Link
+            href={localizedPath(locale, t.partnerTeaser.ctaHref)}
+            className="mt-6 inline-block rounded-full bg-terracotta px-6 py-3 text-sm font-medium text-cream transition-colors hover:bg-terracotta/90"
+          >
+            {t.partnerTeaser.cta}
+          </Link>
+        </div>
+      </section>
+
       {locale === "nl" && <DutchBuyerSections />}
 
       {/* Proof strip */}

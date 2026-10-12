@@ -2,6 +2,7 @@
 
 import { Resend } from "resend";
 import { z } from "zod";
+import { checkSpam } from "@/lib/spam-protection";
 import {
   actionTexts,
   dienstLabels,
@@ -101,6 +102,13 @@ export async function submitContact(
   const locale: ContactLocale =
     rawLocale === "en" || rawLocale === "es" ? rawLocale : "nl";
   const tx = contactTexts[locale];
+
+  // Spam protection: silently return success for bots
+  const spamCheck = checkSpam(formData);
+  if (spamCheck.isSpam) {
+    console.log(`[contact] Spam detected (${spamCheck.reason}), silently ignoring`);
+    return { status: "success", message: tx.success };
+  }
 
   const parsed = contactSchema.safeParse({
     name: formData.get("name"),
@@ -260,6 +268,13 @@ export async function submitOfferte(
   const locale = formLocale(formData.get("locale"));
   const tx = actionTexts[locale];
 
+  // Spam protection: silently return success for bots
+  const spamCheck = checkSpam(formData);
+  if (spamCheck.isSpam) {
+    console.log(`[offerte] Spam detected (${spamCheck.reason}), silently ignoring`);
+    return { status: "success", message: tx.offerteSuccess };
+  }
+
   const parsed = offerteSchema.safeParse({
     dienst: formData.get("dienst"),
     name: formData.get("name"),
@@ -393,6 +408,13 @@ export async function submitKennismaking(
 ): Promise<ContactState> {
   const locale = formLocale(formData.get("locale"));
   const tx = actionTexts[locale];
+
+  // Spam protection: silently return success for bots
+  const spamCheck = checkSpam(formData);
+  if (spamCheck.isSpam) {
+    console.log(`[kennismaking] Spam detected (${spamCheck.reason}), silently ignoring`);
+    return { status: "success", message: tx.kennismakingSuccess };
+  }
 
   const parsed = kennismakingSchema.safeParse({
     name: formData.get("name"),

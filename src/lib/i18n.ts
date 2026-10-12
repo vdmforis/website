@@ -48,6 +48,7 @@ export const translatedPaths = [
   "/onderhoud/benicassim",
   "/verhuurbeheer",
   "/tarieven",
+  "/partners",
   "/privacy",
   "/cookies",
 ] as const;
