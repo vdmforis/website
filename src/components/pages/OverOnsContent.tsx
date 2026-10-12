@@ -105,7 +105,7 @@ export const overOnsText: Record<Locale, OverOnsText> = {
     branchesP1: (n) => (
       <>
         In the Netherlands, {n("Van der Meulen Vastgoed B.V.")} has been active in buying,
-        developing and letting property for more than ten years. Reviewing contracts,
+        developing and letting property. Reviewing contracts,
         negotiating, managing builders and delivering projects: that is the day-to-day work.
       </>
     ),
