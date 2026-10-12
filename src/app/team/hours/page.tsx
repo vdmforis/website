@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { getSession, isDemoMode } from '@/lib/team/auth';
+import { getSession, isDemoModeForUser } from '@/lib/team/auth';
 import { getTimeEntriesForWorker } from '@/lib/db/client';
 import { getDemoTimeEntriesForWorker } from '@/lib/db/demo-data';
 import { team } from '@/i18n/team';
@@ -43,7 +43,7 @@ export default async function HoursPage() {
   
   let weekEntries, monthEntries;
   
-  if (isDemoMode(user)) {
+  if (isDemoModeForUser(user)) {
     weekEntries = getDemoTimeEntriesForWorker(user.id, weekStart);
     monthEntries = getDemoTimeEntriesForWorker(user.id, monthStart);
   } else {

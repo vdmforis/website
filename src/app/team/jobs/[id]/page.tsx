@@ -1,6 +1,6 @@
 import { redirect, notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getSession, isDemoMode } from '@/lib/team/auth';
+import { getSession, isDemoModeForUser } from '@/lib/team/auth';
 import { getJobById } from '@/lib/db/client';
 import { getDemoJobById } from '@/lib/db/demo-data';
 import { team } from '@/i18n/team';
@@ -38,7 +38,7 @@ export default async function JobDetailPage({
   
   let job;
   
-  if (isDemoMode(user)) {
+  if (isDemoModeForUser(user)) {
     job = getDemoJobById(jobId);
   } else {
     job = await getJobById(jobId);

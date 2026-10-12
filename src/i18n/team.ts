@@ -87,6 +87,7 @@ export const team = {
     canOnlyEditToday: 'Solo puedes editar entradas del día de hoy',
     approved: 'Aprobado',
     pending: 'Pendiente de aprobación',
+    photosNotAvailable: 'La subida de fotos no está disponible',
   },
   hours: {
     title: 'Mis horas',

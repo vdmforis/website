@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { getSession, isDemoMode } from '@/lib/team/auth';
+import { getSession, isDemoModeForUser } from '@/lib/team/auth';
 import { getJobsForWorker, getAllJobs } from '@/lib/db/client';
 import { getDemoJobsForWorker } from '@/lib/db/demo-data';
 import { team } from '@/i18n/team';
@@ -50,7 +50,7 @@ export default async function DashboardPage() {
   
   let todayJobs, weekJobs;
   
-  if (isDemoMode(user)) {
+  if (isDemoModeForUser(user)) {
     if (user.role === 'admin') {
       todayJobs = getDemoJobsForWorker(2, today, tomorrow);
       weekJobs = getDemoJobsForWorker(2, weekStart, weekEnd);
@@ -77,7 +77,7 @@ export default async function DashboardPage() {
           <h1 className="text-2xl font-heading font-bold text-foreground mb-1">
             {team.dashboard.welcome.replace('{name}', user.name)}
           </h1>
-          {isDemoMode(user) && (
+          {isDemoModeForUser(user) && (
             <div className="inline-flex items-center gap-2 bg-secondary border border-border rounded-full px-3 py-1 mt-2">
               <div className="w-2 h-2 bg-primary rounded-full" />
               <span className="text-xs font-medium text-muted-foreground">

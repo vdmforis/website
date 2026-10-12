@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import { requireAdmin, isDemoMode } from '@/lib/team/auth';
+import { requireAdmin, isDemoModeForUser } from '@/lib/team/auth';
 import { team } from '@/i18n/team';
 import { TeamHeader } from '@/components/team/TeamHeader';
 import { ReportsView } from '@/components/team/ReportsView';
@@ -24,7 +24,7 @@ export default async function ReportsPage() {
           {team.admin.reports}
         </h1>
         
-        {isDemoMode(user) && (
+        {isDemoModeForUser(user) && (
           <div className="bg-secondary border border-border rounded-lg p-4 mb-6">
             <div className="flex items-start gap-3">
               <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -54,7 +54,7 @@ export default async function ReportsPage() {
           </div>
         )}
         
-        <ReportsView isDemoMode={isDemoMode(user)} />
+        <ReportsView isDemoMode={isDemoModeForUser(user)} />
       </div>
     </div>
   );

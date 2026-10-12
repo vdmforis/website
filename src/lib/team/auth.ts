@@ -3,16 +3,66 @@ import { redirect } from 'next/navigation';
 import type { TeamUser } from '@/lib/db/types';
 import { getUserByEmail, createAuthToken, verifyAuthToken, getUserById } from '@/lib/db/client';
 import { getDemoUserByEmail, DEMO_USERS } from '@/lib/db/demo-data';
+import crypto from 'crypto';
 
 const SESSION_COOKIE = 'team_session';
 const SESSION_MAX_AGE = 60 * 60 * 24 * 7;
 
-export async function sendMagicLink(email: string): Promise<{ success: boolean; error?: string; demoMode?: boolean }> {
+const loginAttempts = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 5;
+const RATE_WINDOW = 15 * 60 * 1000;
+
+function isDemoMode(): boolean {
+  const hasDb = !!process.env.POSTGRES_URL;
+  const isProduction = process.env.VERCEL_ENV === 'production';
+  return !hasDb && !isProduction;
+}
+
+function hashToken(token: string): string {
+  return crypto.createHash('sha256').update(token).digest('hex');
+}
+
+function checkRateLimit(identifier: string): boolean {
+  const now = Date.now();
+  const record = loginAttempts.get(identifier);
+  
+  if (!record || now > record.resetAt) {
+    loginAttempts.set(identifier, { count: 1, resetAt: now + RATE_WINDOW });
+    return true;
+  }
+  
+  if (record.count >= RATE_LIMIT) {
+    return false;
+  }
+  
+  record.count++;
+  return true;
+}
+
+export async function sendMagicLink(email: string, ip?: string): Promise<{ success: boolean; error?: string; demoMode?: boolean }> {
   try {
+    const hasDb = !!process.env.POSTGRES_URL;
+    const isProduction = process.env.VERCEL_ENV === 'production';
+    
+    if (isProduction && !hasDb) {
+      return { 
+        success: false, 
+        error: 'El portal del equipo no está configurado. Contacta con el administrador.' 
+      };
+    }
+    
+    const identifier = ip || email;
+    if (!checkRateLimit(identifier)) {
+      return { 
+        success: false, 
+        error: 'Demasiados intentos. Espera 15 minutos e inténtalo de nuevo.' 
+      };
+    }
+    
     let user = await getUserByEmail(email);
     let demoMode = false;
     
-    if (!user) {
+    if (!user && isDemoMode()) {
       user = getDemoUserByEmail(email);
       demoMode = true;
     }
@@ -22,7 +72,6 @@ export async function sendMagicLink(email: string): Promise<{ success: boolean; 
     }
     
     if (demoMode) {
-      const demoToken = `demo-${user.id}-${Date.now()}`;
       return { 
         success: true, 
         demoMode: true,
@@ -30,21 +79,24 @@ export async function sendMagicLink(email: string): Promise<{ success: boolean; 
     }
     
     const token = await createAuthToken(user.id);
-    const magicLink = `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/team/auth/verify?token=${token}`;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 
+                   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+    const magicLink = `${baseUrl}/team/auth/verify?token=${token}`;
     
     if (process.env.RESEND_API_KEY) {
       const { Resend } = await import('resend');
       const resend = new Resend(process.env.RESEND_API_KEY);
+      const from = process.env.CONTACT_FROM_EMAIL || 'Foris <noreply@vdmforis.com>';
       
       await resend.emails.send({
-        from: 'Foris Team <team@vdmforis.com>',
+        from,
         to: email,
         subject: 'Tu enlace de acceso al portal del equipo',
         html: `
           <p>Hola ${user.name},</p>
           <p>Haz clic en el siguiente enlace para acceder al portal del equipo:</p>
           <p><a href="${magicLink}">${magicLink}</a></p>
-          <p>Este enlace expira en 15 minutos.</p>
+          <p>Este enlace expira en 15 minutos y solo se puede usar una vez.</p>
           <p>Si no has solicitado este enlace, puedes ignorar este correo.</p>
         `
       });
@@ -58,7 +110,17 @@ export async function sendMagicLink(email: string): Promise<{ success: boolean; 
 }
 
 export async function verifyMagicLink(token: string): Promise<TeamUser | null> {
+  const isProduction = process.env.VERCEL_ENV === 'production';
+  
   if (token.startsWith('demo-')) {
+    if (isProduction) {
+      return null;
+    }
+    
+    if (!isDemoMode()) {
+      return null;
+    }
+    
     const userId = parseInt(token.split('-')[1]);
     return DEMO_USERS.find(u => u.id === userId) || null;
   }
@@ -132,6 +194,9 @@ export async function requireAdmin(): Promise<TeamUser> {
   return user;
 }
 
-export function isDemoMode(user: TeamUser): boolean {
-  return DEMO_USERS.some(u => u.id === user.id);
+export function isDemoModeForUser(user: TeamUser): boolean {
+  if (process.env.VERCEL_ENV === 'production') {
+    return false;
+  }
+  return isDemoMode() && DEMO_USERS.some(u => u.id === user.id);
 }

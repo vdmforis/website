@@ -16,7 +16,7 @@ export function TeamLoginForm() {
     setLoading(true);
     setError('');
 
-    const result = await sendMagicLinkAction(email);
+    const result = await sendMagicLinkAction(email, undefined);
 
     if (result.success) {
       setSent(true);

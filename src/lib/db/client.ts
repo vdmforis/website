@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import type { TeamUser, Job, TimeEntry, JobPhoto, JobWithDetails, TimeEntryWithDetails } from './types';
 
 let pg: any = null;
@@ -53,11 +54,12 @@ export async function createAuthToken(userId: number): Promise<string> {
   if (!db) throw new Error('Database not configured');
   
   const token = crypto.randomUUID();
+  const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
   const expiresAt = new Date(Date.now() + 15 * 60 * 1000);
   
   await db(
     'INSERT INTO auth_tokens (user_id, token, expires_at) VALUES ($1, $2, $3)',
-    [userId, token, expiresAt]
+    [userId, tokenHash, expiresAt]
   );
   
   return token;
@@ -67,20 +69,22 @@ export async function verifyAuthToken(token: string): Promise<TeamUser | null> {
   const db = await getDb();
   if (!db) return null;
   
+  const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
+  
   const results = await db(
     `SELECT t.*, u.id as user_id, u.email, u.name, u.role, u.active, u.created_at as user_created_at, u.updated_at as user_updated_at
      FROM auth_tokens t
      JOIN team_users u ON t.user_id = u.id
      WHERE t.token = $1 AND t.expires_at > NOW() AND t.used_at IS NULL
      LIMIT 1`,
-    [token]
+    [tokenHash]
   ) as any[];
   
   if (results.length === 0) return null;
   
   const row = results[0];
   
-  await db('UPDATE auth_tokens SET used_at = NOW() WHERE token = $1', [token]);
+  await db('UPDATE auth_tokens SET used_at = NOW() WHERE token = $1', [tokenHash]);
   
   return {
     id: row.user_id,

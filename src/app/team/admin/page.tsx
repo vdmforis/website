@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { requireAdmin, isDemoMode } from '@/lib/team/auth';
+import { requireAdmin, isDemoModeForUser } from '@/lib/team/auth';
 import { team } from '@/i18n/team';
 import { TeamHeader } from '@/components/team/TeamHeader';
 
@@ -24,7 +24,7 @@ export default async function AdminPage() {
           {team.admin.title}
         </h1>
         
-        {isDemoMode(user) && (
+        {isDemoModeForUser(user) && (
           <div className="bg-secondary border border-border rounded-lg p-4">
             <div className="flex items-start gap-3">
               <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">

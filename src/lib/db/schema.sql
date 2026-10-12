@@ -75,8 +75,10 @@ CREATE INDEX IF NOT EXISTS idx_time_entries_job ON time_entries(job_id);
 CREATE INDEX IF NOT EXISTS idx_auth_tokens_token ON auth_tokens(token);
 CREATE INDEX IF NOT EXISTS idx_auth_tokens_user ON auth_tokens(user_id);
 
--- Initial admin user (Dennis)
--- Password will be set via magic link on first login
+-- Initial admin user
+-- Email configurable via TEAM_ADMIN_EMAIL (default: info@vdmforis.com)
+-- Use the auto-migration instead: npm run db:migrate
+-- Or set TEAM_ADMIN_EMAIL and run this SQL manually
 INSERT INTO team_users (email, name, role, active) 
-VALUES ('dennis@vdmforis.com', 'Dennis', 'admin', true)
+VALUES ('info@vdmforis.com', 'Dennis', 'admin', true)
 ON CONFLICT (email) DO NOTHING;

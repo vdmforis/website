@@ -13,8 +13,8 @@ import {
   executeQuery,
 } from '@/lib/db/client';
 
-export async function sendMagicLinkAction(email: string) {
-  return await sendMagicLink(email);
+export async function sendMagicLinkAction(email: string, ip?: string) {
+  return await sendMagicLink(email, ip);
 }
 
 export async function logoutAction() {

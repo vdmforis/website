@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import { requireAdmin, isDemoMode } from '@/lib/team/auth';
+import { requireAdmin, isDemoModeForUser } from '@/lib/team/auth';
 import { getAllWorkers } from '@/lib/db/client';
 import { DEMO_USERS } from '@/lib/db/demo-data';
 import { team } from '@/i18n/team';
@@ -19,7 +19,7 @@ export default async function NewJobPage() {
   
   let workers;
   
-  if (isDemoMode(user)) {
+  if (isDemoModeForUser(user)) {
     workers = DEMO_USERS.filter(u => u.role === 'worker' && u.active);
   } else {
     workers = await getAllWorkers();
@@ -35,7 +35,7 @@ export default async function NewJobPage() {
         </h1>
         
         <div className="bg-card border border-border rounded-lg p-6">
-          <JobForm workers={workers} isDemoMode={isDemoMode(user)} />
+          <JobForm workers={workers} isDemoMode={isDemoModeForUser(user)} />
         </div>
       </div>
     </div>
