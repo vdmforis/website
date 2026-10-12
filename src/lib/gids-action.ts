@@ -5,6 +5,7 @@ import { renderToBuffer } from "@react-pdf/renderer";
 import { z } from "zod";
 import { ValkuilenPdf } from "@/components/pdf/ValkuilenPdf";
 import { actionTexts, formLocale, processLabels, type ProcessId } from "@/i18n/forms";
+import { checkSpam } from "@/lib/spam-protection";
 
 const gidsSchema = z.object({
   name: z.string().min(2).max(120),
@@ -23,6 +24,13 @@ export async function requestGids(
 ): Promise<GidsState> {
   const locale = formLocale(formData.get("locale"));
   const tx = actionTexts[locale];
+
+  // Spam protection: silently return success for bots
+  const spamCheck = checkSpam(formData);
+  if (spamCheck.isSpam) {
+    console.log(`[gids] Spam detected (${spamCheck.reason}), silently ignoring`);
+    return { status: "success", message: tx.gidsSuccess };
+  }
 
   const parsed = gidsSchema.safeParse({
     name: formData.get("name"),

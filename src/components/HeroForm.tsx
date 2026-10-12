@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,6 +17,7 @@ export function HeroForm({ locale = "nl" }: { locale?: Locale }) {
     submitContact,
     initialState,
   );
+  const [startTime] = useState(() => Date.now());
 
   if (state.status === "success") {
     return (
@@ -37,6 +38,15 @@ export function HeroForm({ locale = "nl" }: { locale?: Locale }) {
       noValidate
     >
       <input type="hidden" name="locale" value={locale} />
+      <input type="hidden" name="startTime" value={startTime} />
+      <input
+        type="text"
+        name="website"
+        autoComplete="off"
+        tabIndex={-1}
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px" }}
+        aria-hidden="true"
+      />
       <div>
         <Label htmlFor="name" className="text-navy">
           {t.name}
