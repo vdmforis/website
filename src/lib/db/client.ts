@@ -28,10 +28,10 @@ export async function getUserByEmail(email: string): Promise<TeamUser | null> {
   const db = await getDb();
   if (!db) return null;
   
-  const results = await db<TeamUser[]>(
+  const results = await db(
     'SELECT * FROM team_users WHERE email = $1 AND active = true LIMIT 1',
     [email]
-  );
+  ) as TeamUser[];
   
   return results.length > 0 ? results[0] : null;
 }
@@ -40,10 +40,10 @@ export async function getUserById(id: number): Promise<TeamUser | null> {
   const db = await getDb();
   if (!db) return null;
   
-  const results = await db<TeamUser[]>(
+  const results = await db(
     'SELECT * FROM team_users WHERE id = $1 LIMIT 1',
     [id]
-  );
+  ) as TeamUser[];
   
   return results.length > 0 ? results[0] : null;
 }
@@ -67,14 +67,14 @@ export async function verifyAuthToken(token: string): Promise<TeamUser | null> {
   const db = await getDb();
   if (!db) return null;
   
-  const results = await db<(AuthToken & { user: TeamUser })[]>(
+  const results = await db(
     `SELECT t.*, u.id as user_id, u.email, u.name, u.role, u.active, u.created_at as user_created_at, u.updated_at as user_updated_at
      FROM auth_tokens t
      JOIN team_users u ON t.user_id = u.id
      WHERE t.token = $1 AND t.expires_at > NOW() AND t.used_at IS NULL
      LIMIT 1`,
     [token]
-  );
+  ) as any[];
   
   if (results.length === 0) return null;
   
@@ -121,7 +121,7 @@ export async function getJobsForWorker(workerId: number, startDate?: Date, endDa
   
   query += ' ORDER BY j.job_date ASC, j.start_time ASC';
   
-  return await db<JobWithDetails[]>(query, params);
+  return await db(query, params) as JobWithDetails[];
 }
 
 export async function getAllJobs(startDate?: Date, endDate?: Date): Promise<JobWithDetails[]> {
@@ -152,14 +152,14 @@ export async function getAllJobs(startDate?: Date, endDate?: Date): Promise<JobW
   
   query += ' ORDER BY j.job_date ASC, j.start_time ASC';
   
-  return await db<JobWithDetails[]>(query, params);
+  return await db(query, params) as JobWithDetails[];
 }
 
 export async function getJobById(id: number): Promise<JobWithDetails | null> {
   const db = await getDb();
   if (!db) return null;
   
-  const results = await db<JobWithDetails[]>(
+  const results = await db(
     `SELECT j.*, 
             w.name as worker_name,
             c.name as creator_name
@@ -169,7 +169,7 @@ export async function getJobById(id: number): Promise<JobWithDetails | null> {
      WHERE j.id = $1
      LIMIT 1`,
     [id]
-  );
+  ) as JobWithDetails[];
   
   return results.length > 0 ? results[0] : null;
 }
@@ -178,7 +178,7 @@ export async function createJob(job: Omit<Job, 'id' | 'created_at' | 'updated_at
   const db = await getDb();
   if (!db) throw new Error('Database not configured');
   
-  const results = await db<{ id: number }[]>(
+  const results = await db(
     `INSERT INTO jobs (job_date, start_time, estimated_hours, client_name, client_address, client_phone, task_description, notes, created_by, assigned_to)
      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
      RETURNING id`,
@@ -194,7 +194,7 @@ export async function createJob(job: Omit<Job, 'id' | 'created_at' | 'updated_at
       job.created_by,
       job.assigned_to
     ]
-  );
+  ) as { id: number }[];
   
   return results[0].id;
 }
@@ -232,7 +232,7 @@ export async function getTimeEntriesForWorker(workerId: number, startDate?: Date
   
   query += ' ORDER BY te.entry_date DESC, te.start_time DESC';
   
-  const results = await db<any[]>(query, params);
+  const results = await db(query, params) as any[];
   
   return results.map(row => ({
     id: row.id,
@@ -267,7 +267,7 @@ export async function createTimeEntry(entry: Omit<TimeEntry, 'id' | 'created_at'
   const db = await getDb();
   if (!db) throw new Error('Database not configured');
   
-  const results = await db<{ id: number }[]>(
+  const results = await db(
     `INSERT INTO time_entries (job_id, worker_id, entry_date, start_time, end_time, break_minutes, notes)
      VALUES ($1, $2, $3, $4, $5, $6, $7)
      RETURNING id`,
@@ -280,7 +280,7 @@ export async function createTimeEntry(entry: Omit<TimeEntry, 'id' | 'created_at'
       entry.break_minutes,
       entry.notes
     ]
-  );
+  ) as { id: number }[];
   
   return results[0].id;
 }
@@ -323,12 +323,12 @@ export async function addJobPhoto(timeEntryId: number, blobUrl: string, caption?
   const db = await getDb();
   if (!db) throw new Error('Database not configured');
   
-  const results = await db<{ id: number }[]>(
+  const results = await db(
     `INSERT INTO job_photos (time_entry_id, blob_url, caption)
      VALUES ($1, $2, $3)
      RETURNING id`,
     [timeEntryId, blobUrl, caption]
-  );
+  ) as { id: number }[];
   
   return results[0].id;
 }
@@ -337,22 +337,22 @@ export async function getAllWorkers(): Promise<TeamUser[]> {
   const db = await getDb();
   if (!db) return [];
   
-  return await db<TeamUser[]>(
+  return await db(
     'SELECT * FROM team_users WHERE role = $1 AND active = true ORDER BY name ASC',
     ['worker']
-  );
+  ) as TeamUser[];
 }
 
 export async function createUser(email: string, name: string, role: 'admin' | 'worker'): Promise<number> {
   const db = await getDb();
   if (!db) throw new Error('Database not configured');
   
-  const results = await db<{ id: number }[]>(
+  const results = await db(
     `INSERT INTO team_users (email, name, role, active)
      VALUES ($1, $2, $3, true)
      RETURNING id`,
     [email, name, role]
-  );
+  ) as { id: number }[];
   
   return results[0].id;
 }
