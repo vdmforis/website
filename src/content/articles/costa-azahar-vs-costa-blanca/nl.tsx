@@ -10,7 +10,7 @@ export default function Body() {
       <Section>
         <Lead>
           Vraag een Nederlander naar &ldquo;de Spaanse kust&rdquo; en je hoort
-          in 80% van de gevallen Benidorm, Calpe of Torrevieja — allemaal Costa
+          in 80% van de gevallen Benidorm, Calpe of Torrevieja - allemaal Costa
           Blanca. De Costa del Azahar (provincie Castellón, net boven Valencia)
           is voor de meeste Nederlanders een blinde vlek. Onterecht: het is
           een aparte kuststrook, in een aparte provincie, met ander prijsniveau,
@@ -26,7 +26,7 @@ export default function Body() {
         <P>
           Een misverstand dat we vaak tegenkomen: dat de Azahar en Blanca aan
           elkaar grenzen. Dat is niet zo. Tussen beide ligt ~110 km{" "}
-          <strong>Costa de Valencia</strong> — de kust van de provincie
+          <strong>Costa de Valencia</strong> - de kust van de provincie
           Valencia, met Sagunto, Valencia stad, Cullera, Gandía en Oliva. De
           Costa del Azahar eindigt bij Almenara (zuidpunt provincie
           Castellón), en de Costa Blanca begint pas in Dénia (noordpunt
@@ -34,21 +34,21 @@ export default function Body() {
         </P>
         <P>
           <strong>Costa del Azahar</strong> loopt grofweg van Vinaròs (grens
-          Catalonië) tot Almenara en is ongeveer 120–130 km lang. De belangrijke
+          Catalonië) tot Almenara en is ongeveer 120-130 km lang. De belangrijke
           kustplaatsen zijn Vinaròs, Benicarló, Peñíscola, Alcossebre, Oropesa
           del Mar, Benicàssim, Grau de Castelló, Almassora, Burriana, Nules,
           Moncofa en Almenara.
         </P>
         <P>
           <strong>Costa Blanca</strong> loopt van Dénia tot Pilar de la
-          Horadada en is met 200–244 km bijna dubbel zo lang. De bekende namen
+          Horadada en is met 200-244 km bijna dubbel zo lang. De bekende namen
           voor Nederlanders: Dénia, Jávea (Xàbia), Moraira, Calpe, Altea,
           Benidorm, Villajoyosa, El Campello, Alicante stad, Santa Pola,
           Guardamar, Torrevieja en Orihuela Costa.
         </P>
         <Callout>
           <strong>Belangrijk voor de papierwinkel:</strong> beide kuststroken
-          liggen in dezelfde autonome regio — Comunitat Valenciana. Regionale
+          liggen in dezelfde autonome regio - Comunitat Valenciana. Regionale
           belastingen (ITP, AJD) en regionale wetten over vivienda turística
           zijn dus identiek. Gemeentelijke regels (zoals IBI of beperkingen op
           toeristische verhuur) verschillen wél per plaats, maar dat staat los
@@ -60,15 +60,15 @@ export default function Body() {
         <H2>Het grootste verschil: prijs per m²</H2>
         <P>
           Op vergelijkbare kwaliteit aan zee betaal je op de Costa del Azahar
-          grofweg <strong>30–50% minder</strong> dan op de Costa Blanca-noord.
+          grofweg <strong>30-50% minder</strong> dan op de Costa Blanca-noord.
           Hieronder de cijfers per gemeente uit Idealista&apos;s tweede kwartaal
-          van 2026 — gepubliceerde vraagprijzen, dus de gerealiseerde prijzen
+          van 2026 - gepubliceerde vraagprijzen, dus de gerealiseerde prijzen
           liggen meestal iets lager.
         </P>
-        <H3>Costa Blanca — premium top</H3>
+        <H3>Costa Blanca - premium top</H3>
         <UL>
           <li>
-            <strong>Moraira (Teulada)</strong>: €3.566–4.497 / m² — duurste
+            <strong>Moraira (Teulada)</strong>: €3.566-4.497 / m² - duurste
             gemeente van de hele provincie
           </li>
           <li>
@@ -87,24 +87,24 @@ export default function Body() {
             <strong>Dénia</strong>: €3.217 / m² (+14% jaar op jaar)
           </li>
         </UL>
-        <H3>Costa Blanca — middensegment</H3>
+        <H3>Costa Blanca - middensegment</H3>
         <UL>
           <li>
-            <strong>Alicante stad</strong>: €2.549–2.811 / m² — nieuw record
+            <strong>Alicante stad</strong>: €2.549-2.811 / m² - nieuw record
             april 2026
           </li>
           <li>
             <strong>Torrevieja</strong>: €2.502 / m²
           </li>
           <li>
-            <strong>Orihuela Costa</strong>: €2.500–3.000 / m² (gemeente
+            <strong>Orihuela Costa</strong>: €2.500-3.000 / m² (gemeente
             gemiddelde 2.847 / m², kustdelen hoger)
           </li>
         </UL>
         <H3>Costa del Azahar</H3>
         <UL>
           <li>
-            <strong>Benicàssim</strong>: €2.708–2.744 / m² — duurste van de
+            <strong>Benicàssim</strong>: €2.708-2.744 / m² - duurste van de
             provincie Castellón
           </li>
           <li>
@@ -114,11 +114,11 @@ export default function Body() {
             <strong>Oropesa del Mar</strong>: €1.957 / m²
           </li>
           <li>
-            <strong>Castelló de la Plana (stad + Grau)</strong>: €1.326–1.666
+            <strong>Castelló de la Plana (stad + Grau)</strong>: €1.326-1.666
             / m² afhankelijk van wijk
           </li>
           <li>
-            <strong>Vinaròs / Benicarló</strong>: ~€1.300–1.700 / m²
+            <strong>Vinaròs / Benicarló</strong>: ~€1.300-1.700 / m²
           </li>
           <li>
             <strong>Burriana</strong>: €1.109 / m² (+14,5% jaar op jaar)
@@ -127,8 +127,8 @@ export default function Body() {
         <Callout>
           <strong>Concreet voorbeeld:</strong> een nieuwbouw chalet adosado van
           120 m² + 50 m² tuin in een goed deel van Benicàssim kost je ruwweg
-          €330.000–360.000. Een vergelijkbaar huis in Calpe of Moraira kost
-          €420.000–540.000. Bij een aankoop via een Nederlandse B.V. tikt dat
+          €330.000-360.000. Een vergelijkbaar huis in Calpe of Moraira kost
+          €420.000-540.000. Bij een aankoop via een Nederlandse B.V. tikt dat
           verschil direct door in IVA (10%), de financieringsbehoefte en het
           jaarlijkse rendementspercentage.
         </Callout>
@@ -136,7 +136,7 @@ export default function Body() {
           Belangrijk: prijs is niet alles. Wat je voor je geld krijgt verschilt
           ook. Op de Costa Blanca-noord betaal je meer voor de bewezen markt
           (sterke verhuur, stabiele waardestijging, brede vraag). Op de Costa
-          del Azahar zit je in een markt die nog opkomt — pluspunt voor
+          del Azahar zit je in een markt die nog opkomt - pluspunt voor
           instapprijs, minpunt voor liquiditeit als je morgen wilt verkopen.
         </P>
       </Section>
@@ -144,18 +144,18 @@ export default function Body() {
       <Section>
         <H2>Bereikbaarheid vanuit Nederland</H2>
         <P>
-          Dit is het verschil dat veel Nederlanders onderschatten — maar het is
+          Dit is het verschil dat veel Nederlanders onderschatten - maar het is
           kleiner dan je zou denken. De Costa Blanca heeft een groot directe
           vliegveld; de Costa del Azahar profiteert van Valencia.
         </P>
-        <H3>Alicante-Elche (ALC) — voor de Costa Blanca</H3>
+        <H3>Alicante-Elche (ALC) - voor de Costa Blanca</H3>
         <UL>
           <li>
             <strong>19,9 miljoen passagiers in 2025</strong> (+8,5% jaar op
-            jaar — record)
+            jaar - record)
           </li>
           <li>
-            Vanaf Amsterdam: <strong>~71 vluchten per week</strong> — Transavia
+            Vanaf Amsterdam: <strong>~71 vluchten per week</strong> - Transavia
             23, KLM 2, plus Vueling en easyJet. Dagelijks, vaak meerdere keren
             per dag
           </li>
@@ -164,10 +164,10 @@ export default function Body() {
             ~1u15, Dénia ~1u20
           </li>
         </UL>
-        <H3>Valencia (VLC) — voor de Costa del Azahar</H3>
+        <H3>Valencia (VLC) - voor de Costa del Azahar</H3>
         <UL>
           <li>
-            ~9 miljoen passagiers in 2025 (+8,2% — recordjaar)
+            ~9 miljoen passagiers in 2025 (+8,2% - recordjaar)
           </li>
           <li>
             Vanaf Amsterdam: <strong>KLM en Transavia dagelijks direct</strong>.
@@ -181,7 +181,7 @@ export default function Body() {
         <H3>Castellón-Costa Azahar (CDT)</H3>
         <UL>
           <li>
-            Klein regionaal vliegveld met ~291.000 passagiers (jan–okt 2025)
+            Klein regionaal vliegveld met ~291.000 passagiers (jan-okt 2025)
           </li>
           <li>
             <strong>Geen directe vlucht uit Amsterdam.</strong> Alleen Ryanair
@@ -209,11 +209,11 @@ export default function Body() {
           Hier zit een verschil dat sommigen <em>het</em> argument vinden voor
           de ene kust en anderen voor de andere.
         </P>
-        <H3>Costa Blanca — Noord-Europees gemaakt</H3>
+        <H3>Costa Blanca - Noord-Europees gemaakt</H3>
         <P>
           Provincie Alicante telde in 2024{" "}
           <strong>464.601 buitenlanders</strong>, oftewel 23,3% van de
-          bevolking — het hoogste percentage van heel Spanje. Per nationaliteit:
+          bevolking - het hoogste percentage van heel Spanje. Per nationaliteit:
           70.786 Britten (verreweg de grootste groep), 17.777 Nederlanders en
           15.503 Duitsers. Het gevolg: hele wijken in Benidorm zijn Engelstalig,
           in Torrevieja vind je Nederlandse supermarkten en in de Albir-corridor
@@ -225,13 +225,13 @@ export default function Body() {
           tandarts vinden is mogelijk, vriendenkring opbouwen gaat gemakkelijk
           via expat-clubs en grote vieringen worden in Nederland-stijl gevierd.
         </P>
-        <H3>Costa del Azahar — primair Spaans</H3>
+        <H3>Costa del Azahar - primair Spaans</H3>
         <P>
           Provincie Castellón heeft ook ~130.000 buitenlanders (zo&apos;n 20%
           van de bevolking), maar het profiel is totaal anders. De grootste
           groepen zijn Roemenen en Marokkanen, voornamelijk werkzaam in de
           tegel- en keramiekindustrie van het binnenland. Noord-Europese
-          kustbewoners — Britten, Nederlanders, Duitsers — zijn er véél minder.
+          kustbewoners - Britten, Nederlanders, Duitsers - zijn er véél minder.
           In Castellón stad of Grau de Castelló merk je dat in de praktijk
           direct: bijna niemand spreekt thuis Engels of Nederlands.
         </P>
@@ -242,11 +242,11 @@ export default function Body() {
           drempel: huisarts en gestor moet je in het Spaans of via een
           Nederlandse begeleider regelen, en sociaal opbouwen kost wat meer
           inspanning. Wij zien dat als pluspunt, maar dat is een persoonlijke
-          voorkeur — geen objectief feit.
+          voorkeur - geen objectief feit.
         </P>
         <H3>En toerisme?</H3>
         <P>
-          De Costa Blanca had in jan–sep 2025 ruim 36 miljoen overnachtingen.
+          De Costa Blanca had in jan-sep 2025 ruim 36 miljoen overnachtingen.
           De Costa del Azahar groeide weliswaar (de enige Valenciaanse provincie
           die in mei 2025 groei liet zien), maar zit in volstrekt andere orde
           van grootte. Op een julimiddag op het strand van Benicàssim staat
@@ -265,18 +265,18 @@ export default function Body() {
         <UL>
           <li>
             <strong>Alicante</strong>: ~2.953 zonuren per jaar, gemiddeld
-            18,3°C, ~310 mm regen per jaar — een van de droogste regio&apos;s
+            18,3°C, ~310 mm regen per jaar - een van de droogste regio&apos;s
             van Spanje
           </li>
           <li>
-            <strong>Castelló (Benicàssim, Peñíscola)</strong>: ~2.700–2.800
-            zonuren per jaar, gemiddeld 17,8°C, ~450 mm regen per jaar — meer
+            <strong>Castelló (Benicàssim, Peñíscola)</strong>: ~2.700-2.800
+            zonuren per jaar, gemiddeld 17,8°C, ~450 mm regen per jaar - meer
             regen, vooral in het najaar
           </li>
         </UL>
         <P>
-          Het verschil voel je vooral in oktober–november: in Castellón valt
-          soms ineens een &ldquo;gota fría&rdquo; — een intense regenbui die in
+          Het verschil voel je vooral in oktober-november: in Castellón valt
+          soms ineens een &ldquo;gota fría&rdquo; - een intense regenbui die in
           een paar uur 100+ mm kan leveren. In de zomer is het verschil te
           verwaarlozen; beide zijn dan droog, heet en zonnig.
         </P>
@@ -296,8 +296,8 @@ export default function Body() {
           </li>
           <li>
             <strong>Valencia ↔ Alicante</strong>: nu 2u 15 min via gemengd
-            spoor. De nieuwe AVE-as Castellón–Valencia–Alicante is gepland voor
-            2027 — vanaf dan ~50 min Valencia–Alicante en geen overstap meer
+            spoor. De nieuwe AVE-as Castellón-Valencia-Alicante is gepland voor
+            2027 - vanaf dan ~50 min Valencia-Alicante en geen overstap meer
             tussen de twee provincies
           </li>
         </UL>
@@ -325,20 +325,20 @@ export default function Body() {
         <P>
           Voor gezinnen met schoolgaande kinderen is dit een groot
           beslispunt. De Costa Blanca heeft 15+ internationale scholen
-          verspreid van Dénia tot Orihuela — Engels en Duitstalig basis- en
+          verspreid van Dénia tot Orihuela - Engels en Duitstalig basis- en
           voortgezet onderwijs is normaal beschikbaar.
         </P>
         <P>
           De Costa del Azahar / provincie Castellón heeft er twee:{" "}
           <strong>British School of Vila-real</strong> (Britse curriculum,
-          2–18 jaar) en de <strong>International English School of
+          2-18 jaar) en de <strong>International English School of
           Castellón (IESC)</strong>, onderdeel van de Dukes Education-groep.
           Voldoende voor wie binnen Castellón blijft, maar geen ruime keuze.
         </P>
       </Section>
 
       <Section>
-        <H2>Belastingen en regels — identiek voor beide</H2>
+        <H2>Belastingen en regels - identiek voor beide</H2>
         <P>
           Omdat beide kuststroken in dezelfde autonome regio liggen (Comunitat
           Valenciana), gelden dezelfde regionale belastingen. Vanaf 1 juni
@@ -352,7 +352,7 @@ export default function Body() {
         <P>
           <strong>Vivienda turística</strong> (toeristische verhuur) heeft een
           gelijk regionaal kader (Decreto 10/2021 + Decreto-ley 9/2024) en
-          gebruikt dezelfde nummering — VT-XXXXXX-A voor Alicante,
+          gebruikt dezelfde nummering - VT-XXXXXX-A voor Alicante,
           VT-XXXXXX-CS voor Castellón. Maar de <em>gemeentelijke</em>{" "}
           restricties verschillen sterk:
         </P>
@@ -389,8 +389,8 @@ export default function Body() {
           <strong>Costa del Azahar</strong>: minder geconcentreerde
           ontwikkeling. Meer Spaanse chalets in stadsranden, lager-stedelijke
           kustlijn met paseo&apos;s (geen massa hoogbouw behalve in een paar
-          wijken van Benicàssim). De nieuwbouwprojecten die er zijn — zoals
-          Metrovacesa in Grau de Castelló of bij Sant Jordi — richten zich
+          wijken van Benicàssim). De nieuwbouwprojecten die er zijn - zoals
+          Metrovacesa in Grau de Castelló of bij Sant Jordi - richten zich
           steeds vaker bewust op buitenlandse kopers, maar zijn niet
           jaarrond &ldquo;voor toeristen&rdquo; gebouwd. Minder inventaris
           dus minder keuze, maar ook minder concurrentie als jij koopt.
@@ -405,11 +405,11 @@ export default function Body() {
         </P>
         <UL>
           <li>
-            <strong>Alicante 2026</strong>: 95 Blauwe Vlag-stranden — eerste
+            <strong>Alicante 2026</strong>: 95 Blauwe Vlag-stranden - eerste
             plaats van heel Spanje
           </li>
           <li>
-            <strong>Castellón 2026</strong>: 39 Blauwe Vlag-stranden — sterk
+            <strong>Castellón 2026</strong>: 39 Blauwe Vlag-stranden - sterk
             voor een veel kleinere kustlijn
           </li>
         </UL>
@@ -419,7 +419,7 @@ export default function Body() {
           achterland (Sierra Helada, Montgó), Costa del Azahar grenst aan het
           natuurpark Sierra de Irta en aan natte achterland-vlakte van Plana.
           Voor wandelaars en MTB&apos;ers heeft elke kust z&apos;n eigen
-          karakter — geen overlap.
+          karakter - geen overlap.
         </P>
       </Section>
 
@@ -441,7 +441,7 @@ export default function Body() {
           </li>
           <li>
             <strong>Directe goedkope vluchten</strong> vanuit Nederland zijn
-            voor jou doorslaggevend — meerdere keren per dag van/naar
+            voor jou doorslaggevend - meerdere keren per dag van/naar
             Amsterdam vs één keer per dag via Valencia
           </li>
           <li>
@@ -462,12 +462,12 @@ export default function Body() {
       <Section>
         <H2>Voor wie de Costa del Azahar logischer is</H2>
         <P>
-          En andersom — Azahar past beter als één of meer van deze punten
+          En andersom - Azahar past beter als één of meer van deze punten
           voor jou belangrijk zijn:
         </P>
         <UL>
           <li>
-            Je wil <strong>30–50% lagere instapprijs</strong> voor
+            Je wil <strong>30-50% lagere instapprijs</strong> voor
             vergelijkbare kwaliteit aan de Middellandse Zee
           </li>
           <li>
@@ -476,7 +476,7 @@ export default function Body() {
           </li>
           <li>
             Je hecht aan een <strong>rustige, niet-toeristische kustlijn</strong>{" "}
-            — geen drukke julimiddagen op het strand, geen kletsende paseo&apos;s
+            - geen drukke julimiddagen op het strand, geen kletsende paseo&apos;s
           </li>
           <li>
             Je vindt <strong>Spaans leren</strong> aantrekkelijk (en de
@@ -484,11 +484,11 @@ export default function Body() {
           </li>
           <li>
             Je accepteert dat het <strong>vliegveld 1 uur rijden</strong>{" "}
-            ligt — Valencia is bereikbaar, dagelijks vluchten uit Amsterdam,
+            ligt - Valencia is bereikbaar, dagelijks vluchten uit Amsterdam,
             maar geen vlucht-op-elke-twee-uur situatie zoals Alicante
           </li>
           <li>
-            Je wil een markt die nog <strong>opwaarts groeit</strong> — meer
+            Je wil een markt die nog <strong>opwaarts groeit</strong> - meer
             instaprendement, minder gerealiseerde liquiditeit
           </li>
         </UL>
@@ -500,35 +500,35 @@ export default function Body() {
           Wij wonen sinds juli 2023 in Grau de Castelló. We hebben hier ons
           eigen huis gekocht via onze B.V., kennen de gestores, notarissen en
           advocaten persoonlijk, en we weten welke wijken in welke gemeenten
-          wel of niet kloppen. De Costa Blanca kennen we als bezoekers — we
+          wel of niet kloppen. De Costa Blanca kennen we als bezoekers - we
           zijn er geweest, we hebben er familie en vrienden, maar we wonen er
           niet.
         </P>
         <P>
           Daarom: <strong>onze begeleidingsdiensten zijn Costa del Azahar
           (provincie Castellón) en omliggende gemeenten in noord-Valencia</strong>.
-          Niet omdat de Costa Blanca een verkeerde keuze is — voor veel
+          Niet omdat de Costa Blanca een verkeerde keuze is - voor veel
           kopers is het de juiste keuze. Maar omdat we daar niet de
           eerstehandskennis hebben die we wel op de Azahar bieden. Zou jij
           geholpen zijn met een goede Nederlandstalige aankoopbegeleider op
-          de Costa Blanca? Vraag het ons gerust — we kunnen een paar namen
+          de Costa Blanca? Vraag het ons gerust - we kunnen een paar namen
           doorgeven.
         </P>
       </Section>
 
       <Section>
-        <H2>Tot slot — beide kuststroken hebben Nederlanders die er gelukkig wonen</H2>
+        <H2>Tot slot - beide kuststroken hebben Nederlanders die er gelukkig wonen</H2>
         <P>
           Er bestaat geen objectieve &ldquo;winnaar&rdquo; tussen Costa del
           Azahar en Costa Blanca. Beide kuststroken hebben Nederlanders die
           er al jaren wonen en geen seconde willen weg. De vraag is welke
           past bij hoe jij wilt leven, hoe je je financiering opbouwt, en
-          wat je belangrijk vindt aan de omgeving — taal, drukte, prijs,
+          wat je belangrijk vindt aan de omgeving - taal, drukte, prijs,
           bereikbaarheid, school, zorg.
         </P>
         <P>
-          Als je deze afweging maakt en eerlijk advies wil — wat past
-          volgens iemand die hier woont? — plan een gratis gesprek van 30
+          Als je deze afweging maakt en eerlijk advies wil - wat past
+          volgens iemand die hier woont? - plan een gratis gesprek van 30
           minuten. We luisteren naar je situatie en zeggen eerlijk welke
           costa we voor jou logischer vinden. Ook als dat de Costa Blanca
           is.
@@ -543,7 +543,7 @@ export default function Body() {
         </h3>
         <p className="mt-3 text-foreground/80">
           Plan een vrijblijvend gesprek van 30 minuten. We bespreken jouw
-          situatie, prijsklasse en wensen — en we zeggen eerlijk welke costa
+          situatie, prijsklasse en wensen - en we zeggen eerlijk welke costa
           voor jou logischer is, óók als dat niet de Azahar is.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
@@ -569,7 +569,7 @@ export default function Body() {
             className="block rounded-2xl border border-border bg-card p-6 transition-colors hover:border-terracotta/60"
           >
             <p className="font-heading text-lg text-navy">
-              Nieuwbouw of bestaande bouw in Spanje — welke past bij jou?
+              Nieuwbouw of bestaande bouw in Spanje - welke past bij jou?
             </p>
             <p className="mt-2 text-sm text-foreground/75">
               Vergelijking van belastingen, garanties, doorlooptijd en
@@ -584,10 +584,10 @@ export default function Body() {
             className="block rounded-2xl border border-border bg-card p-6 transition-colors hover:border-terracotta/60"
           >
             <p className="font-heading text-lg text-navy">
-              NIE aanvragen in Spanje — stappenplan 2026
+              NIE aanvragen in Spanje - stappenplan 2026
             </p>
             <p className="mt-2 text-sm text-foreground/75">
-              Via Consulaat-Generaal Amsterdam of ter plaatse — documenten,
+              Via Consulaat-Generaal Amsterdam of ter plaatse - documenten,
               kosten en doorlooptijd.
             </p>
             <span className="mt-3 inline-block text-sm text-terracotta">

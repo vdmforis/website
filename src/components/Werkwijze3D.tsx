@@ -6,21 +6,21 @@ const STEPS = [
   {
     num: "Stap 01 · Fundament kiezen",
     title: "Oriëntatie & projectkeuze",
-    body: "In anderhalf uur staat je plan op papier: budget, regio en welk nieuwbouwproject bij je past — met een regiogids op maat en warme introducties naar gestor, bank en advocaat.",
+    body: "In anderhalf uur staat je plan op papier: budget, regio en welk nieuwbouwproject bij je past - met een regiogids op maat en warme introducties naar gestor, bank en advocaat.",
     label: "Stap 01 · Oriëntatie",
     dienst: "orientatie",
   },
   {
     num: "Stap 02 · Papieren als fundering",
     title: "De papierwinkel",
-    body: "NIE, CIF, Spaanse bankrekening, modelo 036, vertalingen en apostilles — geregeld voor privé én B.V., zonder dat je ervoor naar Spanje hoeft.",
+    body: "NIE, CIF, Spaanse bankrekening, modelo 036, vertalingen en apostilles - geregeld voor privé én B.V., zonder dat je ervoor naar Spanje hoeft.",
     label: "Stap 02 · Papierwinkel",
     dienst: "papierwinkel",
   },
   {
     num: "Stap 03 · Toezicht op de bouw",
     title: "Nieuwbouwtoezicht",
-    body: "Wij zijn je ogen op de bouwplaats: bouwbezoeken met fotorapportage, controle van de bankgarantie en een opleveringsinspectie — terwijl jij gewoon in Nederland zit.",
+    body: "Wij zijn je ogen op de bouwplaats: bouwbezoeken met fotorapportage, controle van de bankgarantie en een opleveringsinspectie - terwijl jij gewoon in Nederland zit.",
     label: "Stap 03 · Nieuwbouwtoezicht",
     dienst: "nieuwbouwtoezicht",
   },
@@ -34,7 +34,7 @@ const STEPS = [
   {
     num: "Stap 05 · Zorgeloos bezit",
     title: "Concierge na de koop",
-    body: "Sleutelbeheer, periodieke checks, post en klusjescoördinatie — in drie niveaus, van licht tot villa-grade.",
+    body: "Sleutelbeheer, periodieke checks, post en klusjescoördinatie - in drie niveaus, van licht tot villa-grade.",
     label: "Stap 05 · Concierge",
     dienst: "concierge",
   },
@@ -113,7 +113,7 @@ function buildScene(world: HTMLElement) {
   const stages: HTMLElement[] = [];
   for (let i = 0; i < 5; i++) stages.push(stageGroup(world));
 
-  // Fase 1 — perceel; landmeter-paaltjes apart zodat ze verdwijnen zodra de bouw start
+  // Fase 1 - perceel; landmeter-paaltjes apart zodat ze verdwijnen zodra de bouw start
   box(stages[0], 320, 14, 320, 0, -14, 0, SAND);
   const stakes = stageGroup(world);
   for (const [px, pz] of [
@@ -125,11 +125,11 @@ function buildScene(world: HTMLElement) {
     box(stakes, 6, 30, 6, px, 0, pz, TERRA);
   }
 
-  // Fase 2 — fundering + lage muren
+  // Fase 2 - fundering + lage muren
   box(stages[1], 236, 10, 176, -10, 0, 0, CONCRETE);
   box(stages[1], 220, 26, 160, -10, 10, 0, WALL);
 
-  // Fase 3 — volledige muren, tweede volume, platte daken, ramen
+  // Fase 3 - volledige muren, tweede volume, platte daken, ramen
   box(stages[2], 220, 62, 160, -10, 36, 0, WALL);
   box(stages[2], 90, 40, 90, 85, 98, -20, WALL);
   box(stages[2], 236, 10, 176, -10, 98, 0, TERRA);
@@ -139,7 +139,7 @@ function buildScene(world: HTMLElement) {
   box(stages[2], 40, 20, 3, 85, 108, 26, GLASS);
   box(stages[2], 3, 26, 40, 101, 50, 20, GLASS);
 
-  // Fase 4 — sleuteloverdracht: deur, luifel, tuinpad, en de lichten gaan aan
+  // Fase 4 - sleuteloverdracht: deur, luifel, tuinpad, en de lichten gaan aan
   box(stages[3], 34, 52, 4, -12, 0, 81, NAVYC);
   box(stages[3], 4, 52, 4, -33, 0, 81, WALL);
   box(stages[3], 4, 52, 4, 9, 0, 81, WALL);
@@ -151,7 +151,7 @@ function buildScene(world: HTMLElement) {
   box(stages[3], 42, 30, 2, -70, 48, 82.5, WARM);
   box(stages[3], 42, 30, 2, 40, 48, 82.5, WARM);
 
-  // Fase 5 — zwembad + palm
+  // Fase 5 - zwembad + palm
   box(stages[4], 96, 4, 68, -60, 0, 108, WALL);
   box(stages[4], 84, 6, 56, -60, 0, 108, POOL);
   box(stages[4], 76, 3, 48, -60, 4, 108, WATER);
@@ -280,7 +280,7 @@ export function Werkwijze3D() {
           Het traject
         </p>
         <h2 className="mt-3 max-w-2xl font-heading text-3xl text-navy md:text-4xl">
-          Van eerste oriëntatie tot ver na de sleutel — stap voor stap.
+          Van eerste oriëntatie tot ver na de sleutel - stap voor stap.
         </h2>
         <p className="mt-4 max-w-2xl text-foreground/80">
           Elke stap is los af te nemen. Scroll door het traject: de villa bouwt met

@@ -40,7 +40,7 @@ export const ervaringText: Record<Locale, ErvaringText> = {
     intro:
       "We kennen het nieuwbouwtraject van twee kanten: niet uit een handboek, maar uit eigen praktijk.",
     stats: [
-      { big: "10+ jaar", small: "vastgoed in Nederland: koop, ontwikkeling en verhuur, uit familiebedrijf" },
+      { big: "Familie bedrijf", small: "vastgoed in Nederland: koop, ontwikkeling en verhuur" },
       { big: "Ter plaatse", small: "jarenlang wonend en werkend aan de Costa del Azahar" },
       { big: "Vast netwerk", small: "notarissen, gestores en advocaten in Castellón en Valencia" },
       { big: "Eigen praktijk", small: "nieuwbouwtrajecten zelf doorlopen, van reservering tot sleutel" },
@@ -86,7 +86,7 @@ export const ervaringText: Record<Locale, ErvaringText> = {
     intro:
       "We know the new-build process from both sides: not from a handbook, but from our own practice.",
     stats: [
-      { big: "10+ years", small: "in property in the Netherlands: buying, development and letting, as a family business" },
+      { big: "Family business", small: "property in the Netherlands: buying, development and letting" },
       { big: "On the ground", small: "living and working on the Costa del Azahar for years" },
       { big: "Trusted network", small: "notaries, gestores and lawyers in Castellón and Valencia" },
       { big: "Own practice", small: "new-build purchases we went through ourselves, from reservation to keys" },
@@ -132,7 +132,7 @@ export const ervaringText: Record<Locale, ErvaringText> = {
     intro:
       "Conocemos la compra de obra nueva desde los dos lados: no por un manual, sino por experiencia propia.",
     stats: [
-      { big: "Más de 10 años", small: "en el sector inmobiliario en los Países Bajos: compra, promoción y alquiler, como empresa familiar" },
+      { big: "Empresa familiar", small: "sector inmobiliario en los Países Bajos: compra, promoción y alquiler" },
       { big: "Sobre el terreno", small: "años viviendo y trabajando en la Costa del Azahar" },
       { big: "Red de confianza", small: "notarios, gestores y abogados en Castellón y Valencia" },
       { big: "Práctica propia", small: "compras de obra nueva vividas en primera persona, de la reserva a las llaves" },
