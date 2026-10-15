@@ -218,7 +218,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados. Para propietarios que no siempre están aquí.",
       newBuildNote:
         "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
-      pricingLink: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
+      pricingLink: "Solicita un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
       ctaTitle: "Hablemos.",
       ctaBody:
         "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",
@@ -246,7 +246,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados. Para propietarios que no siempre están aquí.",
       newBuildNote:
         "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
-      pricingLink: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
+      pricingLink: "Solicita un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
       ctaTitle: "Hablemos.",
       ctaBody:
         "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",
@@ -275,7 +275,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados, revisión visual del jardín y la piscina. Para propietarios que no siempre están aquí.",
       newBuildNote:
         "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
-      pricingLink: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
+      pricingLink: "Solicita un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
       ctaTitle: "Hablemos.",
       ctaBody:
         "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",
