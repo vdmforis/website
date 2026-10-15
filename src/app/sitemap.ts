@@ -35,7 +35,7 @@ const abs = (path: string) => `${BASE}${path === "/" ? "/" : path}`;
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return locales.flatMap((locale) =>
-    translatedPaths.map((path) => {
+    translatedPaths.filter((path) => path !== "/tarieven").map((path) => {
       const s = settings[path] ?? { freq: "monthly" as Freq, priority: 0.5 };
       const langs = languageAlternates(locale, path).languages;
       return {
