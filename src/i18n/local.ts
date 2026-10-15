@@ -44,7 +44,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Onderhoud en kleine reparaties, sleutelbeheer, periodieke woningcontroles, post ophalen en luchten, schilderwerk en afwerking. Voor eigenaren die er niet altijd zelf zijn.",
       newBuildNote:
         "Ook nieuwbouw: repasos coördineren en kleine gebreken na oplevering verhelpen.",
-      pricingLink: "Bekijk alle prijzen en tarieven",
+      pricingLink: "Vraag een vrijblijvende offerte aan via WhatsApp (+34 611 365 294)",
       ctaTitle: "Laten we kennismaken.",
       ctaBody:
         "Stuur ons een bericht via WhatsApp of vraag een offerte aan. We reageren binnen een werkdag.",
@@ -72,7 +72,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Onderhoud en kleine reparaties, sleutelbeheer, periodieke woningcontroles, post ophalen en luchten, schilderwerk en afwerking. Voor eigenaren die er niet altijd zelf zijn.",
       newBuildNote:
         "Ook nieuwbouw: repasos coördineren en kleine gebreken na oplevering verhelpen.",
-      pricingLink: "Bekijk alle prijzen en tarieven",
+      pricingLink: "Vraag een vrijblijvende offerte aan via WhatsApp (+34 611 365 294)",
       ctaTitle: "Laten we kennismaken.",
       ctaBody:
         "Stuur ons een bericht via WhatsApp of vraag een offerte aan. We reageren binnen een werkdag.",
@@ -101,7 +101,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Onderhoud en kleine reparaties, sleutelbeheer, periodieke woningcontroles, post ophalen en luchten, schilderwerk en afwerking, visuele controle van tuin en zwembad. Voor eigenaren die er niet altijd zelf zijn.",
       newBuildNote:
         "Ook nieuwbouw: repasos coördineren en kleine gebreken na oplevering verhelpen.",
-      pricingLink: "Bekijk alle prijzen en tarieven",
+      pricingLink: "Vraag een vrijblijvende offerte aan via WhatsApp (+34 611 365 294)",
       ctaTitle: "Laten we kennismaken.",
       ctaBody:
         "Stuur ons een bericht via WhatsApp of vraag een offerte aan. We reageren binnen een werkdag.",
@@ -131,7 +131,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Maintenance and small repairs, key holding, regular house checks, collecting post and airing out, painting and finishing. For owners who are not always here.",
       newBuildNote:
         "Also new builds: coordinate snagging and fix small defects after handover.",
-      pricingLink: "See all prices and rates",
+      pricingLink: "Ask for a free quote via WhatsApp (+34 611 365 294)",
       ctaTitle: "Let's talk.",
       ctaBody:
         "Send us a message via WhatsApp or request a quote. We reply within one working day.",
@@ -159,7 +159,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Maintenance and small repairs, key holding, regular house checks, collecting post and airing out, painting and finishing. For owners who are not always here.",
       newBuildNote:
         "Also new builds: coordinate snagging and fix small defects after handover.",
-      pricingLink: "See all prices and rates",
+      pricingLink: "Ask for a free quote via WhatsApp (+34 611 365 294)",
       ctaTitle: "Let's talk.",
       ctaBody:
         "Send us a message via WhatsApp or request a quote. We reply within one working day.",
@@ -188,7 +188,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Maintenance and small repairs, key holding, regular house checks, collecting post and airing out, painting and finishing, visual checks of garden and pool. For owners who are not always here.",
       newBuildNote:
         "Also new builds: coordinate snagging and fix small defects after handover.",
-      pricingLink: "See all prices and rates",
+      pricingLink: "Ask for a free quote via WhatsApp (+34 611 365 294)",
       ctaTitle: "Let's talk.",
       ctaBody:
         "Send us a message via WhatsApp or request a quote. We reply within one working day.",
@@ -218,7 +218,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados. Para propietarios que no siempre están aquí.",
       newBuildNote:
         "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
-      pricingLink: "Ver todos los precios y tarifas",
+      pricingLink: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
       ctaTitle: "Hablemos.",
       ctaBody:
         "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",
@@ -246,7 +246,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados. Para propietarios que no siempre están aquí.",
       newBuildNote:
         "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
-      pricingLink: "Ver todos los precios y tarifas",
+      pricingLink: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
       ctaTitle: "Hablemos.",
       ctaBody:
         "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",
@@ -275,7 +275,7 @@ export const localContent: Record<Locale, LocalContent> = {
         "Mantenimiento y pequeñas reparaciones, custodia de llaves, revisiones periódicas, recoger correo y ventilar, pintura y acabados, revisión visual del jardín y la piscina. Para propietarios que no siempre están aquí.",
       newBuildNote:
         "También obra nueva: coordinar repasos y solucionar pequeños defectos tras la entrega.",
-      pricingLink: "Ver todos los precios y tarifas",
+      pricingLink: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
       ctaTitle: "Hablemos.",
       ctaBody:
         "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",

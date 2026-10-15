@@ -65,9 +65,9 @@ export const verhuurbeheerText: Record<Locale, VerhuurbeheerText> = {
       "Coördinatie van onderhoud en reparaties",
       "Contact met je in het Nederlands",
     ],
-    pricingTitle: "Prijs",
+    pricingTitle: "Offerte",
     pricingBody:
-      "De prijs hangt af van de woning en het type verhuur. Stuur ons een bericht en we bespreken wat bij jouw situatie past.",
+      "Elke woning en elk type verhuur is anders. Stuur ons een bericht en we bespreken wat bij jouw situatie past.",
     ctaTitle: "Laten we kennismaken.",
     ctaBody:
       "Stuur ons een bericht via WhatsApp of vraag een offerte aan. We reageren binnen een werkdag.",
@@ -120,9 +120,9 @@ export const verhuurbeheerText: Record<Locale, VerhuurbeheerText> = {
       "Coordinating maintenance and repairs",
       "Contact with you in Dutch or English",
     ],
-    pricingTitle: "Price",
+    pricingTitle: "Quote",
     pricingBody:
-      "The price depends on the property and the type of rental. Send us a message and we will discuss what suits your situation.",
+      "Every property and type of rental is different. Send us a message and we will discuss what suits your situation.",
     ctaTitle: "Let's talk.",
     ctaBody:
       "Send us a message via WhatsApp or request a quote. We reply within one working day.",
@@ -175,9 +175,9 @@ export const verhuurbeheerText: Record<Locale, VerhuurbeheerText> = {
       "Coordinación de mantenimiento y reparaciones",
       "Contacto contigo en español",
     ],
-    pricingTitle: "Precio",
+    pricingTitle: "Presupuesto",
     pricingBody:
-      "El precio depende de la vivienda y el tipo de alquiler. Envíanos un mensaje y hablamos de lo que encaja con tu situación.",
+      "Cada vivienda y cada tipo de alquiler es distinto. Envíanos un mensaje y hablamos de lo que encaja con tu situación.",
     ctaTitle: "Hablemos.",
     ctaBody:
       "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",

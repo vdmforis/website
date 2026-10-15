@@ -20,9 +20,9 @@ type OnderhoudText = {
   newBuildItems: string[];
   packagesTitle: string;
   packagesIntro: string;
-  light: { name: string; price: string; freq: string; for: string; includes: string[] };
-  standard: { name: string; price: string; freq: string; for: string; includes: string[] };
-  villa: { name: string; price: string; freq: string; for: string; includes: string[] };
+  light: { name: string; freq: string; for: string; includes: string[] };
+  standard: { name: string; freq: string; for: string; includes: string[] };
+  villa: { name: string; freq: string; for: string; includes: string[] };
   allInclude: string;
   pricingCta: string;
   ctaTitle: string;
@@ -51,7 +51,7 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
       },
       {
         title: "Schilderwerk en afwerking",
-        desc: "Kamers overschilderen, kitwerk vernieuwen, kleine verfklusjes. Prijs vooraf afgesproken, altijd inclusief materiaal.",
+        desc: "Kamers overschilderen, kitwerk vernieuwen, kleine verfklusjes. Altijd inclusief materiaal.",
       },
       {
         title: "Periodieke woningcontroles",
@@ -77,8 +77,8 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
         desc: "Beschrijf kort wat er speelt of stuur foto's. We reageren snel, ook als je in Nederland zit.",
       },
       {
-        step: "2. Je krijgt vooraf een prijs",
-        desc: "Altijd een duidelijke prijs of uurtarief vooraf, geen verrassingen achteraf.",
+        step: "2. Je krijgt een vrijblijvende offerte",
+        desc: "Je weet vooraf waar je aan toe bent, geen verrassingen achteraf.",
       },
       {
         step: "3. Wij regelen het",
@@ -95,10 +95,9 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     ],
     packagesTitle: "Vaste pakketten voor woningbeheer",
     packagesIntro:
-      "Voor eigenaren die niet permanent in Spanje wonen. Prijs per maand, inclusief sleutelbeheer en fotoverslag na elk bezoek.",
+      "Voor eigenaren die niet permanent in Spanje wonen. Inclusief sleutelbeheer en fotoverslag na elk bezoek.",
     light: {
       name: "Light",
-      price: "59 euro",
       freq: "per maand",
       for: "Voor wie een paar keer per maand wil laten checken.",
       includes: [
@@ -110,7 +109,6 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     },
     standard: {
       name: "Standard",
-      price: "99 euro",
       freq: "per maand",
       for: "Voor wie regelmatig wil weten hoe het met de woning staat.",
       includes: [
@@ -124,7 +122,6 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     },
     villa: {
       name: "Villa",
-      price: "149 euro",
       freq: "per maand",
       for: "Voor wie ook de tuin en het zwembad visueel wil laten controleren.",
       includes: [
@@ -137,8 +134,8 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
         "Sleutelbeheer inbegrepen",
       ],
     },
-    allInclude: "Alle pakketten: betaling per maand, opzegbaar met een maand opzegtermijn.",
-    pricingCta: "Bekijk alle prijzen en tarieven",
+    allInclude: "Alle pakketten: opzegbaar met een maand opzegtermijn.",
+    pricingCta: "Vraag een vrijblijvende offerte aan via WhatsApp (+34 611 365 294)",
     ctaTitle: "Laten we kennismaken.",
     ctaBody:
       "Stuur ons een bericht via WhatsApp of vraag een offerte aan. We reageren binnen een werkdag.",
@@ -164,7 +161,7 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
       },
       {
         title: "Painting and finishing",
-        desc: "Repainting rooms, renewing silicone, small painting jobs. Price agreed upfront, always including materials.",
+        desc: "Repainting rooms, renewing silicone, small painting jobs. Always including materials.",
       },
       {
         title: "Regular house checks",
@@ -190,8 +187,8 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
         desc: "Describe briefly what is going on or send photos. We reply quickly, even when you are in the Netherlands.",
       },
       {
-        step: "2. You get a price upfront",
-        desc: "Always a clear price or hourly rate upfront, no surprises afterwards.",
+        step: "2. You get a free quote",
+        desc: "You know where you stand upfront, no surprises afterwards.",
       },
       {
         step: "3. We take care of it",
@@ -208,10 +205,9 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     ],
     packagesTitle: "Fixed packages for property care",
     packagesIntro:
-      "For owners who do not live in Spain full-time. Price per month, including key holding and photo reports after every visit.",
+      "For owners who do not live in Spain full-time. Including key holding and photo reports after every visit.",
     light: {
       name: "Light",
-      price: "59 euros",
       freq: "per month",
       for: "For those who want a check a couple of times a month.",
       includes: [
@@ -223,7 +219,6 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     },
     standard: {
       name: "Standard",
-      price: "99 euros",
       freq: "per month",
       for: "For those who want to know regularly how the home is doing.",
       includes: [
@@ -237,7 +232,6 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     },
     villa: {
       name: "Villa",
-      price: "149 euros",
       freq: "per month",
       for: "For those who also want the garden and pool checked visually.",
       includes: [
@@ -251,7 +245,7 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
       ],
     },
     allInclude: "All packages: pay monthly, cancel with one month's notice.",
-    pricingCta: "See all prices and rates",
+    pricingCta: "Ask for a free quote via WhatsApp (+34 611 365 294)",
     ctaTitle: "Let's talk.",
     ctaBody:
       "Send us a message via WhatsApp or request a quote. We reply within one working day.",
@@ -277,7 +271,7 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
       },
       {
         title: "Pintura y acabados",
-        desc: "Pintar habitaciones, renovar siliconas, pequeños trabajos de pintura. Precio acordado por adelantado, siempre con el material incluido.",
+        desc: "Pintar habitaciones, renovar siliconas, pequeños trabajos de pintura. Siempre con el material incluido.",
       },
       {
         title: "Revisiones periódicas de la vivienda",
@@ -303,8 +297,8 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
         desc: "Describe brevemente qué ocurre o envía fotos. Te respondemos rápido, aunque estés en los Países Bajos.",
       },
       {
-        step: "2. Te damos el precio por adelantado",
-        desc: "Siempre un precio claro o una tarifa por hora por adelantado, sin sorpresas después.",
+        step: "2. Le enviamos un presupuesto sin compromiso",
+        desc: "Sabe de antemano a qué atenerse, sin sorpresas después.",
       },
       {
         step: "3. Nosotros nos encargamos",
@@ -321,10 +315,9 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     ],
     packagesTitle: "Paquetes fijos de gestión de viviendas",
     packagesIntro:
-      "Para propietarios que no viven todo el año en España. Precio por mes, con custodia de llaves e informe fotográfico después de cada visita.",
+      "Para propietarios que no viven todo el año en España. Con custodia de llaves e informe fotográfico después de cada visita.",
     light: {
       name: "Light",
-      price: "59 euros",
       freq: "al mes",
       for: "Para quien quiere revisar la casa un par de veces al mes.",
       includes: [
@@ -336,7 +329,6 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     },
     standard: {
       name: "Standard",
-      price: "99 euros",
       freq: "al mes",
       for: "Para quien quiere saber con regularidad cómo está la vivienda.",
       includes: [
@@ -350,7 +342,6 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
     },
     villa: {
       name: "Villa",
-      price: "149 euros",
       freq: "al mes",
       for: "Para quien también quiere revisar visualmente el jardín y la piscina.",
       includes: [
@@ -364,7 +355,7 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
       ],
     },
     allInclude: "Todos los paquetes: pago mensual, cancelable con un mes de aviso previo.",
-    pricingCta: "Ver todos los precios y tarifas",
+    pricingCta: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
     ctaTitle: "Hablemos.",
     ctaBody:
       "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",
