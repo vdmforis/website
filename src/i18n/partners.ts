@@ -49,8 +49,8 @@ export const partnersText: Record<Locale, PartnersText> = {
         desc: "Kort beschrijven wat er speelt, bij voorkeur met foto. We reageren snel.",
       },
       {
-        step: "3. Wij geven een duidelijke prijs vooraf",
-        desc: "Altijd een prijs of uurtarief vooraf, geen verrassingen. Jullie kunnen dit aan de eigenaar doorgeven of wij nemen direct contact op.",
+        step: "3. Wij sturen een vrijblijvende offerte",
+        desc: "Altijd vooraf duidelijk, geen verrassingen. Jullie kunnen dit aan de eigenaar doorgeven of wij nemen direct contact op.",
       },
       {
         step: "4. Wij regelen het en houden jullie op de hoogte",
@@ -98,8 +98,8 @@ export const partnersText: Record<Locale, PartnersText> = {
         desc: "Briefly describe what is going on, preferably with a photo. We reply quickly.",
       },
       {
-        step: "3. We give a clear price upfront",
-        desc: "Always a price or hourly rate upfront, no surprises. You can pass this on to the owner or we get in touch directly.",
+        step: "3. We send a free quote",
+        desc: "Always clear upfront, no surprises. You can pass this on to the owner or we get in touch directly.",
       },
       {
         step: "4. We sort it out and keep you posted",
@@ -147,8 +147,8 @@ export const partnersText: Record<Locale, PartnersText> = {
         desc: "Describan brevemente qué ocurre, preferiblemente con foto. Respondemos rápido.",
       },
       {
-        step: "3. Damos un precio claro por adelantado",
-        desc: "Siempre un precio o tarifa por hora por adelantado, sin sorpresas. Pueden transmitirlo al propietario o nosotros contactamos directamente.",
+        step: "3. Enviamos un presupuesto sin compromiso",
+        desc: "Siempre claro de antemano, sin sorpresas. Pueden transmitirlo al propietario o nosotros contactamos directamente.",
       },
       {
         step: "4. Nos encargamos e informamos",

@@ -91,7 +91,7 @@ export const home: Record<Locale, HomeCopy> = {
       },
       {
         label: "Hoe we werken",
-        body: "Van der Meulen Foris B.V. is een Nederlands familiebedrijf met een fiscaal domicilie in Grau de Castellón. Je krijgt vooraf een prijs of uurtarief, en achteraf altijd een factuur.",
+        body: "Van der Meulen Foris B.V. is een Nederlands familiebedrijf met een fiscaal domicilie in Grau de Castellón. Je krijgt vooraf een vrijblijvende offerte, en achteraf altijd een factuur.",
       },
       {
         label: "Werkgebied",
@@ -152,7 +152,7 @@ export const home: Record<Locale, HomeCopy> = {
       },
       {
         label: "How we work",
-        body: "Van der Meulen Foris B.V. is a Dutch family business with its Spanish tax address in Grau de Castellón. You get a price or hourly rate upfront, and always an invoice afterwards.",
+        body: "Van der Meulen Foris B.V. is a Dutch family business with its Spanish tax address in Grau de Castellón. You get a free quote upfront, and always an invoice afterwards.",
       },
       {
         label: "Where we work",
@@ -213,7 +213,7 @@ export const home: Record<Locale, HomeCopy> = {
       },
       {
         label: "Cómo trabajamos",
-        body: "Van der Meulen Foris B.V. es una empresa familiar neerlandesa con domicilio fiscal en el Grao de Castellón. Te damos un precio o una tarifa por hora por adelantado y, después, siempre una factura.",
+        body: "Van der Meulen Foris B.V. es una empresa familiar neerlandesa con domicilio fiscal en el Grao de Castellón. Te enviamos un presupuesto sin compromiso por adelantado y, después, siempre una factura.",
       },
       {
         label: "Dónde trabajamos",

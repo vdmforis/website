@@ -99,8 +99,6 @@ export function OnderhoudContent({ locale }: { locale: Locale }) {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
               {t.light.name}
             </p>
-            <p className="mt-2 font-heading text-3xl text-navy">{t.light.price}</p>
-            <p className="text-sm text-foreground/60">{t.light.freq}</p>
             <p className="mt-4 text-foreground/80">{t.light.for}</p>
             <ul className="mt-6 space-y-2">
               {t.light.includes.map((item) => (
@@ -116,8 +114,6 @@ export function OnderhoudContent({ locale }: { locale: Locale }) {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
               {t.standard.name}
             </p>
-            <p className="mt-2 font-heading text-3xl text-navy">{t.standard.price}</p>
-            <p className="text-sm text-foreground/60">{t.standard.freq}</p>
             <p className="mt-4 text-foreground/80">{t.standard.for}</p>
             <ul className="mt-6 space-y-2">
               {t.standard.includes.map((item) => (
@@ -133,8 +129,6 @@ export function OnderhoudContent({ locale }: { locale: Locale }) {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-olive">
               {t.villa.name}
             </p>
-            <p className="mt-2 font-heading text-3xl text-navy">{t.villa.price}</p>
-            <p className="text-sm text-foreground/60">{t.villa.freq}</p>
             <p className="mt-4 text-foreground/80">{t.villa.for}</p>
             <ul className="mt-6 space-y-2">
               {t.villa.includes.map((item) => (
@@ -148,12 +142,14 @@ export function OnderhoudContent({ locale }: { locale: Locale }) {
         </div>
 
           <p className="mt-6 text-sm text-foreground/60">{t.allInclude}</p>
-          <Link
-            href={lp("/tarieven")}
+          <a
+            href={whatsappLink(locale)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 inline-block text-base font-medium text-terracotta underline-offset-4 hover:underline"
           >
-            {t.pricingCta} →
-          </Link>
+            {t.pricingCta}
+          </a>
         </div>
       </section>
 

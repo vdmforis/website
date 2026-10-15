@@ -57,10 +57,10 @@ export function VerhuurbeheerContent({ locale }: { locale: Locale }) {
           <p className="mt-6 text-lg text-foreground/80">{t.pricingBody}</p>
           <p className="mt-4 inline-block rounded-lg border border-olive/40 bg-olive/10 px-4 py-2 text-sm font-medium text-foreground">
             {locale === "nl"
-              ? "Prijs op aanvraag"
+              ? "Vraag een vrijblijvende offerte aan via WhatsApp (+34 611 365 294)"
               : locale === "en"
-                ? "Price on request"
-                : "Precio a consultar"}
+                ? "Ask for a free quote via WhatsApp (+34 611 365 294)"
+                : "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)"}
           </p>
         </div>
       </section>
