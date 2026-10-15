@@ -60,7 +60,7 @@ export function VerhuurbeheerContent({ locale }: { locale: Locale }) {
               ? "Vraag een vrijblijvende offerte aan via WhatsApp (+34 611 365 294)"
               : locale === "en"
                 ? "Ask for a free quote via WhatsApp (+34 611 365 294)"
-                : "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)"}
+                : "Solicita un presupuesto sin compromiso por WhatsApp (+34 611 365 294)"}
           </p>
         </div>
       </section>

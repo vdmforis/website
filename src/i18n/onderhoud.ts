@@ -355,7 +355,7 @@ export const onderhoudText: Record<Locale, OnderhoudText> = {
       ],
     },
     allInclude: "Todos los paquetes: pago mensual, cancelable con un mes de aviso previo.",
-    pricingCta: "Solicite un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
+    pricingCta: "Solicita un presupuesto sin compromiso por WhatsApp (+34 611 365 294)",
     ctaTitle: "Hablemos.",
     ctaBody:
       "Envíanos un mensaje por WhatsApp o pide presupuesto. Te respondemos en un día laborable.",
