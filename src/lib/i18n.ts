@@ -13,7 +13,10 @@ export type Locale = (typeof locales)[number];
 export type ForeignLocale = Exclude<Locale, "nl">;
 
 export const defaultLocale: Locale = "nl";
-export const foreignLocales: readonly ForeignLocale[] = ["en", "es"];
+export const foreignLocales: readonly ForeignLocale[] = ["en"];
+
+/** Languages offered to visitors. Spanish content stays in code but /es/* redirects to Dutch. */
+export const publicLocales: readonly Locale[] = ["nl", "en"];
 
 /** Cookie that remembers the visitor's choice from the language switcher. */
 export const LOCALE_COOKIE = "NEXT_LOCALE";
@@ -117,7 +120,6 @@ export function languageAlternates(locale: Locale, path: string) {
     languages: {
       nl: localizedPath("nl", path),
       en: localizedPath("en", path),
-      es: localizedPath("es", path),
       "x-default": localizedPath("nl", path),
     },
   };
@@ -149,7 +151,7 @@ export function negotiateLocale(header: string | null | undefined): Locale {
   if (entries.some((e) => e.lang === "nl")) return "nl";
   for (const { lang } of entries) {
     if (lang === "en") return "en";
-    if (lang === "es" || lang === "ca" || lang === "gl" || lang === "eu") return "es";
+    // Spanish is no longer offered: Spanish browsers get Dutch.
   }
   return defaultLocale;
 }

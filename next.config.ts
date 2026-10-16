@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/es", destination: "/", statusCode: 301 },
+      { source: "/es/:path*", destination: "/:path*", statusCode: 301 },
       {
         source: "/onze-villa",
         destination: "/onze-ervaring",

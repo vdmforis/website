@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { languageAlternates, locales, localizedPath, translatedPaths } from "@/lib/i18n";
+import { languageAlternates, publicLocales, localizedPath, translatedPaths } from "@/lib/i18n";
 
 const BASE = "https://www.vdmforis.com";
 
@@ -34,7 +34,7 @@ const abs = (path: string) => `${BASE}${path === "/" ? "/" : path}`;
 /** Every page in NL, EN and ES, each with hreflang alternates. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return locales.flatMap((locale) =>
+  return publicLocales.flatMap((locale) =>
     translatedPaths.filter((path) => path !== "/tarieven").map((path) => {
       const s = settings[path] ?? { freq: "monthly" as Freq, priority: 0.5 };
       const langs = languageAlternates(locale, path).languages;

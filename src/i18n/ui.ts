@@ -22,7 +22,7 @@ export const ui = {
       closeMenu: "Sluit menu",
     },
     footer: {
-      tagline: "Onderhoud, verhuurbeheer en aankoopbegeleiding in Grau de Castellón, Castellón en Benicàssim.",
+      tagline: "Onderhoud en woningtoezicht voor Nederlandse en Belgische eigenaren rond Castellón en de Costa Azahar.",
       sub: "Ook verhuur van eigen woonruimte voor de lange termijn.",
       contact: "Contact",
       pages: "Pagina's",
@@ -83,7 +83,7 @@ export const ui = {
       closeMenu: "Close menu",
     },
     footer: {
-      tagline: "Maintenance, rental management and buying guidance in Grau de Castellón, Castellón and Benicàssim.",
+      tagline: "Home maintenance and property checks for owners around Castellón and the Costa Azahar.",
       sub: "We also rent out our own housing on long-term lets.",
       contact: "Contact",
       pages: "Pages",
