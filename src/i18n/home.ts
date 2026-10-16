@@ -122,19 +122,19 @@ export const home: Record<Locale, HomeCopy> = {
         title: "Maintenance and property care",
         body: "Property checks while you are away, small repairs, small electrical jobs (lights, sockets, switches), assembly and general upkeep. With photo reports via WhatsApp and key holding. Also for new builds after handover.",
         cta: "More about maintenance",
-        ctaHref: "/en/onderhoud",
+        ctaHref: "/onderhoud",
       },
       verhuurbeheer: {
         title: "Rental management",
         body: "Full rental management for private landlords: from finding and screening a tenant to rent collection, contact and maintenance. We sit between you and the tenant and take care of everything.",
         cta: "More about rental management",
-        ctaHref: "/en/verhuurbeheer",
+        ctaHref: "/verhuurbeheer",
       },
       aankoopbegeleiding: {
         title: "Buying guidance",
         body: "Guidance when buying a home on the Costa del Azahar. From orientation and paperwork to new-build supervision and concierge. For buyers who want to do it properly.",
         cta: "More for buyers",
-        ctaHref: "/en/diensten",
+        ctaHref: "/diensten",
       },
     },
     alsoRent:
@@ -143,7 +143,7 @@ export const home: Record<Locale, HomeCopy> = {
       title: "For partners",
       body: "Are you a cleaning company, holiday rental manager, estate agent or administrador? We are happy to work with you on maintenance and small repairs. First job with no call-out charge.",
       cta: "More about partnership",
-      ctaHref: "/en/partners",
+      ctaHref: "/partners",
     },
     proof: [
       {
