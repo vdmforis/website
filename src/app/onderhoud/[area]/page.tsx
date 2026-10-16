@@ -29,7 +29,7 @@ export async function generateMetadata({
       type: "website",
       siteName: "Foris",
       locale: "nl_NL",
-      alternateLocale: ["en_GB", "es_ES"],
+      alternateLocale: ["en_GB"],
       url: path,
       title: t.title,
       description: t.description,

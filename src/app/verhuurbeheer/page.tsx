@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Foris",
     locale: "nl_NL",
-    alternateLocale: ["en_GB", "es_ES"],
+    alternateLocale: ["en_GB"],
     url: "/verhuurbeheer",
     title: verhuurbeheerText.nl.meta.title,
     description: verhuurbeheerText.nl.meta.description,

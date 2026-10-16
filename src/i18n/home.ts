@@ -40,15 +40,15 @@ export type HomeCopy = {
 export const home: Record<Locale, HomeCopy> = {
   nl: {
     meta: {
-      title: "Foris · Woningbeheer, onderhoud en verhuurbeheer in Castellón",
+      title: "VDM Foris · Onderhoud en woningtoezicht in Castellón voor Nederlandse en Belgische eigenaren",
       description:
-        "Onderhoud en woningbeheer, verhuurbeheer voor particuliere verhuurders en aankoopbegeleiding in Castellón. In het Nederlands geregeld.",
+        "Woningcontroles als je er niet bent, kleine reparaties en elektrische klusjes, montage en sleutelbeheer rond Castellón en de Costa Azahar. Nederlands sprekend, met foto update na elk bezoek.",
     },
     hero: {
-      eyebrow: "Onderhoud · Verhuurbeheer · Aankoopbegeleiding",
-      title: "Je huis rond Castellón, in goede handen.",
+      eyebrow: "Onderhoud en woningtoezicht · Costa Azahar",
+      title: "Je huis in Spanje, goed verzorgd als jij er niet bent.",
       intro:
-        "Drie diensten rond je woning in Grau de Castellón, Castellón en Benicàssim: onderhoud en woningbeheer, verhuurbeheer voor particuliere verhuurders en begeleiding bij het kopen van een huis. In het Nederlands geregeld.",
+        "Voor Nederlandse en Belgische eigenaren rond Castellón en de Costa Azahar. Wij controleren je woning als je weg bent, doen kleine reparaties en elektrische klusjes zoals lampen, stopcontacten en schakelaars, monteren wat nodig is en houden alles bij. Na elk bezoek een foto update. Vertrouwd, Nederlands sprekend, en afspraak is afspraak.",
       quote: "Vraag een offerte aan",
       quoteHref: "/offerte",
       whatsapp: "Of stuur een WhatsApp",
@@ -56,10 +56,10 @@ export const home: Record<Locale, HomeCopy> = {
     },
     services: {
       eyebrow: "Wat Foris doet",
-      title: "Drie diensten, één aanspreekpunt.",
+      title: "Eerst onderhoud. Daarnaast verhuur en aankoop.",
       onderhoud: {
         title: "Onderhoud en woningbeheer",
-        body: "Kleine reparaties, periodieke controles en sleutelbeheer. Ook voor nieuwbouwwoningen: repasos coördineren en kleine gebreken na oplevering verhelpen. Speciaal voor eigenaren die er niet altijd zelf zijn.",
+        body: "Woningcontroles terwijl je weg bent, kleine reparaties, kleine elektrische klusjes (lampen, stopcontacten, schakelaars), montage en algemeen onderhoud. Met foto verslag via WhatsApp en sleutelbeheer. Ook voor nieuwbouw na oplevering.",
         cta: "Meer over onderhoud",
         ctaHref: "/onderhoud",
       },
@@ -86,30 +86,30 @@ export const home: Record<Locale, HomeCopy> = {
     },
     proof: [
       {
-        label: "Eigen ervaring",
-        body: "Foris komt voort uit een familiebedrijf met ruime vastgoedervaring in Nederland en Spanje, met name aan de Costa del Azahar. We verhuren ook zelf woonruimte in Castellón.",
+        label: "Vertrouwd en Nederlands sprekend",
+        body: "Een Nederlands familiebedrijf dat zelf rond Castellón woont. Je hebt één vast aanspreekpunt dat je taal spreekt, of je nu uit Nederland of Vlaanderen komt.",
       },
       {
-        label: "Hoe we werken",
-        body: "Van der Meulen Foris B.V. is een Nederlands familiebedrijf met een fiscaal domicilie in Grau de Castellón. Je krijgt vooraf een vrijblijvende offerte, en achteraf altijd een factuur.",
+        label: "Afspraak is afspraak",
+        body: "We komen wanneer we zeggen dat we komen. Na elk bezoek krijg je foto's via WhatsApp. Vooraf een vrijblijvende offerte, achteraf altijd een factuur.",
       },
       {
         label: "Werkgebied",
-        body: "Onderhoud en woningbeheer in Grau de Castellón, Castellón centrum en Benicàssim. Kopers begeleiden we langs de kust tussen Vinaròs en Burriana.",
+        body: "Grau de Castellón, Castellón, Benicàssim, Oropesa en de rest van de Costa Azahar.",
       },
     ],
   },
   en: {
     meta: {
-      title: "Foris · Property care, maintenance and rental management in Castellón",
+      title: "VDM Foris · Home maintenance and property checks in Castellón",
       description:
-        "Maintenance and property care, rental management for private landlords and buying guidance in Castellón. Arranged in English.",
+        "Property checks while you are away, small repairs and electrical jobs, assembly and key holding around Castellón and the Costa Azahar. Photo update after every visit.",
     },
     hero: {
-      eyebrow: "Maintenance · Rental management · Buying guidance",
-      title: "Your home around Castellón, in good hands.",
+      eyebrow: "Maintenance and property checks · Costa Azahar",
+      title: "Your home in Spain, looked after while you are away.",
       intro:
-        "Three services around your home in Grau de Castellón, Castellón and Benicàssim: maintenance and property care, rental management for private landlords and guidance when buying a home. Arranged in English.",
+        "For owners around Castellón and the Costa Azahar who are not here all year. We check your home while you are away, do small repairs and small electrical jobs like lights, sockets and switches, assemble what is needed and keep everything in shape. A photo update after every visit. Trusted, Dutch run, and we do what we say.",
       quote: "Request a quote",
       quoteHref: "/en/offerte",
       whatsapp: "Or send a WhatsApp",
@@ -117,10 +117,10 @@ export const home: Record<Locale, HomeCopy> = {
     },
     services: {
       eyebrow: "What Foris does",
-      title: "Three services, one point of contact.",
+      title: "Maintenance first. Rentals and buying on the side.",
       onderhoud: {
         title: "Maintenance and property care",
-        body: "Small repairs, regular checks and key holding. Also for new-build homes: coordinate snagging and fix small defects after handover. Made for owners who are not always here.",
+        body: "Property checks while you are away, small repairs, small electrical jobs (lights, sockets, switches), assembly and general upkeep. With photo reports via WhatsApp and key holding. Also for new builds after handover.",
         cta: "More about maintenance",
         ctaHref: "/en/onderhoud",
       },
@@ -147,16 +147,16 @@ export const home: Record<Locale, HomeCopy> = {
     },
     proof: [
       {
-        label: "Our background",
-        body: "Foris comes from a family business with broad property experience in the Netherlands and Spain, especially on the Costa del Azahar. We also rent out our own housing in Castellón.",
+        label: "Trusted and personal",
+        body: "A Dutch family business living around Castellón. One fixed point of contact who knows your home.",
       },
       {
-        label: "How we work",
-        body: "Van der Meulen Foris B.V. is a Dutch family business with its Spanish tax address in Grau de Castellón. You get a free quote upfront, and always an invoice afterwards.",
+        label: "We do what we say",
+        body: "We turn up when we say we will. Photos via WhatsApp after every visit. A free quote upfront, and always an invoice afterwards.",
       },
       {
         label: "Where we work",
-        body: "Maintenance and property care in Grau de Castellón, Castellón city centre and Benicàssim. We guide buyers along the coast between Vinaròs and Burriana.",
+        body: "Grau de Castellón, Castellón, Benicàssim, Oropesa and the rest of the Costa Azahar.",
       },
     ],
   },

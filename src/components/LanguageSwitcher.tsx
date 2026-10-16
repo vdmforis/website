@@ -5,7 +5,7 @@ import {
   LOCALE_COOKIE,
   LOCALE_COOKIE_MAX_AGE,
   localeFromPathname,
-  locales,
+  publicLocales,
   switchTarget,
   type Locale,
 } from "@/lib/i18n";
@@ -28,7 +28,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   return (
     <nav aria-label={ui[current].switcherLabel} className={className}>
       <ul className="flex items-center gap-1 font-mono text-xs uppercase tracking-[0.12em]">
-        {locales.map((l) => {
+        {publicLocales.map((l) => {
           const active = l === current;
           return (
             <li key={l}>
