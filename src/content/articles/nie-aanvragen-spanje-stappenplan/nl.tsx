@@ -10,16 +10,16 @@ export default function Body() {
       <Section>
         <Lead>
           De NIE-aanvraag is voor de meeste Nederlanders de eerste echte stap in
-          het Spaanse traject — en meteen de eerste die vaak fout of te laat
+          het Spaanse traject - en meteen de eerste die vaak fout of te laat
           gaat. Begin je te vroeg, dan is het overzichtelijk. Wacht je tot je
-          een huis op het oog hebt, dan zit je weken vast omdat alles erna —
-          bankrekening, contract, modelo 036 — eerst je NIE nodig heeft.
+          een huis op het oog hebt, dan zit je weken vast omdat alles erna -
+          bankrekening, contract, modelo 036 - eerst je NIE nodig heeft.
         </Lead>
         <GidsCallout variant="inline" />
       </Section>
 
       <Section>
-        <H2>Wat is een NIE — kort uitgelegd</H2>
+        <H2>Wat is een NIE - kort uitgelegd</H2>
         <P>
           De NIE (<em>Número de Identidad de Extranjero</em>) is jouw persoonlijke
           fiscaal- en identificatienummer in Spanje als buitenlander. Het bestaat
@@ -38,7 +38,7 @@ export default function Body() {
         </UL>
         <P>
           Eenmaal toegekend is je NIE <strong>levenslang geldig</strong>. Hij
-          staat niet op je paspoort en hoeft niet vernieuwd te worden — het is
+          staat niet op je paspoort en hoeft niet vernieuwd te worden - het is
           één keer aanvragen, voor altijd houden.
         </P>
       </Section>
@@ -53,18 +53,18 @@ export default function Body() {
         <UL>
           <li>
             Je gaat een <strong>reserveringscontract</strong> tekenen bij een
-            nieuwbouwproject — de meeste ontwikkelaars vragen er al om
+            nieuwbouwproject - de meeste ontwikkelaars vragen er al om
           </li>
           <li>
             Je opent een <strong>Spaanse bankrekening</strong> als particulier of
-            voor je B.V. — verplicht voorafgaand identiteitsvereiste
+            voor je B.V. - verplicht voorafgaand identiteitsvereiste
           </li>
           <li>
             Je gaat <strong>nutsvoorzieningen activeren</strong> bij een nieuw
             gehuurd of gekocht huis
           </li>
           <li>
-            Je gaat een <strong>auto of scooter aanschaffen</strong> — DGT
+            Je gaat een <strong>auto of scooter aanschaffen</strong> - DGT
             accepteert geen registratie zonder NIE
           </li>
         </UL>
@@ -84,10 +84,10 @@ export default function Body() {
         <OL>
           <li>
             <strong>Bij de Spaanse Ambassade of een Spaans Consulaat in
-            Nederland</strong> — Den Haag of Amsterdam
+            Nederland</strong> - Den Haag of Amsterdam
           </li>
           <li>
-            <strong>Ter plaatse in Spanje</strong> — bij een{" "}
+            <strong>Ter plaatse in Spanje</strong> - bij een{" "}
             <em>Oficina de Extranjería</em> of een{" "}
             <em>Comisaría de Policía Nacional</em>
           </li>
@@ -110,7 +110,7 @@ export default function Body() {
           <P>
             <strong>Belangrijk om te weten</strong>: in Den Haag zit alleen de{" "}
             <em>Embajada de España</em> (Ambassade), zonder consulaire sectie.
-            Alle consulaire zaken voor heel Nederland — inclusief NIE — lopen via
+            Alle consulaire zaken voor heel Nederland - inclusief NIE - lopen via
             het{" "}
             <a
               href="https://www.exteriores.gob.es/Consulados/amsterdam/es/Paginas/index.aspx"
@@ -124,8 +124,8 @@ export default function Body() {
           </P>
           <P>
             Maak via hun website online een afspraak voor de aanvraag van een NIE
-            — kies de optie &quot;NIE para no residentes&quot; of vergelijkbaar.
-            Reken op een wachttijd van <strong>2–8 weken</strong> tot de
+            - kies de optie &quot;NIE para no residentes&quot; of vergelijkbaar.
+            Reken op een wachttijd van <strong>2-8 weken</strong> tot de
             eerstvolgende beschikbare afspraak, afhankelijk van het seizoen. In
             de zomermaanden is de drukte hoger.
           </P>
@@ -149,21 +149,21 @@ export default function Body() {
           </P>
           <UL>
             <li>
-              <strong>Datos personales</strong> — voornaam, achternaam,
+              <strong>Datos personales</strong> - voornaam, achternaam,
               geboorteplaats, geboortedatum, nationaliteit
             </li>
             <li>
-              <strong>Domicilio en España</strong> — laat leeg als je nog geen
+              <strong>Domicilio en España</strong> - laat leeg als je nog geen
               adres hebt; vul anders het hotel- of vakantieadres in waar je
               verblijft
             </li>
             <li>
-              <strong>Domicilio en el país de origen</strong> — je Nederlandse
+              <strong>Domicilio en el país de origen</strong> - je Nederlandse
               adres
             </li>
             <li>
-              <strong>Motivos de la solicitud</strong> — kies de juiste reden:
-              vrijwel altijd <em>económicos</em> (economisch — voor vastgoed) of{" "}
+              <strong>Motivos de la solicitud</strong> - kies de juiste reden:
+              vrijwel altijd <em>económicos</em> (economisch - voor vastgoed) of{" "}
               <em>profesionales</em> (zakelijk)
             </li>
           </UL>
@@ -172,7 +172,7 @@ export default function Body() {
         <Step number={3} title="Motivatiebrief opstellen">
           <P>
             De NIE-aanvraag heeft een onderbouwing nodig. Dat hoeft geen lang
-            verhaal te zijn — een korte verklaring in het Spaans waarom je het
+            verhaal te zijn - een korte verklaring in het Spaans waarom je het
             nummer aanvraagt is voldoende. Een veelgebruikte tekst voor
             vastgoedkopers:
           </P>
@@ -188,7 +188,7 @@ export default function Body() {
           </Callout>
           <P>
             Schrijf je naam, datum en handtekening eronder. Een Nederlandse
-            vertaling hoeft niet — Spaans volstaat.
+            vertaling hoeft niet - Spaans volstaat.
           </P>
         </Step>
 
@@ -211,13 +211,13 @@ export default function Body() {
             Vul het formulier digitaal in, print het, en betaal de tasa bij een
             Spaanse <em>entidad colaboradora</em> (CaixaBank, BBVA, Santander,
             Sabadell, Ibercaja, Bankinter of Unicaja). Je krijgt een gestempeld
-            afschrift terug — dat moet je meenemen naar je afspraak.
+            afschrift terug - dat moet je meenemen naar je afspraak.
           </P>
           <P>
             Voor Nederlandse aanvragers: ga je via het Consulaat-Generaal in
             Amsterdam, dan betaal je de leges meestal bij het consulaat zelf, in
             plaats van via Modelo 790. Vraag bij de afspraakbevestiging om welke
-            bedragen het exact gaat — die wisselen periodiek.
+            bedragen het exact gaat - die wisselen periodiek.
           </P>
         </Step>
 
@@ -248,10 +248,10 @@ export default function Body() {
           <P>
             De wettelijke termijn is <strong>5 werkdagen</strong> na registratie
             door de bevoegde instantie. In de praktijk via een consulaat in
-            Nederland reken op <strong>2–6 weken</strong> tot je NIE wordt
-            afgegeven — afhankelijk van seizoen en drukte. Het consulaat belt
+            Nederland reken op <strong>2-6 weken</strong> tot je NIE wordt
+            afgegeven - afhankelijk van seizoen en drukte. Het consulaat belt
             je of stuurt een e-mail zodra het document klaar is. Je ontvangt
-            een <em>Resguardo de NIE</em> — een papieren attest met je nummer
+            een <em>Resguardo de NIE</em> - een papieren attest met je nummer
             erop. Bewaar het goed.
           </P>
         </Step>
@@ -284,7 +284,7 @@ export default function Body() {
               <strong>De grote valkuil:</strong> In drukke regio&apos;s
               (Alicante, Málaga, Valencia kuststrook) zijn er vaak weken of
               maanden geen afspraken beschikbaar. Het systeem laat dan
-              &quot;Geen afspraken&quot; zien. Probeer dagelijks om 9:00 — er
+              &quot;Geen afspraken&quot; zien. Probeer dagelijks om 9:00 - er
               komen dan nieuwe slots vrij. Of probeer een minder drukke
               provincie (Castellón en Tarragona zijn vaak realistischer dan
               Alicante).
@@ -302,7 +302,7 @@ export default function Body() {
 
         <Step number={3} title="Afspraak bezoeken">
           <P>
-            Verschijn op je afspraak — meestal bij een{" "}
+            Verschijn op je afspraak - meestal bij een{" "}
             <em>Comisaría de Policía Nacional</em> of een{" "}
             <em>Oficina de Extranjería</em>. Wees op tijd (15 minuten van
             tevoren). Wat je meeneemt:
@@ -323,7 +323,7 @@ export default function Body() {
           <P>
             De wettelijke termijn is <strong>5 werkdagen</strong> vanaf
             registratie. In drukke kuststreken (Costa Blanca, Mallorca) reken op{" "}
-            <strong>1–3 weken</strong>. Soms krijg je het ter plekke — afhankelijk
+            <strong>1-3 weken</strong>. Soms krijg je het ter plekke - afhankelijk
             van de afhandelingssnelheid van de comisaría. Je krijgt het op een
             papieren <em>Resguardo</em> met je nummer; geen plastic kaart.
           </P>
@@ -343,7 +343,7 @@ export default function Body() {
             <tbody className="divide-y divide-border bg-card">
               <tr>
                 <td className="px-4 py-3">Vroeg in oriëntatie, geen reisplan</td>
-                <td className="px-4 py-3">Consulaat NL — rustig regelen</td>
+                <td className="px-4 py-3">Consulaat NL - rustig regelen</td>
               </tr>
               <tr>
                 <td className="px-4 py-3">Plan binnenkort bezichtigingsreis</td>
@@ -355,7 +355,7 @@ export default function Body() {
               </tr>
               <tr>
                 <td className="px-4 py-3">Wil het alleen voor &quot;voor de zekerheid&quot;</td>
-                <td className="px-4 py-3">Consulaat NL — kost niets om alvast te doen</td>
+                <td className="px-4 py-3">Consulaat NL - kost niets om alvast te doen</td>
               </tr>
               <tr>
                 <td className="px-4 py-3">Geen tijd om weken te wachten</td>
@@ -375,23 +375,23 @@ export default function Body() {
         </P>
         <UL>
           <li>
-            Reis naar Amsterdam (Consulaat-Generaal — ~€10–€30 OV vanuit Nederland)
+            Reis naar Amsterdam (Consulaat-Generaal - ~€10-€30 OV vanuit Nederland)
           </li>
           <li>
-            Pasfoto&apos;s in Spaans formaat (€7–€10 bij een fotograaf — vraag om
+            Pasfoto&apos;s in Spaans formaat (€7-€10 bij een fotograaf - vraag om
             DNI-formaat 32 × 26 mm)
           </li>
           <li>
-            Bankkosten internationaal indien je in Spanje moet betalen (€5–€20)
+            Bankkosten internationaal indien je in Spanje moet betalen (€5-€20)
           </li>
           <li>
-            Eventuele gestor-bijstand (optioneel) — €100–€200 als je het hele
+            Eventuele gestor-bijstand (optioneel) - €100-€200 als je het hele
             traject wil uitbesteden
           </li>
         </UL>
         <P>
-          Reken op een totale uitgave van <strong>€20–€50</strong> als je het
-          zelf doet, of <strong>€150–€300</strong> als je een gestor inschakelt
+          Reken op een totale uitgave van <strong>€20-€50</strong> als je het
+          zelf doet, of <strong>€150-€300</strong> als je een gestor inschakelt
           voor de hele coördinatie.
         </P>
       </Section>
@@ -401,7 +401,7 @@ export default function Body() {
         <OL>
           <li>
             <strong>EX-15 verwarren met EX-18.</strong> EX-18 is het{" "}
-            <em>Certificado de Registro de Ciudadano de la Unión</em> — voor
+            <em>Certificado de Registro de Ciudadano de la Unión</em> - voor
             EU-burgers die zich vestigen als resident. EX-15 is voor de
             NIE-toekenning als niet-resident. Voor de meeste tweede-huis-kopers:
             altijd EX-15.
@@ -432,7 +432,7 @@ export default function Body() {
           </li>
           <li>
             <strong>Hoofd letter verwarren.</strong> NIE begint altijd met X,
-            Y of Z. Sommige systemen vragen of het een Spaanse DNI is — dan
+            Y of Z. Sommige systemen vragen of het een Spaanse DNI is - dan
             niet bevestigen, kies de optie &quot;NIE&quot;.
           </li>
         </OL>
@@ -450,7 +450,7 @@ export default function Body() {
             Bewaar het origineel zorgvuldig in je &quot;Spanje-mapje&quot; thuis
           </li>
           <li>
-            Voeg het toe aan je belangrijkste documenten — je hebt het bij
+            Voeg het toe aan je belangrijkste documenten - je hebt het bij
             vrijwel elke Spaanse stap nodig
           </li>
           <li>
@@ -461,7 +461,7 @@ export default function Body() {
             >
               Modelo 036
             </Link>{" "}
-            in voor je B.V. — die heeft je NIE als gevolmachtigde nodig
+            in voor je B.V. - die heeft je NIE als gevolmachtigde nodig
           </li>
           <li>
             Open je Spaanse bankrekening (je NIE plus paspoort plus verblijfsbewijs
@@ -473,14 +473,14 @@ export default function Body() {
       <Section>
         <H2>Tot slot</H2>
         <P>
-          De NIE-aanvraag is technisch eenvoudig — een formulier, een tasa, en
+          De NIE-aanvraag is technisch eenvoudig - een formulier, een tasa, en
           wat geduld. Het probleem zit niet in de complexiteit maar in de
           timing: mensen vragen het te laat aan en raken vervolgens vast op
           elke volgende stap (bank, contract, modelo 036).
         </P>
         <P>
           Onze eerlijke aanbeveling: vraag je NIE aan zodra je serieus over een
-          Spaans huis nadenkt — niet pas als je er één hebt gevonden. Het is
+          Spaans huis nadenkt - niet pas als je er één hebt gevonden. Het is
           een eenmalige administratieve stap met levenslange geldigheid. Geen
           risico, alleen voorsprong.
         </P>
@@ -494,7 +494,7 @@ export default function Body() {
         </h3>
         <p className="mt-3 text-foreground/80">
           Onze papierwinkel-dienst regelt NIE, bankrekening, modelo 036 en
-          vertalingen — vaste prijs vooraf, één Nederlandstalig aanspreekpunt.
+          vertalingen - vaste prijs vooraf, één Nederlandstalig aanspreekpunt.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Link

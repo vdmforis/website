@@ -10,7 +10,7 @@ export default function Body() {
       <Section>
         <Lead>
           De keuze tussen nieuwbouw en bestaande bouw is in Spanje fundamenteler
-          dan in Nederland. Het zit niet alleen in stijl of bouwjaar — ook in
+          dan in Nederland. Het zit niet alleen in stijl of bouwjaar - ook in
           belastingen, juridische garanties, aankoopproces en de hoeveelheid
           geduld die je moet meebrengen. Hieronder een eerlijke vergelijking
           zonder voorkeur vooraf.
@@ -21,7 +21,7 @@ export default function Body() {
       <Section>
         <H2>De kernverschillen in één blik</H2>
         <P>
-          Voor wie weinig tijd heeft — hier zijn de verschillen waar het werkelijk
+          Voor wie weinig tijd heeft - hier zijn de verschillen waar het werkelijk
           om gaat. Daaronder leggen we elke regel uit met cijfers.
         </P>
         <div className="mt-6 overflow-hidden rounded-2xl border border-border">
@@ -37,7 +37,7 @@ export default function Body() {
               <tr>
                 <td className="px-4 py-3 font-medium text-navy">Belasting bij koop</td>
                 <td className="px-4 py-3">IVA 10%</td>
-                <td className="px-4 py-3">ITP 6–13% (CCAA-afhankelijk)</td>
+                <td className="px-4 py-3">ITP 6-13% (CCAA-afhankelijk)</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-navy">AJD (Valencia)</td>
@@ -46,8 +46,8 @@ export default function Body() {
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-navy">Doorlooptijd</td>
-                <td className="px-4 py-3">9–18 mnd (off-plan)</td>
-                <td className="px-4 py-3">2–3 mnd</td>
+                <td className="px-4 py-3">9-18 mnd (off-plan)</td>
+                <td className="px-4 py-3">2-3 mnd</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-navy">Betalingsstructuur</td>
@@ -67,12 +67,12 @@ export default function Body() {
               <tr>
                 <td className="px-4 py-3 font-medium text-navy">Energielabel</td>
                 <td className="px-4 py-3">A of B</td>
-                <td className="px-4 py-3">Varieert A–G</td>
+                <td className="px-4 py-3">Varieert A-G</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-navy">Onderhandelingsruimte</td>
                 <td className="px-4 py-3">Beperkt</td>
-                <td className="px-4 py-3">5–15% mogelijk</td>
+                <td className="px-4 py-3">5-15% mogelijk</td>
               </tr>
             </tbody>
           </table>
@@ -80,7 +80,7 @@ export default function Body() {
       </Section>
 
       <Section>
-        <H2>Belastingen vergeleken — concreet</H2>
+        <H2>Belastingen vergeleken - concreet</H2>
         <P>
           Op een woning van <strong>€350.000</strong> ziet de
           belastingafhandeling er als volgt uit (Comunidad Valenciana):
@@ -115,17 +115,17 @@ export default function Body() {
               <strong>Madrid</strong>: 6% algemeen
             </li>
             <li>
-              <strong>Andalucía</strong>: 7% vlak tarief; verlaagd 3,5–6% voor
+              <strong>Andalucía</strong>: 7% vlak tarief; verlaagd 3,5-6% voor
               specifieke gevallen (jongeren, lage prijs, grote gezinnen)
             </li>
             <li>
-              <strong>Catalunya</strong>: progressief sinds juni 2025 — 10% tot
+              <strong>Catalunya</strong>: progressief sinds juni 2025 - 10% tot
               €600k / 11% tot €900k / 12% tot €1,5 mln / 13% boven €1,5 mln.
               Plus 20% opslag voor <em>grandes tenedores</em>
             </li>
           </ul>
           <p className="mt-3">
-            Vraag je gestor altijd het actuele percentage in jouw regio — beleid
+            Vraag je gestor altijd het actuele percentage in jouw regio - beleid
             kan elk fiscaal jaar wijzigen.
           </p>
         </Callout>
@@ -146,7 +146,7 @@ export default function Body() {
           <li>
             <strong>Je wilt geen renovatieproject.</strong> Sleutelklaar is bij
             nieuwbouw vrijwel altijd écht sleutelklaar: keuken, badkamer,
-            electra, water — allemaal nieuw en gegarandeerd.
+            electra, water - allemaal nieuw en gegarandeerd.
           </li>
           <li>
             <strong>Je hecht waarde aan 10-jaars constructiegarantie.</strong>{" "}
@@ -157,9 +157,9 @@ export default function Body() {
             (terminación o acabado).
           </li>
           <li>
-            <strong>Je hebt tijd.</strong> Off-plan kopen betekent 9–18 maanden
+            <strong>Je hebt tijd.</strong> Off-plan kopen betekent 9-18 maanden
             wachten op oplevering, met betalingen verspreid over de bouwperiode.
-            Als je geen haast hebt en je liquiditeit kan dat aan — geen probleem.
+            Als je geen haast hebt en je liquiditeit kan dat aan - geen probleem.
           </li>
         </OL>
       </Section>
@@ -170,13 +170,13 @@ export default function Body() {
         <OL>
           <li>
             <strong>Je wilt er direct kunnen zijn.</strong> Bij bestaande bouw
-            kun je binnen 2–3 maanden na ondertekening over de sleutel beschikken.
+            kun je binnen 2-3 maanden na ondertekening over de sleutel beschikken.
             Bij nieuwbouw zit je vaak een jaar te wachten.
           </li>
           <li>
             <strong>De locatie heeft geen nieuwbouw.</strong> Oude stadskernen
             (Castellón centro, Peñíscola historisch centrum), eerstelijn-strand
-            op een al volgebouwde boulevard — daar bestaat geen nieuwbouw, je
+            op een al volgebouwde boulevard - daar bestaat geen nieuwbouw, je
             bent aangewezen op bestaande woningen.
           </li>
           <li>
@@ -185,7 +185,7 @@ export default function Body() {
             niet kan namaken. Voor sommige kopers het hele punt.
           </li>
           <li>
-            <strong>Je wilt onderhandelen.</strong> Bij bestaande bouw is 5–15%
+            <strong>Je wilt onderhandelen.</strong> Bij bestaande bouw is 5-15%
             korting op de vraagprijs een reëel onderhandelingsdoel, zeker bij
             langlopende leegstand. Bij nieuwbouw is de prijslijst publiek en zit
             er weinig speling op.
@@ -194,7 +194,7 @@ export default function Body() {
       </Section>
 
       <Section>
-        <H2>Verborgen kosten — verschillen die je vaak niet ziet komen</H2>
+        <H2>Verborgen kosten - verschillen die je vaak niet ziet komen</H2>
         <P>
           Naast de hoofdkosten zijn er categorieën van uitgaven die per type
           woning verschillen. Hier de eerlijke lijst.
@@ -211,18 +211,18 @@ export default function Body() {
           <li>
             <strong>Snagging-defecten.</strong> Vrijwel elke nieuwbouw heeft 20+
             kleine defecten bij oplevering (verfvlek, scheef stopcontact,
-            kraan-lekkage). Je moet ze melden binnen 14 dagen — dat kost tijd en
+            kraan-lekkage). Je moet ze melden binnen 14 dagen - dat kost tijd en
             vereist aanwezigheid.
           </li>
           <li>
             <strong>Tuinwerk vaak niet inbegrepen.</strong> Een &quot;eigen tuin&quot;
             betekent doorgaans: zand en grind. Beplanting, irrigatie, terras = bij
-            jou. Reken op €5–€15k.
+            jou. Reken op €5-€15k.
           </li>
           <li>
             <strong>Lege omgeving.</strong> Bij nieuwe woonwijken volgen de
             voorzieningen (winkels, scholen, openbaar vervoer) pas later. Een
-            paar jaar wat afgelegen leven kan een welkome rust zijn — of een
+            paar jaar wat afgelegen leven kan een welkome rust zijn - of een
             ergernis.
           </li>
         </UL>
@@ -231,13 +231,13 @@ export default function Body() {
         <UL>
           <li>
             <strong>Achterstallig onderhoud.</strong> Badkamer, keuken, leidingen,
-            electra — de meeste woningen ouder dan 25 jaar hebben minstens één
-            kapitale renovatie nodig. Reken op €15–€60k afhankelijk van leeftijd
+            electra - de meeste woningen ouder dan 25 jaar hebben minstens één
+            kapitale renovatie nodig. Reken op €15-€60k afhankelijk van leeftijd
             en staat.
           </li>
           <li>
             <strong>Energierenovatie.</strong> Van een F- of G-label naar A/B
-            kost meestal €10–€30k (isolatie, ramen, warmtepomp). Onder de
+            kost meestal €10-€30k (isolatie, ramen, warmtepomp). Onder de
             EU-EPBD-richtlijn moet Spanje nationale renovatieplannen opstellen
             die naar verwachting label E vanaf 2030 en label D vanaf 2033 als
             minimum voor verkoop/verhuur zullen vragen. Geen direct EU-verbod,
@@ -248,7 +248,7 @@ export default function Body() {
             <strong>Verborgen gebreken.</strong> Vocht, lekkages, asbest in oude
             daken, scheurvorming. Een onafhankelijke{" "}
             <em>informe técnico</em> (bouwkundige keuring) door een Spaanse
-            architect kost €300–€600 en is altijd het geld waard.
+            architect kost €300-€600 en is altijd het geld waard.
           </li>
           <li>
             <strong>Plusvalía Municipal soms voor koper.</strong> Wettelijk
@@ -259,7 +259,7 @@ export default function Body() {
       </Section>
 
       <Section>
-        <H2>Onze eigen keuze — waarom wij nieuwbouw kozen</H2>
+        <H2>Onze eigen keuze - waarom wij nieuwbouw kozen</H2>
         <P>
           Voor onze eigen aankoop kozen we voor nieuwbouw: een chalet adosado in
           Grau de Castellón, gekocht in 2025 bij Metrovacesa, sleutel juni 2026.
@@ -267,15 +267,15 @@ export default function Body() {
         <P>De afweging:</P>
         <UL>
           <li>
-            Energiezuinigheid was zwaarwegend — we wonen er zelf en willen geen
+            Energiezuinigheid was zwaarwegend - we wonen er zelf en willen geen
             hoge energierekeningen op een woning die we 30 jaar willen gebruiken
           </li>
           <li>
-            We wilden geen renovatieproject erbij — we wonen al jaren in
+            We wilden geen renovatieproject erbij - we wonen al jaren in
             Spanje en hebben de mentale ruimte niet voor verbouwingsstress
           </li>
           <li>
-            We hadden tijd — geen acute druk om binnen drie maanden te kunnen
+            We hadden tijd - geen acute druk om binnen drie maanden te kunnen
             intrekken
           </li>
           <li>
@@ -286,7 +286,7 @@ export default function Body() {
         <P>
           De tradeoff: 18 maanden tussen reservering en sleutel, vier
           deelbetalingen die je liquiditeit drukken, en het mentale werk van
-          aval-tracking, vertalingen en modelo 036. Dat hebben we onderschat —
+          aval-tracking, vertalingen en modelo 036. Dat hebben we onderschat -
           niet de bedragen, maar het aantal urenkleine beslissingen tijdens het
           proces.
         </P>
@@ -305,13 +305,13 @@ export default function Body() {
       <Section>
         <H2>Vijf vragen om je beslissing te maken</H2>
         <P>
-          Beantwoord deze vijf vragen eerlijk voor jezelf — dan rolt de keuze er
+          Beantwoord deze vijf vragen eerlijk voor jezelf - dan rolt de keuze er
           meestal vanzelf uit:
         </P>
         <OL>
           <li>
             <strong>Wanneer wil je er kunnen zijn?</strong> Direct → bestaande
-            bouw. Binnen 12–18 maanden ok → nieuwbouw is een optie.
+            bouw. Binnen 12-18 maanden ok → nieuwbouw is een optie.
           </li>
           <li>
             <strong>Hoe belangrijk is energiezuinigheid?</strong> Cruciaal →
@@ -344,8 +344,8 @@ export default function Body() {
           leven, wat je tijd waard is, en hoe je tegen onderhoud aankijkt.
         </P>
         <P>
-          Wat in beide gevallen geldt: een onafhankelijke begeleiding — iemand
-          die voor jou werkt en niet voor de verkoper — voorkomt de meeste
+          Wat in beide gevallen geldt: een onafhankelijke begeleiding - iemand
+          die voor jou werkt en niet voor de verkoper - voorkomt de meeste
           kostbare misstappen. Of dat nu door een advocaat is die de
           koopovereenkomst checkt, een gestor die de papierwinkel coördineert,
           of een aankoopbegeleider die het hele traject volgt.
@@ -360,7 +360,7 @@ export default function Body() {
         </h3>
         <p className="mt-3 text-foreground/80">
           Plan een vrijblijvend gesprek van 30 minuten. We bespreken jouw
-          situatie, regio en wensen — en we zeggen eerlijk welke richting voor
+          situatie, regio en wensen - en we zeggen eerlijk welke richting voor
           jou logisch is.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
@@ -385,7 +385,7 @@ export default function Body() {
           className="mt-3 block rounded-2xl border border-border bg-card p-6 transition-colors hover:border-terracotta/60"
         >
           <p className="font-heading text-lg text-navy">
-            Modelo 036 voor Nederlandse B.V.&apos;s — wat je moet weten in 2026
+            Modelo 036 voor Nederlandse B.V.&apos;s - wat je moet weten in 2026
           </p>
           <p className="mt-2 text-sm text-foreground/75">
             Eerstehandsgids voor het indienen van een Modelo 036 om een Spaanse

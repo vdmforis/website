@@ -36,7 +36,7 @@ export const overOnsText: Record<Locale, OverOnsText> = {
     meta: {
       title: "Over ons · Foris",
       description:
-        "Foris is de Spaanse tak van een Nederlands vastgoedfamiliebedrijf: tien jaar ervaring in koop, ontwikkeling en verhuur, gecombineerd met een vast netwerk en eigen nieuwbouwpraktijk aan de Costa del Azahar.",
+        "Foris is de Spaanse tak van een Nederlands vastgoedfamiliebedrijf met ervaring in koop, ontwikkeling en verhuur, gecombineerd met een vast netwerk en eigen nieuwbouwpraktijk aan de Costa del Azahar.",
     },
     heroAlt: "Strand bij dageraad aan de Costa del Azahar, Grau de Castellón",
     eyebrow: "Over ons",
@@ -46,8 +46,8 @@ export const overOnsText: Record<Locale, OverOnsText> = {
     branchesTitle: "Twee takken, één discipline",
     branchesP1: (n) => (
       <>
-        In Nederland opereert {n("Van der Meulen Vastgoed B.V.")}, al meer dan tien jaar
-        actief in koop, ontwikkeling en verhuur van vastgoed. Contracten beoordelen,
+        In Nederland opereert {n("Van der Meulen Vastgoed B.V.")}, actief
+        in koop, ontwikkeling en verhuur van vastgoed. Contracten beoordelen,
         onderhandelen, bouwers aansturen en projecten opleveren: dat is het dagelijkse werk.
       </>
     ),
@@ -94,7 +94,7 @@ export const overOnsText: Record<Locale, OverOnsText> = {
     meta: {
       title: "About us · Foris",
       description:
-        "Foris is the Spanish branch of a Dutch family property business: ten years of experience in buying, development and letting, combined with a trusted network and our own new-build experience on the Costa del Azahar.",
+        "Foris is the Spanish branch of a Dutch family property business with experience in buying, development and letting, combined with a trusted network and our own new-build experience on the Costa del Azahar.",
     },
     heroAlt: "Beach at dawn on the Costa del Azahar, Grau de Castellón",
     eyebrow: "About us",
@@ -105,7 +105,7 @@ export const overOnsText: Record<Locale, OverOnsText> = {
     branchesP1: (n) => (
       <>
         In the Netherlands, {n("Van der Meulen Vastgoed B.V.")} has been active in buying,
-        developing and letting property for more than ten years. Reviewing contracts,
+        developing and letting property. Reviewing contracts,
         negotiating, managing builders and delivering projects: that is the day-to-day work.
       </>
     ),
@@ -152,7 +152,7 @@ export const overOnsText: Record<Locale, OverOnsText> = {
     meta: {
       title: "Quiénes somos · Foris",
       description:
-        "Foris es la rama española de una empresa familiar inmobiliaria neerlandesa: diez años de experiencia en compra, promoción y alquiler, junto con una red de confianza y experiencia propia en obra nueva en la Costa del Azahar.",
+        "Foris es la rama española de una empresa familiar inmobiliaria neerlandesa con experiencia en compra, promoción y alquiler, junto con una red de confianza y experiencia propia en obra nueva en la Costa del Azahar.",
     },
     heroAlt: "Playa al amanecer en la Costa del Azahar, Grao de Castellón",
     eyebrow: "Quiénes somos",
@@ -162,8 +162,8 @@ export const overOnsText: Record<Locale, OverOnsText> = {
     branchesTitle: "Dos ramas, una misma forma de trabajar",
     branchesP1: (n) => (
       <>
-        En los Países Bajos opera {n("Van der Meulen Vastgoed B.V.")}, con más de diez años
-        de actividad en la compra, promoción y alquiler de inmuebles. Revisar contratos,
+        En los Países Bajos opera {n("Van der Meulen Vastgoed B.V.")}, activa
+        en la compra, promoción y alquiler de inmuebles. Revisar contratos,
         negociar, dirigir constructores y entregar proyectos: ese es el trabajo diario.
       </>
     ),
