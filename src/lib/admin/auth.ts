@@ -15,7 +15,8 @@ const MAX_AGE = 60 * 60 * 12; // 12 hours
 const attempts = new Map<string, { count: number; resetAt: number }>();
 
 function password(): string | null {
-  const p = process.env.ADMIN_PASSWORD;
+  // Trim: env values pasted or uploaded often carry a trailing newline.
+  const p = process.env.ADMIN_PASSWORD?.trim();
   return p && p.length >= 8 ? p : null;
 }
 
@@ -54,7 +55,7 @@ export function rateLimited(id: string): boolean {
 export function checkPassword(input: string): boolean {
   const p = password();
   if (!p) return false;
-  return safeEqual(input, p);
+  return safeEqual(input.trim(), p);
 }
 
 export async function startSession(): Promise<void> {
