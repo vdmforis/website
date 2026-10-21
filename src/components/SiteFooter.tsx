@@ -7,8 +7,11 @@ import { localeFromPathname, localizedPath } from "@/lib/i18n";
 import { ui } from "@/i18n/ui";
 
 export function SiteFooter() {
-  const locale = localeFromPathname(usePathname());
+  const pathname = usePathname();
+  const locale = localeFromPathname(pathname);
   const t = ui[locale].footer;
+  // Private admin pages render without the public site chrome.
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <footer className="mt-auto border-t border-border bg-navy text-cream">
