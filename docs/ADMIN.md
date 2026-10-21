@@ -14,7 +14,7 @@ Vercel Blob store and is only served through authenticated routes.
    Connect it to project `web` (Production + Preview) with env var prefix
    `FORIS_ADMIN`, which creates `FORIS_ADMIN_READ_WRITE_TOKEN`.
    (Falls back to `BLOB_READ_WRITE_TOKEN` only if that store is private.)
-2. **Settings → Environment Variables**: add `ADMIN_PASSWORD` (at least 10 characters,
+2. **Settings → Environment Variables**: add `ADMIN_PASSWORD` (at least 8 characters,
    Sensitive) for Production and Preview. Optional: `ADMIN_SESSION_SECRET` (random string).
    Without `ADMIN_PASSWORD` the admin stays closed.
 3. Redeploy.

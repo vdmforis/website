@@ -11,7 +11,7 @@ export default async function AdminLoginPage() {
         <LoginForm />
       ) : (
         <p className="mt-4 text-sm">
-          De admin is nog niet ingesteld. Zet ADMIN_PASSWORD (minstens 10 tekens) in de Vercel
+          De admin is nog niet ingesteld. Zet ADMIN_PASSWORD (minstens 8 tekens) in de Vercel
           projectinstellingen en deploy opnieuw.
         </p>
       )}

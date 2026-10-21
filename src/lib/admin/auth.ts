@@ -16,7 +16,7 @@ const attempts = new Map<string, { count: number; resetAt: number }>();
 
 function password(): string | null {
   const p = process.env.ADMIN_PASSWORD;
-  return p && p.length >= 10 ? p : null;
+  return p && p.length >= 8 ? p : null;
 }
 
 export function adminConfigured(): boolean {
