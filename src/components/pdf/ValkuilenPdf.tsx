@@ -27,7 +27,7 @@ Font.register({
   src: interPath,
 });
 
-// Disable hyphenation — gives cleaner Dutch text rendering in the PDF.
+// Disable hyphenation - gives cleaner Dutch text rendering in the PDF.
 Font.registerHyphenationCallback((word) => [word]);
 
 const HEADING_FONT = "Fraunces";
@@ -242,53 +242,53 @@ const valkuilen: Omit<ValkuilSectionProps, "number">[] = [
     problem:
       "De NIE (Número de Identidad de Extranjero) is jouw Spaanse fiscaalnummer als buitenlander. Zonder NIE kun je geen Spaanse bankrekening openen, geen contract tekenen, geen notarisafspraak inplannen. De meeste Nederlanders denken: 'ik vraag 'm aan zodra ik een huis op het oog heb.' Dat is te laat.",
     origin:
-      "De Spaanse bureaucratie werkt sequentieel. NIE-aanvraag duurt 2–6 weken via de Spaanse consul in Den Haag. Vanuit Spanje zelf kan sneller, mits je een verblijfsaanvraag of werkverband hebt — maar voor een tweede huis is dat zelden van toepassing.",
+      "De Spaanse bureaucratie werkt sequentieel. NIE-aanvraag duurt 2-6 weken via de Spaanse consul in Den Haag. Vanuit Spanje zelf kan sneller, mits je een verblijfsaanvraag of werkverband hebt - maar voor een tweede huis is dat zelden van toepassing.",
     action:
-      "Vraag je NIE aan zodra je serieus rondkijkt naar Spaans vastgoed — zelfs vóór je een specifiek huis hebt. De NIE blijft levenslang geldig en je hebt 'm voor van alles nodig. Reken op 6 weken vanaf indiening tot ontvangst.",
+      "Vraag je NIE aan zodra je serieus rondkijkt naar Spaans vastgoed - zelfs vóór je een specifiek huis hebt. De NIE blijft levenslang geldig en je hebt 'm voor van alles nodig. Reken op 6 weken vanaf indiening tot ontvangst.",
   },
   {
     title: "Geen Modelo 036 indienen vóór je gaat betalen",
     problem:
       "Als je via een Nederlandse B.V. koopt, heb je een Spaanse CIF nodig (NIF voor rechtspersonen). Die krijg je via een Modelo 036 bij de Spaanse Belastingdienst. Zonder CIF kan een Spaanse bank geen rekening openen op naam van je B.V., kan een notaris geen escritura passeren, en kunnen Spaanse leveranciers je niet factureren.",
     origin:
-      "De Modelo 036 vereist een complete documentenstapel: notariële volmacht (NL, beëdigd vertaald, geapostilleerd), oprichtingsakte (idem), KvK-uittreksel, UBO-uittreksel. Beëdigde vertalingen alleen kosten €600–€1.200 en duren 1–2 weken.",
+      "De Modelo 036 vereist een complete documentenstapel: notariële volmacht (NL, beëdigd vertaald, geapostilleerd), oprichtingsakte (idem), KvK-uittreksel, UBO-uittreksel. Beëdigde vertalingen alleen kosten €600-€1.200 en duren 1-2 weken.",
     action:
-      "Start het Modelo 036-traject minstens 8 weken voordat je een betaling vanuit je B.V. naar Spanje wil doen. Begin met de notariële volmacht in Nederland — die regelt zichzelf niet. Werk parallel: vertalingen en apostille terwijl je wacht op de notaris.",
+      "Start het Modelo 036-traject minstens 8 weken voordat je een betaling vanuit je B.V. naar Spanje wil doen. Begin met de notariële volmacht in Nederland - die regelt zichzelf niet. Werk parallel: vertalingen en apostille terwijl je wacht op de notaris.",
   },
   {
     title: "Het aval bancair niet controleren bij nieuwbouw",
     problem:
-      "Bij nieuwbouw (off-plan) kopen betaal je in tranches — vaak 20% verspreid over de bouwperiode, met de slot van 80% bij oplevering. Als de ontwikkelaar in die periode failliet gaat, raak je je geld kwijt, tenzij je betalingen zijn gedekt door een aval bancair.",
+      "Bij nieuwbouw (off-plan) kopen betaal je in tranches - vaak 20% verspreid over de bouwperiode, met de slot van 80% bij oplevering. Als de ontwikkelaar in die periode failliet gaat, raak je je geld kwijt, tenzij je betalingen zijn gedekt door een aval bancair.",
     origin:
-      "Een aval bancair is een bankgarantie die bouwers verplicht moeten regelen onder Ley 20/2015. Klinkt waterdicht — maar niet elke aval dekt automatisch alle deelbetalingen plus IVA plus wettelijke rente. Sommige dekken alleen de hoofdsom. Sommige worden pas afgegeven ná de eerste storting.",
+      "Een aval bancair is een bankgarantie die bouwers verplicht moeten regelen onder Ley 20/2015. Klinkt waterdicht - maar niet elke aval dekt automatisch alle deelbetalingen plus IVA plus wettelijke rente. Sommige dekken alleen de hoofdsom. Sommige worden pas afgegeven ná de eerste storting.",
     action: "AVAL_CHECKLIST",
   },
   {
     title: "De Spaanse notaris vertrouwen 'het wel uit te leggen'",
     problem:
-      "Bij de Spaanse escritura leest de notaris het hele contract hardop voor — in het Spaans. Veel Nederlanders denken: 'de notaris is onpartijdig, die past wel op'. Maar dat is een misverstand. De notaris is procedureel verantwoordelijk, niet adviserend.",
+      "Bij de Spaanse escritura leest de notaris het hele contract hardop voor - in het Spaans. Veel Nederlanders denken: 'de notaris is onpartijdig, die past wel op'. Maar dat is een misverstand. De notaris is procedureel verantwoordelijk, niet adviserend.",
     origin:
-      "De Spaanse notarispraktijk verschilt fundamenteel van de Nederlandse. In Nederland is de notaris vaak een trusted advisor die proactief meedenkt. In Spanje is de rol formeler — de notaris waarmerkt en registreert. Inhoudelijke bescherming komt van je advocaat.",
+      "De Spaanse notarispraktijk verschilt fundamenteel van de Nederlandse. In Nederland is de notaris vaak een trusted advisor die proactief meedenkt. In Spanje is de rol formeler - de notaris waarmerkt en registreert. Inhoudelijke bescherming komt van je advocaat.",
     action:
-      "Schakel altijd een onafhankelijke Spaanse advocaat in vóór de escritura. Niet de advocaat van de verkoper — een eigen, voor wie jij betaalt. Reken op €1.000–€2.500 voor een complete check + bijwonen van de notaris.",
+      "Schakel altijd een onafhankelijke Spaanse advocaat in vóór de escritura. Niet de advocaat van de verkoper - een eigen, voor wie jij betaalt. Reken op €1.000-€2.500 voor een complete check + bijwonen van de notaris.",
   },
   {
     title: "Beëdigde vertalingen vergeten of verkeerd inschakelen",
     problem:
-      "Veel Nederlandse documenten die je in Spanje nodig hebt — notariële akten, KvK-uittreksels, UBO-bewijzen — moeten beëdigd vertaald zijn. De Spaanse Belastingdienst, banken en notarissen accepteren geen gewone vertaalbureau-vertalingen. Alleen vertalingen van een traductor jurado.",
+      "Veel Nederlandse documenten die je in Spanje nodig hebt - notariële akten, KvK-uittreksels, UBO-bewijzen - moeten beëdigd vertaald zijn. De Spaanse Belastingdienst, banken en notarissen accepteren geen gewone vertaalbureau-vertalingen. Alleen vertalingen van een traductor jurado.",
     origin:
-      "Nederlandse vertaalbureaus zijn niet allemaal bekend met de Spaanse vereisten. Als je gewoon 'vertaal dit naar het Spaans' zegt, krijg je vaak een prima vertaling — maar niet beëdigd. Het document wordt dan geweigerd, je begint opnieuw, en verliest 1–2 weken.",
+      "Nederlandse vertaalbureaus zijn niet allemaal bekend met de Spaanse vereisten. Als je gewoon 'vertaal dit naar het Spaans' zegt, krijg je vaak een prima vertaling - maar niet beëdigd. Het document wordt dan geweigerd, je begint opnieuw, en verliest 1-2 weken.",
     action:
-      "Vraag bij elke opdracht expliciet: 'Dit moet beëdigd worden door een traductor jurado die ingeschreven staat bij het Spaanse Ministerie van Buitenlandse Zaken (MAEC).' Reken op €30–€60 per pagina, totaal €600–€1.200 voor een complete B.V.-set.",
+      "Vraag bij elke opdracht expliciet: 'Dit moet beëdigd worden door een traductor jurado die ingeschreven staat bij het Spaanse Ministerie van Buitenlandse Zaken (MAEC).' Reken op €30-€60 per pagina, totaal €600-€1.200 voor een complete B.V.-set.",
   },
   {
     title: "Te vroeg een vakantievlucht boeken voor de oplevering",
     problem:
       "In je koopovereenkomst staat een opleveringsdatum. Mensen denken: 'dan plan ik daar mijn vlucht en hotel omheen.' Probleem: de opleveringsdatum is de uiterste datum voor de bouwer, niet de datum waarop jij bij de notaris zit.",
     origin:
-      "Tussen oplevering door de bouwer (Licencia de Primera Ocupación) en jouw notarisafspraak zitten 2–4 weken aan papierwerk: gemeente, advocaat, slotbetaling via bankcheque. Daarna moet er nog een notaristijd vrij zijn.",
+      "Tussen oplevering door de bouwer (Licencia de Primera Ocupación) en jouw notarisafspraak zitten 2-4 weken aan papierwerk: gemeente, advocaat, slotbetaling via bankcheque. Daarna moet er nog een notaristijd vrij zijn.",
     action:
-      "Boek je vlucht en hotel pas zodra je een schriftelijke notarisafspraak hebt — meestal komt die 1–2 weken van tevoren binnen. Tot dan: alleen vrijblijvende reservering met flexibele annulering.",
+      "Boek je vlucht en hotel pas zodra je een schriftelijke notarisafspraak hebt - meestal komt die 1-2 weken van tevoren binnen. Tot dan: alleen vrijblijvende reservering met flexibele annulering.",
   },
   {
     title: "Lokale lasten niet realistisch inschatten",
@@ -296,12 +296,12 @@ const valkuilen: Omit<ValkuilSectionProps, "number">[] = [
       "Bij berekenen of een Spaans huis 'haalbaar' is, kijken kopers vaak naar aankoopprijs + IVA + notariskosten. Wat ze vergeten zijn de terugkerende lokale lasten die structureel je kostenpost vormen.",
     origin: "LASTEN_LIST",
     action:
-      "Vraag voorafgaand aan koop een gedetailleerd kostenoverzicht aan je gestor. Op een woning van €350.000 kun je rekenen op 8–10% aan eenmalige aankoopkosten en daarna €3.000–€4.000 per jaar aan lopende lasten. Bouw dat in je financieringsplan.",
+      "Vraag voorafgaand aan koop een gedetailleerd kostenoverzicht aan je gestor. Op een woning van €350.000 kun je rekenen op 8-10% aan eenmalige aankoopkosten en daarna €3.000-€4.000 per jaar aan lopende lasten. Bouw dat in je financieringsplan.",
   },
   {
     title: "Werken met een gestor zonder buitenlandse-koper ervaring",
     problem:
-      "De gestor is jouw schakel tussen jou en de Spaanse bureaucratie. Niet elke gestor weet hoe om te gaan met buitenlandse kopers — laat staan met Nederlandse B.V.'s. Als hij iets verkeerd indient, krijg jij de boete.",
+      "De gestor is jouw schakel tussen jou en de Spaanse bureaucratie. Niet elke gestor weet hoe om te gaan met buitenlandse kopers - laat staan met Nederlandse B.V.'s. Als hij iets verkeerd indient, krijg jij de boete.",
     origin:
       "De meeste Spaanse gestores bedienen lokale particulieren. Een Nederlandse koper komt met aparte eisen: beëdigde vertalingen, apostilles, buitenlandse fiscaalnummers, Modelo 720, Modelo 210, internationale belastingverdragen. Wie dit een paar keer per jaar doet, weet de stappen niet uit z'n hoofd.",
     action:
@@ -310,20 +310,20 @@ const valkuilen: Omit<ValkuilSectionProps, "number">[] = [
   {
     title: "Koopovereenkomst niet door onafhankelijke advocaat laten checken",
     problem:
-      "Een Spaanse koopovereenkomst is 12–20 pagina's juridisch Spaans. Daarin staan clausules over ontbinding, garanties, aval, oplevering, force majeure. De gemiddelde koper leest het niet, of leest het via Google Translate, en tekent. Daarna is het te laat.",
+      "Een Spaanse koopovereenkomst is 12-20 pagina's juridisch Spaans. Daarin staan clausules over ontbinding, garanties, aval, oplevering, force majeure. De gemiddelde koper leest het niet, of leest het via Google Translate, en tekent. Daarna is het te laat.",
     origin:
-      "Verkopers en ontwikkelaars hebben professionele juristen die contracten in hun voordeel opstellen. Standaard-clausules die 'iedereen tekent' kunnen significant nadelig voor jou zijn — bijvoorbeeld een ontbindingsclausule waarbij de bouwer mag annuleren met retournering van alleen de hoofdsom (geen rente).",
+      "Verkopers en ontwikkelaars hebben professionele juristen die contracten in hun voordeel opstellen. Standaard-clausules die 'iedereen tekent' kunnen significant nadelig voor jou zijn - bijvoorbeeld een ontbindingsclausule waarbij de bouwer mag annuleren met retournering van alleen de hoofdsom (geen rente).",
     action:
-      "Schakel een Spaanse advocaat in vóór je het privaat koopcontract tekent — niet pas voor de escritura. Een grondige contractreview kost €500–€1.000 en levert een lijst clausules op die aangepast kunnen worden. De meeste ontwikkelaars accepteren redelijke aanpassingsvoorstellen.",
+      "Schakel een Spaanse advocaat in vóór je het privaat koopcontract tekent - niet pas voor de escritura. Een grondige contractreview kost €500-€1.000 en levert een lijst clausules op die aangepast kunnen worden. De meeste ontwikkelaars accepteren redelijke aanpassingsvoorstellen.",
   },
 ];
 
 const lastenList = [
-  "IBI (gemeentelijke OZB) — €500–€2.500 per jaar",
-  "Comunidad de Propietarios — €50–€300 per maand",
-  "Modelo 210 / IRNR — 19% inkomstenbelasting over fictieve huurwaarde voor niet-residenten",
-  "Modelo 720 — verplichte aangifte buitenlands vermogen boven €50.000",
-  "Lokale verzekeringen — €300–€800 per jaar",
+  "IBI (gemeentelijke OZB) - €500-€2.500 per jaar",
+  "Comunidad de Propietarios - €50-€300 per maand",
+  "Modelo 210 / IRNR - 19% inkomstenbelasting over fictieve huurwaarde voor niet-residenten",
+  "Modelo 720 - verplichte aangifte buitenlands vermogen boven €50.000",
+  "Lokale verzekeringen - €300-€800 per jaar",
 ];
 
 const avalChecklist = [
@@ -361,7 +361,7 @@ function ValkuilSection({ number, title, problem, origin, action }: ValkuilSecti
         <>
           <Text style={s.p}>
             De Spaanse lokale lasten lijken klein per item, maar tellen op. Reken
-            voor een doorsnee vakantiehuis op €2.500–€5.000 per jaar aan lopende
+            voor een doorsnee vakantiehuis op €2.500-€5.000 per jaar aan lopende
             lasten, exclusief energie en onderhoud:
           </Text>
           <BulletList items={lastenList} />
@@ -374,7 +374,7 @@ function ValkuilSection({ number, title, problem, origin, action }: ValkuilSecti
       {action === "AVAL_CHECKLIST" ? (
         <>
           <Text style={s.p}>
-            Lees de aval-clausule zorgvuldig — of laat dat door een onafhankelijke
+            Lees de aval-clausule zorgvuldig - of laat dat door een onafhankelijke
             Spaanse advocaat doen. Controleer specifiek:
           </Text>
           <BulletList items={avalChecklist} />
@@ -414,7 +414,7 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
           </Text>
           <Text style={s.coverSub}>
             Praktische gids uit onze eigen vastgoedpraktijk in Nederland en
-            Spanje — met name de Costa del Azahar.
+            Spanje - met name de Costa del Azahar.
             {recipientName ? `\n\nGeschreven voor ${recipientName}.` : ""}
           </Text>
         </View>
@@ -436,14 +436,14 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
 
         <Text style={s.lead}>
           Nieuwbouw kopen in Spanje is voor de meeste Nederlanders een eenmalige
-          ervaring. En dat is precies het probleem — eenmalig betekent: zonder
+          ervaring. En dat is precies het probleem - eenmalig betekent: zonder
           ervaring, zonder de juiste contacten, en zonder begrip van waar de
           Spaanse bureaucratie afwijkt van wat je in Nederland gewend bent.
         </Text>
 
         <Text style={s.p}>
           Foris komt voort uit een familiebedrijf met ruime vastgoedervaring in
-          Nederland en Spanje — koop, ontwikkeling en verhuur, met name aan de
+          Nederland en Spanje - koop, ontwikkeling en verhuur, met name aan de
           Costa del Azahar. Nieuwbouwtrajecten doorlopen we ook zelf, van
           reservering en aval bancair tot oplevering. De valkuilen in deze gids
           komen rechtstreeks uit die praktijk.
@@ -468,11 +468,11 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
         </View>
 
         <Text style={s.pageFooter} fixed>
-          <Text>Foris — vdmforis.com</Text>
+          <Text>Foris - vdmforis.com</Text>
         </Text>
       </Page>
 
-      {/* 9 valkuilen — each one on its own area, multiple per page */}
+      {/* 9 valkuilen - each one on its own area, multiple per page */}
       {valkuilen.map((v, idx) => (
         <Page key={v.title} size="A4" style={s.page} wrap>
           <View style={s.pageHeader}>
@@ -487,7 +487,7 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
             action={v.action}
           />
           <Text style={s.pageFooter} fixed>
-            <Text>Foris — vdmforis.com</Text>
+            <Text>Foris - vdmforis.com</Text>
           </Text>
         </Page>
       ))}
@@ -502,7 +502,7 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
         <Text style={s.h1}>Tot slot</Text>
 
         <Text style={s.p}>
-          Nieuwbouw kopen in Spanje is geen ramp — duizenden mensen doen het
+          Nieuwbouw kopen in Spanje is geen ramp - duizenden mensen doen het
           jaarlijks succesvol. Maar het is wel een traject waar onwetendheid duur
           kan worden, en waar de juiste volgorde en de juiste mensen een enorm
           verschil maken.
@@ -546,7 +546,7 @@ export function ValkuilenPdf({ recipientName }: { recipientName?: string }) {
               color: colors.textMuted,
             }}
           >
-            © {new Date().getFullYear()} Van der Meulen Foris B.V. — vdmforis.com
+            © {new Date().getFullYear()} Van der Meulen Foris B.V. - vdmforis.com
           </Text>
         </View>
       </Page>

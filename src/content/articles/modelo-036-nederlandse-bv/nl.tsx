@@ -9,18 +9,18 @@ export default function Body() {
     <>
       <Section>
         <Lead>
-          Heel kort: een Modelo 036 is het Spaanse declaración censal — de
+          Heel kort: een Modelo 036 is het Spaanse declaración censal - de
           fiscale aanmelding bij de Agencia Tributaria. Voor Nederlandse B.V.&apos;s
           die in Spanje vastgoed willen kopen is wachten op de Modelo 036 vaak
           het lange-tand-moment in het hele aankoopproces. Wij hebben dit
-          traject in mei 2026 zelf doorlopen voor onze eigen B.V. — hier zit
+          traject in mei 2026 zelf doorlopen voor onze eigen B.V. - hier zit
           alles wat we onderweg leerden.
         </Lead>
         <GidsCallout variant="inline" />
       </Section>
 
       <Section>
-        <H2>Wat is een Modelo 036 — in mensentaal</H2>
+        <H2>Wat is een Modelo 036 - in mensentaal</H2>
         <P>
           De Modelo 036 (officieel:{" "}
           <em>
@@ -52,7 +52,7 @@ export default function Body() {
           </li>
           <li>
             <strong>Nederlandse B.V.&apos;s die incidenteel kopen</strong> voor
-            eigen gebruik zitten technisch in een grijs gebied — maar in de
+            eigen gebruik zitten technisch in een grijs gebied - maar in de
             praktijk vragen Spaanse banken en notarissen vrijwel altijd om
             een CIF voordat ze met je werken.
           </li>
@@ -72,7 +72,7 @@ export default function Body() {
       </Section>
 
       <Section>
-        <H2>CIF, NIF, NIE — wat is het verschil?</H2>
+        <H2>CIF, NIF, NIE - wat is het verschil?</H2>
         <P>
           Voordat we het hebben over hoe je een Modelo 036 indient: weet welk
           nummer je krijgt en wat het verschil is met andere
@@ -80,28 +80,28 @@ export default function Body() {
         </P>
         <UL>
           <li>
-            <strong>NIF (Número de Identificación Fiscal)</strong> — generieke
+            <strong>NIF (Número de Identificación Fiscal)</strong> - generieke
             term, de Spaanse fiscale identiteit van zowel personen als
             rechtspersonen.
           </li>
           <li>
-            <strong>NIE (Número de Identidad de Extranjero)</strong> — NIF
+            <strong>NIE (Número de Identidad de Extranjero)</strong> - NIF
             voor buitenlandse natuurlijke personen, beginnend met X, Y of Z.
           </li>
           <li>
-            <strong>CIF (Código de Identificación Fiscal)</strong> — voorheen
+            <strong>CIF (Código de Identificación Fiscal)</strong> - voorheen
             de aparte naam voor de NIF van rechtspersonen. Sinds 2008
             officieel afgeschaft als aparte aanduiding, maar nog steeds breed
             gebruikt in de zakelijke taal.
           </li>
           <li>
-            <strong>NIF voor buitenlandse entidades</strong> — buitenlandse
+            <strong>NIF voor buitenlandse entidades</strong> - buitenlandse
             rechtspersonen krijgen een NIF die begint met{" "}
             <strong>N</strong> (Nederlandse B.V.: N + 7 cijfers + letter).
           </li>
         </UL>
         <P>
-          Voor jouw Nederlandse B.V. is wat je krijgt formeel een NIF — in
+          Voor jouw Nederlandse B.V. is wat je krijgt formeel een NIF - in
           dagelijkse Spaanse zakelijke taal meestal aangeduid met CIF.
         </P>
       </Section>
@@ -115,33 +115,33 @@ export default function Body() {
         </P>
         <OL>
           <li>
-            <strong>Modelo 036 zelf</strong> — ingevuld, ondertekend door de
+            <strong>Modelo 036 zelf</strong> - ingevuld, ondertekend door de
             gevolmachtigde (apoderado).
           </li>
           <li>
-            <strong>Notariële volmacht (poder)</strong> — Nederlandse akte
+            <strong>Notariële volmacht (poder)</strong> - Nederlandse akte
             waarin de gevolmachtigde wordt aangewezen om de B.V. in Spanje te
             vertegenwoordigen. Beëdigd vertaald naar Spaans. Geapostilleerd.
           </li>
           <li>
-            <strong>Akte van oprichting van de Nederlandse B.V.</strong> —
+            <strong>Akte van oprichting van de Nederlandse B.V.</strong> -
             beëdigd vertaald, geapostilleerd. Bij ons: 15 pagina&apos;s statuten
             + slotverklaringen, allemaal vertaald.
           </li>
           <li>
-            <strong>KvK-uittreksel</strong> — bij voorkeur in de Spaanse{" "}
+            <strong>KvK-uittreksel</strong> - bij voorkeur in de Spaanse{" "}
             <em>Extracto del Registro Mercantil</em>-versie. KvK levert die
             zelf, scheelt een vertaalstap.
           </li>
           <li>
             <strong>UBO-register-uittreksel</strong> van de eigenaar(s) van de
-            B.V. — beëdigd vertaald.
+            B.V. - beëdigd vertaald.
           </li>
           <li>
-            <strong>NIE van de gevolmachtigde</strong> — kopie.
+            <strong>NIE van de gevolmachtigde</strong> - kopie.
           </li>
           <li>
-            <strong>Mandato de representación</strong> — Spaanse
+            <strong>Mandato de representación</strong> - Spaanse
             vertegenwoordigings&shy;overeenkomst tussen B.V. en gestor.
           </li>
         </OL>
@@ -151,7 +151,7 @@ export default function Body() {
             gemaakt door een <em>traductor jurado</em> die geregistreerd is
             bij het Spaanse Ministerie van Buitenlandse Zaken. Een gewone
             vertaalbureau-vertaling wordt geweigerd. Kosten lopen op tot
-            €800–1.200 voor een complete set.
+            €800-1.200 voor een complete set.
           </p>
         </Callout>
       </Section>
@@ -187,7 +187,7 @@ export default function Body() {
                 Representante (apoderado): de gevolmachtigde met NIE
               </li>
               <li>
-                Clave 332 (Voluntaria) aanvinken — vertegenwoordiging is op
+                Clave 332 (Voluntaria) aanvinken - vertegenwoordiging is op
                 vrijwillige basis, niet wettelijk
               </li>
             </UL>
@@ -196,7 +196,7 @@ export default function Body() {
             <P>
               De gestor logt in op de sede electrónica van de AEAT met zijn
               eigen certificaat en dient namens jou in. Je krijgt een{" "}
-              <em>número de asiento registral</em> (registreer&shy;nummer) —
+              <em>número de asiento registral</em> (registreer&shy;nummer) -
               bewaar dit goed.
             </P>
           </Step>
@@ -213,12 +213,12 @@ export default function Body() {
             <P>
               De AEAT bevestigt eerst de ontvangst (binnen 24 uur). De
               wettelijke termijn voor de toekenning van een{" "}
-              <strong>provisionele NIF</strong> is 10 werkdagen — in de praktijk
-              via de consulaire route is dit doorgaans 2–4 weken. Voor de{" "}
+              <strong>provisionele NIF</strong> is 10 werkdagen - in de praktijk
+              via de consulaire route is dit doorgaans 2-4 weken. Voor de{" "}
               <strong>definitieve NIF</strong> heeft de entiteit vervolgens 6
               maanden om alle documentatie aan te leveren; afhandeling duurt in
-              de praktijk 2–3 maanden vanaf indiening. In ons koopcontract
-              stond al een provisionele NIF — dat is hoe gebruikelijk dit is.
+              de praktijk 2-3 maanden vanaf indiening. In ons koopcontract
+              stond al een provisionele NIF - dat is hoe gebruikelijk dit is.
             </P>
           </Step>
         </div>
@@ -241,33 +241,33 @@ export default function Body() {
                 <td className="px-6 py-4">
                   Honorarium gestor voor Modelo 036
                 </td>
-                <td className="px-6 py-4 text-right">€ 250 – € 500</td>
+                <td className="px-6 py-4 text-right">€ 250 - € 500</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">
                   Notariële volmacht in Nederland
                 </td>
-                <td className="px-6 py-4 text-right">€ 350 – € 600</td>
+                <td className="px-6 py-4 text-right">€ 350 - € 600</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Apostille (rechtbank)</td>
-                <td className="px-6 py-4 text-right">€ 25 – € 50</td>
+                <td className="px-6 py-4 text-right">€ 25 - € 50</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">
                   Beëdigde vertalingen NL → ES (volledige set)
                 </td>
-                <td className="px-6 py-4 text-right">€ 600 – € 1.200</td>
+                <td className="px-6 py-4 text-right">€ 600 - € 1.200</td>
               </tr>
               <tr className="bg-navy/5 font-medium text-navy">
                 <td className="px-6 py-4">Totaal</td>
-                <td className="px-6 py-4 text-right">€ 1.500 – € 2.500</td>
+                <td className="px-6 py-4 text-right">€ 1.500 - € 2.500</td>
               </tr>
             </tbody>
           </table>
         </div>
         <P>
-          Reken op een bandbreedte van €1.500–€2.500 voor het hele
+          Reken op een bandbreedte van €1.500-€2.500 voor het hele
           Modelo-036-traject, exclusief eigen tijd.
         </P>
       </Section>
@@ -279,16 +279,16 @@ export default function Body() {
           klaar&quot;. Realistisch tijdpad:
         </P>
         <UL>
-          <li>Week 1–2: notariële volmacht in Nederland regelen + ondertekenen</li>
-          <li>Week 2–3: apostille bij de rechtbank</li>
+          <li>Week 1-2: notariële volmacht in Nederland regelen + ondertekenen</li>
+          <li>Week 2-3: apostille bij de rechtbank</li>
           <li>
-            Week 3–4: beëdigde vertalingen (een traductor jurado heeft 1–2
+            Week 3-4: beëdigde vertalingen (een traductor jurado heeft 1-2
             weken nodig)
           </li>
           <li>Week 4: indienen Modelo 036 + bijlagen</li>
-          <li>Week 5–8: toekenning provisionele CIF</li>
+          <li>Week 5-8: toekenning provisionele CIF</li>
           <li>
-            Week 8–12: definitieve CIF (vaak parallel aan de koopactiviteit)
+            Week 8-12: definitieve CIF (vaak parallel aan de koopactiviteit)
           </li>
         </UL>
         <Callout>
@@ -296,7 +296,7 @@ export default function Body() {
             <strong>Vuistregel:</strong> begin met de Modelo 036 minstens 8
             weken vóórdat je een betaling vanuit je B.V. naar Spanje wil doen.
             Veel kopers starten dit traject pas ná het tekenen van een Spaans
-            contract — en lopen dan vast op de betaaldeadlines.
+            contract - en lopen dan vast op de betaaldeadlines.
           </p>
         </Callout>
       </Section>
@@ -308,36 +308,36 @@ export default function Body() {
             <strong>
               Vertalingen door een niet-beëdigde vertaler
             </strong>{" "}
-            — gewoon weigeren door de AEAT. Altijd traductor jurado.
+            - gewoon weigeren door de AEAT. Altijd traductor jurado.
           </li>
           <li>
-            <strong>Apostille vergeten</strong> — Spanje accepteert
-            Nederlandse akten alleen met apostille. Hou rekening met 1–2 weken
+            <strong>Apostille vergeten</strong> - Spanje accepteert
+            Nederlandse akten alleen met apostille. Hou rekening met 1-2 weken
             extra.
           </li>
           <li>
             <strong>
               NIE van de gevolmachtigde niet eerst regelen
             </strong>{" "}
-            — je hebt een geldige NIE nodig om als apoderado in te dienen.
+            - je hebt een geldige NIE nodig om als apoderado in te dienen.
             Heeft de gevolmachtigde nog geen NIE? Stop, doe eerst de NIE.
           </li>
           <li>
             <strong>
               Per ongeluk aanvinken dat het wél een vaste inrichting betreft
             </strong>{" "}
-            — als je dat vakje aanvinkt denkt de AEAT dat je een{" "}
+            - als je dat vakje aanvinkt denkt de AEAT dat je een{" "}
             <em>establecimiento permanente</em> in Spanje hebt en moet je in
             Spanje vennootschapsbelasting gaan betalen. Verandert de hele
             fiscale structuur.
           </li>
           <li>
-            <strong>Niet alle UBO&apos;s vermelden</strong> — Nederlandse
+            <strong>Niet alle UBO&apos;s vermelden</strong> - Nederlandse
             B.V.&apos;s moeten ook in de Modelo 036 hun titulares reales
             opgeven (pagina 10). Vergeten = vertraging.
           </li>
           <li>
-            <strong>Mandato de representación vergeten</strong> — als je via
+            <strong>Mandato de representación vergeten</strong> - als je via
             een gestor indient, moet er een mandato zijn dat de gestor
             machtigt om namens jouw B.V. op te treden bij de AEAT.
           </li>
@@ -357,8 +357,8 @@ export default function Body() {
           </li>
         </UL>
         <P>
-          De definitieve CIF (na 2–3 maanden) heeft dezelfde rechten als de
-          provisionele — niet harder werken aan die overgang.
+          De definitieve CIF (na 2-3 maanden) heeft dezelfde rechten als de
+          provisionele - niet harder werken aan die overgang.
         </P>
       </Section>
 
@@ -366,7 +366,7 @@ export default function Body() {
         <H2>Hulp nodig?</H2>
         <P>
           Wij hebben dit traject begin 2026 zelf doorlopen voor onze
-          Nederlandse B.V. — opgericht in september 2025, met Spaanse CIF
+          Nederlandse B.V. - opgericht in september 2025, met Spaanse CIF
           binnen voor mei 2026. Als je hetzelfde traject staat te lopen en de
           papierwinkel niet zelf wil uitzoeken, helpt onze{" "}
           <Link
@@ -375,7 +375,7 @@ export default function Body() {
           >
             papierwinkel-dienst
           </Link>{" "}
-          je er doorheen — vaste prijs, vooraf afgesproken, geen verrassingen.
+          je er doorheen - vaste prijs, vooraf afgesproken, geen verrassingen.
         </P>
       </Section>
 
