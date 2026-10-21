@@ -8,8 +8,11 @@ import { ui } from "@/i18n/ui";
 
 export function FloatingContact() {
   const [open, setOpen] = useState(false);
-  const locale = localeFromPathname(usePathname());
+  const pathname = usePathname();
+  const locale = localeFromPathname(pathname);
   const t = ui[locale].floating;
+  // Private admin pages render without the public site chrome.
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3 print:hidden">

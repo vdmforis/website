@@ -11,8 +11,11 @@ import { ui } from "@/i18n/ui";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const locale = localeFromPathname(usePathname());
+  const pathname = usePathname();
+  const locale = localeFromPathname(pathname);
   const t = ui[locale].header;
+  // Private admin pages render without the public site chrome.
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/60 bg-cream/85 backdrop-blur">
